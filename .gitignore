@@ -2,3 +2,6 @@
 *.md
 !README.md
 每日推送_*.html
+
+.vercel
+.env*
