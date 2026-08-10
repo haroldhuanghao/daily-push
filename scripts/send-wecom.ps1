@@ -38,6 +38,7 @@ if ($null -eq $report) {
 }
 
 $reportUrl = "$($BaseUrl.TrimEnd('/'))$($report.path)"
+$coverUrl = "$($reportUrl.TrimEnd('/'))/cover.png"
 if (-not $SkipLinkCheck) {
     try {
         $response = Invoke-WebRequest -Uri $reportUrl -Method Get -UseBasicParsing
@@ -45,33 +46,27 @@ if (-not $SkipLinkCheck) {
     } catch {
         throw 'The permanent report URL is not available yet. Wait for deployment and retry.'
     }
+
+    try {
+        $coverResponse = Invoke-WebRequest -Uri $coverUrl -Method Get -UseBasicParsing
+        if ($coverResponse.StatusCode -lt 200 -or $coverResponse.StatusCode -ge 400) { throw 'bad status' }
+        if ($coverResponse.Headers['Content-Type'] -notlike 'image/*') { throw 'bad content type' }
+    } catch {
+        throw 'The permanent cover URL is not available yet. Wait for deployment and retry.'
+    }
 }
 
 $payload = [pscustomobject]@{
-    msgtype = 'template_card'
-    template_card = [pscustomobject]@{
-        card_type = 'text_notice'
-        source = [pscustomobject]@{
-            desc = '核电智慧巡检与工业智能化行业日报'
-            desc_color = 0
-        }
-        main_title = [pscustomobject]@{
-            title = $report.title
-            desc = $report.summary
-        }
-        emphasis_content = [pscustomobject]@{
-            title = '日报已发布'
-            desc = '查看行业判断与建议行动'
-        }
-        sub_title_text = $report.summary
-        horizontal_content_list = @(
-            [pscustomobject]@{ keyname = '日报日期'; value = $report.date }
-            [pscustomobject]@{ keyname = '访问方式'; value = '永久链接' }
+    msgtype = 'news'
+    news = [pscustomobject]@{
+        articles = @(
+            [pscustomobject]@{
+                title = $report.title
+                description = $report.summary
+                url = $reportUrl
+                picurl = $coverUrl
+            }
         )
-        jump_list = @(
-            [pscustomobject]@{ type = 1; url = $reportUrl; title = '阅读全文' }
-        )
-        card_action = [pscustomobject]@{ type = 1; url = $reportUrl }
     }
 } | ConvertTo-Json -Depth 8 -Compress
 
@@ -85,4 +80,4 @@ if ($null -ne $result.errcode -and [int]$result.errcode -ne 0) {
     throw "WeCom rejected the message with error code $($result.errcode)."
 }
 
-Write-Host "Pushed $($report.title)"
+Write-Host "Pushed $($report.title) with cover $coverUrl"

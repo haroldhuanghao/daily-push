@@ -1,0 +1,221 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="IAEA 研究堆 AI 安全技术会议今日启动；立即将人工复核、失效安全、版本审计写入核电 AI PoC 验收，并继续推进国产双后端回归。">
+  <meta property="og:title" content="核电智慧巡检与工业智能化行业日报 · 2026-08-10">
+  <meta property="og:description" content="IAEA 研究堆 AI 安全技术会议今日启动；立即将人工复核、失效安全、版本审计写入核电 AI PoC 验收，并继续推进国产双后端回归。">
+  <meta property="og:type" content="article">
+  <meta property="og:url" content="https://daily.851473.xyz/reports/2026-08-10/">
+  <meta property="og:image" content="https://daily.851473.xyz/reports/2026-08-10/cover.png">
+  <meta name="report-contract" content="nuclear-daily-v2">
+  <link rel="canonical" href="https://daily.851473.xyz/reports/2026-08-10/">
+  <title>核电智慧巡检与工业智能化行业日报 · 2026-08-10</title>
+  <style>
+    :root {
+      --accent: #0d6b4f;
+      --accent-strong: #063d30;
+      --accent-soft: #dff4eb;
+      --page: #f4f6f2;
+      --surface: #ffffff;
+      --text: #13201c;
+      --muted: #65736d;
+      --border: #dfe6e1;
+      --shadow: 0 12px 36px rgba(24, 51, 41, .08);
+      --radius-card: 18px;
+      --space-card: 24px;
+    }
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body { margin: 0; background: var(--page); color: var(--text); font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang SC", "Microsoft YaHei", sans-serif; font-size: 15px; line-height: 1.7; overflow-wrap: anywhere; }
+    img { max-width: 100%; height: auto; }
+    a { color: var(--accent); text-decoration-thickness: 1px; text-underline-offset: 3px; }
+    a:hover { color: var(--accent-strong); }
+    a:focus-visible { outline: 3px solid var(--accent-soft); outline-offset: 3px; border-radius: 4px; }
+    .wrap { width: min(1120px, calc(100% - 32px)); margin-inline: auto; }
+    .hero { padding: 52px 0 46px; color: #fff; background: radial-gradient(circle at 82% 18%, var(--accent) 0, transparent 30%), linear-gradient(135deg, var(--accent-strong), var(--accent)); border-bottom: 4px solid var(--accent-soft); }
+    .eyebrow { color: rgba(255, 255, 255, .78); font-size: 12px; font-weight: 800; letter-spacing: .16em; text-transform: uppercase; }
+    .hero h1 { max-width: 880px; margin: 10px 0 14px; font-size: clamp(30px, 5vw, 54px); line-height: 1.14; text-wrap: balance; }
+    .hero .lead { max-width: 820px; margin: 0; color: rgba(255, 255, 255, .86); font-size: clamp(15px, 2vw, 17px); }
+    .meta { display: flex; flex-wrap: wrap; gap: 9px; margin-top: 22px; }
+    .pill { padding: 6px 11px; border: 1px solid rgba(255, 255, 255, .28); border-radius: 999px; background: rgba(255, 255, 255, .09); font-size: 12px; }
+    .summary { position: relative; margin-top: -24px; }
+    .summary-grid { display: grid; grid-template-columns: 1.4fr repeat(2, minmax(0, 1fr)); gap: 12px; }
+    .card { padding: var(--space-card); border: 1px solid var(--border); border-radius: var(--radius-card); background: var(--surface); box-shadow: var(--shadow); }
+    .summary-card { min-width: 0; padding: 20px; }
+    .summary-card.primary { background: var(--accent-soft); border-color: var(--accent); }
+    .summary-card b { display: block; margin-bottom: 5px; color: var(--accent-strong); font-size: 13px; }
+    .summary-card strong { display: block; color: var(--accent); font-size: clamp(20px, 3vw, 26px); line-height: 1.25; }
+    .summary-card p { margin: 6px 0 0; color: var(--muted); font-size: 13px; }
+    main { padding: 34px 0 56px; }
+    .layout { display: grid; grid-template-columns: minmax(0, 1fr) 250px; gap: 24px; align-items: start; }
+    .content { min-width: 0; }
+    .content > .card { margin-bottom: 18px; }
+    .toc { position: sticky; top: 16px; padding: 18px; box-shadow: 0 4px 18px rgba(24, 51, 41, .05); }
+    .toc h2 { margin: 0 0 10px; color: var(--muted); font-size: 12px; letter-spacing: .12em; }
+    .toc a { display: block; padding: 6px 0; color: var(--muted); font-size: 13px; text-decoration: none; }
+    .toc a:hover { color: var(--accent); }
+    .section-head { display: flex; align-items: flex-start; justify-content: space-between; gap: 14px; margin-bottom: 6px; padding-bottom: 14px; border-bottom: 1px solid var(--border); }
+    .section-head h2 { margin: 0; color: var(--accent-strong); font-size: clamp(19px, 3vw, 23px); line-height: 1.35; }
+    .kicker { margin-bottom: 4px; color: var(--accent); font-size: 12px; font-weight: 800; letter-spacing: .08em; }
+    .rank { color: var(--muted); font-size: 12px; white-space: nowrap; }
+    .item { padding: 19px 0; border-bottom: 1px dashed var(--border); }
+    .item:last-child { padding-bottom: 2px; border-bottom: 0; }
+    .item h3 { margin: 0 0 8px; font-size: 18px; line-height: 1.45; text-wrap: pretty; }
+    .item p { margin: 7px 0; color: var(--muted); font-size: 14px; }
+    .tags { display: flex; flex-wrap: wrap; gap: 7px; margin: 9px 0; }
+    .tag { padding: 3px 8px; border-radius: 999px; background: var(--accent-soft); color: var(--accent-strong); font-size: 11px; font-weight: 800; }
+    .tag.warn { background: #fff0d8; color: #8a5a10; }
+    .tag.risk { background: #fae5e1; color: #a7332c; }
+    .verdict { margin-top: 12px; padding: 12px 14px; border-left: 3px solid var(--accent); border-radius: 0 10px 10px 0; background: var(--accent-soft); font-size: 14px; }
+    .source { margin-top: 10px; color: var(--muted); font-size: 12px; }
+    .source a { margin-right: 10px; }
+    .mini-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 12px; margin-top: 16px; }
+    .mini-card { padding: 16px; border: 1px solid var(--border); border-radius: 14px; background: var(--page); }
+    .mini-card h3 { margin: 0 0 7px; font-size: 16px; }
+    .mini-card p { margin: 6px 0; color: var(--muted); font-size: 13px; }
+    .table-wrap { max-width: 100%; margin-top: 14px; overflow-x: auto; border-radius: 12px; }
+    .table-wrap:focus-visible { outline: 3px solid var(--accent-soft); outline-offset: 2px; }
+    table { width: 100%; min-width: 620px; border-collapse: collapse; font-size: 13px; }
+    th, td { padding: 11px 10px; border-bottom: 1px solid var(--border); text-align: left; vertical-align: top; }
+    th { background: var(--accent-soft); color: var(--accent-strong); }
+    .note { margin-top: 15px; padding: 11px 13px; border-radius: 10px; background: var(--page); color: var(--muted); font-size: 12px; }
+    footer { padding: 0 16px 32px; color: var(--muted); text-align: center; font-size: 12px; }
+    @media (max-width: 900px) {
+      .summary-grid { grid-template-columns: 1fr 1fr; }
+      .summary-card.primary { grid-column: 1 / -1; }
+      .layout { grid-template-columns: 1fr; }
+      .toc { position: static; display: none; }
+    }
+    @media (max-width: 640px) {
+      .wrap { width: min(100% - 24px, 1120px); }
+      .hero { padding: 40px 0 38px; }
+      .summary-grid, .mini-grid { grid-template-columns: 1fr; }
+      .summary-card.primary { grid-column: auto; }
+      .card { padding: 19px 17px; }
+      .section-head { display: block; }
+      .rank { display: block; margin-top: 6px; white-space: normal; }
+    }
+  </style>
+</head>
+<body>
+  <header class="hero">
+    <div class="wrap">
+      <div class="eyebrow">DAILY BRIEFING</div>
+      <h1>核电智慧巡检与工业智能化行业日报</h1>
+      <p class="lead">IAEA 研究堆 AI 安全技术会议今日启动；立即将人工复核、失效安全、版本审计写入核电 AI PoC 验收，并继续推进国产双后端回归。</p>
+      <div class="meta"><span class="pill">2026年8月10日星期一 · 星期一</span><span class="pill">Asia/Shanghai</span></div>
+    </div>
+  </header>
+
+  <div class="wrap summary" aria-label="今日摘要">
+    <div class="summary-grid">
+      <section class="card summary-card primary"><b>今日一句话结论</b><strong>AI 核安全验证进入执行期</strong><p>会议启动不等于成果；今天把人工复核、失效安全和版本审计固化进 PoC 验收。</p></section>
+      <section class="card summary-card"><b>今日新增</b><strong>会议启动</strong><p>IAEA 研究堆 AI 安全技术会议于今日开始，后续只跟踪正式公开结论。</p></section>
+      <section class="card summary-card"><b>建议动作</b><strong>冻结验收表</strong><p>继续执行国产多后端回归，补齐高风险用途的安全边界与审计证据。</p></section>
+    </div>
+  </div>
+
+  <main class="wrap layout">
+    <div class="content">
+      <section id="industry" class="card">
+        <div class="section-head"><div><div class="kicker">01 · INDUSTRY</div><h2>一、今日重大行业事件</h2></div><div class="rank">1 条实质状态变化</div></div>
+        <article class="item">
+          <h3>IAEA 研究堆 AI 安全技术会议于今日启动</h3>
+          <div class="tags"><span class="tag">核安全</span><span class="tag">AI 治理</span><span class="tag warn">待正式结论</span></div>
+          <p><b>已确认事实：</b>IAEA 编号 EVT2503557 的“研究堆 AI 应用安全考虑”技术会议计划于 2026 年 8 月 10—14 日在维也纳举行；资料明确议题包括 AI 应用开发、测试、实施及与安全相关系统的软件要求。今天是会议首日，尚未见公开会议结论。</p>
+          <div class="verdict"><b>判断：</b>这不是新产品或核电项目落地，但把核领域 AI 的评价重心进一步拉回预期用途、软件生命周期、独立验证、人工监督与失效隔离。对核电巡检而言，算法精度不能替代可审计的运行边界。</div>
+          <p><b>建议行动：</b>将现有视觉和 RAG/Agent PoC 的验收表升级为：预期用途、禁止用途、超范围输入、人工复核点、失败安全状态、数据/模型/软件版本、回滚与留痕；安全级控制与生产控制保持隔离。</p>
+          <div class="source">来源：<a href="https://www.haea.hu/web/v3/OAHPortal.nsf/B5B8D0EAE35A7011C1258551004A2468/%24File/EVT2503557.pdf" target="_blank" rel="noopener noreferrer">IAEA EVT2503557 信息文件</a></div>
+        </article>
+        <article class="item">
+          <h3>公开监管与招采渠道未见新的核电审批、开工、并网或智能化上线强信号</h3>
+          <div class="tags"><span class="tag">检索结论</span><span class="tag warn">不以旧闻凑数</span></div>
+          <p><b>已确认事实：</b>截至 2026-08-10 14:00（Asia/Shanghai），国家能源局核电司、国家核安全局公开栏目及主要核电招采入口未显示与昨日相比新增的、直接匹配智慧巡检或工业智能化的高价值公告。</p>
+          <div class="verdict"><b>判断：</b>今日没有可转化为新增订单判断的公开信号；会议启动是治理与交付方法信号，不应被包装为客户需求或中标。</div>
+          <p><b>建议行动：</b>继续把销售资源投入已知账户的预算、采购方式和联合伙伴核实；没有三项可验证证据的线索不进入正式商机池。</p>
+          <div class="source">核验入口：<a href="https://www.nea.gov.cn/sjzz/hds/" target="_blank" rel="noopener noreferrer">国家能源局核电司</a><a href="https://nnsa.mee.gov.cn/ywdt/" target="_blank" rel="noopener noreferrer">国家核安全局</a><a href="https://ecp.cgnpc.com.cn/zbgg.html" target="_blank" rel="noopener noreferrer">中广核电子商务平台</a></div>
+        </article>
+      </section>
+
+      <section id="inspection" class="card">
+        <div class="section-head"><div><div class="kicker">02 · INSPECTION</div><h2>二、智慧巡检最新动态</h2></div><div class="rank">无新增项目</div></div>
+        <article class="item"><h3>今日未发现核电智慧巡检的新招标、中标、试点或上线证据</h3><p><b>已确认事实：</b>截至信息截点，公开渠道没有相较前日报新增、可核验的核电巡检项目阶段变化。此前出现的在役检查载具平台等事项没有新的公开状态，故仅保留在持续跟踪中。</p><div class="verdict"><b>判断：</b>机会窗口仍在新投运机组首循环、大修/延寿的检测与调试证据链，但今天没有新增采购信号。最适合的产品入口仍是非安全级旁路：仪表/阀位识别、跑冒滴漏、PPE、原始证据留存与工单闭环。</div><p><b>建议行动：</b>把销售线索逐项补齐牵头部门、预算来源、采购方式、时间窗和生态伙伴；技术侧以人工复核为前提整理弱光、反光、遮挡、跨班次场景的验收样本。</p><div class="source">来源：<a href="https://ecp.cgnpc.com.cn/fzbggg.html" target="_blank" rel="noopener noreferrer">中广核非招标采购信息</a></div></article>
+      </section>
+
+      <section id="ai" class="card">
+        <div class="section-head"><div><div class="kicker">03 · AI</div><h2>三、AI 视觉与多模态技术进展</h2></div><div class="rank">验证优先</div></div>
+        <article class="item"><h3>会议议题强化核领域 AI 的“先验证、再使用”边界</h3><div class="tags"><span class="tag">有条件适合核电</span><span class="tag risk">禁止自动安全决策</span></div><p><b>已确认事实：</b>IAEA 会议资料引用研究堆安全与安全重要软件的既有要求，并聚焦 AI 应用的开发、测试和实施安全考虑。资料不是针对商用核电厂的产品认证，也没有发布新的模型性能结论。</p><p><b>判断：</b>视觉异常检测、仪表读数、PPE、阀位和渗漏识别适合在隔离网络中作为辅助决策；RAG/Agent 应先只读检索并展示来源。模型输出不得直接触发安全级控制、设备放行或规程批准。</p><p><b>工程化限制：</b>必须覆盖样本代表性、误报/漏报成本、低照与遮挡、现场算力与功耗、网络隔离、版本可追溯、权限与人工复核。缺任何一项，均不能从演示进入生产。</p><div class="verdict"><b>建议行动：</b>立即验证：以黄金样本做跨工况回归，并记录误报/小时、漏报、时延、掉电恢复和人工复核一致性。持续跟踪会议正式资料；在可审计证据形成前暂不扩大高风险用途。</div><div class="source">来源：<a href="https://www.haea.hu/web/v3/OAHPortal.nsf/B5B8D0EAE35A7011C1258551004A2468/%24File/EVT2503557.pdf" target="_blank" rel="noopener noreferrer">IAEA EVT2503557 信息文件</a><a href="https://github.com/ultralytics/ultralytics/releases" target="_blank" rel="noopener noreferrer">Ultralytics 官方发布页</a></div></article>
+      </section>
+
+      <section id="domestic" class="card">
+        <div class="section-head"><div><div class="kicker">04 · DOMESTIC STACK</div><h2>四、国产硬件与边缘智能专项</h2></div><div class="rank">部署结论不变</div></div>
+        <div class="mini-grid">
+          <article class="mini-card"><h3>4.1 国产 CPU 与服务器</h3><p><b>已确认事实：</b>今日无直接关联的新发布或核电部署证据。鲲鹏、海光适合纳入厂级/边缘通算 PoC；飞腾作为客户指定或边缘备选。<br><b>限制：</b>必须核对容器镜像、数据库扩展、监控代理和第三方 SDK 的架构支持。</p></article>
+          <article class="mini-card"><h3>4.2 国产 GPU / NPU 与 AI 加速</h3><p><b>已确认事实：</b>未见可核验的新核电实测突破。昇腾适合做厂级视觉、RAG 和 Agent 主线，端侧按路数与功耗评估 RK 系列等整机。<br><b>限制：</b>算子、量化、动态 shape、驱动/固件/框架绑定均应回归。</p></article>
+          <article class="mini-card"><h3>4.3 国产边缘算力设备</h3><p><b>已确认事实：</b>没有新的核电级整机认证或现场长稳数据。边缘只承担确定性视觉和缓存；中心训练/大模型推理留在厂级。<br><b>限制：</b>宽温、EMC、MTBF、双网隔离、时间同步、掉电恢复和长期供货。</p></article>
+          <article class="mini-card"><h3>4.4 国产操作系统与基础软件</h3><p><b>已确认事实：</b>今日未见本业务直接相关的新版本变化。openEuler 可作为服务器工程基线，麒麟/UOS 留在客户交付适配矩阵。<br><b>限制：</b>内核与加速驱动、国密、中间件、外设、补丁与备份恢复必须联测。</p></article>
+        </div>
+        <article class="item"><h3>4.5 对智慧核电的部署建议</h3><p><b>今日国产化部署结论：</b>边缘层使用可离线、可回滚的视觉推理与缓存；厂级使用国产 CPU＋NPU 的模型服务、RAG、Agent 与审计；生产控制和安全级系统与 AI 平台保持隔离。技术路线不因今天的会议启动而调整。</p><div class="verdict"><b>适配结论：</b>主力方案：鲲鹏或海光服务器＋昇腾，openEuler 工程基线。备选方案：客户指定的飞腾/麒麟/UOS 与第二推理后端。立即 PoC：同一黄金样本在 Ascend、端侧 NPU、CPU 参考后端验证精度、时延、功耗、72 小时长稳和回滚。结论：全部 PoC 后采用，暂不以峰值宣传进入生产。</div></article>
+      </section>
+
+      <section id="data" class="card">
+        <div class="section-head"><div><div class="kicker">05 · DATA &amp; TWIN</div><h2>五、工业数据治理与数字孪生趋势</h2></div><div class="rank">无新增落地</div></div>
+        <article class="item"><h3>今日无核电数据治理、数字孪生或工业 Agent 新上线证据</h3><p><b>已确认事实：</b>截至截点未发现可核验的新增上线或采购，故不将通用厂商宣传视为核电落地。</p><div class="verdict"><b>判断：</b>会议带来的直接启示是：资产语义、来源引用、权限控制、规则引擎、人工签批与全量审计，比单纯的知识库问答更接近可验收能力。</div><p><b>建议行动：</b>先建立设备编码、时序、告警、文档、图纸、工单、缺陷和规程的只读证据链；在权限和审批验证完成后，再接入低风险工具调用。</p></article>
+      </section>
+
+      <section id="competitors" class="card">
+        <div class="section-head"><div><div class="kicker">06 · COMPETITORS</div><h2>六、竞争对手动态</h2></div><div class="rank">无新动作</div></div>
+        <article class="item"><h3>重点竞争与生态企业今日无可核验的核电 AI 新中标、发布或合作</h3><p><b>已确认事实：</b>中广核数字科技、中核控制系统工程、东方电气、远光软件及主要工业平台和国产算力厂商公开渠道未见与昨日相比的强相关实质进展。</p><div class="verdict"><b>判断：</b>竞争核心仍是客户入口、平台/集成能力、国产生态与现场验收证据；会议开始本身不能推导出任何一家企业的项目优势。</div><p><b>建议行动：</b>差异化聚焦“可审计巡检闭环＋跨芯片验证＋现场离线交付”；联合整机、昇腾集成和核电检修/NDT 伙伴，避免与大平台正面销售泛化数据中台。</p></article>
+      </section>
+
+      <section id="opportunities" class="card">
+        <div class="section-head"><div><div class="kicker">07 · OPPORTUNITIES</div><h2>七、商业机会</h2></div><div class="rank">无新增公开标</div></div>
+        <article class="item"><h3>今天无直接匹配且可核验的新公开招标</h3><p><b>已确认事实：</b>未找到新增的核电智慧巡检、工业视觉或厂级 AI 平台公开采购；不虚构项目名称、金额、截止期或采购状态。</p><p><b>匹配判断：</b>太平岭首循环、田湾调试证据链、秦山延寿检测等仍可作为账户研究方向，但在预算、牵头部门或采购方式未核实前，不等同于正式商机。</p><div class="verdict"><b>推荐行动：</b>建立关系＋方案预研。销售在 48 小时内补齐预算来源、决策人、采购方式、时间窗与联合投标伙伴；满足三项以上可验证条件后再转入正式机会池。</div></article>
+      </section>
+
+      <section id="tracking" class="card">
+        <div class="section-head"><div><div class="kicker">08 · TRACKING</div><h2>八、持续跟踪事项</h2></div><div class="rank">仅状态更新</div></div>
+        <div class="table-wrap" tabindex="0" role="region" aria-label="持续跟踪事项表"><table><thead><tr><th>事项名称</th><th>当前状态</th><th>今日是否有实质新增</th><th>下一观察节点</th></tr></thead><tbody><tr><td>IAEA 研究堆 AI 安全技术会议</td><td>8 月 10—14 日会议首日</td><td>有：由“计划召开”转为“已开始”；尚无公开结论</td><td>会议结论、报告或公开材料</td></tr><tr><td>太平岭 2 号机首循环巡检基线</td><td>已商运；账户与方案预研</td><td>无</td><td>首循环巡检要求、生产/维修技改计划</td></tr><tr><td>田湾 8 号调试证据链</td><td>调试阶段跟踪</td><td>无</td><td>热试、装料许可、数字化移交需求</td></tr><tr><td>秦山三期全堆芯压力管更换</td><td>环评拟审批阶段跟踪</td><td>无</td><td>正式批复、EPC/检修/NDT/载具招采</td></tr><tr><td>中广核数字科技多年框架采购</td><td>此前取件已结束</td><td>无</td><td>截标后的澄清、中标及入围伙伴</td></tr></tbody></table></div>
+      </section>
+
+      <section id="insights" class="card">
+        <div class="section-head"><div><div class="kicker">09 · INSIGHT</div><h2>九、今日技术洞察</h2></div><div class="rank">未来 1—3 年</div></div>
+        <article class="item"><h3>长期壁垒是可验证、可审计的巡检闭环，而非单一模型</h3><p><b>结论：</b>未来 1—3 年最可复制的商业机会是新投运、调试、大修和延寿场景中的“巡检证据闭环”：感知结果与设备语义、规程、工单、人工签批和可回放证据相连接。</p><p><b>依据：</b>本期会议资料强调 AI 的开发、测试、实施及安全考虑；这支持“先验证、再使用”的路线，但不构成商用核电项目或任何算法性能的证明。国产软硬件的价值在于隔离网络内的可控、可维护、可替换交付。</p><div class="verdict"><b>建议行动：</b>产品团队在两周内形成一份可复用 V&amp;V 报告：黄金集、误报/漏报、时延、功耗、长稳、权限、人工复核、版本/SBOM 与回滚。以此打包“首循环巡检基线包”和“调试/大修证据包”。</div></article>
+      </section>
+
+      <section id="actions" class="card">
+        <div class="section-head"><div><div class="kicker">10 · ACTION</div><h2>十、给公司的建议</h2></div></div>
+        <div class="mini-grid">
+          <article class="mini-card"><h3>今日建议（不超过 3 条）</h3><p>1. 今天冻结《核电 AI 安全边界》及 PoC 验收表。<br>2. 启动 Ascend、端侧 NPU、CPU 三后端黄金样本回归。<br>3. 48 小时内补齐重点账户的部门、预算、入口人与采购方式。</p></article>
+          <article class="mini-card"><h3>短期行动（1–3 个月）</h3><p>完成仪表、阀位、渗漏、PPE 四类非安全级旁路 PoC；交付精度、时延、功耗、掉电恢复、离线升级、版本回滚和 72 小时长稳报告；建立客户指定 OS/CPU/NPU 兼容矩阵。</p></article>
+          <article class="mini-card"><h3>中长期规划（6–24 个月）</h3><p>建设“设备语义与数据底座—多模态巡检模型—可审计 Agent—国产边缘产品线”四层能力。所有高风险工单、生产控制和核安全相关场景坚持 AI 辅助、人机协同、人工复核、规程优先。</p></article>
+        </div>
+      </section>
+
+      <section id="method" class="card">
+        <div class="section-head"><div><div class="kicker">METHODOLOGY</div><h2>信息说明</h2></div></div>
+        <p class="note">信息截点：2026-08-10 14:00（Asia/Shanghai）。优先检索 IAEA、国家能源局、国家核安全局、官方招采平台及官方代码仓库。本期仅将会议由“计划召开”变为“会议首日”列为实质状态变化；尚无公开会议结论。未发现强信号时不以旧闻补量，缺席性结论只代表截点前公开渠道未发现，不代表项目不存在。任何公开资料或性能宣传均不得替代核电现场 V&amp;V。</p>
+      </section>
+    </div>
+
+    <aside class="card toc" aria-label="本期目录">
+      <h2>本期目录</h2>
+      <a href="#industry">01 重大行业事件</a>
+      <a href="#inspection">02 智慧巡检</a>
+      <a href="#ai">03 AI 视觉与多模态</a>
+      <a href="#domestic">04 国产硬件与边缘智能</a>
+      <a href="#data">05 数据治理与数字孪生</a>
+      <a href="#competitors">06 竞争对手</a>
+      <a href="#opportunities">07 商业机会</a>
+      <a href="#tracking">08 持续跟踪</a>
+      <a href="#insights">09 技术洞察</a>
+      <a href="#actions">10 公司建议</a>
+      <a href="#method">信息说明</a>
+    </aside>
+  </main>
+
+  <footer>每日推送 · 2026-08-10 · <a href="/archive/">查看历史归档</a></footer>
+</body>
+</html>
