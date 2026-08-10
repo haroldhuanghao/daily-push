@@ -1,0 +1,341 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="太平岭2号机正式投产，首循环巡检基线窗口打开；YOLO打通昇腾训练推理与瑞芯微全任务导出，应立即启动跨NPU回归PoC。">
+  <meta property="og:title" content="核电智慧巡检与工业智能化行业日报 · 2026-08-07">
+  <meta property="og:description" content="太平岭2号机正式投产，首循环巡检基线窗口打开；YOLO打通昇腾训练推理与瑞芯微全任务导出，应立即启动跨NPU回归PoC。">
+  <meta property="og:type" content="article">
+  <meta property="og:url" content="https://daily.851473.xyz/reports/2026-08-07/">
+  <meta property="og:image" content="https://daily.851473.xyz/reports/2026-08-07/cover.png">
+  <link rel="canonical" href="https://daily.851473.xyz/reports/2026-08-07/">
+  <title>核电智慧巡检与工业智能化行业日报 · 2026-08-07</title>
+  <style>
+    :root {
+      --accent: #087f9c;
+      --accent-strong: #073a59;
+      --accent-soft: #dff3f7;
+      --page: #f3f6f8;
+      --surface: #ffffff;
+      --text: #152733;
+      --muted: #5f707b;
+      --border: #d9e3e8;
+      --shadow: 0 12px 36px rgba(7, 58, 89, .08);
+      --radius-card: 18px;
+      --space-card: 24px;
+    }
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body { margin: 0; background: var(--page); color: var(--text); font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang SC", "Microsoft YaHei", sans-serif; font-size: 15px; line-height: 1.7; overflow-x: hidden; overflow-wrap: anywhere; }
+    a { color: var(--accent); text-decoration-thickness: 1px; text-underline-offset: 3px; }
+    a:hover { color: var(--accent-strong); }
+    a:focus-visible { outline: 3px solid var(--accent-soft); outline-offset: 3px; border-radius: 4px; }
+    .wrap { width: min(1120px, calc(100% - 32px)); margin-inline: auto; }
+    .hero { padding: 52px 0 46px; color: #fff; background: radial-gradient(circle at 82% 18%, #087f9c 0, transparent 30%), linear-gradient(135deg, #061f36, var(--accent-strong)); border-bottom: 4px solid var(--accent); }
+    .eyebrow { color: rgba(255,255,255,.75); font-size: 12px; font-weight: 800; letter-spacing: .16em; }
+    .hero h1 { max-width: 900px; margin: 10px 0 14px; font-size: clamp(30px, 5vw, 52px); line-height: 1.14; text-wrap: balance; }
+    .hero .lead { width: 100%; max-width: 900px; margin: 0; color: rgba(255,255,255,.86); font-size: clamp(15px, 2vw, 17px); }
+    .meta, .tags { display: flex; flex-wrap: wrap; gap: 8px; }
+    .meta { margin-top: 22px; }
+    .pill { padding: 6px 11px; border: 1px solid rgba(255,255,255,.28); border-radius: 999px; background: rgba(255,255,255,.08); font-size: 12px; }
+    .summary { position: relative; margin-top: -24px; }
+    .summary-grid { display: grid; grid-template-columns: 1.4fr repeat(2, minmax(0,1fr)); gap: 12px; }
+    .card { padding: var(--space-card); border: 1px solid var(--border); border-radius: var(--radius-card); background: var(--surface); box-shadow: var(--shadow); }
+    .summary-card { min-width: 0; padding: 20px; }
+    .summary-card.primary { background: var(--accent-soft); border-color: var(--accent); }
+    .summary-card b { display: block; margin-bottom: 5px; color: var(--accent-strong); font-size: 13px; }
+    .summary-card strong { display: block; color: var(--accent); font-size: clamp(20px,3vw,26px); line-height: 1.25; }
+    .summary-card p { margin: 6px 0 0; color: var(--muted); font-size: 13px; }
+    main { padding: 34px 0 56px; }
+    .layout { display: grid; grid-template-columns: minmax(0,1fr) 250px; gap: 24px; align-items: start; }
+    .content { min-width: 0; }
+    .content > .card { margin-bottom: 18px; }
+    .toc { position: sticky; top: 16px; padding: 18px; box-shadow: 0 4px 18px rgba(7,58,89,.05); }
+    .toc h2 { margin: 0 0 10px; color: var(--muted); font-size: 12px; letter-spacing: .12em; }
+    .toc a { display: block; padding: 5px 0; color: var(--muted); font-size: 13px; text-decoration: none; }
+    .toc a:hover { color: var(--accent); }
+    .section-head { display: flex; align-items: flex-start; justify-content: space-between; gap: 14px; margin-bottom: 6px; padding-bottom: 14px; border-bottom: 1px solid var(--border); }
+    .section-head h2 { margin: 0; color: var(--accent-strong); font-size: clamp(19px,3vw,23px); line-height: 1.35; }
+    .kicker { margin-bottom: 4px; color: var(--accent); font-size: 12px; font-weight: 800; letter-spacing: .08em; }
+    .rank { color: var(--muted); font-size: 12px; white-space: nowrap; }
+    .item { padding: 19px 0; border-bottom: 1px dashed var(--border); }
+    .item:last-child { padding-bottom: 2px; border-bottom: 0; }
+    .item h3 { margin: 0 0 8px; font-size: 18px; line-height: 1.45; text-wrap: pretty; }
+    .item p { margin: 7px 0; color: var(--muted); font-size: 14px; }
+    .tags { margin: 9px 0; }
+    .tag { padding: 3px 8px; border-radius: 999px; background: var(--accent-soft); color: var(--accent-strong); font-size: 11px; font-weight: 800; }
+    .tag.warn { background: #fff0d8; color: #8a5a10; }
+    .tag.risk { background: #fae5e1; color: #a7332c; }
+    .verdict { margin-top: 12px; padding: 12px 14px; border-left: 3px solid var(--accent); border-radius: 0 10px 10px 0; background: var(--accent-soft); font-size: 14px; }
+    .source { margin-top: 10px; color: var(--muted); font-size: 12px; }
+    .source a { margin-right: 10px; }
+    .mini-grid { display: grid; grid-template-columns: repeat(2,minmax(0,1fr)); gap: 12px; margin-top: 16px; }
+    .mini-card { padding: 16px; border: 1px solid var(--border); border-radius: 14px; background: var(--page); }
+    .mini-card h3 { margin: 0 0 7px; font-size: 16px; }
+    .mini-card p { margin: 6px 0; color: var(--muted); font-size: 13px; }
+    .table-wrap { max-width: 100%; margin-top: 14px; overflow-x: auto; border-radius: 12px; }
+    .table-wrap:focus-visible { outline: 3px solid var(--accent-soft); outline-offset: 2px; }
+    table { width: 100%; min-width: 680px; border-collapse: collapse; font-size: 13px; }
+    th, td { padding: 11px 10px; border-bottom: 1px solid var(--border); text-align: left; vertical-align: top; }
+    th { background: var(--accent-soft); color: var(--accent-strong); }
+    .note { margin-top: 15px; padding: 11px 13px; border-radius: 10px; background: var(--page); color: var(--muted); font-size: 12px; }
+    .qa { display: grid; grid-template-columns: 34px 1fr; gap: 12px; padding: 15px 0; border-bottom: 1px dashed var(--border); }
+    .qa:last-child { border-bottom: 0; }
+    .qa .num { width: 30px; height: 30px; border-radius: 50%; background: var(--accent-soft); color: var(--accent-strong); font-weight: 800; text-align: center; line-height: 30px; }
+    .qa h3 { margin: 0 0 6px; font-size: 16px; }
+    .qa p { margin: 4px 0; color: var(--muted); font-size: 13px; }
+    footer { padding: 0 16px 32px; color: var(--muted); text-align: center; font-size: 12px; }
+    @media (max-width: 900px) {
+      .summary-grid { grid-template-columns: 1fr 1fr; }
+      .summary-card.primary { grid-column: 1 / -1; }
+      .layout { grid-template-columns: 1fr; }
+      .toc { position: static; display: none; }
+    }
+    @media (max-width: 640px) {
+      .wrap { width: calc(100% - 24px); max-width: 1120px; }
+      .hero { padding: 40px 0 38px; }
+      .summary-grid, .mini-grid { grid-template-columns: 1fr; }
+      .summary-card.primary { grid-column: auto; }
+      .card { padding: 19px 17px; }
+      .section-head { display: block; }
+      .rank { display: block; margin-top: 6px; white-space: normal; }
+    }
+  </style>
+</head>
+<body>
+  <header class="hero">
+    <div class="wrap">
+      <div class="eyebrow">NUCLEAR SMART INSPECTION · DAILY INTELLIGENCE</div>
+      <h1>核电智慧巡检与工业智能化行业日报</h1>
+      <p class="lead">太平岭 2 号机正式投产，首循环巡检基线窗口打开；YOLO 打通昇腾训练推理与瑞芯微全任务导出，应立即启动跨 NPU 回归 PoC。</p>
+      <div class="meta"><span class="pill">2026年8月7日 · 星期五</span><span class="pill">内部行业情报</span><span class="pill">Asia/Shanghai</span></div>
+    </div>
+  </header>
+
+  <div class="wrap summary" aria-label="今日摘要">
+    <div class="summary-grid">
+      <section class="card summary-card primary"><b>今日一句话结论</b><strong>商运窗口已打开</strong><p>太平岭 2 号机转入商运，立即切入首循环巡检基线并启动国产双后端验证。</p></section>
+      <section class="card summary-card"><b>今日新增</b><strong>1 个商运节点</strong><p>相较前次“首次并网”，新增为 8 月 3 日正式投产。</p></section>
+      <section class="card summary-card"><b>技术动作</b><strong>2 类 NPU 回归</strong><p>同一模型对比昇腾 OM 与瑞芯微 RKNN 的精度、时延、功耗和长稳。</p></section>
+    </div>
+  </div>
+
+  <main class="wrap layout">
+    <div class="content">
+      <section id="events" class="card">
+        <div class="section-head"><div><div class="kicker">01 · MAJOR EVENTS</div><h2>一、今日重大行业事件 ⭐⭐⭐⭐⭐</h2></div><div class="rank">战略影响</div></div>
+        <article class="item">
+          <h3>太平岭 2 号机正式投产，一期工程全面建成</h3>
+          <div class="tags"><span class="tag">已证实</span><span class="tag">商业运行</span><span class="tag warn">新增节点</span></div>
+          <p><b>来源与发布日期：</b>国家核安全局 2026-08-06 发布；事件发生于 2026-08-03。</p>
+          <p><b>已确认事实：</b>中广核广东太平岭核电项目 2 号机组正式投产发电，粤港澳大湾区首个“华龙一号”项目一期两台机组全面建成。2 号机核心设备国产化率超过 90%，额定电功率约 1200 MW；全项目规划 6 台机组。</p>
+          <p><b>相较前次新增：</b>前日报已报告“首次并网”；本次新增是完成试运行并转入正式投产，不能把建设期数字化成果重复包装为今日新增。</p>
+          <p><b>判断｜影响等级 ★★★★★：</b>需求重心由工程建造切向生产准备、首循环状态基线、巡检路线优化、备件与设备履历、首轮大修数据准备。建设期已部署智慧工地、数字化移交和备件管理，外部方案必须嵌入现有体系，而非另建信息孤岛。</p>
+          <p><b>关联方向：</b>智慧巡检 / 工业视觉 / 设备健康 / 数据治理 / 边缘部署。</p>
+          <p><b>建议行动：</b>两周内完成太平岭账户图谱，向生产、维修、设备与信息化条线提交“首循环巡检基线包”：仪表与阀位识别、跑冒滴漏/PPE、正常样本库、异常复核、工单证据链；定位非安全级辅助，人机协同、人工签批。</p>
+          <div class="source">来源：<a href="https://nnsa.mee.gov.cn/ywdt/hyzx/202608/t20260806_1163624.html" target="_blank" rel="noopener noreferrer">国家核安全局 · 正式投产</a><a href="https://www.cgnpc.com.cn/cgn/c100944/2026-07/07/content_b7efcac4fc6e41079dd090dbd74008f0.shtml" target="_blank" rel="noopener noreferrer">中广核 · 建设期数字化基础</a></div>
+        </article>
+      </section>
+
+      <section id="inspection" class="card">
+        <div class="section-head"><div><div class="kicker">02 · SMART INSPECTION</div><h2>二、智慧巡检最新动态 ⭐⭐⭐⭐⭐</h2></div><div class="rank">1 条有效场景信号</div></div>
+        <article class="item">
+          <h3>田湾 8 号机完成冷试控制点释放与一回路水压试验</h3>
+          <div class="tags"><span class="tag">田湾核电</span><span class="tag">调试节点</span><span class="tag">证据链</span></div>
+          <p><b>项目 / 采购方：</b>田湾核电站 8 号机组；监管方为生态环境部华北核与辐射安全监督站。当前无公开采购公告。</p>
+          <p><b>技术与阶段：</b>监管方逐项核查待整改事项、试验先决条件、现场安全措施和设备状态记录；控制点释放后，对升压、稳压、检漏全流程及 24.5 MPa 最高设计压力平台进行见证。阶段为冷态功能试验关键节点完成。</p>
+          <p><b>市场价值与成熟度：</b>高。该流程天然需要“要求—物项—状态—原始记录—异常—整改—签批”贯通，适合数字化移交、移动采集、试验证据包和可审计 Agent；不适合让 AI 自动判定控制点释放。</p>
+          <p><b>是否主流 / 可进入：</b>调试与投运证据链是未来新机组复制场景。切入方式应为平台＋集成＋现场服务，先做只读汇聚和证据核验，不接管安全级控制。</p>
+          <p><b>建议行动：</b>用四周做“冷试证据包”演示：设备编码对齐、先决条件清单、移动端取证、泄漏候选标注、整改关闭、授权签批与全量审计。</p>
+          <div class="source">来源：<a href="https://nnsa.mee.gov.cn/ywdt/gzdt/202608/t20260805_1163607.html" target="_blank" rel="noopener noreferrer">国家核安全局 · 2026-08-05</a></div>
+        </article>
+        <p class="note">检索结论：近 30 天未发现官方可核验的核电智慧巡检/机器人新上线或新中标项目。今日不重复苍南机器人等既有案例，也不把过期变更公告包装为新商机。</p>
+      </section>
+
+      <section id="vision" class="card">
+        <div class="section-head"><div><div class="kicker">03 · VISION & MULTIMODAL AI</div><h2>三、AI 视觉与多模态技术进展 ⭐⭐⭐⭐</h2></div><div class="rank">工程化优先</div></div>
+        <article class="item">
+          <h3>Ultralytics 8.4.107—8.4.111 补齐昇腾与 RKNN 部署链</h3>
+          <div class="tags"><span class="tag">立即验证</span><span class="tag">昇腾</span><span class="tag">RKNN</span></div>
+          <p><b>来源与发布日期：</b>Ultralytics 官方 Releases，2026-07-26 至 2026-07-29。</p>
+          <p><b>核心能力：</b>8.4.107 新增 Huawei Ascend 导出/推理，经 CANN ATC 编译为 OM，覆盖检测、分割、姿态、OBB、分类与深度；8.4.110 将 RKNN 导出扩展到全任务并加入 rknn-toolkit2 冒烟测试；8.4.111 增加昇腾单/多 NPU 训练验证。</p>
+          <p><b>相比现有方案：</b>同一 YOLO 工程可更直接地覆盖昇腾与瑞芯微两类国产后端，降低重复移植成本，真正有利于跨芯片交付。</p>
+          <p><b>是否适合核电：</b>有条件适合。推荐仪表/阀位、PPE、异物、跑冒滴漏和机器人目标感知等非安全级场景。</p>
+          <p><b>工程化限制：</b>昇腾路径依赖 Linux、CANN/ATC/ais_bench，当前重点为静态 shape FP16；“可导出”不等于所有算子均上 NPU 或精度一致。还需处理许可、弱光/遮挡、误漏报、离线升级和长稳。</p>
+          <p><b>产品化路径：</b>立即建立同一 YOLO26n/s 的 Ascend 310B/310P 与 RK3588/RK1828 黄金样本回归，固化预处理、后处理、模型包、SBOM 与版本矩阵。</p>
+          <div class="source">来源：<a href="https://github.com/ultralytics/ultralytics/releases" target="_blank" rel="noopener noreferrer">Ultralytics 官方 Releases</a></div>
+        </article>
+        <article class="item">
+          <h3>anomalib 2.6.0 引入 SuperADD，少样本异常检测有了新工程基线</h3>
+          <div class="tags"><span class="tag">立即验证</span><span class="tag">异常检测</span><span class="tag warn">不可直接生产</span></div>
+          <p><b>来源与发布日期：</b>open-edge-platform/anomalib 官方 Release，2026-07-25。</p>
+          <p><b>核心能力：</b>新增 VAND 4.0 优胜方法 SuperADD 与 AutoVI 数据集，同时包含安全修复和依赖升级。上一小版本已加强 DINO 系骨干与动态 ONNX/OpenVINO 导出。</p>
+          <p><b>是否适合核电：</b>适合立即离线验证，场景为设备外观异常、大修前后对比、腐蚀/异物/绝缘状态与少样本缺陷候选。</p>
+          <p><b>工程化限制：</b>公开基准不能外推核电现场；2.6.0 有 API 变化，国产 NPU 仍需 ONNX 中间层与自研后处理。必须按误报/小时、漏报、跨视角、低照、推理时延和长稳验收。</p>
+          <p><b>建议：</b>对 PatchCore、Dinomaly、SuperADD 做同一核电小样本集 A/B；先冻结容器、模型权重、数据版本和 SBOM，再决定是否进入产品基线。</p>
+          <div class="source">来源：<a href="https://github.com/open-edge-platform/anomalib/releases" target="_blank" rel="noopener noreferrer">anomalib 官方 Releases</a></div>
+        </article>
+      </section>
+
+      <section id="domestic" class="card">
+        <div class="section-head"><div><div class="kicker">04 · DOMESTIC COMPUTING</div><h2>四、国产硬件与边缘智能专项 ⭐⭐⭐⭐⭐</h2></div><div class="rank">适配结论</div></div>
+        <article class="item">
+          <h3>4.1 国产 CPU 与服务器</h3>
+          <p><b>最新动态：</b>飞腾 7 月 22 日披露，S5000C-M 与中国移动扩展型皮基站已在十余省市试点/规模部署，可本地处理 AI 视频与工业实时数据，并给出热电企业 5G 专网支撑巡检机器人 7×24 小时联网案例。</p>
+          <p><b>智慧核电价值：</b>适合作为国产 5G 专网通信/网关与通算节点，不应被当作主视觉 NPU。推荐层级为边缘服务器、机器人通信节点。</p>
+          <p><b>风险与结论：</b>厂商时延/功耗口径需复测；核电仍要验证网安分区、断网自治、双链路切换、EMC、时间同步和审计。<b>建议 PoC 验证后作为备选方案</b>。</p>
+          <div class="source">来源：<a href="https://www.phytium.com.cn/homepage/news/1022/" target="_blank" rel="noopener noreferrer">飞腾官方 · 2026-07-22</a></div>
+        </article>
+        <article class="item">
+          <h3>4.2 国产 GPU / NPU 与 AI 加速</h3>
+          <p><b>最新动态：</b>Ultralytics 已给出 Ascend OM 导出/推理与单/多 NPU 训练路径，价值高于单纯发布峰值参数。华为 Atlas 950 面向超大模型中心算力，不适合边缘巡检；厂级平台应先从可控规模的昇腾服务器开始。</p>
+          <p><b>部署结论：</b>视觉边缘主线为 Ascend 310B/310P，厂级 RAG/Agent 以昇腾为主；海光 DCU、沐曦等保留第二后端做可替换性验证。所有组合均为<b>PoC 后采用</b>。</p>
+          <p><b>关键风险：</b>CANN/算子/量化精度、模型与驱动版本绑定、容器监控、离线补丁和单厂 SDK 锁定。</p>
+          <div class="source">来源：<a href="https://www.huawei.com/cn/news/2026/7/atlas-950-superpod" target="_blank" rel="noopener noreferrer">华为 · Atlas 950</a><a href="https://github.com/ultralytics/ultralytics/releases" target="_blank" rel="noopener noreferrer">Ultralytics · Ascend 支持</a></div>
+        </article>
+        <article class="item">
+          <h3>4.3 国产边缘算力设备</h3>
+          <p><b>最新动态：</b>瑞芯微 7 月 17 日展示 RK3588/RK3576＋RK1828 端侧方案及多模态工业质检智盒；随后 Ultralytics 8.4.110 将 RKNN 导出扩至全任务。</p>
+          <p><b>产品价值与层级：</b>适合机器人、单机/少路视频、轻量 VLM 与离线多媒体检索；不替代厂级服务器，更不能承担安全级控制。</p>
+          <p><b>风险与结论：</b>展会指标不等于工业认证；需索取宽温、EMC、MTBF、BOM 锁定和长期供货证据，并验证算子回退、掉电恢复和热稳定。<b>建议 PoC 验证后采用</b>。</p>
+          <div class="source">来源：<a href="https://www.rock-chips.com/a/cn/news/rockchip/2026/0717/2173.html" target="_blank" rel="noopener noreferrer">瑞芯微官方 · 2026-07-17</a></div>
+        </article>
+        <article class="item">
+          <h3>4.4 国产操作系统与基础软件</h3>
+          <p><b>最新动态：</b>openEuler AcTrail 从操作系统侧统一记录 Agent 的模型交互、工具、进程、文件、网络与 IPC 事件；银河麒麟 KylinBot/KYSEC 展示端侧 Agent、细粒度权限与内核级防护。</p>
+          <p><b>对智慧核电的帮助：</b>把“模型回答”扩展为“谁调用了什么工具、影响了什么资源、谁批准”的全链路审计。适用层级为隔离区 RAG/Agent 与运维终端。</p>
+          <p><b>风险与结论：</b>需验证性能开销、规则覆盖、SIEM 对接、商业支持、回滚和离线补丁。AcTrail <b>建议 PoC</b>；桌面 Agent <b>暂不建议进入生产控制域</b>。</p>
+          <div class="source">来源：<a href="https://www.openeuler.org/zh/blog/20260702-AcTrail/20260702-AcTrail.html" target="_blank" rel="noopener noreferrer">openEuler · AcTrail</a><a href="https://www.kylinos.cn/about/news/2079008326486691841.html" target="_blank" rel="noopener noreferrer">银河麒麟 · 2026-07-20</a></div>
+        </article>
+        <article class="item">
+          <h3>4.5 对智慧核电的部署建议</h3>
+          <div class="table-wrap" tabindex="0" role="region" aria-label="国产化部署建议表">
+            <table>
+              <thead><tr><th>层级</th><th>推荐参考组合</th><th>适用工作负载</th><th>结论</th></tr></thead>
+              <tbody>
+                <tr><td>视觉边缘推理</td><td>工业整机＋Ascend 310B/310P；低功耗对照 RK3588＋RK1828</td><td>仪表、PPE、异物、渗漏、机器人感知</td><td>双主线 PoC 后采用</td></tr>
+                <tr><td>厂级 AI 平台</td><td>认证鲲鹏/飞腾/海光服务器＋昇腾；沐曦/海光 DCU 作第二后端</td><td>批量视觉、模型服务、知识库</td><td>小规模起步，可扩展</td></tr>
+                <tr><td>RAG / AI Agent</td><td>国产服务器＋国产加速卡＋商业支持 OS＋可替换模型/向量库</td><td>规程、工单、设备履历、经验反馈</td><td>只读建议优先，人工签批</td></tr>
+              </tbody>
+            </table>
+          </div>
+          <div class="verdict"><b>今日国产化部署结论：</b>立即开展同模型 Ascend OM / RKNN 双后端回归；同时验证 ONNX 中间层、黄金样本、精度/时延/功耗/72 小时长稳、SBOM、断网升级与回滚。业务层只依赖统一推理接口，不写死单厂 SDK；这是规避锁定并形成跨芯片交付壁垒的关键。</div>
+        </article>
+      </section>
+
+      <section id="data" class="card">
+        <div class="section-head"><div><div class="kicker">05 · DATA & DIGITAL TWIN</div><h2>五、工业数据治理与数字孪生趋势 ⭐⭐⭐⭐</h2></div><div class="rank">业务闭环</div></div>
+        <article class="item">
+          <h3>田湾冷试再次证明：数据底座必须面向控制点与证据闭环</h3>
+          <p><b>事实：</b>监管流程同时核查整改项、先决条件、安全措施、设备状态记录，并对升压、稳压、检漏和压力平台进行现场见证。</p>
+          <p><b>趋势判断：</b>核电数据治理不是“把文档放进知识库”，而是把设备编码、要求条款、版本、原始记录、异常、整改状态和授权签批放在同一可追溯上下文中。</p>
+          <p><b>产品影响：</b>优先建设资产模型、证据对象、版本/权限、规则引擎、逐句引用与审批门；Agent 先读后写，生产控制与核安全决策保持人工主导。</p>
+          <div class="source">来源：<a href="https://nnsa.mee.gov.cn/ywdt/gzdt/202608/t20260805_1163607.html" target="_blank" rel="noopener noreferrer">国家核安全局 · 田湾 8 号冷试</a></div>
+        </article>
+        <article class="item">
+          <h3>Siemens Optimize my plant 2606 强化 3D、仿真回放与决策工作流</h3>
+          <p><b>已确认事实：</b>Siemens 7 月 21 日发布 2606 更新，新增 Digital Twin Composer 集成、USD 资产生成/仿真回放、增强 API、工厂地图与分析。</p>
+          <p><b>趋势与商业化判断：</b>工业孪生正在从展示走向“3D＋实时数据＋what-if＋决策工作流”。核电可用于非安全级检修组织、人员/物流路径和设备级仿真，不可替代经鉴定的核安全分析。</p>
+          <p><b>建议能力建设：</b>差异化做轻量、私有化、国产 GPU 可部署的设备级孪生，先绑定巡检路线、工单和证据回放，不复制全厂高保真平台。</p>
+          <div class="source">来源：<a href="https://blogs.sw.siemens.com/tecnomatix/discover-whats-new-in-optimize-my-plant-2606/" target="_blank" rel="noopener noreferrer">Siemens 官方 · 2026-07-21</a></div>
+        </article>
+      </section>
+
+      <section id="competitors" class="card">
+        <div class="section-head"><div><div class="kicker">06 · COMPETITION</div><h2>六、竞争对手动态 ⭐⭐⭐⭐⭐</h2></div><div class="rank">真实动作</div></div>
+        <div class="table-wrap" tabindex="0" role="region" aria-label="竞争对手动态表">
+          <table>
+            <thead><tr><th>企业</th><th>最新动作 / 事实</th><th>竞争影响</th><th>建议策略</th></tr></thead>
+            <tbody>
+              <tr><td>中广核</td><td>太平岭一期全面商运；建设期已形成智慧工地、数字移交、外骨骼与备件数字化基础。</td><td>集团内部具备场景、数据和复制能力，外部供应商若只卖独立算法将难进入。</td><td>联合生态；提供可嵌入现有编码、移交、备件和工单体系的增量模块。</td></tr>
+              <tr><td>Siemens</td><td>Optimize my plant 2606 继续连接 3D、仿真、实时数据和分析 API。</td><td>全厂级孪生平台正加深工作流闭环，国际工业软件的集成优势增强。</td><td>差异化；聚焦私有化、国产算力和设备级巡检证据闭环，回避正面复制。</td></tr>
+              <tr><td>华为 / 瑞芯微生态</td><td>昇腾训练推理与 RKNN 全任务导出进入主流视觉框架官方链路。</td><td>底层生态更完整，算力厂商会向上侵入工具链；行业数据与验收体系仍是合作空间。</td><td>联合生态；控制黄金数据、验证、统一推理接口与现场交付，不绑定单一芯片。</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+
+      <section id="opportunities" class="card">
+        <div class="section-head"><div><div class="kicker">07 · BUSINESS</div><h2>七、商业机会 ⭐⭐⭐⭐⭐</h2></div><div class="rank">非虚构、可行动</div></div>
+        <article class="item">
+          <h3>太平岭 1、2 号机首循环巡检基线与运维证据包</h3>
+          <p><b>采购单位 / 阶段：</b>潜在客户为太平岭核电运营相关主体；当前为账户进入与方案预研，<b>未发现对应公开招标</b>。</p>
+          <p><b>机会内容：</b>生产准备数据校核、正常图像/时序基线、仪表/阀位/PPE/渗漏辅助识别、异常复核和工单闭环。</p>
+          <p><b>国产化 / 安全要求：</b>离线部署、既有系统只读集成、设备编码继承、细粒度权限、原始证据留存、人工复核。</p>
+          <p><b>匹配与等级：</b>工业视觉、边缘智能、数据治理和 AI Agent 高度匹配；机会等级 ★★★★★。</p>
+          <p><b>推荐行动：</b>建立关系＋方案预研；先从非安全级常规岛/辅助设施旁路 PoC 切入，不声称已进入采购。</p>
+        </article>
+        <article class="item">
+          <h3>田湾 8 号调试证据链与数字化移交</h3>
+          <p><b>采购单位 / 阶段：</b>潜在客户为田湾核电及调试/总包相关单位；冷试关键节点已完成，<b>未发现对应公开招标</b>。</p>
+          <p><b>机会内容：</b>试验先决条件、设备状态、移动取证、泄漏候选、整改关闭、签批审计与投运移交。</p>
+          <p><b>匹配与等级：</b>数据治理、数字孪生、现场移动应用和规则引擎高度匹配；机会等级 ★★★★。</p>
+          <p><b>推荐行动：</b>联合投标生态预研；以“证据完整率、状态一致率、复核时长、整改闭环率”定义演示，不承诺自动放行。</p>
+        </article>
+        <p class="note">截至 07:05，未发现仍在取文件期内且直接匹配核电智慧巡检、AI 视觉或数字孪生的官方公开招标。宁可少报，不把已过取件窗口或第三方聚合线索列为可投项目。</p>
+      </section>
+
+      <section id="tracking" class="card">
+        <div class="section-head"><div><div class="kicker">08 · TRACKING</div><h2>八、持续跟踪事项</h2></div><div class="rank">仅保留状态</div></div>
+        <div class="table-wrap" tabindex="0" role="region" aria-label="持续跟踪事项表">
+          <table>
+            <thead><tr><th>事项名称</th><th>当前状态</th><th>今日实质新增</th><th>下一观察节点</th></tr></thead>
+            <tbody>
+              <tr><td>秦山三期全堆芯压力管更换</td><td>环评拟审批阶段</td><td>无</td><td>正式批复、EPC/检修/NDT/载具招采</td></tr>
+              <tr><td>中广核在役检查载具平台研发框架</td><td>曾出现第 1 次变更，采购主体与窗口待登录核实</td><td>无</td><td>澄清、成交/入围或新批次公告</td></tr>
+              <tr><td>太平岭台风运行事件</td><td>事件定级 INES 0；2 号机已另行正式投产</td><td>无整改类新增</td><td>经验反馈、程序修订与整改证据</td></tr>
+              <tr><td>中广核数字科技多年框架采购</td><td>取件已结束，计划 8 月 12 日截标</td><td>无</td><td>澄清、中标与入围伙伴</td></tr>
+              <tr><td>DOE Prometheus</td><td>Phase II 拟获 3 年 6000 万美元，受拨款约束</td><td>无</td><td>拨款、工具/数据开放、现场验证</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+
+      <section id="insight" class="card">
+        <div class="section-head"><div><div class="kicker">09 · TODAY'S INSIGHT</div><h2>九、今日技术洞察</h2></div><div class="rank">未来 1—3 年</div></div>
+        <div class="qa"><div class="num">1</div><div><h3>未来 1—3 年最大的商业机会是什么？</h3><p><b>结论：</b>新投运机组与大修/延寿项目的“巡检证据闭环”。</p><p><b>依据：</b>太平岭转商运、田湾冷试和秦山换管分别形成首循环、调试、延寿三个可复制窗口。</p><p><b>动作：</b>把感知、资产上下文、规则、工单、证据和人工签批打包销售。</p></div></div>
+        <div class="qa"><div class="num">2</div><div><h3>哪些技术值得立即投入验证？</h3><p><b>结论：</b>Ascend OM / RKNN 同模型回归与 anomalib 少样本基线。</p><p><b>依据：</b>官方工具链已补齐导出、推理和训练路径，能直接降低国产适配成本。</p><p><b>动作：</b>两周完成黄金样本、精度、时延、功耗、72 小时长稳和版本回滚报告。</p></div></div>
+        <div class="qa"><div class="num">3</div><div><h3>哪些方向能形成长期壁垒？</h3><p><b>结论：</b>核电设备语义、跨工况数据资产、验证体系和可审计工作流，而非单一模型。</p><p><b>依据：</b>算力/框架正在标准化，现场编码、规程、证据、网安和验收仍高度行业化。</p><p><b>动作：</b>积累跨机组黄金集、误报成本模型、缺陷证据模板和版本化 V&amp;V。</p></div></div>
+        <div class="qa"><div class="num">4</div><div><h3>国产软硬件发展的最大帮助是什么？</h3><p><b>结论：</b>让非安全级视觉、RAG 与 Agent 在隔离网络内形成可控供应链和离线交付。</p><p><b>依据：</b>昇腾、RKNN、国产 CPU/OS 的主流框架链路持续补齐。</p><p><b>动作：</b>按边缘、厂级、终端分层，不把超节点参数误当边缘价值。</p></div></div>
+        <div class="qa"><div class="num">5</div><div><h3>公司应优先建立哪些国产化能力？</h3><p><b>结论：</b>统一模型包、双后端回归、离线运维、安全审计和工业整机认证矩阵。</p><p><b>依据：</b>真正交付风险集中在算子、精度、驱动、补丁、回滚、BOM 与长期供货。</p><p><b>动作：</b>建立 CPU×NPU×OS×框架×模型五维兼容矩阵，关键组合每季度回归。</p></div></div>
+      </section>
+
+      <section id="advice" class="card">
+        <div class="section-head"><div><div class="kicker">10 · RECOMMENDATIONS</div><h2>十、给公司的建议</h2></div><div class="rank">可执行</div></div>
+        <article class="item">
+          <h3>今日建议（不超过 3 条）</h3>
+          <p>1. 由销售与产品共同建立太平岭首循环账户图谱，48 小时内确认生产、维修、设备和信息化四类入口人。</p>
+          <p>2. 冻结一个 YOLO26n/s 黄金模型与核电样本集，本周启动 Ascend 310P/310B、RK3588/RK1828 双后端回归。</p>
+          <p>3. 把田湾冷试流程拆成“要求—状态—证据—整改—签批”演示，不让 Agent 自动放行任何安全相关步骤。</p>
+        </article>
+        <article class="item">
+          <h3>短期行动（1—3 个月）</h3>
+          <div class="mini-grid">
+            <article class="mini-card"><h3>客户与商机</h3><p>完成太平岭、田湾、秦山三类账户地图；每类形成一页价值场景、接口清单、验证指标和联合生态名单。</p></article>
+            <article class="mini-card"><h3>PoC 与适配</h3><p>交付国产双后端视觉回归、anomalib 少样本 A/B、断网 RAG 权限/引用与 Agent 工具审计四份报告。</p></article>
+            <article class="mini-card"><h3>产品打包</h3><p>形成“首循环巡检基线包”和“调试/大修证据包”，统一设备编码、原始证据、复核、工单与审计接口。</p></article>
+            <article class="mini-card"><h3>生态合作</h3><p>绑定一家工业整机厂、一家昇腾集成商和一家核电检修/NDT 伙伴，锁定 BOM、供货、网安和联合投标责任。</p></article>
+          </div>
+        </article>
+        <article class="item">
+          <h3>中长期规划（6—24 个月）</h3>
+          <p>构建“设备语义与数据底座—多模态巡检模型—可审计 Agent—国产边缘产品线”四层平台；沉淀跨机组正常/异常数据、模型 V&amp;V、离线升级和多品牌机器人接入能力。所有核安全、生产控制和高风险工单保持 AI 辅助、人机协同、人工复核、规程优先。</p>
+        </article>
+      </section>
+
+      <section id="method" class="card">
+        <div class="section-head"><div><div class="kicker">METHODOLOGY</div><h2>信息说明</h2></div></div>
+        <p class="note">信息截点：2026-08-07 07:05（Asia/Shanghai）。优先核验监管机构、企业官网、官方仓库与论文原文；事实、推断和建议分开表述。未发现高价值新增的栏目明确留空或缩短。公开性能与厂商口径不得替代核电现场 V&amp;V；未见公开招标的机会均已标注，不代表采购已启动。</p>
+      </section>
+    </div>
+
+    <aside class="card toc" aria-label="本期目录">
+      <h2>本期目录</h2>
+      <a href="#events">01 重大行业事件</a><a href="#inspection">02 智慧巡检</a><a href="#vision">03 AI 视觉</a><a href="#domestic">04 国产算力</a><a href="#data">05 数据与孪生</a><a href="#competitors">06 竞争动态</a><a href="#opportunities">07 商业机会</a><a href="#tracking">08 持续跟踪</a><a href="#insight">09 技术洞察</a><a href="#advice">10 公司建议</a><a href="#method">信息说明</a>
+    </aside>
+  </main>
+
+  <footer>核电智慧巡检与工业智能化行业日报 · 2026-08-07 · <a href="/archive/">查看历史归档</a></footer>
+</body>
+</html>

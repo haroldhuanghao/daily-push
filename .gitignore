@@ -1,7 +1,15 @@
-*.docx
-*.md
-!README.md
-每日推送_*.html
-
-.vercel
+# Local deployment state and secrets
+.vercel/
 .env*
+!.env.example
+
+# Local drafts and exported attachments
+/_drafts/
+/reports/*-v*/
+/*.docx
+/每日推送_*.html
+/每日推送_*.md
+
+# Browser QA profiles and local agent state
+/.chrome-qa-profile*/
+/.cindy/

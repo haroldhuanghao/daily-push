@@ -1,0 +1,9 @@
+{
+  "redirects": [
+    {
+      "source": "/",
+      "destination": "/reports/2026-08-09/",
+      "permanent": false
+    }
+  ]
+}

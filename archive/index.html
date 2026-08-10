@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="每日推送历史归档。">
+  <title>历史归档 · 每日推送</title>
+  <style>
+    :root { --accent: #0d6b4f; --accent-strong: #063d30; --accent-soft: #dff4eb; --page: #f4f6f2; --surface: #fff; --text: #13201c; --muted: #65736d; --border: #dfe6e1; --shadow: 0 12px 36px rgba(24, 51, 41, .08); --radius-card: 18px; --space-card: 24px; }
+    * { box-sizing: border-box; }
+    body { margin: 0; padding: 32px 16px 56px; background: var(--page); color: var(--text); font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang SC", "Microsoft YaHei", sans-serif; font-size: 15px; line-height: 1.7; overflow-wrap: anywhere; }
+    main { width: min(760px, 100%); margin: 0 auto; }
+    .card { border: 1px solid var(--border); border-radius: var(--radius-card); background: var(--surface); box-shadow: var(--shadow); }
+    .hero { position: relative; overflow: hidden; margin-bottom: 18px; padding: 32px; color: #fff; background: radial-gradient(circle at 86% 18%, var(--accent) 0, transparent 34%), linear-gradient(135deg, var(--accent-strong), var(--accent)); }
+    .eyebrow { font-size: 12px; font-weight: 800; letter-spacing: .16em; opacity: .76; }
+    h1 { margin: 8px 0 0; font-size: clamp(27px, 6vw, 38px); line-height: 1.2; }
+    .hero p { max-width: 520px; margin: 10px 0 0; color: rgba(255, 255, 255, .84); }
+    ul { list-style: none; padding: 0; margin: 0; display: grid; gap: 12px; }
+    .archive-card { padding: 20px 22px; box-shadow: 0 4px 18px rgba(24, 51, 41, .045); }
+    .archive-card:hover { border-color: var(--accent); transform: translateY(-1px); }
+    a { color: var(--accent); font-weight: 800; text-decoration-thickness: 1px; text-underline-offset: 3px; }
+    a:hover { color: var(--accent-strong); }
+    a:focus-visible { outline: 3px solid var(--accent-soft); outline-offset: 3px; border-radius: 4px; }
+    time { display: block; margin-top: 2px; color: var(--muted); font-size: 12px; }
+    .summary { margin: 8px 0 0; color: var(--muted); font-size: 14px; }
+    .empty { color: var(--muted); }
+    @media (prefers-reduced-motion: no-preference) { .archive-card { transition: transform .18s ease, border-color .18s ease; } }
+    @media (max-width: 640px) { body { padding: 20px 12px 40px; } .hero { padding: 27px 20px; } .archive-card { padding: 18px 17px; } }
+  </style>
+</head>
+<body>
+  <main>
+    <header class="card hero">
+      <div class="eyebrow">DAILY BRIEFING ARCHIVE</div>
+      <h1>每日推送 · 历史归档</h1>
+      <p>每份日报都有独立、长期有效的链接，群聊中的历史链接不会随最新日报改变。</p>
+    </header>
+    <ul id="reports" aria-live="polite"><li class="card archive-card empty">正在加载归档……</li></ul>
+    <noscript><p>请启用 JavaScript 查看完整归档。</p></noscript>
+  </main>
+  <script>
+    fetch('/reports/index.json', { cache: 'no-store' })
+      .then(function (response) { if (!response.ok) throw new Error('load failed'); return response.json(); })
+      .then(function (data) {
+        var list = document.getElementById('reports');
+        list.textContent = '';
+        data.reports.forEach(function (report) {
+          var item = document.createElement('li');
+          var link = document.createElement('a');
+          var date = document.createElement('time');
+          var summary = document.createElement('p');
+          item.className = 'card archive-card';
+          link.href = report.path;
+          link.textContent = report.title;
+          date.dateTime = report.date;
+          date.textContent = report.date;
+          summary.className = 'summary';
+          summary.textContent = report.summary;
+          item.append(link, date, summary);
+          list.appendChild(item);
+        });
+      })
+      .catch(function () { document.getElementById('reports').innerHTML = '<li class="card archive-card empty">归档暂时无法加载，请稍后重试。</li>'; });
+  </script>
+</body>
+</html>

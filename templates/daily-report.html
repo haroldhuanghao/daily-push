@@ -1,0 +1,213 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="{{SUMMARY}}">
+  <meta property="og:title" content="核电智慧巡检与工业智能化行业日报 · {{DATE}}">
+  <meta property="og:description" content="{{SUMMARY}}">
+  <meta property="og:type" content="article">
+  <meta property="og:url" content="https://daily.851473.xyz/reports/{{DATE}}/">
+  <meta property="og:image" content="https://daily.851473.xyz/reports/{{DATE}}/cover.png">
+  <meta name="report-contract" content="nuclear-daily-v2">
+  <link rel="canonical" href="https://daily.851473.xyz/reports/{{DATE}}/">
+  <title>核电智慧巡检与工业智能化行业日报 · {{DATE}}</title>
+  <style>
+    :root {
+      --accent: #0d6b4f;
+      --accent-strong: #063d30;
+      --accent-soft: #dff4eb;
+      --page: #f4f6f2;
+      --surface: #ffffff;
+      --text: #13201c;
+      --muted: #65736d;
+      --border: #dfe6e1;
+      --shadow: 0 12px 36px rgba(24, 51, 41, .08);
+      --radius-card: 18px;
+      --space-card: 24px;
+    }
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body { margin: 0; background: var(--page); color: var(--text); font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang SC", "Microsoft YaHei", sans-serif; font-size: 15px; line-height: 1.7; overflow-wrap: anywhere; }
+    img { max-width: 100%; height: auto; }
+    a { color: var(--accent); text-decoration-thickness: 1px; text-underline-offset: 3px; }
+    a:hover { color: var(--accent-strong); }
+    a:focus-visible { outline: 3px solid var(--accent-soft); outline-offset: 3px; border-radius: 4px; }
+    .wrap { width: min(1120px, calc(100% - 32px)); margin-inline: auto; }
+    .hero { padding: 52px 0 46px; color: #fff; background: radial-gradient(circle at 82% 18%, var(--accent) 0, transparent 30%), linear-gradient(135deg, var(--accent-strong), var(--accent)); border-bottom: 4px solid var(--accent-soft); }
+    .eyebrow { color: rgba(255, 255, 255, .78); font-size: 12px; font-weight: 800; letter-spacing: .16em; text-transform: uppercase; }
+    .hero h1 { max-width: 880px; margin: 10px 0 14px; font-size: clamp(30px, 5vw, 54px); line-height: 1.14; text-wrap: balance; }
+    .hero .lead { max-width: 820px; margin: 0; color: rgba(255, 255, 255, .86); font-size: clamp(15px, 2vw, 17px); }
+    .meta { display: flex; flex-wrap: wrap; gap: 9px; margin-top: 22px; }
+    .pill { padding: 6px 11px; border: 1px solid rgba(255, 255, 255, .28); border-radius: 999px; background: rgba(255, 255, 255, .09); font-size: 12px; }
+    .summary { position: relative; margin-top: -24px; }
+    .summary-grid { display: grid; grid-template-columns: 1.4fr repeat(2, minmax(0, 1fr)); gap: 12px; }
+    .card { padding: var(--space-card); border: 1px solid var(--border); border-radius: var(--radius-card); background: var(--surface); box-shadow: var(--shadow); }
+    .summary-card { min-width: 0; padding: 20px; }
+    .summary-card.primary { background: var(--accent-soft); border-color: var(--accent); }
+    .summary-card b { display: block; margin-bottom: 5px; color: var(--accent-strong); font-size: 13px; }
+    .summary-card strong { display: block; color: var(--accent); font-size: clamp(20px, 3vw, 26px); line-height: 1.25; }
+    .summary-card p { margin: 6px 0 0; color: var(--muted); font-size: 13px; }
+    main { padding: 34px 0 56px; }
+    .layout { display: grid; grid-template-columns: minmax(0, 1fr) 250px; gap: 24px; align-items: start; }
+    .content { min-width: 0; }
+    .content > .card { margin-bottom: 18px; }
+    .toc { position: sticky; top: 16px; padding: 18px; box-shadow: 0 4px 18px rgba(24, 51, 41, .05); }
+    .toc h2 { margin: 0 0 10px; color: var(--muted); font-size: 12px; letter-spacing: .12em; }
+    .toc a { display: block; padding: 6px 0; color: var(--muted); font-size: 13px; text-decoration: none; }
+    .toc a:hover { color: var(--accent); }
+    .section-head { display: flex; align-items: flex-start; justify-content: space-between; gap: 14px; margin-bottom: 6px; padding-bottom: 14px; border-bottom: 1px solid var(--border); }
+    .section-head h2 { margin: 0; color: var(--accent-strong); font-size: clamp(19px, 3vw, 23px); line-height: 1.35; }
+    .kicker { margin-bottom: 4px; color: var(--accent); font-size: 12px; font-weight: 800; letter-spacing: .08em; }
+    .rank { color: var(--muted); font-size: 12px; white-space: nowrap; }
+    .item { padding: 19px 0; border-bottom: 1px dashed var(--border); }
+    .item:last-child { padding-bottom: 2px; border-bottom: 0; }
+    .item h3 { margin: 0 0 8px; font-size: 18px; line-height: 1.45; text-wrap: pretty; }
+    .item p { margin: 7px 0; color: var(--muted); font-size: 14px; }
+    .tags { display: flex; flex-wrap: wrap; gap: 7px; margin: 9px 0; }
+    .tag { padding: 3px 8px; border-radius: 999px; background: var(--accent-soft); color: var(--accent-strong); font-size: 11px; font-weight: 800; }
+    .tag.warn { background: #fff0d8; color: #8a5a10; }
+    .tag.risk { background: #fae5e1; color: #a7332c; }
+    .verdict { margin-top: 12px; padding: 12px 14px; border-left: 3px solid var(--accent); border-radius: 0 10px 10px 0; background: var(--accent-soft); font-size: 14px; }
+    .source { margin-top: 10px; color: var(--muted); font-size: 12px; }
+    .source a { margin-right: 10px; }
+    .mini-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 12px; margin-top: 16px; }
+    .mini-card { padding: 16px; border: 1px solid var(--border); border-radius: 14px; background: var(--page); }
+    .mini-card h3 { margin: 0 0 7px; font-size: 16px; }
+    .mini-card p { margin: 6px 0; color: var(--muted); font-size: 13px; }
+    .table-wrap { max-width: 100%; margin-top: 14px; overflow-x: auto; border-radius: 12px; }
+    .table-wrap:focus-visible { outline: 3px solid var(--accent-soft); outline-offset: 2px; }
+    table { width: 100%; min-width: 620px; border-collapse: collapse; font-size: 13px; }
+    th, td { padding: 11px 10px; border-bottom: 1px solid var(--border); text-align: left; vertical-align: top; }
+    th { background: var(--accent-soft); color: var(--accent-strong); }
+    .note { margin-top: 15px; padding: 11px 13px; border-radius: 10px; background: var(--page); color: var(--muted); font-size: 12px; }
+    footer { padding: 0 16px 32px; color: var(--muted); text-align: center; font-size: 12px; }
+    @media (max-width: 900px) {
+      .summary-grid { grid-template-columns: 1fr 1fr; }
+      .summary-card.primary { grid-column: 1 / -1; }
+      .layout { grid-template-columns: 1fr; }
+      .toc { position: static; display: none; }
+    }
+    @media (max-width: 640px) {
+      .wrap { width: min(100% - 24px, 1120px); }
+      .hero { padding: 40px 0 38px; }
+      .summary-grid, .mini-grid { grid-template-columns: 1fr; }
+      .summary-card.primary { grid-column: auto; }
+      .card { padding: 19px 17px; }
+      .section-head { display: block; }
+      .rank { display: block; margin-top: 6px; white-space: normal; }
+    }
+  </style>
+</head>
+<body>
+  <header class="hero">
+    <div class="wrap">
+      <div class="eyebrow">DAILY BRIEFING</div>
+      <h1>核电智慧巡检与工业智能化行业日报</h1>
+      <p class="lead">{{SUMMARY}}</p>
+      <div class="meta"><span class="pill">{{DATE_CN}} · {{WEEKDAY}}</span><span class="pill">Asia/Shanghai</span></div>
+    </div>
+  </header>
+
+  <div class="wrap summary" aria-label="今日摘要">
+    <div class="summary-grid">
+      <section class="card summary-card primary"><b>今日一句话结论</b><strong>在 50 字内写明最重要变化及当天行动</strong><p>必须服务于公司战略、产品路线或真实商机。</p></section>
+      <section class="card summary-card"><b>今日新增</b><strong>已证实信号</strong><p>只保留相较前次报道的实质进展。</p></section>
+      <section class="card summary-card"><b>建议动作</b><strong>立即执行</strong><p>写出责任明确、可验证的下一步。</p></section>
+    </div>
+  </div>
+
+  <main class="wrap layout">
+    <div class="content">
+      <section id="industry" class="card">
+        <div class="section-head"><div><div class="kicker">01 · INDUSTRY</div><h2>一、今日重大行业事件</h2></div><div class="rank">最多 3–5 条</div></div>
+        <article class="item">
+          <h3>在这里填写准确、具体的标题</h3>
+          <div class="tags"><span class="tag">关联方向</span><span class="tag warn">影响等级</span></div>
+          <p><b>已确认事实：</b>只写可由来源核验的内容与发布日期。</p>
+          <div class="verdict"><b>判断：</b>说明对核电智能化、公司战略或交付的具体影响。</div>
+          <p><b>建议行动：</b>写出可执行的跟进动作。</p>
+          <div class="source">来源：<a href="https://example.com/" rel="noopener noreferrer">来源名称</a></div>
+        </article>
+      </section>
+
+      <section id="inspection" class="card">
+        <div class="section-head"><div><div class="kicker">02 · INSPECTION</div><h2>二、智慧巡检最新动态</h2></div><div class="rank">最多 3 条</div></div>
+        <article class="item"><h3>项目 / 场景</h3><p><b>采购方与当前阶段：</b>概念、试点、已上线或规模化推广。</p><p><b>技术与市场价值：</b>说明技术方案、进入机会和推荐切入方式。</p><div class="verdict"><b>建议行动：</b>算法、平台、硬件、集成、运维服务或联合投标。</div></article>
+      </section>
+
+      <section id="ai" class="card">
+        <div class="section-head"><div><div class="kicker">03 · AI</div><h2>三、AI 视觉与多模态技术进展</h2></div><div class="rank">最多 2–3 条</div></div>
+        <article class="item"><h3>技术 / 论文 / 模型</h3><p><b>核心能力与核电场景：</b>说明应用价值、适用性和原因。</p><p><b>工程化限制：</b>数据、误漏报、现场环境、算力功耗、网络隔离、可解释性和审查要求。</p><div class="verdict"><b>跟进建议：</b>立即验证、持续跟踪或暂不投入，并说明产品化路径。</div></article>
+      </section>
+
+      <section id="domestic" class="card">
+        <div class="section-head"><div><div class="kicker">04 · DOMESTIC STACK</div><h2>四、国产硬件与边缘智能专项</h2></div><div class="rank">最多 3–5 条</div></div>
+        <div class="mini-grid">
+          <article class="mini-card"><h3>4.1 国产 CPU 与服务器</h3><p>最新动作、部署层级、适配风险与优先级。</p></article>
+          <article class="mini-card"><h3>4.2 国产 GPU / NPU 与 AI 加速</h3><p>视觉、RAG、Agent 的适配价值与限制。</p></article>
+          <article class="mini-card"><h3>4.3 国产边缘算力设备</h3><p>可靠性、离线部署、视频接入与运维能力。</p></article>
+          <article class="mini-card"><h3>4.4 国产操作系统与基础软件</h3><p>中心平台、边缘服务器、机器人和工控终端适配。</p></article>
+        </div>
+        <article class="item"><h3>4.5 对智慧核电的部署建议</h3><p><b>今日国产化部署结论：</b>给出视觉边缘推理、厂级 AI 平台、RAG / AI Agent 的推荐组合，并列出立即 PoC 与关键锁定风险。</p><div class="verdict"><b>适配结论：</b>主力方案、备选方案、PoC 后采用或暂不进入生产环境。</div></article>
+      </section>
+
+      <section id="data" class="card">
+        <div class="section-head"><div><div class="kicker">05 · DATA &amp; TWIN</div><h2>五、工业数据治理与数字孪生趋势</h2></div></div>
+        <article class="item"><h3>事件 / 趋势</h3><p><b>已落地证据：</b>说明数据底座、知识库、规则引擎、AI Agent、数字孪生或应用集成的真实进展。</p><div class="verdict"><b>建议行动：</b>写出产品能力建设与商业化判断。</div></article>
+      </section>
+
+      <section id="competitors" class="card">
+        <div class="section-head"><div><div class="kicker">06 · COMPETITORS</div><h2>六、竞争对手动态</h2></div><div class="rank">最多 3 条</div></div>
+        <article class="item"><h3>企业 / 最新动作</h3><p><b>已确认事实：</b>产品发布、中标、合作、招聘、专利或国产化适配布局。</p><div class="verdict"><b>建议策略：</b>跟进、差异化、联合生态或回避竞争。</div></article>
+      </section>
+
+      <section id="opportunities" class="card">
+        <div class="section-head"><div><div class="kicker">07 · OPPORTUNITIES</div><h2>七、商业机会</h2></div><div class="rank">优先 1–5 个</div></div>
+        <article class="item"><h3>项目名称 / 采购单位</h3><p><b>机会内容：</b>公告链接、发布日期、招标阶段、需求与技术要求。</p><p><b>匹配判断：</b>国产化、边缘部署、网络安全或数据隔离的匹配点与机会等级。</p><div class="verdict"><b>推荐行动：</b>建立关系、联合投标、方案预研或暂不投入。</div></article>
+      </section>
+
+      <section id="tracking" class="card">
+        <div class="section-head"><div><div class="kicker">08 · TRACKING</div><h2>八、持续跟踪事项</h2></div></div>
+        <div class="table-wrap" tabindex="0"><table><thead><tr><th>事项名称</th><th>当前状态</th><th>今日是否有实质新增</th><th>下一观察节点</th></tr></thead><tbody><tr><td>填写此前已报道事项</td><td>当前状态</td><td>有 / 无</td><td>明确的审批、采购、上线或实测节点</td></tr></tbody></table></div>
+      </section>
+
+      <section id="insights" class="card">
+        <div class="section-head"><div><div class="kicker">09 · INSIGHT</div><h2>九、今日技术洞察</h2></div></div>
+        <article class="item"><h3>一至三年商业机会、验证重点与长期壁垒</h3><p><b>结论：</b>回答最大商业机会、立即验证技术、长期壁垒、国产化价值与优先建设的适配能力。</p><p><b>依据：</b>引用本期可验证事实，不把推断写成事实。</p><div class="verdict"><b>建议动作：</b>明确团队、PoC 或产品化下一步。</div></article>
+      </section>
+
+      <section id="actions" class="card">
+        <div class="section-head"><div><div class="kicker">10 · ACTION</div><h2>十、给公司的建议</h2></div></div>
+        <div class="mini-grid">
+          <article class="mini-card"><h3>今日建议（不超过 3 条）</h3><p>客户验证、商机跟进、PoC、生态合作、国产化适配、模型验证或产品打包。</p></article>
+          <article class="mini-card"><h3>短期行动（1–3 个月）</h3><p>明确负责人、里程碑和验证标准。</p></article>
+          <article class="mini-card"><h3>中长期规划（6–24 个月）</h3><p>平台化、数据资产、多模态行业模型、AI Agent、兼容矩阵、边缘产品线和可复制方案。</p></article>
+        </div>
+      </section>
+
+      <section id="method" class="card">
+        <div class="section-head"><div><div class="kicker">METHODOLOGY</div><h2>信息说明</h2></div></div>
+        <p class="note">说明信息截点、来源选择和不确定性。</p>
+      </section>
+    </div>
+
+    <aside class="card toc" aria-label="本期目录">
+      <h2>本期目录</h2>
+      <a href="#industry">01 重大行业事件</a>
+      <a href="#inspection">02 智慧巡检</a>
+      <a href="#ai">03 AI 视觉与多模态</a>
+      <a href="#domestic">04 国产硬件与边缘智能</a>
+      <a href="#data">05 数据治理与数字孪生</a>
+      <a href="#competitors">06 竞争对手</a>
+      <a href="#opportunities">07 商业机会</a>
+      <a href="#tracking">08 持续跟踪</a>
+      <a href="#insights">09 技术洞察</a>
+      <a href="#actions">10 公司建议</a>
+      <a href="#method">信息说明</a>
+    </aside>
+  </main>
+
+  <footer>每日推送 · {{DATE}} · <a href="/archive/">查看历史归档</a></footer>
+</body>
+</html>

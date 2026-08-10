@@ -1,0 +1,12 @@
+.git
+.vercel
+.cindy
+.env*
+reports/*-v*/
+scripts
+templates
+*.docx
+每日推送_*.html
+每日推送_*.md
+AGENTS.md
+README.md
