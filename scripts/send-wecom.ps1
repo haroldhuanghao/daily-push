@@ -11,6 +11,21 @@ param(
 )
 
 $ErrorActionPreference = 'Stop'
+
+# PowerShell does not load .env.local automatically. Respect an explicit parameter
+# or process environment variable first, then use the git-ignored local file.
+if ([string]::IsNullOrWhiteSpace($WebhookUrl)) {
+    $localEnvPath = Join-Path (Split-Path -Parent $PSScriptRoot) '.env.local'
+    if (Test-Path -LiteralPath $localEnvPath) {
+        foreach ($line in [IO.File]::ReadAllLines($localEnvPath, [Text.Encoding]::UTF8)) {
+            if ($line -match '^\s*WECOM_WEBHOOK_URL\s*=\s*(.+?)\s*$') {
+                $WebhookUrl = $matches[1].Trim().Trim('"').Trim("'")
+                break
+            }
+        }
+    }
+}
+
 if ([string]::IsNullOrWhiteSpace($WebhookUrl)) {
     throw 'WECOM_WEBHOOK_URL is not configured.'
 }
