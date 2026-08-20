@@ -1,0 +1,221 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="今日无高价值项目新增；Ultralytics 深度数据兼容回摆，应冻结数据契约并把应急监测培训转为可考核证据包。">
+  <meta property="og:title" content="核电智慧巡检与工业智能化行业日报 · 2026-08-20">
+  <meta property="og:description" content="今日无高价值项目新增；Ultralytics 深度数据兼容回摆，应冻结数据契约并把应急监测培训转为可考核证据包。">
+  <meta property="og:type" content="article">
+  <meta property="og:url" content="https://daily.851473.xyz/reports/2026-08-20/">
+  <meta property="og:image" content="https://daily.851473.xyz/reports/2026-08-20/cover.png">
+  <meta name="report-contract" content="nuclear-daily-v2">
+  <link rel="canonical" href="https://daily.851473.xyz/reports/2026-08-20/">
+  <title>核电智慧巡检与工业智能化行业日报 · 2026-08-20</title>
+  <style>
+    :root {
+      --accent: #087ea4;
+      --accent-strong: #073657;
+      --accent-soft: #dff3fa;
+      --page: #f3f7f9;
+      --surface: #ffffff;
+      --text: #14242e;
+      --muted: #61717b;
+      --border: #dbe6eb;
+      --shadow: 0 12px 36px rgba(15, 55, 78, .08);
+      --radius-card: 18px;
+      --space-card: 24px;
+    }
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body { margin: 0; background: var(--page); color: var(--text); font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang SC", "Microsoft YaHei", sans-serif; font-size: 15px; line-height: 1.7; overflow-wrap: anywhere; }
+    img { max-width: 100%; height: auto; }
+    a { color: var(--accent); text-decoration-thickness: 1px; text-underline-offset: 3px; }
+    a:hover { color: var(--accent-strong); }
+    a:focus-visible { outline: 3px solid var(--accent-soft); outline-offset: 3px; border-radius: 4px; }
+    .wrap { width: min(1120px, calc(100% - 32px)); margin-inline: auto; }
+    .hero { padding: 52px 0 46px; color: #fff; background: radial-gradient(circle at 82% 18%, var(--accent) 0, transparent 30%), linear-gradient(135deg, var(--accent-strong), var(--accent)); border-bottom: 4px solid var(--accent-soft); }
+    .eyebrow { color: rgba(255, 255, 255, .78); font-size: 12px; font-weight: 800; letter-spacing: .16em; text-transform: uppercase; }
+    .hero h1 { max-width: 880px; margin: 10px 0 14px; font-size: clamp(30px, 5vw, 54px); line-height: 1.14; text-wrap: balance; }
+    .hero .lead { max-width: 820px; margin: 0; color: rgba(255, 255, 255, .86); font-size: clamp(15px, 2vw, 17px); }
+    .meta { display: flex; flex-wrap: wrap; gap: 9px; margin-top: 22px; }
+    .pill { padding: 6px 11px; border: 1px solid rgba(255, 255, 255, .28); border-radius: 999px; background: rgba(255, 255, 255, .09); font-size: 12px; }
+    .summary { position: relative; margin-top: -24px; }
+    .summary-grid { display: grid; grid-template-columns: 1.4fr repeat(2, minmax(0, 1fr)); gap: 12px; }
+    .card { padding: var(--space-card); border: 1px solid var(--border); border-radius: var(--radius-card); background: var(--surface); box-shadow: var(--shadow); }
+    .summary-card { min-width: 0; padding: 20px; }
+    .summary-card.primary { background: var(--accent-soft); border-color: var(--accent); }
+    .summary-card b { display: block; margin-bottom: 5px; color: var(--accent-strong); font-size: 13px; }
+    .summary-card strong { display: block; color: var(--accent); font-size: clamp(20px, 3vw, 26px); line-height: 1.25; }
+    .summary-card p { margin: 6px 0 0; color: var(--muted); font-size: 13px; }
+    main { padding: 34px 0 56px; }
+    .layout { display: grid; grid-template-columns: minmax(0, 1fr) 250px; gap: 24px; align-items: start; }
+    .content { min-width: 0; }
+    .content > .card { margin-bottom: 18px; }
+    .toc { position: sticky; top: 16px; padding: 18px; box-shadow: 0 4px 18px rgba(24, 51, 41, .05); }
+    .toc h2 { margin: 0 0 10px; color: var(--muted); font-size: 12px; letter-spacing: .12em; }
+    .toc a { display: block; padding: 6px 0; color: var(--muted); font-size: 13px; text-decoration: none; }
+    .toc a:hover { color: var(--accent); }
+    .section-head { display: flex; align-items: flex-start; justify-content: space-between; gap: 14px; margin-bottom: 6px; padding-bottom: 14px; border-bottom: 1px solid var(--border); }
+    .section-head h2 { margin: 0; color: var(--accent-strong); font-size: clamp(19px, 3vw, 23px); line-height: 1.35; }
+    .kicker { margin-bottom: 4px; color: var(--accent); font-size: 12px; font-weight: 800; letter-spacing: .08em; }
+    .rank { color: var(--muted); font-size: 12px; white-space: nowrap; }
+    .item { padding: 19px 0; border-bottom: 1px dashed var(--border); }
+    .item:last-child { padding-bottom: 2px; border-bottom: 0; }
+    .item h3 { margin: 0 0 8px; font-size: 18px; line-height: 1.45; text-wrap: pretty; }
+    .item p { margin: 7px 0; color: var(--muted); font-size: 14px; }
+    .tags { display: flex; flex-wrap: wrap; gap: 7px; margin: 9px 0; }
+    .tag { padding: 3px 8px; border-radius: 999px; background: var(--accent-soft); color: var(--accent-strong); font-size: 11px; font-weight: 800; }
+    .tag.warn { background: #fff0d8; color: #8a5a10; }
+    .tag.risk { background: #fae5e1; color: #a7332c; }
+    .verdict { margin-top: 12px; padding: 12px 14px; border-left: 3px solid var(--accent); border-radius: 0 10px 10px 0; background: var(--accent-soft); font-size: 14px; }
+    .source { margin-top: 10px; color: var(--muted); font-size: 12px; }
+    .source a { margin-right: 10px; }
+    .mini-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 12px; margin-top: 16px; }
+    .mini-card { padding: 16px; border: 1px solid var(--border); border-radius: 14px; background: var(--page); }
+    .mini-card h3 { margin: 0 0 7px; font-size: 16px; }
+    .mini-card p { margin: 6px 0; color: var(--muted); font-size: 13px; }
+    .table-wrap { max-width: 100%; margin-top: 14px; overflow-x: auto; border-radius: 12px; }
+    .table-wrap:focus-visible { outline: 3px solid var(--accent-soft); outline-offset: 2px; }
+    table { width: 100%; min-width: 620px; border-collapse: collapse; font-size: 13px; }
+    th, td { padding: 11px 10px; border-bottom: 1px solid var(--border); text-align: left; vertical-align: top; }
+    th { background: var(--accent-soft); color: var(--accent-strong); }
+    .note { margin-top: 15px; padding: 11px 13px; border-radius: 10px; background: var(--page); color: var(--muted); font-size: 12px; }
+    footer { padding: 0 16px 32px; color: var(--muted); text-align: center; font-size: 12px; }
+    @media (max-width: 900px) {
+      .summary-grid { grid-template-columns: 1fr 1fr; }
+      .summary-card.primary { grid-column: 1 / -1; }
+      .layout { grid-template-columns: 1fr; }
+      .toc { position: static; display: none; }
+    }
+    @media (max-width: 640px) {
+      .wrap { width: min(100% - 24px, 1120px); }
+      .hero { padding: 40px 0 38px; }
+      .summary-grid, .mini-grid { grid-template-columns: 1fr; }
+      .summary-card.primary { grid-column: auto; }
+      .card { padding: 19px 17px; }
+      .section-head { display: block; }
+      .rank { display: block; margin-top: 6px; white-space: normal; }
+    }
+  </style>
+</head>
+<body>
+  <header class="hero">
+    <div class="wrap">
+      <div class="eyebrow">DAILY BRIEFING</div>
+      <h1>核电智慧巡检与工业智能化行业日报</h1>
+      <p class="lead">今日无高价值项目新增；Ultralytics 深度数据兼容回摆，应冻结数据契约并把应急监测培训转为可考核证据包。</p>
+      <div class="meta"><span class="pill">2026年8月20日 · 星期四</span><span class="pill">Asia/Shanghai</span></div>
+    </div>
+  </header>
+
+  <div class="wrap summary" aria-label="今日摘要">
+    <div class="summary-grid">
+      <section class="card summary-card primary"><b>今日一句话结论</b><strong>无高价值项目新增：冻结深度数据契约，补齐应急监测证据包</strong><p>不追逐版本号；先把数据单位、校准、无效值与人工复核变成验收项。</p></section>
+      <section class="card summary-card"><b>今日新增</b><strong>2 条中等强度信号</strong><p>深度数据兼容更新；应急监测与 INES 培训。</p></section>
+      <section class="card summary-card"><b>建议动作</b><strong>回归＋演练</strong><p>今天冻结契约，本周跑迁移测试和一次桌面演练。</p></section>
+    </div>
+  </div>
+
+  <main class="wrap layout">
+    <div class="content">
+      <section id="industry" class="card">
+        <div class="section-head"><div><div class="kicker">01 · INDUSTRY</div><h2>一、今日重大行业事件</h2></div><div class="rank">无项目级强新增</div></div>
+        <article class="item">
+          <h3>浙江辐射环境监测培训把应急规范、放射源搜寻和实操考核放在同一闭环</h3>
+          <div class="tags"><span class="tag">辐射监测</span><span class="tag">实操考核</span><span class="tag warn">非采购公告</span></div>
+          <p><b>已确认事实：</b>国家核安全局 8 月 19 日发布消息：浙江省辐射环境监测站以线上＋线下方式培训 11 个地市人员，线下 48 人、线上约 80 人；课程包括水中钍放化分析、辐射事故应急监测技术规范、放射源搜寻和操作演示，线下学员参加考核。公告未披露数字化项目、采购预算、产品上线或核电厂应用。</p>
+          <div class="verdict"><b>判断：</b>新增信号不是设备采购，而是能力验收口径：监测平台若只汇聚数据、不能把任务、人员资质、仪器校准、操作步骤、原始记录和复核签批串成证据链，很难支撑应急演练和质量审查。</div>
+          <p><b>建议行动：</b>本周用“放射源搜寻＋水样分析”做一份数字作业包样例；AI 仅做读数辅助、记录检查和材料检索，结果解释、事件判断与处置继续由授权人员按规程复核。</p>
+          <div class="source">来源：<a href="https://nnsa.mee.gov.cn/ywdt/gzdt/202608/t20260819_1164260.html" rel="noopener noreferrer">国家核安全局，2026-08-19</a></div>
+        </article>
+        <article class="item">
+          <h3>IAEA 安排 2026 版 INES 手册培训，事件数据产品须保留人工定级边界</h3>
+          <div class="tags"><span class="tag">INES 2026</span><span class="tag">事件沟通</span><span class="tag risk">不得自动定级</span></div>
+          <p><b>已确认事实：</b>IAEA 事件资料列明 8 月 17—19 日举行面向国家培训官员的线上研讨，目标是按 2026 版《国际核与放射事件分级表（INES）用户手册》更新分级方法知识，并收集手册使用反馈。资料说明的是培训安排，不是新的核电项目、软件认证或自动定级授权。</p>
+          <div class="verdict"><b>判断：</b>对工业数据与 Agent 产品的直接约束是“先组织事实、再由授权角色判断”：系统可生成时间线、证据索引和待核对清单，但不能依据告警数量或模型置信度自动给出 INES 等级。</div>
+          <p><b>建议行动：</b>把“事件事实字段—证据来源—适用条款—人工意见—批准记录”做成只读模板；待取得正式 2026 手册及客户适用程序后再更新规则库。</p>
+          <div class="source">来源：<a href="https://nucleus.iaea.org/sites/committees/EPReSC%20Documents/E3.5%20INES%20manual%20and%20its%20implementation%20plan1.pdf" rel="noopener noreferrer">IAEA EVT2504905 会议资料</a></div>
+        </article>
+      </section>
+
+      <section id="inspection" class="card">
+        <div class="section-head"><div><div class="kicker">02 · INSPECTION</div><h2>二、智慧巡检最新动态</h2></div><div class="rank">无新项目，转化 1 个验证场景</div></div>
+        <article class="item"><h3>应急监测数字作业包：先验证证据完整性，不包装成核电商机</h3><p><b>采购方与当前阶段：</b>公开主体是浙江省辐射环境监测站，当前为能力培训和考核，不是核电业主的招标、试点或上线；预算、责任部门和采购路径均未知。</p><p><b>技术与市场价值：</b>可验证移动终端离线任务、仪器与人员绑定、样品链路、时间戳、照片/视频、原始谱图、异常说明、复核签名与报告归档。最适合做非安全级作业辅助和演练复盘，不替代监测仪器、法定记录或专业判断。</p><p><b>工程限制：</b>需覆盖受控区域网络隔离、掉电/弱网、可信时间、仪器校准、样品身份、证据防篡改、误填漏填、权限分离和离线恢复；生成式 AI 不得改写原始数据或自动下达应急处置。</p><div class="verdict"><b>建议行动：</b>产品团队一周内做最小演示，验收标准不是“能问答”，而是一次任务可完整导出原始证据、版本、人员操作、复核与审批链。</div><div class="source">来源：<a href="https://nnsa.mee.gov.cn/ywdt/gzdt/202608/t20260819_1164260.html" rel="noopener noreferrer">国家核安全局，2026-08-19</a></div></article>
+      </section>
+
+      <section id="ai" class="card">
+        <div class="section-head"><div><div class="kicker">03 · AI</div><h2>三、AI 视觉与多模态技术进展</h2></div><div class="rank">1 条数据管线更新</div></div>
+        <article class="item"><h3>Ultralytics 8.4.123 恢复标准深度图兼容，重点是数据契约而非模型精度</h3><div class="tags"><span class="tag">深度估计</span><span class="tag">RGB-D 数据</span><span class="tag warn">须迁移回归</span></div><p><b>已确认事实：</b>Ultralytics 8 月 19 日先发布 v8.4.122，将深度目标统一到带元数据的 16 位 PNG 并移除 NPY；约四小时后发布 v8.4.123，改为接受普通 16 位灰度 PNG 和米制浮点 NPY，增加数据集级 <code>depth_scale</code>（默认 1000），支持同名配对、同宽高比的不同分辨率，并处理零值、NaN 与无穷值。两次发布都未给出核电数据、国产 NPU 实测或模型精度提升结论。</p><p><b>核电应用价值：</b>有条件适合机器人通行性、障碍距离筛查、设备空间特征和多传感器巡检数据准备；可减少自定义转换脚本，但不能把单目估计或未标定深度图用于尺寸验收、间隙测量、安全保护或自动控制。</p><p><b>工程化限制：</b><code>depth_scale</code> 配错会造成量纲级错误；同宽高比不代表 RGB 与深度像素已经配准。必须验证单位、无效值、分辨率、内外参、时间同步、传感器范围、PNG 精度、NPY dtype、增强一致性、离线依赖、导出后端与回滚。上游两次同日改动也说明版本锁定不可省略。</p><div class="verdict"><b>跟进建议：立即验证数据管线，暂不升级生产。</b>冻结 v8.4.123，在 30—50 组已知距离样本上做 PNG/NPY 双格式等价、毫米/米比例、零值/NaN、跨分辨率配准和旧数据迁移测试；随后再在 CPU、昇腾及端侧 NPU 路线分别验证导出、时延、功耗与 72 小时长稳。</div><div class="source">来源：<a href="https://github.com/ultralytics/ultralytics/releases/tag/v8.4.122" rel="noopener noreferrer">Ultralytics v8.4.122</a><a href="https://github.com/ultralytics/ultralytics/releases/tag/v8.4.123" rel="noopener noreferrer">Ultralytics v8.4.123</a><a href="https://docs.ultralytics.com/datasets/depth/" rel="noopener noreferrer">官方深度数据文档</a></div></article>
+      </section>
+
+      <section id="domestic" class="card">
+        <div class="section-head"><div><div class="kicker">04 · DOMESTIC STACK</div><h2>四、国产硬件与边缘智能专项</h2></div><div class="rank">今日无强新增</div></div>
+        <div class="mini-grid">
+          <article class="mini-card"><h3>4.1 国产 CPU 与服务器</h3><p><b>最新动态：</b>未核验到鲲鹏、海光、飞腾、龙芯或申威面向核电智慧巡检的新订单、产品或现场实测。<br><b>结论：</b>鲲鹏/openEuler 作为厂级主力，海光/银河麒麟作为备选；容器镜像、数据库扩展和第三方 SDK 均须 PoC 后采用。</p></article>
+          <article class="mini-card"><h3>4.2 国产 GPU / NPU 与 AI 加速</h3><p><b>最新动态：</b>Ultralytics 的数据格式兼容不构成昇腾或端侧国产 NPU 的能力证明。<br><b>结论：</b>昇腾作为中心推理主线，端侧 NPU 与 CPU 参考后端作为双备选；同一深度数据契约通过后再采用。</p></article>
+          <article class="mini-card"><h3>4.3 国产边缘算力设备</h3><p><b>最新动态：</b>今日无核电场景新增长稳数据。<br><b>结论：</b>边缘盒先承担确定性采集、缓存、规则和轻量视觉；必须验证双网隔离、离线续传、可信时间、掉电恢复、宽温与签名回滚，未通过故障注入暂不进生产。</p></article>
+          <article class="mini-card"><h3>4.4 国产操作系统与基础软件</h3><p><b>最新动态：</b>未见直接影响本业务交付的新版本或认证。<br><b>结论：</b>openEuler 为工程主线、银河麒麟为客户指定备选；固定内核、驱动、容器运行时、数据库和安全补丁基线，PoC 后采用。</p></article>
+        </div>
+        <article class="item"><h3>4.5 对智慧核电的部署建议</h3><p><b>今日国产化部署结论：</b>边缘侧固定数据采集、校准、格式转换、缓存和轻量推理；厂级侧承载资产语义、模型服务、只读 RAG/Agent、证据索引与审计。安全级系统和生产控制继续与 AI 平台隔离，不因上游数据格式更新改变架构。</p><div class="verdict"><b>适配结论：</b>主力：鲲鹏/openEuler＋昇腾；备选：海光/银河麒麟＋CPU 或第二国产 NPU。立即 PoC：同一 PNG/NPY 黄金集在三后端验证数值一致性、时延、功耗、离线安装、72 小时长稳和回滚；全部 PoC 后采用。</div></article>
+      </section>
+
+      <section id="data" class="card">
+        <div class="section-head"><div><div class="kicker">05 · DATA &amp; TWIN</div><h2>五、工业数据治理与数字孪生趋势</h2></div><div class="rank">无新上线，契约风险上升</div></div>
+        <article class="item"><h3>深度数据契约与应急证据契约应成为同一底座的两类受控对象</h3><p><b>已落地证据：</b>今日未发现新的核电数据治理、数字孪生或工业 Agent 上线。可核验变化来自上游深度数据格式的同日调整，以及监管/IAEA 培训对规范、实操、事件分级和反馈的强调。</p><p><b>判断：</b>数据湖中“有文件”不等于数据可用。深度数据至少要记录单位、比例、无效值、传感器、校准版本、时间戳、配准关系与校验和；应急记录至少要记录任务、人员、仪器、原始数据、操作步骤、判断、复核和批准。两者都需版本化、只追加留痕和可回放。</p><div class="verdict"><b>建议行动：</b>数据团队两周内发布 v0.1 契约及 JSON Schema；Agent 只读检索受控副本并给出来源，不得改写原始记录、替代事件定级或自动生成控制指令。</div><div class="source">依据：<a href="https://github.com/ultralytics/ultralytics/releases/tag/v8.4.123" rel="noopener noreferrer">Ultralytics v8.4.123</a><a href="https://nnsa.mee.gov.cn/ywdt/gzdt/202608/t20260819_1164260.html" rel="noopener noreferrer">国家核安全局培训信息</a></div></article>
+      </section>
+
+      <section id="competitors" class="card">
+        <div class="section-head"><div><div class="kicker">06 · COMPETITORS</div><h2>六、竞争对手动态</h2></div><div class="rank">无可核验新动作</div></div>
+        <article class="item"><h3>重点核电数科、工业平台与国产算力厂商未见项目级新增</h3><p><b>已确认事实：</b>截至信息截点，公开渠道未核验到中广核数字科技、中核控制系统工程、主要工业平台或国产算力厂商与昨日相比新增的核电 AI 中标、上线、合作或现场实测。Ultralytics 平台增加深度任务支持属于上游工具能力，不等同于核电竞争对手拿到客户项目。</p><div class="verdict"><b>建议策略：</b>不以通用“模型平台”正面跟随；把差异化落在数据契约、跨芯片一致性、离线交付、应急证据链与人工复核，并保留与整机、仪器和核电检修伙伴联合进入的接口。</div></article>
+      </section>
+
+      <section id="opportunities" class="card">
+        <div class="section-head"><div><div class="kicker">07 · OPPORTUNITIES</div><h2>七、商业机会</h2></div><div class="rank">无新增公开机会</div></div>
+        <article class="item"><h3>今日无直接匹配且可核验的新公开招标、中标或试点</h3><p><b>已确认事实：</b>截至截点，未发现新的核电智慧巡检、工业视觉、数字孪生、厂级 AI 平台或国产边缘算力公开机会；不虚构采购单位、金额、截止期或项目阶段。</p><p><b>潜在线索：</b>“应急监测数字作业包”和“RGB-D/单目深度数据治理 PoC”可作为产品预研方向，但当前只有培训与开源更新证据，尚无业主预算、牵头部门或采购窗口，因此不进入正式机会池。</p><div class="verdict"><b>推荐行动：</b>销售在 48 小时内只做资格确认：核实目标单位现行应急记录方式、数据痛点、预算来源、责任部门和生态伙伴；至少取得三项可验证条件后再建商机。产品先准备可演示的证据导出与双格式回归报告。</div><div class="source">核验入口：<a href="https://ecp.cgnpc.com.cn/" rel="noopener noreferrer">中广核电子商务平台</a><a href="https://nnsa.mee.gov.cn/ywdt/gzdt/" rel="noopener noreferrer">国家核安全局监管动态</a></div></article>
+      </section>
+
+      <section id="tracking" class="card">
+        <div class="section-head"><div><div class="kicker">08 · TRACKING</div><h2>八、持续跟踪事项</h2></div></div>
+        <div class="table-wrap" tabindex="0"><table><thead><tr><th>事项名称</th><th>当前状态</th><th>今日是否有实质新增</th><th>下一观察节点</th></tr></thead><tbody><tr><td>昌江小堆审评监督</td><td>8 月 18 日监管会议要求收敛未关闭审评问题、调试异常、仪控验证和行动项</td><td>无；不重复进入主体</td><td>问题关闭、调试异常处置与监管复核</td></tr><tr><td>汛期安全证据闭环</td><td>在线监测、应急通信、防洪泵、应急电源、排洪沟和带负荷测试已形成监管检查清单</td><td>无项目新增；浙江培训补充人员实操侧信号</td><td>营运单位演练、整改、采购或验收公告</td></tr><tr><td>Ultralytics OpenVINO INT8</td><td>v8.4.121 修复检测头量化忽略范围，仍待核电与国产后端回归</td><td>无性能新增</td><td>黄金集精度差、端侧后端和 72 小时长稳</td></tr><tr><td>Ultralytics 深度数据管线</td><td>v8.4.123 恢复普通 PNG/NPY 并增加 depth_scale</td><td>有；数据契约发生实质变化</td><td>旧数据迁移、像素配准、导出后端与版本稳定性</td></tr><tr><td>IAEA INES 2026</td><td>8 月 17—19 日培训资料聚焦新版手册、分级方法与反馈</td><td>有培训安排；无产品或项目</td><td>正式手册文本、客户适用程序和培训反馈</td></tr></tbody></table></div>
+      </section>
+
+      <section id="insights" class="card">
+        <div class="section-head"><div><div class="kicker">09 · INSIGHT</div><h2>九、今日技术洞察</h2></div></div>
+        <article class="item"><h3>一至三年壁垒是“数据契约＋证据契约”，不是追随每次模型发布</h3><p><b>结论：</b>最可复制的机会是把视觉、深度、辐射监测、规程和人工签批统一为可验证、可迁移、可审计的巡检证据闭环。模型可替换，数据单位、校准、权限、版本、来源和审查规则必须稳定。</p><p><b>依据：</b>Ultralytics 在同日两次调整深度格式，显示上游接口仍快速变化；监管和 IAEA 培训同时把规范、实操、分级与反馈放在核心位置。这些事实支持加强契约与验证，但不证明已有核电订单或算法达到安全级要求。</p><p><b>国产化价值：</b>统一黄金集和证据契约可以在鲲鹏/海光、昇腾/端侧 NPU、openEuler/银河麒麟之间做可比较验证，降低单一芯片、框架或供应商锁定。</p><div class="verdict"><b>建议动作：</b>平台、算法和 QA 共同维护一个契约仓：Schema、示例、迁移器、校验器、黄金数据、后端基线、SBOM、离线包、回滚和审计导出；任何版本升级先过契约测试，再谈现场试点。</div></article>
+      </section>
+
+      <section id="actions" class="card">
+        <div class="section-head"><div><div class="kicker">10 · ACTION</div><h2>十、给公司的建议</h2></div></div>
+        <div class="mini-grid">
+          <article class="mini-card"><h3>今日建议（不超过 3 条）</h3><p>1. 今天冻结深度数据契约 v0.1 和版本锁定清单。<br>2. 本周完成 PNG/NPY 迁移回归及一次应急监测桌面演练。<br>3. 销售只核实预算与责任人，不把培训或开源更新登记成正式商机。</p></article>
+          <article class="mini-card"><h3>短期行动（1–3 个月）</h3><p>交付深度数据校验器、跨分辨率配准测试、三后端兼容矩阵和 72 小时长稳报告；完成一个可离线导出任务、原始证据、人员操作、复核与审批链的应急监测 PoC。</p></article>
+          <article class="mini-card"><h3>中长期规划（6–24 个月）</h3><p>形成“设备语义与数据契约—多模态巡检—证据链—只读 Agent—国产软硬件适配”产品线。安全级判断、事件定级、工单批准和生产控制始终坚持 AI 辅助、人机协同、人工复核、规程优先。</p></article>
+        </div>
+      </section>
+
+      <section id="method" class="card">
+        <div class="section-head"><div><div class="kicker">METHODOLOGY</div><h2>信息说明</h2></div></div>
+        <p class="note">信息截点：2026-08-20 09:12（Asia/Shanghai）。优先核验国家核安全局、IAEA、开源项目官方 Release/文档与核电业主电子采购平台；未发现高价值新增时不以通用宣传或旧项目凑数。“未发现”仅代表截至截点的公开核验结果，不等于全行业不存在非公开项目。所有技术建议限于非安全级辅助场景，现场采用须经客户规程、网络安全、V&amp;V 与人工复核。</p>
+      </section>
+    </div>
+
+    <aside class="card toc" aria-label="本期目录">
+      <h2>本期目录</h2>
+      <a href="#industry">01 重大行业事件</a>
+      <a href="#inspection">02 智慧巡检</a>
+      <a href="#ai">03 AI 视觉与多模态</a>
+      <a href="#domestic">04 国产硬件与边缘智能</a>
+      <a href="#data">05 数据治理与数字孪生</a>
+      <a href="#competitors">06 竞争对手</a>
+      <a href="#opportunities">07 商业机会</a>
+      <a href="#tracking">08 持续跟踪</a>
+      <a href="#insights">09 技术洞察</a>
+      <a href="#actions">10 公司建议</a>
+      <a href="#method">信息说明</a>
+    </aside>
+  </main>
+
+  <footer>每日推送 · 2026-08-20 · <a href="/archive/">查看历史归档</a></footer>
+</body>
+</html>
