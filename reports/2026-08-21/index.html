@@ -1,0 +1,233 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="田湾防汛监督与动态尺寸模型导出共同指向一件事：把现场巡检和视觉模型纳入可回放、可回归、可审查的证据链。">
+  <meta property="og:title" content="核电智慧巡检与工业智能化行业日报 · 2026-08-21">
+  <meta property="og:description" content="田湾防汛监督与动态尺寸模型导出共同指向一件事：把现场巡检和视觉模型纳入可回放、可回归、可审查的证据链。">
+  <meta property="og:type" content="article">
+  <meta property="og:url" content="https://daily.851473.xyz/reports/2026-08-21/">
+  <meta property="og:image" content="https://daily.851473.xyz/reports/2026-08-21/cover.png">
+  <meta name="report-contract" content="nuclear-daily-v2">
+  <link rel="canonical" href="https://daily.851473.xyz/reports/2026-08-21/">
+  <title>核电智慧巡检与工业智能化行业日报 · 2026-08-21</title>
+  <style>
+    :root {
+      --accent: #137f91;
+      --accent-strong: #083d56;
+      --accent-soft: #dff4f7;
+      --page: #f3f7f8;
+      --surface: #ffffff;
+      --text: #11222b;
+      --muted: #60727b;
+      --border: #d9e5e8;
+      --shadow: 0 12px 36px rgba(8, 61, 86, .08);
+      --radius-card: 18px;
+      --space-card: 24px;
+    }
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body { margin: 0; background: var(--page); color: var(--text); font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang SC", "Microsoft YaHei", sans-serif; font-size: 15px; line-height: 1.7; overflow-wrap: anywhere; }
+    img { max-width: 100%; height: auto; }
+    a { color: var(--accent); text-decoration-thickness: 1px; text-underline-offset: 3px; }
+    a:hover { color: var(--accent-strong); }
+    a:focus-visible { outline: 3px solid var(--accent-soft); outline-offset: 3px; border-radius: 4px; }
+    .wrap { width: min(1120px, calc(100% - 32px)); margin-inline: auto; }
+    .hero { padding: 52px 0 46px; color: #fff; background: radial-gradient(circle at 82% 18%, var(--accent) 0, transparent 30%), linear-gradient(135deg, var(--accent-strong), var(--accent)); border-bottom: 4px solid var(--accent-soft); }
+    .eyebrow { color: rgba(255, 255, 255, .78); font-size: 12px; font-weight: 800; letter-spacing: .16em; text-transform: uppercase; }
+    .hero h1 { max-width: 880px; margin: 10px 0 14px; font-size: clamp(30px, 5vw, 54px); line-height: 1.14; text-wrap: balance; }
+    .hero .lead { max-width: 820px; margin: 0; color: rgba(255, 255, 255, .86); font-size: clamp(15px, 2vw, 17px); }
+    .meta { display: flex; flex-wrap: wrap; gap: 9px; margin-top: 22px; }
+    .pill { padding: 6px 11px; border: 1px solid rgba(255, 255, 255, .28); border-radius: 999px; background: rgba(255, 255, 255, .09); font-size: 12px; }
+    .summary { position: relative; margin-top: -24px; }
+    .summary-grid { display: grid; grid-template-columns: 1.4fr repeat(2, minmax(0, 1fr)); gap: 12px; }
+    .card { padding: var(--space-card); border: 1px solid var(--border); border-radius: var(--radius-card); background: var(--surface); box-shadow: var(--shadow); }
+    .summary-card { min-width: 0; padding: 20px; }
+    .summary-card.primary { background: var(--accent-soft); border-color: var(--accent); }
+    .summary-card b { display: block; margin-bottom: 5px; color: var(--accent-strong); font-size: 13px; }
+    .summary-card strong { display: block; color: var(--accent); font-size: clamp(20px, 3vw, 26px); line-height: 1.25; }
+    .summary-card p { margin: 6px 0 0; color: var(--muted); font-size: 13px; }
+    main { padding: 34px 0 56px; }
+    .layout { display: grid; grid-template-columns: minmax(0, 1fr) 250px; gap: 24px; align-items: start; }
+    .content { min-width: 0; }
+    .content > .card { margin-bottom: 18px; }
+    .toc { position: sticky; top: 16px; padding: 18px; box-shadow: 0 4px 18px rgba(8, 61, 86, .05); }
+    .toc h2 { margin: 0 0 10px; color: var(--muted); font-size: 12px; letter-spacing: .12em; }
+    .toc a { display: block; padding: 6px 0; color: var(--muted); font-size: 13px; text-decoration: none; }
+    .toc a:hover { color: var(--accent); }
+    .section-head { display: flex; align-items: flex-start; justify-content: space-between; gap: 14px; margin-bottom: 6px; padding-bottom: 14px; border-bottom: 1px solid var(--border); }
+    .section-head h2 { margin: 0; color: var(--accent-strong); font-size: clamp(19px, 3vw, 23px); line-height: 1.35; }
+    .kicker { margin-bottom: 4px; color: var(--accent); font-size: 12px; font-weight: 800; letter-spacing: .08em; }
+    .rank { color: var(--muted); font-size: 12px; white-space: nowrap; }
+    .item { padding: 19px 0; border-bottom: 1px dashed var(--border); }
+    .item:last-child { padding-bottom: 2px; border-bottom: 0; }
+    .item h3 { margin: 0 0 8px; font-size: 18px; line-height: 1.45; text-wrap: pretty; }
+    .item p { margin: 7px 0; color: var(--muted); font-size: 14px; }
+    .tags { display: flex; flex-wrap: wrap; gap: 7px; margin: 9px 0; }
+    .tag { padding: 3px 8px; border-radius: 999px; background: var(--accent-soft); color: var(--accent-strong); font-size: 11px; font-weight: 800; }
+    .tag.warn { background: #fff0d8; color: #8a5a10; }
+    .tag.risk { background: #fae5e1; color: #a7332c; }
+    .verdict { margin-top: 12px; padding: 12px 14px; border-left: 3px solid var(--accent); border-radius: 0 10px 10px 0; background: var(--accent-soft); font-size: 14px; }
+    .source { margin-top: 10px; color: var(--muted); font-size: 12px; }
+    .source a { margin-right: 10px; }
+    .mini-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 12px; margin-top: 16px; }
+    .mini-card { padding: 16px; border: 1px solid var(--border); border-radius: 14px; background: var(--page); }
+    .mini-card h3 { margin: 0 0 7px; font-size: 16px; }
+    .mini-card p { margin: 6px 0; color: var(--muted); font-size: 13px; }
+    .table-wrap { max-width: 100%; margin-top: 14px; overflow-x: auto; border-radius: 12px; }
+    .table-wrap:focus-visible { outline: 3px solid var(--accent-soft); outline-offset: 2px; }
+    table { width: 100%; min-width: 620px; border-collapse: collapse; font-size: 13px; }
+    th, td { padding: 11px 10px; border-bottom: 1px solid var(--border); text-align: left; vertical-align: top; }
+    th { background: var(--accent-soft); color: var(--accent-strong); }
+    .note { margin-top: 15px; padding: 11px 13px; border-radius: 10px; background: var(--page); color: var(--muted); font-size: 12px; }
+    footer { padding: 0 16px 32px; color: var(--muted); text-align: center; font-size: 12px; }
+    @media (max-width: 900px) {
+      .summary-grid { grid-template-columns: 1fr 1fr; }
+      .summary-card.primary { grid-column: 1 / -1; }
+      .layout { grid-template-columns: 1fr; }
+      .toc { position: static; display: none; }
+    }
+    @media (max-width: 640px) {
+      .wrap { width: min(100% - 24px, 1120px); }
+      .hero { padding: 40px 0 38px; }
+      .summary-grid, .mini-grid { grid-template-columns: 1fr; }
+      .summary-card.primary { grid-column: auto; }
+      .card { padding: 19px 17px; }
+      .section-head { display: block; }
+      .rank { display: block; margin-top: 6px; white-space: normal; }
+    }
+  </style>
+</head>
+<body>
+  <header class="hero">
+    <div class="wrap">
+      <div class="eyebrow">DAILY BRIEFING</div>
+      <h1>核电智慧巡检与工业智能化行业日报</h1>
+      <p class="lead">田湾防汛监督与动态尺寸模型导出共同指向一件事：把现场巡检和视觉模型纳入可回放、可回归、可审查的证据链。</p>
+      <div class="meta"><span class="pill">2026年8月21日 · 星期五</span><span class="pill">Asia/Shanghai</span></div>
+    </div>
+  </header>
+
+  <div class="wrap summary" aria-label="今日摘要">
+    <div class="summary-grid">
+      <section class="card summary-card primary"><b>今日一句话结论</b><strong>把防汛巡检与动态尺寸推理一起纳入回归证据链</strong><p>先建立场景矩阵和可审查记录，再谈自动化替代。</p></section>
+      <section class="card summary-card"><b>今日新增</b><strong>2 项已证实信号</strong><p>田湾防台监督；视觉模型动态导出修复。</p></section>
+      <section class="card summary-card"><b>建议动作</b><strong>启动两组回归验证</strong><p>防汛任务闭环与多尺寸模型导出各一组。</p></section>
+    </div>
+  </div>
+
+  <main class="wrap layout">
+    <div class="content">
+      <section id="industry" class="card">
+        <div class="section-head"><div><div class="kicker">01 · INDUSTRY</div><h2>一、今日重大行业事件</h2></div><div class="rank">1 条新增</div></div>
+        <article class="item">
+          <h3>田湾核电站防台监督把值守、物资、排水与构筑物巡查纳入同一检查面</h3>
+          <div class="tags"><span class="tag">田湾核电站</span><span class="tag">防汛防台</span><span class="tag warn">监管信号</span></div>
+          <p><b>已确认事实：</b>国家核安全局 8 月 20 日披露，华北核与辐射安全监督站在台风影响期间检查田湾核电站应急值班人员和应急物资，并巡查厂区排水管网、重要构筑物，要求执行自然灾害应急预案；现场监督同时关注台风动态和气象预警。公开信息未披露采购、金额或新增系统上线。</p>
+          <div class="verdict"><b>判断：</b>相较泛化的“智能巡检”，监管关注的是人员、物资、设施、预警和处置能否串成可核验闭环。产品机会更接近受控任务编排、离线留证与复核看板，而不是单点识别算法。</div>
+          <p><b>建议行动：</b>用“气象预警—任务下发—点位检查—异常处置—人工签批”制作一个防汛证据包原型；所有识别结果只作辅助提示，保留规程、人工判断和原始记录。</p>
+          <div class="source">来源：<a href="https://nnsa.mee.gov.cn/ywdt/gzdt/202608/t20260820_1164291.html" rel="noopener noreferrer">国家核安全局｜防范汛期风险 筑牢核安全防线（2026-08-20）</a></div>
+        </article>
+      </section>
+
+      <section id="inspection" class="card">
+        <div class="section-head"><div><div class="kicker">02 · INSPECTION</div><h2>二、智慧巡检最新动态</h2></div><div class="rank">1 个可转化场景</div></div>
+        <article class="item">
+          <h3>防汛巡检不应只报“完成”，要能证明检查对象、时点与处置结果</h3>
+          <p><b>采购方与当前阶段：</b>本期仅确认田湾核电站接受防台防汛现场监督，未确认相关智能巡检采购或试点，采购主体与预算均待核实。</p>
+          <p><b>技术与市场价值：</b>把排水管网、重要构筑物、应急物资和值守状态做成可配置点位与任务模板，支持移动端采集、时间戳、原图/视频、异常升级、复核签字和离线同步，可形成跨基地复用的“极端天气巡检证据包”。</p>
+          <p><b>工程化限制：</b>现场网络隔离、恶劣天气成像退化、点位可达性、设备防护等级和误漏报都需要实测；AI 不替代应急预案、运行人员确认或核安全判断。</p>
+          <div class="verdict"><b>建议行动：</b>先用 8–12 个非安全级点位做离线演练，验收任务完成率、证据完整率、异常闭环时长、同步失败恢复率和人工复核一致性。</div>
+        </article>
+      </section>
+
+      <section id="ai" class="card">
+        <div class="section-head"><div><div class="kicker">03 · AI</div><h2>三、AI 视觉与多模态技术进展</h2></div><div class="rank">1 条新增</div></div>
+        <article class="item">
+          <h3>Ultralytics 8.4.124 恢复带 NMS 导出的动态尺寸推理，部署端需要重新做形状回归</h3>
+          <div class="tags"><span class="tag">ONNX</span><span class="tag">OpenVINO</span><span class="tag">TensorRT</span><span class="tag risk">版本变更</span></div>
+          <p><b>已确认事实：</b>Ultralytics 于 8 月 20 日发布 v8.4.124。官方说明，设置 <code>dynamic=True</code> 且 <code>nms=True</code> 的 ONNX、OpenVINO、TensorRT 导出重新支持运行时图像高宽；导出 NMS 重新遵守 <code>max_det</code>，坐标归一化使用实际输入尺寸，并修复非等比缩放后的坐标恢复。该版本还修复恢复训练误载预训练权重、复用模型时参数残留等问题。</p>
+          <div class="verdict"><b>判断：</b>这不是核电性能或精度背书，但直接影响多路视频、不同相机分辨率和边缘端动态预处理。若继续用旧导出物或只测单一尺寸，可能漏掉候选框数量、坐标和复用状态问题。</div>
+          <p><b>工程化限制：</b>开源版本未经过核电现场资格鉴定；需要锁定模型、依赖、导出参数与推理后端，并对静态/动态形状、横竖画幅、非等比缩放、<code>max_det</code>、空目标、密集目标和长时间复用逐项回归。</p>
+          <p><b>跟进建议：</b>立即验证，但只进入开发与 PoC 环境；生产版本升级必须以既有现场样本、坐标容差、漏报/误报、时延、显存和异常恢复测试通过为前提。</p>
+          <div class="source">来源：<a href="https://github.com/ultralytics/ultralytics/releases/tag/v8.4.124" rel="noopener noreferrer">Ultralytics 官方发布｜v8.4.124（2026-08-20）</a></div>
+        </article>
+      </section>
+
+      <section id="domestic" class="card">
+        <div class="section-head"><div><div class="kicker">04 · DOMESTIC STACK</div><h2>四、国产硬件与边缘智能专项</h2></div><div class="rank">今日无项目级新增</div></div>
+        <div class="mini-grid">
+          <article class="mini-card"><h3>4.1 国产 CPU 与服务器</h3><p><b>今日无高价值新增。</b>继续以已通过操作系统、数据库、视频接入和压力测试的服务器组合为主力，不因新闻曝光更换基线。</p></article>
+          <article class="mini-card"><h3>4.2 国产 GPU / NPU 与 AI 加速</h3><p><b>今日无高价值新增。</b>动态尺寸修复属于上层框架变化，国产加速卡仍需分别验证动态 shape、NMS 算子支持、精度漂移与离线编译约束。</p></article>
+          <article class="mini-card"><h3>4.3 国产边缘算力设备</h3><p><b>今日无高价值新增。</b>边缘 PoC 优先补齐断网缓存、掉电恢复、温度降频、视频断流和远程版本回滚测试。</p></article>
+          <article class="mini-card"><h3>4.4 国产操作系统与基础软件</h3><p><b>今日无高价值新增。</b>继续锁定内核、驱动、推理运行时和容器版本，保留 SBOM、离线安装包与可复现实验记录。</p></article>
+        </div>
+        <article class="item"><h3>4.5 对智慧核电的部署建议</h3><p><b>今日国产化部署结论：</b>主力仍是“已通过现场 PoC 的国产 CPU/NPU 边缘节点＋厂内自主管理平台”；备选为成熟 x86/GPU 组合用于算法回归与性能对照。动态尺寸能力只在设备与运行时联合验证后采用。</p><div class="verdict"><b>适配结论：</b>现有已验证组合继续主力；新框架版本、动态导出和未进入兼容矩阵的加速设备仅限 PoC，暂不进入生产环境。</div></article>
+      </section>
+
+      <section id="data" class="card">
+        <div class="section-head"><div><div class="kicker">05 · DATA &amp; TWIN</div><h2>五、工业数据治理与数字孪生趋势</h2></div></div>
+        <article class="item"><h3>把极端天气巡检建模为“触发—任务—证据—处置—签批”受控对象</h3><p><b>已落地证据：</b>本期公开信息确认监管检查覆盖气象预警、应急值守、物资、排水管网和重要构筑物，但未披露数字平台或数字孪生系统上线。</p><div class="verdict"><b>建议行动：</b>数据底座应保存预警来源、规程版本、点位、执行人、原始媒体、模型版本、人工结论和处置时限；数字孪生只承担定位与状态关联，不把未验证推断写回事实主数据。</div></article>
+      </section>
+
+      <section id="competitors" class="card">
+        <div class="section-head"><div><div class="kicker">06 · COMPETITORS</div><h2>六、竞争对手动态</h2></div><div class="rank">今日无高价值新增</div></div>
+        <article class="item"><h3>重点核电数科、工业平台与国产算力厂商未见项目级新增</h3><p><b>已确认事实：</b>截至本期信息截点，公开渠道未发现与核电智慧巡检直接相关且可核验的新中标、上线、扩容或联合交付。</p><div class="verdict"><b>建议策略：</b>不以宣传稿代替项目证据；继续按采购公告、中标结果、现场上线和兼容认证四类节点跟踪。</div></article>
+      </section>
+
+      <section id="opportunities" class="card">
+        <div class="section-head"><div><div class="kicker">07 · OPPORTUNITIES</div><h2>七、商业机会</h2></div><div class="rank">1 个待核实机会</div></div>
+        <article class="item"><h3>田湾核电极端天气巡检证据包｜采购主体待核实</h3><p><b>机会内容：</b>监管披露提供了明确场景和检查对象，但不是采购公告，也未确认预算、招标阶段或技术路线。</p><p><b>匹配判断：</b>公司可从非安全级移动作业、巡检证据管理、视频辅助识别与离线部署切入；机会等级为“中，待客户访谈确认”。</p><div class="verdict"><b>推荐行动：</b>先用一页方案和可演示原型访谈营运/运维单位，确认当前表单、系统接口、网络分区、留存周期和审计要求；未确认采购前不投入定制开发。</div></article>
+      </section>
+
+      <section id="tracking" class="card">
+        <div class="section-head"><div><div class="kicker">08 · TRACKING</div><h2>八、持续跟踪事项</h2></div></div>
+        <div class="table-wrap" tabindex="0"><table><thead><tr><th>事项名称</th><th>当前状态</th><th>今日是否有实质新增</th><th>下一观察节点</th></tr></thead><tbody>
+          <tr><td>田湾核电防汛防台</td><td>监管已披露检查对象与执行要求</td><td>有：新增值守、物资、排水与构筑物检查证据</td><td>是否形成整改、采购、试点或复盘结论</td></tr>
+          <tr><td>昌江小堆审评监督闭环</td><td>第二次专项工作会议已召开</td><td>无</td><td>审评问题关闭、调试或许可节点</td></tr>
+          <tr><td>Ultralytics 深度数据契约</td><td>v8.4.123 已恢复常规格式兼容</td><td>无：本期新增转向动态尺寸导出</td><td>自有深度数据迁移与回归测试结果</td></tr>
+          <tr><td>核电智慧巡检公开招采</td><td>持续检索中</td><td>无可核验项目级新增</td><td>采购公告、中标结果或现场上线</td></tr>
+        </tbody></table></div>
+      </section>
+
+      <section id="insights" class="card">
+        <div class="section-head"><div><div class="kicker">09 · INSIGHT</div><h2>九、今日技术洞察</h2></div></div>
+        <article class="item"><h3>一至三年机会：把现场任务证据与模型回归证据统一管理</h3><p><b>结论：</b>最大机会不是再增加一个识别模型，而是形成“现场任务如何证明执行、模型版本如何证明可用”的双证据链。立即验证极端天气任务闭环和多尺寸推理；长期壁垒来自场景模板、数据契约、版本基线、回归集与审计接口。</p><p><b>依据：</b>田湾监督信息强调跨对象的检查闭环；Ultralytics 本次修复说明输入形状、NMS、坐标与状态复用会随版本改变，部署能力必须由回归证据而非版本号证明。</p><div class="verdict"><b>建议动作：</b>由产品、算法、测试和交付共同定义一份统一证据清单，国产设备兼容矩阵只登记通过同一验收集的组合。</div></article>
+      </section>
+
+      <section id="actions" class="card">
+        <div class="section-head"><div><div class="kicker">10 · ACTION</div><h2>十、给公司的建议</h2></div></div>
+        <div class="mini-grid">
+          <article class="mini-card"><h3>今日建议（3 条）</h3><p>① 建立防汛巡检 8–12 点位演练包；② 对 ONNX/OpenVINO/TensorRT 做动态尺寸导出回归；③ 核实田湾场景现有系统与采购窗口。</p></article>
+          <article class="mini-card"><h3>短期行动（1–3 个月）</h3><p>产品负责人完成任务与证据模板；算法负责人冻结基线与多尺寸用例；交付负责人完成国产边缘节点断网、掉电和回滚验收。</p></article>
+          <article class="mini-card"><h3>中长期规划（6–24 个月）</h3><p>形成跨基地可复制的极端天气巡检产品包、模型/设备兼容矩阵和受控版本仓；AI Agent 只编排授权任务与检索证据，不直接给出控制指令。</p></article>
+          <article class="mini-card"><h3>安全边界</h3><p>所有 AI 结果用于辅助；核安全、生产控制和应急处置始终遵循规程、人机协同与人工复核，保持网络隔离和最小权限。</p></article>
+        </div>
+      </section>
+
+      <section id="method" class="card">
+        <div class="section-head"><div><div class="kicker">METHODOLOGY</div><h2>信息说明</h2></div></div>
+        <p class="note">信息截点：2026-08-21 09:08（Asia/Shanghai）。本期优先核查国家核安全局、核电企业公开信息、招采入口与开源项目官方发布；只把 2026-08-20 日报截点后出现且可核验的实质变化列为新增。公开检索未发现新的核电智慧巡检招标、中标或上线，也未发现国产算力和重点竞品的项目级新增；来源不可达或未公开的事项不作无事件断言。</p>
+      </section>
+    </div>
+
+    <aside class="card toc" aria-label="本期目录">
+      <h2>本期目录</h2>
+      <a href="#industry">01 重大行业事件</a>
+      <a href="#inspection">02 智慧巡检</a>
+      <a href="#ai">03 AI 视觉与多模态</a>
+      <a href="#domestic">04 国产硬件与边缘智能</a>
+      <a href="#data">05 数据治理与数字孪生</a>
+      <a href="#competitors">06 竞争对手</a>
+      <a href="#opportunities">07 商业机会</a>
+      <a href="#tracking">08 持续跟踪</a>
+      <a href="#insights">09 技术洞察</a>
+      <a href="#actions">10 公司建议</a>
+      <a href="#method">信息说明</a>
+    </aside>
+  </main>
+
+  <footer>每日推送 · 2026-08-21 · <a href="/archive/">查看历史归档</a></footer>
+</body>
+</html>
