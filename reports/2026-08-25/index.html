@@ -1,0 +1,222 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="徐大堡建造质量对话与 OpenVINO 动态批处理修复共同提示：先固化问题闭环和回归证据，再扩大智能化应用。">
+  <meta property="og:title" content="核电智慧巡检与工业智能化行业日报 · 2026-08-25">
+  <meta property="og:description" content="徐大堡建造质量对话与 OpenVINO 动态批处理修复共同提示：先固化问题闭环和回归证据，再扩大智能化应用。">
+  <meta property="og:type" content="article">
+  <meta property="og:url" content="https://daily.851473.xyz/reports/2026-08-25/">
+  <meta property="og:image" content="https://daily.851473.xyz/reports/2026-08-25/cover.png">
+  <meta name="report-contract" content="nuclear-daily-v2">
+  <link rel="canonical" href="https://daily.851473.xyz/reports/2026-08-25/">
+  <title>核电智慧巡检与工业智能化行业日报 · 2026-08-25</title>
+  <style>
+    :root {
+      --accent: #087ca7;
+      --accent-strong: #073b5c;
+      --accent-soft: #dff3fa;
+      --page: #f3f7fa;
+      --surface: #ffffff;
+      --text: #102735;
+      --muted: #607581;
+      --border: #d8e5eb;
+      --shadow: 0 12px 36px rgba(8, 61, 86, .08);
+      --radius-card: 18px;
+      --space-card: 24px;
+    }
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body { margin: 0; background: var(--page); color: var(--text); font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang SC", "Microsoft YaHei", sans-serif; font-size: 15px; line-height: 1.7; overflow-wrap: anywhere; }
+    img { max-width: 100%; height: auto; }
+    a { color: var(--accent); text-decoration-thickness: 1px; text-underline-offset: 3px; }
+    a:hover { color: var(--accent-strong); }
+    a:focus-visible { outline: 3px solid var(--accent-soft); outline-offset: 3px; border-radius: 4px; }
+    .wrap { width: min(1120px, calc(100% - 32px)); margin-inline: auto; }
+    .hero { padding: 52px 0 46px; color: #fff; background: radial-gradient(circle at 82% 18%, var(--accent) 0, transparent 30%), linear-gradient(135deg, var(--accent-strong), var(--accent)); border-bottom: 4px solid var(--accent-soft); }
+    .eyebrow { color: rgba(255, 255, 255, .78); font-size: 12px; font-weight: 800; letter-spacing: .16em; text-transform: uppercase; }
+    .hero h1 { max-width: 880px; margin: 10px 0 14px; font-size: clamp(30px, 5vw, 54px); line-height: 1.14; text-wrap: balance; }
+    .hero .lead { max-width: 820px; margin: 0; color: rgba(255, 255, 255, .86); font-size: clamp(15px, 2vw, 17px); }
+    .meta { display: flex; flex-wrap: wrap; gap: 9px; margin-top: 22px; }
+    .pill { padding: 6px 11px; border: 1px solid rgba(255, 255, 255, .28); border-radius: 999px; background: rgba(255, 255, 255, .09); font-size: 12px; }
+    .summary { position: relative; margin-top: -24px; }
+    .summary-grid { display: grid; grid-template-columns: 1.4fr repeat(2, minmax(0, 1fr)); gap: 12px; }
+    .card { padding: var(--space-card); border: 1px solid var(--border); border-radius: var(--radius-card); background: var(--surface); box-shadow: var(--shadow); }
+    .summary-card { min-width: 0; padding: 20px; }
+    .summary-card.primary { background: var(--accent-soft); border-color: var(--accent); }
+    .summary-card b { display: block; margin-bottom: 5px; color: var(--accent-strong); font-size: 13px; }
+    .summary-card strong { display: block; color: var(--accent); font-size: clamp(20px, 3vw, 26px); line-height: 1.25; }
+    .summary-card p { margin: 6px 0 0; color: var(--muted); font-size: 13px; }
+    main { padding: 34px 0 56px; }
+    .layout { display: grid; grid-template-columns: minmax(0, 1fr) 250px; gap: 24px; align-items: start; }
+    .content { min-width: 0; }
+    .content > .card { margin-bottom: 18px; }
+    .toc { position: sticky; top: 16px; padding: 18px; box-shadow: 0 4px 18px rgba(24, 51, 41, .05); }
+    .toc h2 { margin: 0 0 10px; color: var(--muted); font-size: 12px; letter-spacing: .12em; }
+    .toc a { display: block; padding: 6px 0; color: var(--muted); font-size: 13px; text-decoration: none; }
+    .toc a:hover { color: var(--accent); }
+    .section-head { display: flex; align-items: flex-start; justify-content: space-between; gap: 14px; margin-bottom: 6px; padding-bottom: 14px; border-bottom: 1px solid var(--border); }
+    .section-head h2 { margin: 0; color: var(--accent-strong); font-size: clamp(19px, 3vw, 23px); line-height: 1.35; }
+    .kicker { margin-bottom: 4px; color: var(--accent); font-size: 12px; font-weight: 800; letter-spacing: .08em; }
+    .rank { color: var(--muted); font-size: 12px; white-space: nowrap; }
+    .item { padding: 19px 0; border-bottom: 1px dashed var(--border); }
+    .item:last-child { padding-bottom: 2px; border-bottom: 0; }
+    .item h3 { margin: 0 0 8px; font-size: 18px; line-height: 1.45; text-wrap: pretty; }
+    .item p { margin: 7px 0; color: var(--muted); font-size: 14px; }
+    .tags { display: flex; flex-wrap: wrap; gap: 7px; margin: 9px 0; }
+    .tag { padding: 3px 8px; border-radius: 999px; background: var(--accent-soft); color: var(--accent-strong); font-size: 11px; font-weight: 800; }
+    .tag.warn { background: #fff0d8; color: #8a5a10; }
+    .tag.risk { background: #fae5e1; color: #a7332c; }
+    .verdict { margin-top: 12px; padding: 12px 14px; border-left: 3px solid var(--accent); border-radius: 0 10px 10px 0; background: var(--accent-soft); font-size: 14px; }
+    .source { margin-top: 10px; color: var(--muted); font-size: 12px; }
+    .source a { margin-right: 10px; }
+    .mini-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 12px; margin-top: 16px; }
+    .mini-card { padding: 16px; border: 1px solid var(--border); border-radius: 14px; background: var(--page); }
+    .mini-card h3 { margin: 0 0 7px; font-size: 16px; }
+    .mini-card p { margin: 6px 0; color: var(--muted); font-size: 13px; }
+    .table-wrap { max-width: 100%; margin-top: 14px; overflow-x: auto; border-radius: 12px; }
+    .table-wrap:focus-visible { outline: 3px solid var(--accent-soft); outline-offset: 2px; }
+    table { width: 100%; min-width: 620px; border-collapse: collapse; font-size: 13px; }
+    th, td { padding: 11px 10px; border-bottom: 1px solid var(--border); text-align: left; vertical-align: top; }
+    th { background: var(--accent-soft); color: var(--accent-strong); }
+    .note { margin-top: 15px; padding: 11px 13px; border-radius: 10px; background: var(--page); color: var(--muted); font-size: 12px; }
+    footer { padding: 0 16px 32px; color: var(--muted); text-align: center; font-size: 12px; }
+    @media (max-width: 900px) {
+      .summary-grid { grid-template-columns: 1fr 1fr; }
+      .summary-card.primary { grid-column: 1 / -1; }
+      .layout { grid-template-columns: 1fr; }
+      .toc { position: static; display: none; }
+    }
+    @media (max-width: 640px) {
+      .wrap { width: min(100% - 24px, 1120px); }
+      .hero { padding: 40px 0 38px; }
+      .summary-grid, .mini-grid { grid-template-columns: 1fr; }
+      .summary-card.primary { grid-column: auto; }
+      .card { padding: 19px 17px; }
+      .section-head { display: block; }
+      .rank { display: block; margin-top: 6px; white-space: normal; }
+    }
+  </style>
+</head>
+<body>
+  <header class="hero">
+    <div class="wrap">
+      <div class="eyebrow">DAILY BRIEFING</div>
+      <h1>核电智慧巡检与工业智能化行业日报</h1>
+      <p class="lead">徐大堡建造质量对话与 OpenVINO 动态批处理修复共同提示：先固化问题闭环和回归证据，再扩大智能化应用。</p>
+      <div class="meta"><span class="pill">2026年8月25日 · 星期二</span><span class="pill">Asia/Shanghai</span></div>
+    </div>
+  </header>
+
+  <div class="wrap summary" aria-label="今日摘要">
+    <div class="summary-grid">
+      <section class="card summary-card primary"><b>今日一句话结论</b><strong>质量问题要闭环，动态推理先回归</strong><p>先定义责任、证据与退出条件，再扩大自动化范围。</p></section>
+      <section class="card summary-card"><b>今日新增</b><strong>2 项已证实信号</strong><p>徐大堡建造质量对话；OpenVINO 动态批处理修复。</p></section>
+      <section class="card summary-card"><b>建议动作</b><strong>启动双证据验证</strong><p>建造问题闭环原型与动态 INT8 回归各一组。</p></section>
+    </div>
+  </div>
+
+  <main class="wrap layout">
+    <div class="content">
+      <section id="industry" class="card">
+        <div class="section-head"><div><div class="kicker">01 · INDUSTRY</div><h2>一、今日重大行业事件</h2></div><div class="rank">1 条新增</div></div>
+        <article class="item">
+          <h3>徐大堡“两堆型、四机组”并行施工把质量问题闭环推到关键位置</h3>
+          <div class="tags"><span class="tag">徐大堡核电厂</span><span class="tag">建造质量</span><span class="tag warn">监管信号</span></div>
+          <p><b>已确认事实：</b>国家核安全局 8 月 24 日披露，东北核与辐射安全监督站与中核辽宁核电有限公司开展建造质量对话，中国核电及相关参建单位参加。活动围绕核安全相关构筑物、系统、设备及设计质量问题，梳理管理短板、分析根本原因并研究改进措施。监管方指出，徐大堡正处于两个堆型、四台机组同时施工，土建、安装和调试任务叠加的阶段，要求压实各环节责任并做好问题闭环。公开信息未披露问题数量、采购、预算或数字化系统上线。</p>
+          <div class="verdict"><b>判断：</b>新增价值不在“又有一次监管活动”，而在于质量对象跨构筑物、系统、设备、设计、土建、安装和调试并行流转。最现实的智能化切入点是受控的问题台账、根因与措施关联、责任穿透、证据归档和人工签批，而不是自动判定质量结论。</div>
+          <p><b>建议行动：</b>五个工作日内制作“问题—对象—根因—措施—责任—证据—复核—关闭”数据模型和 20 条脱敏演示数据，邀请建造、质量保证和调试伙伴核对字段、权限、规程引用与关闭门槛。</p>
+          <div class="source">来源：<a href="https://nnsa.mee.gov.cn/ywdt/gzdt/202608/t20260824_1164423.html" rel="noopener noreferrer">国家核安全局｜开展徐大堡核电厂建造质量对话活动（2026-08-24）</a></div>
+        </article>
+      </section>
+
+      <section id="inspection" class="card">
+        <div class="section-head"><div><div class="kicker">02 · INSPECTION</div><h2>二、智慧巡检最新动态</h2></div><div class="rank">1 个可转化场景</div></div>
+        <article class="item"><h3>建造质量巡检要把现场发现与设计、安装和调试责任串成闭环</h3><p><b>采购方与当前阶段：</b>公开主体为中核辽宁核电有限公司及徐大堡参建单位，当前证据是监管质量对话，不是智慧巡检招标、试点验收或系统上线；采购主体、预算和现有平台均待核实。</p><p><b>技术与市场价值：</b>可从非安全级辅助作业切入：移动端采集点位与原始照片/视频，关联构筑物、系统、设备、图纸/版本、责任单位、措施和复核记录；按网络分区离线缓存并生成审计包。视觉模型只做缺陷候选提示和图像质量检查，不能代替质量检验与核安全判断。</p><p><b>工程化限制：</b>两种堆型、四台机组并行会放大编码体系、版本谱系、跨单位权限、时间同步和重复问题归并难度；还需验证弱网、粉尘、低照、遮挡、设备标识差异、误漏报、证据防篡改与数据最小化。</p><div class="verdict"><b>建议行动：</b>先做 20 条历史问题的只读穿透演示，验收原始证据可回放率、责任链完整率、版本可追溯率和人工复核一致性；未确认现有流程与接口前不投入现场定制。</div></article>
+      </section>
+
+      <section id="ai" class="card">
+        <div class="section-head"><div><div class="kicker">03 · AI</div><h2>三、AI 视觉与多模态技术进展</h2></div><div class="rank">1 条新增</div></div>
+        <article class="item"><h3>Ultralytics 8.4.128 将 OpenVINO 动态批处理改为同步低延迟路径</h3><div class="tags"><span class="tag">OpenVINO</span><span class="tag">动态 INT8</span><span class="tag">RKNN</span><span class="tag risk">须重跑回归</span></div><p><b>已确认事实：</b>Ultralytics 于 8 月 25 日发布 v8.4.128。官方说明，OpenVINO 现在把每个输入批次作为单次同步请求并固定使用 <code>LATENCY</code> 性能提示，以规避 <code>AsyncInferQueue</code> 在 CPU 动态 INT8 批处理中的挂起风险；官方还收紧 TensorRT INT8 检测头 Sigmoid 精度排除、将 ONNX opset 上限设为 18，并让 RKNN INT8 对不支持的非检测任务明确拒绝、建议使用 FP16。官方基准不包含核电数据、国产 NPU 或现场长期运行。</p><p><b>核电应用价值：</b>适合非安全级仪表、阀位、PPE、异物、跑冒滴漏和机器人视频的边缘 CPU 推理验证。同步路径有利于降低不可预测挂起，但不等于核电现场精度、吞吐或可靠性已获证明；吞吐优先的多路视频还可能出现不同表现。</p><p><b>工程化限制：</b>需要以固定模型、预后处理和黄金样本，对静态/动态 shape、batch 1/多批次、FP32/INT8、低照反光、小目标、空目标、72 小时长稳、内存峰值、超时恢复和版本回滚逐项比较；OpenVINO 结果不能外推到昇腾或 RKNN。</p><div class="verdict"><b>跟进建议：立即验证，暂不直接升级生产。</b>先在开发与 PoC 环境复现旧异步挂起用例，再对 v8.4.128 做同负载 A/B；只有精度、时延、内存和恢复门槛全部通过，才进入变更评审。</div><div class="source">来源：<a href="https://github.com/ultralytics/ultralytics/releases/tag/v8.4.128" rel="noopener noreferrer">Ultralytics GitHub Release｜v8.4.128（2026-08-25）</a></div></article>
+      </section>
+
+      <section id="domestic" class="card">
+        <div class="section-head"><div><div class="kicker">04 · DOMESTIC STACK</div><h2>四、国产硬件与边缘智能专项</h2></div><div class="rank">今日无项目级新增</div></div>
+        <div class="mini-grid">
+          <article class="mini-card"><h3>4.1 国产 CPU 与服务器</h3><p><b>今日无高价值新增。</b>厂级平台继续以鲲鹏/openEuler 为主力、海光/银河麒麟为备选；并发问题闭环、审计导出和离线运维须通过 PoC 后采用。</p></article>
+          <article class="mini-card"><h3>4.2 国产 GPU / NPU 与 AI 加速</h3><p><b>今日无核电项目级实测新增。</b>昇腾作为中心推理主线，RKNN 类低功耗 NPU 作为边缘备选；v8.4.128 对 RKNN INT8 的限制再次说明每个任务、精度和算子组合都要单独验收。</p></article>
+          <article class="mini-card"><h3>4.3 国产边缘算力设备</h3><p><b>今日无高价值新增。</b>边缘盒应优先验证离线缓存、可信时间、视频断流、掉电恢复、温度降频、签名升级与回滚；批处理吞吐不能以牺牲确定性恢复为代价。</p></article>
+          <article class="mini-card"><h3>4.4 国产操作系统与基础软件</h3><p><b>今日无直接影响交付的新版本或认证。</b>锁定内核、驱动、容器运行时、推理框架和数据库基线，保留 SBOM、离线包、签名与复现记录。</p></article>
+        </div>
+        <article class="item"><h3>4.5 对智慧核电的部署建议</h3><p><b>今日国产化部署结论：</b>边缘侧承载确定性采集、缓存、规则和轻量视觉；厂级侧承载质量对象、知识检索、只读 Agent 与审计。生产控制和安全级系统保持物理/逻辑隔离，不因开源框架更新改变边界。</p><div class="verdict"><b>适配结论：</b>主力：鲲鹏/openEuler＋昇腾；备选：海光/银河麒麟＋CPU 或客户指定 NPU。立即 PoC：跨任务 FP16/INT8、动态 batch、72 小时长稳、断网断电与回滚。全部 PoC 后采用；未通过同一黄金集与故障注入的组合暂不进生产。</div></article>
+      </section>
+
+      <section id="data" class="card">
+        <div class="section-head"><div><div class="kicker">05 · DATA &amp; TWIN</div><h2>五、工业数据治理与数字孪生趋势</h2></div></div>
+        <article class="item"><h3>建造质量数字化的最小单元应是可审查的问题对象，而不是孤立看板</h3><p><b>已落地证据：</b>徐大堡质量对话已把构筑物、系统、设备、设计、根因、改进措施和多层责任放在同一监管语境中，但官方没有宣布新的数据平台、数字孪生或 AI Agent 上线。</p><div class="verdict"><b>判断：</b>近期产品价值是让每个问题能穿透到原始记录、对象编码、图纸/版本、责任单位、措施、复核与关闭依据。数字孪生用于定位与关联，只读 Agent 用于权限过滤后的检索、差异比对和缺项提醒；关闭、放行与参数修改始终由授权人员按规程签批。</div><p><b>建议行动：</b>定义八类对象及唯一 ID、来源哈希、版本、权限、责任人与审批关系；先用 20 条脱敏问题验证跨堆型编码映射、版本冲突和审计导出，再决定是否扩展孪生与工具调用。</p><div class="source">依据：<a href="https://nnsa.mee.gov.cn/ywdt/gzdt/202608/t20260824_1164423.html" rel="noopener noreferrer">国家核安全局监管动态</a></div></article>
+      </section>
+
+      <section id="competitors" class="card">
+        <div class="section-head"><div><div class="kicker">06 · COMPETITORS</div><h2>六、竞争对手动态</h2></div><div class="rank">今日无高价值新增</div></div>
+        <article class="item"><h3>主要核电数字化与工业平台厂商未见项目级新增证据</h3><p><b>已确认事实：</b>截至信息截点，已核查的官方监管、核电企业与公开招采入口未显示主要目标厂商新增核电智慧巡检中标、正式上线、扩容或国产化现场实测；徐大堡监管信息未点名数字化供应商，也未披露新增系统采购。</p><div class="verdict"><b>判断：</b>两堆型、四机组并行施工依赖既有营运、设计、建安、调试和质量保证体系，外部供应商直接替换核心平台的进入成本高。差异化应放在可嵌入的问题对象、离线采集、证据穿透、跨芯片回归与审计导出。</div><p><b>建议策略：</b>优先联合既有工程、仪控和信息化伙伴，以只读补充模块进入；没有采购文件、上线验收或实测报告前，不预测项目金额、中标概率或竞争排名。</p></article>
+      </section>
+
+      <section id="opportunities" class="card">
+        <div class="section-head"><div><div class="kicker">07 · OPPORTUNITIES</div><h2>七、商业机会</h2></div><div class="rank">1 个待核实账户机会</div></div>
+        <article class="item"><h3>徐大堡建造质量问题证据链｜营运与参建单位，采购主体待核实</h3><div class="tags"><span class="tag">质量闭环</span><span class="tag warn">★★★☆</span></div><p><b>机会内容：</b>围绕构筑物、系统、设备和设计质量问题，建设移动留证、对象编码、根因/措施关联、责任穿透、版本追溯、人工复核和审计导出。当前依据是监管质量对话，不是招标公告，预算、采购阶段、系统边界和接口均待核实。</p><p><b>匹配判断：</b>与工业数据治理、只读 Agent、离线部署、国产服务器/NPU 和审计留痕匹配；跨组织权限、既有编码、核安全审查和网络隔离是主要门槛。机会等级 ★★★☆，仅代表值得访谈，不代表已立项。</p><div class="verdict"><b>推荐行动：</b>建立关系＋联合方案预研；先向营运、建安、调试和质量保证伙伴验证八类对象、现有系统痛点与责任边界，确认需求后再投入 PoC。</div><div class="source">依据：<a href="https://nnsa.mee.gov.cn/ywdt/gzdt/202608/t20260824_1164423.html" rel="noopener noreferrer">国家核安全局监管动态</a></div></article>
+      </section>
+
+      <section id="tracking" class="card">
+        <div class="section-head"><div><div class="kicker">08 · TRACKING</div><h2>八、持续跟踪事项</h2></div></div>
+        <div class="table-wrap" tabindex="0"><table><thead><tr><th>事项名称</th><th>当前状态</th><th>今日是否有实质新增</th><th>下一观察节点</th></tr></thead><tbody>
+          <tr><td>徐大堡建造质量闭环</td><td>监管质量对话已覆盖多对象、根因、措施与责任</td><td>有：新增“两堆型、四机组并行施工”场景和闭环要求</td><td>问题整改、采购、系统试点或建造/调试节点</td></tr>
+          <tr><td>田湾防汛防台证据包</td><td>监管已披露值守、物资、排水与构筑物检查</td><td>无</td><td>整改复盘、采购或现场试点</td></tr>
+          <tr><td>昌江小堆调试与审评闭环</td><td>专项工作组已要求梳理仪控验证与异常处理</td><td>无</td><td>问题关闭、调试或许可节点</td></tr>
+          <tr><td>Ultralytics 边缘推理基线</td><td>v8.4.124 动态导出后续更新至 v8.4.128</td><td>有：OpenVINO 同步批处理与 RKNN INT8 边界变化</td><td>自有动态 batch、长稳和国产后端 A/B 结果</td></tr>
+          <tr><td>核电智慧巡检公开招采</td><td>持续核查中</td><td>无可核验项目级新增</td><td>采购公告、中标结果、正式上线或扩容</td></tr>
+        </tbody></table></div>
+      </section>
+
+      <section id="insights" class="card">
+        <div class="section-head"><div><div class="kicker">09 · INSIGHT</div><h2>九、今日技术洞察</h2></div></div>
+        <article class="item"><h3>1. 一至三年最大的商业机会</h3><p><b>结论：</b>把建造、安装和调试阶段的问题、对象、版本、措施、责任和关闭依据做成可审计证据闭环，比单独销售识别模型更接近持续预算。</p><p><b>依据：</b>徐大堡监管活动把多专业任务叠加、根因分析、责任落实和问题闭环同时列为关注点，但没有证明已存在数字化采购。</p><div class="verdict"><b>建议动作：</b>产品与行业团队共同形成“建造质量证据链”两页方案和 20 条脱敏演示，不承诺自动质量判定。</div></article>
+        <article class="item"><h3>2. 值得立即验证的技术</h3><p><b>结论：</b>OpenVINO 动态 INT8 同步批处理、超时恢复、内存峰值和多路视频吞吐需要在升级前做对照试验。</p><p><b>依据：</b>v8.4.128 的核心变化直接针对异步队列挂起与动态批处理可靠性，同时明确吞吐型工作负载可能有不同表现。</p><div class="verdict"><b>建议动作：</b>算法与 QA 冻结 v8.4.124/128 两套环境，用同一数据、硬件与负载跑 72 小时 A/B，并记录模型、依赖、日志、误漏报、时延、内存和恢复结果。</div></article>
+        <article class="item"><h3>3. 长期壁垒与国产化价值</h3><p><b>结论：</b>长期壁垒是跨堆型质量对象模型、失效与根因库、版本谱系、跨芯片黄金样本和人工关闭反馈；国产化价值在隔离环境中的可供货、可维护、可替换与可审计。</p><p><b>依据：</b>监管问题需要多组织闭环，而开源推理路径连续变化；仅有兼容声明不足以证明任务、精度和算子组合可用。</p><div class="verdict"><b>建议动作：</b>平台、算法、QA 与交付共建契约仓：Schema、迁移器、黄金集、后端基线、SBOM、离线包、签名、回滚和审计导出。</div></article>
+      </section>
+
+      <section id="actions" class="card">
+        <div class="section-head"><div><div class="kicker">10 · ACTION</div><h2>十、给公司的建议</h2></div></div>
+        <div class="mini-grid">
+          <article class="mini-card"><h3>今日建议（3 条）</h3><p>1. 产品负责人今天冻结八类建造质量证据对象 v0.1。<br>2. 算法与 QA 启动 v8.4.124/128 动态 INT8 A/B。<br>3. 行业负责人只核实徐大堡现有流程、伙伴和采购窗口，不把监管活动登记成已立项商机。</p></article>
+          <article class="mini-card"><h3>短期行动（1–3 个月）</h3><p>完成 20 条脱敏质量问题穿透演示、一个联合伙伴访谈和一组 72 小时动态批处理长稳；形成主力/备选国产组合的任务级 FP16/INT8 兼容矩阵。</p></article>
+          <article class="mini-card"><h3>中长期规划（6–24 个月）</h3><p>形成“建造质量对象模型—移动巡检—证据链—只读 Agent—国产软硬件适配”产品线，沉淀跨堆型编码、根因模式、版本谱系和人工关闭反馈。</p></article>
+          <article class="mini-card"><h3>安全边界</h3><p>AI 仅作辅助决策；核安全、生产控制、质量关闭和网络安全相关输出必须人机协同、人工复核、规程优先。模型不得自动放行、关闭问题或控制安全级系统。</p></article>
+        </div>
+      </section>
+
+      <section id="method" class="card">
+        <div class="section-head"><div><div class="kicker">METHODOLOGY</div><h2>信息说明</h2></div></div>
+        <p class="note">信息截点：2026-08-25 09:15（Asia/Shanghai）。本期以国家核安全局、核电企业公开渠道、公开招采入口和开源项目官方发布为主，读取最近三期日报并只把 2026-08-21 截点后出现的实质变化列为新增。今日核验到 1 条监管质量信号和 1 条边缘视觉工程更新；未发现新的核电智慧巡检公开招标、中标、正式上线，也未发现国产算力与主要竞品的核电项目级新增。公开检索存在时滞，未发现不等于不存在，后续以采购公告、验收和实测为准。</p>
+      </section>
+    </div>
+
+    <aside class="card toc" aria-label="本期目录">
+      <h2>本期目录</h2>
+      <a href="#industry">01 重大行业事件</a>
+      <a href="#inspection">02 智慧巡检</a>
+      <a href="#ai">03 AI 视觉与多模态</a>
+      <a href="#domestic">04 国产硬件与边缘智能</a>
+      <a href="#data">05 数据治理与数字孪生</a>
+      <a href="#competitors">06 竞争对手</a>
+      <a href="#opportunities">07 商业机会</a>
+      <a href="#tracking">08 持续跟踪</a>
+      <a href="#insights">09 技术洞察</a>
+      <a href="#actions">10 公司建议</a>
+      <a href="#method">信息说明</a>
+    </aside>
+  </main>
+
+  <footer>每日推送 · 2026-08-25 · <a href="/archive/">查看历史归档</a></footer>
+</body>
+</html>
