@@ -1,0 +1,213 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="田湾7号机组进入带核调试，装料监督强调先决条件逐项核验和全过程留痕；Ultralytics 8.4.129 带来 BF16 与 LiteRT GPU 委派变化，生产升级前须独立回归。">
+  <meta property="og:title" content="核电智慧巡检与工业智能化行业日报 · 2026-08-26">
+  <meta property="og:description" content="田湾7号机组进入带核调试，装料监督强调先决条件逐项核验和全过程留痕；Ultralytics 8.4.129 带来 BF16 与 LiteRT GPU 委派变化，生产升级前须独立回归。">
+  <meta property="og:type" content="article">
+  <meta property="og:url" content="https://daily.851473.xyz/reports/2026-08-26/">
+  <meta property="og:image" content="https://daily.851473.xyz/reports/2026-08-26/cover.png">
+  <meta name="report-contract" content="nuclear-daily-v2">
+  <link rel="canonical" href="https://daily.851473.xyz/reports/2026-08-26/">
+  <title>核电智慧巡检与工业智能化行业日报 · 2026-08-26</title>
+  <style>
+    :root {
+      --accent: #087ea4;
+      --accent-strong: #083b62;
+      --accent-soft: #dff4fa;
+      --page: #f3f7fa;
+      --surface: #ffffff;
+      --text: #142533;
+      --muted: #617482;
+      --border: #dbe6ec;
+      --shadow: 0 12px 36px rgba(20, 52, 72, .08);
+      --radius-card: 18px;
+      --space-card: 24px;
+    }
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body { margin: 0; background: var(--page); color: var(--text); font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang SC", "Microsoft YaHei", sans-serif; font-size: 15px; line-height: 1.7; overflow-wrap: anywhere; }
+    img { max-width: 100%; height: auto; }
+    a { color: var(--accent); text-decoration-thickness: 1px; text-underline-offset: 3px; }
+    a:hover { color: var(--accent-strong); }
+    a:focus-visible { outline: 3px solid var(--accent-soft); outline-offset: 3px; border-radius: 4px; }
+    .wrap { width: min(1120px, calc(100% - 32px)); margin-inline: auto; }
+    .hero { padding: 52px 0 46px; color: #fff; background: radial-gradient(circle at 82% 18%, var(--accent) 0, transparent 30%), linear-gradient(135deg, var(--accent-strong), var(--accent)); border-bottom: 4px solid var(--accent-soft); }
+    .eyebrow { color: rgba(255, 255, 255, .78); font-size: 12px; font-weight: 800; letter-spacing: .16em; text-transform: uppercase; }
+    .hero h1 { max-width: 880px; margin: 10px 0 14px; font-size: clamp(30px, 5vw, 54px); line-height: 1.14; text-wrap: balance; }
+    .hero .lead { max-width: 820px; margin: 0; color: rgba(255, 255, 255, .86); font-size: clamp(15px, 2vw, 17px); }
+    .meta { display: flex; flex-wrap: wrap; gap: 9px; margin-top: 22px; }
+    .pill { padding: 6px 11px; border: 1px solid rgba(255, 255, 255, .28); border-radius: 999px; background: rgba(255, 255, 255, .09); font-size: 12px; }
+    .summary { position: relative; margin-top: -24px; }
+    .summary-grid { display: grid; grid-template-columns: 1.4fr repeat(2, minmax(0, 1fr)); gap: 12px; }
+    .card { padding: var(--space-card); border: 1px solid var(--border); border-radius: var(--radius-card); background: var(--surface); box-shadow: var(--shadow); }
+    .summary-card { min-width: 0; padding: 20px; }
+    .summary-card.primary { background: var(--accent-soft); border-color: var(--accent); }
+    .summary-card b { display: block; margin-bottom: 5px; color: var(--accent-strong); font-size: 13px; }
+    .summary-card strong { display: block; color: var(--accent); font-size: clamp(20px, 3vw, 26px); line-height: 1.25; }
+    .summary-card p { margin: 6px 0 0; color: var(--muted); font-size: 13px; }
+    main { padding: 34px 0 56px; }
+    .layout { display: grid; grid-template-columns: minmax(0, 1fr) 250px; gap: 24px; align-items: start; }
+    .content { min-width: 0; }
+    .content > .card { margin-bottom: 18px; }
+    .toc { position: sticky; top: 16px; padding: 18px; box-shadow: 0 4px 18px rgba(24, 51, 41, .05); }
+    .toc h2 { margin: 0 0 10px; color: var(--muted); font-size: 12px; letter-spacing: .12em; }
+    .toc a { display: block; padding: 6px 0; color: var(--muted); font-size: 13px; text-decoration: none; }
+    .toc a:hover { color: var(--accent); }
+    .section-head { display: flex; align-items: flex-start; justify-content: space-between; gap: 14px; margin-bottom: 6px; padding-bottom: 14px; border-bottom: 1px solid var(--border); }
+    .section-head h2 { margin: 0; color: var(--accent-strong); font-size: clamp(19px, 3vw, 23px); line-height: 1.35; }
+    .kicker { margin-bottom: 4px; color: var(--accent); font-size: 12px; font-weight: 800; letter-spacing: .08em; }
+    .rank { color: var(--muted); font-size: 12px; white-space: nowrap; }
+    .item { padding: 19px 0; border-bottom: 1px dashed var(--border); }
+    .item:last-child { padding-bottom: 2px; border-bottom: 0; }
+    .item h3 { margin: 0 0 8px; font-size: 18px; line-height: 1.45; text-wrap: pretty; }
+    .item p { margin: 7px 0; color: var(--muted); font-size: 14px; }
+    .tags { display: flex; flex-wrap: wrap; gap: 7px; margin: 9px 0; }
+    .tag { padding: 3px 8px; border-radius: 999px; background: var(--accent-soft); color: var(--accent-strong); font-size: 11px; font-weight: 800; }
+    .tag.warn { background: #fff0d8; color: #8a5a10; }
+    .tag.risk { background: #fae5e1; color: #a7332c; }
+    .verdict { margin-top: 12px; padding: 12px 14px; border-left: 3px solid var(--accent); border-radius: 0 10px 10px 0; background: var(--accent-soft); font-size: 14px; }
+    .source { margin-top: 10px; color: var(--muted); font-size: 12px; }
+    .source a { margin-right: 10px; }
+    .mini-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 12px; margin-top: 16px; }
+    .mini-card { padding: 16px; border: 1px solid var(--border); border-radius: 14px; background: var(--page); }
+    .mini-card h3 { margin: 0 0 7px; font-size: 16px; }
+    .mini-card p { margin: 6px 0; color: var(--muted); font-size: 13px; }
+    .table-wrap { max-width: 100%; margin-top: 14px; overflow-x: auto; border-radius: 12px; }
+    .table-wrap:focus-visible { outline: 3px solid var(--accent-soft); outline-offset: 2px; }
+    table { width: 100%; min-width: 620px; border-collapse: collapse; font-size: 13px; }
+    th, td { padding: 11px 10px; border-bottom: 1px solid var(--border); text-align: left; vertical-align: top; }
+    th { background: var(--accent-soft); color: var(--accent-strong); }
+    .note { margin-top: 15px; padding: 11px 13px; border-radius: 10px; background: var(--page); color: var(--muted); font-size: 12px; }
+    footer { padding: 0 16px 32px; color: var(--muted); text-align: center; font-size: 12px; }
+    @media (max-width: 900px) {
+      .summary-grid { grid-template-columns: 1fr 1fr; }
+      .summary-card.primary { grid-column: 1 / -1; }
+      .layout { grid-template-columns: 1fr; }
+      .toc { position: static; display: none; }
+    }
+    @media (max-width: 640px) {
+      .wrap { width: min(100% - 24px, 1120px); }
+      .hero { padding: 40px 0 38px; }
+      .summary-grid, .mini-grid { grid-template-columns: 1fr; }
+      .summary-card.primary { grid-column: auto; }
+      .card { padding: 19px 17px; }
+      .section-head { display: block; }
+      .rank { display: block; margin-top: 6px; white-space: normal; }
+    }
+  </style>
+</head>
+<body>
+  <header class="hero">
+    <div class="wrap">
+      <div class="eyebrow">DAILY BRIEFING</div>
+      <h1>核电智慧巡检与工业智能化行业日报</h1>
+      <p class="lead">田湾7号机组进入带核调试，装料监督强调先决条件逐项核验和全过程留痕；Ultralytics 8.4.129 带来 BF16 与 LiteRT GPU 委派变化，生产升级前须独立回归。</p>
+      <div class="meta"><span class="pill">2026年8月26日星期三 · 星期三</span><span class="pill">Asia/Shanghai</span></div>
+    </div>
+  </header>
+
+  <div class="wrap summary" aria-label="今日摘要">
+    <div class="summary-grid">
+      <section class="card summary-card primary"><b>今日一句话结论</b><strong>先把装料监督做成证据链，再评估视觉升级</strong><p>监管关键节点优先交付可审查、可回放、可追责的证据，不追求越权自动判定。</p></section>
+      <section class="card summary-card"><b>今日新增</b><strong>2 条实质信号</strong><p>田湾装料全过程监管；Ultralytics 8.4.129 工程更新。</p></section>
+      <section class="card summary-card"><b>建议动作</b><strong>双轨验证</strong><p>建证据对象样例，同时冻结版本做 72 小时 A/B。</p></section>
+    </div>
+  </div>
+
+  <main class="wrap layout">
+    <div class="content">
+      <section id="industry" class="card">
+        <div class="section-head"><div><div class="kicker">01 · INDUSTRY</div><h2>一、今日重大行业事件</h2></div><div class="rank">最多 3–5 条</div></div>
+        <article class="item">
+          <h3>田湾7号机组首次装料监督覆盖先决条件、关键工序和后续带核调试</h3>
+          <div class="tags"><span class="tag">带核调试</span><span class="tag">全过程监督</span><span class="tag warn">安全关键节点</span></div>
+          <p><b>已确认事实：</b>国家核安全局于 8 月 25 日披露，田湾核电站7号机组首次装料已启动，机组转入带核运行调试阶段。装料前，监管人员逐项核验组织与人员准备、运行许可证文件批复和相关系统设备准备；装料期间全程监督燃料组件起吊、场内转运、堆芯装入与精准就位；后续还将跟进首次临界、功率提升及各类调试试验。公开信息未宣布新的 AI、数字孪生或智慧巡检系统采购、上线。</p>
+          <div class="verdict"><b>判断：</b>从建造转向带核调试后，数字化产品的首要价值不是替代授权人员判断，而是把先决条件、操作步骤、设备状态、人员资质、异常处置和签批记录串成可审查证据链；任何视觉识别只应形成提示和带时间戳的候选证据。</div>
+          <p><b>建议行动：</b>以“装料先决条件包”和“关键动作证据包”各做一套脱敏演示，明确数据来源、版本、责任人、复核人、变更原因和导出格式；先在非生产数据上验证完整性与追溯，再讨论现场接入。</p>
+          <div class="source">来源：<a href="https://nnsa.mee.gov.cn/ywdt/gzdt/202608/t20260825_1164509.html" rel="noopener noreferrer">国家核安全局｜开展田湾核电站7号机组首次装料监督（2026-08-25）</a></div>
+        </article>
+      </section>
+
+      <section id="inspection" class="card">
+        <div class="section-head"><div><div class="kicker">02 · INSPECTION</div><h2>二、智慧巡检最新动态</h2></div><div class="rank">最多 3 条</div></div>
+        <article class="item"><h3>今日无新的智慧巡检招标、中标或正式上线</h3><p><b>已确认范围：</b>截至信息截点，核验国家核安全局、国家能源局、主要核电企业公开入口与中广核电子商务平台公开页面，未发现相较 8 月 25 日日报新增的核电智慧巡检项目级公告。田湾首次装料是监管与工程节点，不是智慧巡检采购线索。</p><p><b>场景判断：</b>可持续积累非安全级视频、仪表、作业步骤与异常记录的证据组织能力，但不得把“全过程监督”解释为监管部门要求机器视觉自动判定，更不得虚构采购方、预算或上线范围。</p><div class="verdict"><b>建议行动：</b>保持项目观察，不主动包装“已立项”；将能力演示聚焦证据采集完整性、断网缓存、时间同步、人工复核、审计导出和权限隔离六项可验指标。</div></article>
+      </section>
+
+      <section id="ai" class="card">
+        <div class="section-head"><div><div class="kicker">03 · AI</div><h2>三、AI 视觉与多模态技术进展</h2></div><div class="rank">最多 2–3 条</div></div>
+        <article class="item"><h3>Ultralytics 8.4.129 增加 BF16 训练，并优化 LiteRT GPU 委派与多数据集调参</h3><div class="tags"><span class="tag">BF16</span><span class="tag">LiteRT GPU</span><span class="tag">多数据集</span><span class="tag risk">须独立回归</span></div><p><b>已确认事实：</b>Ultralytics 于 8 月 25 日发布 v8.4.129：训练参数 <code>amp</code> 新增 BF16；多数据集调参交由 <code>MultiTrainer</code> 隔离执行并记录逐数据集与宏平均指标；YOLO26 端到端 LiteRT 导出调整检测头算子，以减少 GPU 委派时回退 CPU；常规批量图像解码和部分 FastSAM 预处理也增加并行路径。官方说明并未给出核电数据、国产 NPU 或现场长稳结果。</p><p><b>核电应用价值：</b>BF16 更适合在支持的 CUDA 训练设备上验证小目标、低照、反光和类别不平衡数据的数值稳定性；多数据集指标有利于避免“一个厂区平均分掩盖另一个厂区退化”。LiteRT GPU 变化可用于 Android/轻量边缘终端的非安全级检测验证，但不能外推到昇腾、RKNN 或其他国产 NPU。</p><p><b>工程化限制：</b>需固定模型、数据版本、随机种子、预后处理和阈值，比较 FP32/FP16/BF16 的逐场景召回、误报、收敛、显存与复现性；LiteRT 必须核对委派比例、CPU 回退、热稳定、功耗、空目标和小目标精度。所有告警继续由人员按规程复核。</p><div class="verdict"><b>跟进建议：立即做隔离验证，暂不升级生产。</b>冻结 v8.4.128 与 v8.4.129，先跑离线精度与导出一致性，再做 72 小时同负载长稳；任何生产变更都要保留回滚包和版本化验证报告。</div><div class="source">来源：<a href="https://github.com/ultralytics/ultralytics/releases/tag/v8.4.129" rel="noopener noreferrer">Ultralytics GitHub Release｜v8.4.129（2026-08-25）</a></div></article>
+      </section>
+
+      <section id="domestic" class="card">
+        <div class="section-head"><div><div class="kicker">04 · DOMESTIC STACK</div><h2>四、国产硬件与边缘智能专项</h2></div><div class="rank">最多 3–5 条</div></div>
+        <div class="mini-grid">
+          <article class="mini-card"><h3>4.1 国产 CPU 与服务器</h3><p><b>今日无高价值新增。</b>继续把数据库、证据归档、只读检索和审计导出作为中心侧主负载；采购前用真实并发、国密、备份恢复和长期支持版本验证，不仅看单项算力。</p></article>
+          <article class="mini-card"><h3>4.2 国产 GPU / NPU 与 AI 加速</h3><p><b>今日无可核验的新核电项目级进展。</b>Ultralytics 的 LiteRT/CUDA 结论不能转写为国产 NPU 兼容；昇腾、寒武纪、RKNN 等必须分别锁定算子、量化、精度和驱动矩阵。</p></article>
+          <article class="mini-card"><h3>4.3 国产边缘算力设备</h3><p>主力仍是低功耗盒式设备承载视频接入、缓存、推理与健康监测；PoC 必测断网续传、时钟漂移、硬件看门狗、温升降频、掉电恢复和 72 小时长稳。</p></article>
+          <article class="mini-card"><h3>4.4 国产操作系统与基础软件</h3><p>优先验证麒麟/统信与容器运行时、视频编解码、NPU 驱动、离线升级、SBOM 和审计日志组合；机器人/终端侧只部署签名模型与最小权限服务。</p></article>
+        </div>
+        <article class="item"><h3>4.5 对智慧核电的部署建议</h3><p><b>今日国产化部署结论：</b>视觉边缘推理以“国产 NPU 盒式设备 + 本地缓存 + 人工复核”为主力；厂级证据与知识平台以国产 CPU 服务器和本地对象存储为主力；RAG/AI Agent 仅以只读检索、缺项提示和差异比对进入 PoC。外部云推理、自动写控制参数和自动关闭质量问题暂不进入生产。</p><div class="verdict"><b>适配结论：</b>国产主力方案须经逐模型、逐算子、逐驱动 PoC 后采用；x86/CUDA 可作为研发和精度对照备选，不作为国产适配已完成的证据。</div></article>
+      </section>
+
+      <section id="data" class="card">
+        <div class="section-head"><div><div class="kicker">05 · DATA &amp; TWIN</div><h2>五、工业数据治理与数字孪生趋势</h2></div></div>
+        <article class="item"><h3>带核调试证据底座应围绕“条件—动作—结果—复核”建模</h3><p><b>已落地证据：</b>国家核安全局公开信息明确了装料前组织、人员、许可文件和系统设备准备核验，以及装料中起吊、转运、装入、就位等关键工序监督；但没有宣布新的数据平台、数字孪生或 AI Agent 上线。</p><div class="verdict"><b>判断：</b>可商业化的最小产品不是一张“进度大屏”，而是每个先决条件和关键动作的版本化证据对象：对象 ID、原始来源、采集时间、设备/人员、规程版本、复核结论、异常与变更链。数字孪生只承担对象定位与关系导航，只读 Agent 只做权限内检索和缺项提醒。</div><p><b>建议行动：</b>用 30 条脱敏样例建立字段字典、证据哈希、电子签批、权限继承和审计导出；以“任一结论能在两分钟内回到原始证据”为验收门槛。</p><div class="source">依据：<a href="https://nnsa.mee.gov.cn/ywdt/gzdt/202608/t20260825_1164509.html" rel="noopener noreferrer">国家核安全局监管动态</a></div></article>
+      </section>
+
+      <section id="competitors" class="card">
+        <div class="section-head"><div><div class="kicker">06 · COMPETITORS</div><h2>六、竞争对手动态</h2></div><div class="rank">最多 3 条</div></div>
+        <article class="item"><h3>今日无高价值竞争对手项目级新增</h3><p><b>已确认事实：</b>截至信息截点，未核验到主要竞争主体新发布的核电智慧巡检中标、正式上线或国产化适配实测；公开检索未命中不等于市场上不存在非公开项目。</p><div class="verdict"><b>建议策略：</b>不以产品宣传和通用 AI 新闻填充竞争情报；持续按“采购公告—合同/中标—上线范围—现场指标—复购扩容”五级证据追踪，只在等级变化时进入主体。</div></article>
+      </section>
+
+      <section id="opportunities" class="card">
+        <div class="section-head"><div><div class="kicker">07 · OPPORTUNITIES</div><h2>七、商业机会</h2></div><div class="rank">优先 1–5 个</div></div>
+        <article class="item"><h3>田湾带核调试证据链方案预研｜线索级，不是采购公告</h3><p><b>机会内容：</b>首次装料后的首次临界、功率提升和调试试验将继续受到过程监督，这提供了验证“先决条件包、关键动作留痕、异常闭环、审计导出”的业务语境；公开来源没有采购名称、预算、技术规格或联系人，因此只能列为 C 级账户研究线索。</p><p><b>匹配判断：</b>适合已有数据治理、证据归档、边缘采集、权限审计能力的团队做脱敏原型；网络隔离、许可边界、数据主权和人工复核是进入门槛。视觉算法只是证据候选生成器，不是放行依据。</p><div class="verdict"><b>推荐行动：</b>先完成内部场景卡和演示，不进行“已立项”销售表述；只有出现正式需求访谈、采购公告或联合验证邀请后才升级机会等级。</div><div class="source">线索依据：<a href="https://nnsa.mee.gov.cn/ywdt/gzdt/202608/t20260825_1164509.html" rel="noopener noreferrer">国家核安全局｜田湾7号机组首次装料监督</a></div></article>
+      </section>
+
+      <section id="tracking" class="card">
+        <div class="section-head"><div><div class="kicker">08 · TRACKING</div><h2>八、持续跟踪事项</h2></div></div>
+        <div class="table-wrap" tabindex="0"><table><thead><tr><th>事项名称</th><th>当前状态</th><th>今日是否有实质新增</th><th>下一观察节点</th></tr></thead><tbody><tr><td>田湾7号机组</td><td>首次装料启动，转入带核调试；监管将跟进临界、功率提升和调试试验</td><td>有：首次披露全过程装料监督链</td><td>首次临界、功率提升、调试试验监督信息</td></tr><tr><td>徐大堡建造质量对话</td><td>已提出分层压实责任、根因分析和闭环整改要求</td><td>无：未见相较 8 月 25 日的新节点</td><td>整改闭环、质量监督或正式数字化采购</td></tr><tr><td>Ultralytics 边缘视觉基线</td><td>v8.4.129 发布；v8.4.128 仍为当前对照版本</td><td>有：BF16、多数据集调参和 LiteRT GPU 委派变化</td><td>逐场景精度、委派比例与 72 小时 A/B 结果</td></tr><tr><td>核电智慧巡检公开采购</td><td>今日未核验到新招标、中标或上线</td><td>无</td><td>采购公告、中标公示、验收或扩容</td></tr><tr><td>国产算力适配</td><td>继续按逐芯片、逐模型、逐驱动验证</td><td>无项目级新增</td><td>官方版本发布与核电现场实测</td></tr></tbody></table></div>
+      </section>
+
+      <section id="insights" class="card">
+        <div class="section-head"><div><div class="kicker">09 · INSIGHT</div><h2>九、今日技术洞察</h2></div></div>
+        <article class="item"><h3>一至三年机会在“可审查证据操作系统”，不是更大的模型</h3><p><b>结论：</b>最大商业机会是把现场感知、规程、对象编码、人员资质、版本、异常与签批串成连续证据；立即验证的是证据完整性、跨系统追溯、模型版本可复现和断网可恢复。长期壁垒来自核电对象/规程语义、审计历史、现场接口与国产软硬件兼容矩阵，而不是单个通用模型。</p><p><b>依据：</b>田湾装料监督公开信息把先决条件、关键动作和后续调试串成全过程监管链；Ultralytics v8.4.129 同时提醒团队，训练精度和导出执行路径会随版本改变，模型结果必须与版本、数据和硬件绑定保存。</p><div class="verdict"><b>建议动作：</b>由产品、核电业务、数据平台与算法四方共同冻结证据对象 v0.1；算法团队提交 v8.4.128/129 可复现实验包，平台团队验证任一告警到原始帧、模型、阈值和人工结论的反向追溯。</div></article>
+      </section>
+
+      <section id="actions" class="card">
+        <div class="section-head"><div><div class="kicker">10 · ACTION</div><h2>十、给公司的建议</h2></div></div>
+        <div class="mini-grid">
+          <article class="mini-card"><h3>今日建议（不超过 3 条）</h3><p>① 48 小时内完成装料先决条件/关键动作证据对象 v0.1；② 冻结 v8.4.128/129 环境并启动同数据 A/B；③ 将田湾机会保持 C 级线索，未经采购或访谈证据不升级。</p></article>
+          <article class="mini-card"><h3>短期行动（1–3 个月）</h3><p>产品负责人交付 30 条脱敏证据样例；算法负责人完成 FP32/FP16/BF16、LiteRT GPU 委派与国产 NPU 分离验证；平台负责人完成断网缓存、签名升级、权限审计和两分钟证据回溯验收。</p></article>
+          <article class="mini-card"><h3>中长期规划（6–24 个月）</h3><p>形成核电对象/规程语义层、证据湖、模型与阈值注册表、国产兼容矩阵和只读 Agent 网关；按装料、调试、运行、检修等监管节点沉淀可复制方案，始终保留人机协同和授权签批边界。</p></article>
+        </div>
+      </section>
+
+      <section id="method" class="card">
+        <div class="section-head"><div><div class="kicker">METHODOLOGY</div><h2>信息说明</h2></div></div>
+        <p class="note">信息截点：2026-08-26 09:18（Asia/Shanghai）。本期读取 2026-08-20、08-21、08-25 三期日报去重，优先核验国家核安全局、国家能源局、核电企业公开渠道、公开招采入口与开源项目官方发布。相较 8 月 25 日截点，本期确认 1 条监管工程节点和 1 条视觉工程更新；未发现新的核电智慧巡检公开招标、中标、正式上线，也未发现国产算力或主要竞品的核电项目级新增。公开检索存在时滞，“未发现”不等于不存在，采购、验收和实测结论须以后续一手证据为准。</p>
+      </section>
+    </div>
+
+    <aside class="card toc" aria-label="本期目录">
+      <h2>本期目录</h2>
+      <a href="#industry">01 重大行业事件</a>
+      <a href="#inspection">02 智慧巡检</a>
+      <a href="#ai">03 AI 视觉与多模态</a>
+      <a href="#domestic">04 国产硬件与边缘智能</a>
+      <a href="#data">05 数据治理与数字孪生</a>
+      <a href="#competitors">06 竞争对手</a>
+      <a href="#opportunities">07 商业机会</a>
+      <a href="#tracking">08 持续跟踪</a>
+      <a href="#insights">09 技术洞察</a>
+      <a href="#actions">10 公司建议</a>
+      <a href="#method">信息说明</a>
+    </aside>
+  </main>
+
+  <footer>每日推送 · 2026-08-26 · <a href="/archive/">查看历史归档</a></footer>
+</body>
+</html>
