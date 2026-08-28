@@ -1,0 +1,211 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Ultralytics 修正训练集验证口径，昨日固定样本基线必须重跑；本地 2U 边缘 AI 进入量产，但核电应用仍须隔离验证。">
+  <meta property="og:title" content="核电智慧巡检与工业智能化行业日报 · 2026-08-28">
+  <meta property="og:description" content="Ultralytics 修正训练集验证口径，昨日固定样本基线必须重跑；本地 2U 边缘 AI 进入量产，但核电应用仍须隔离验证。">
+  <meta property="og:type" content="article">
+  <meta property="og:url" content="https://daily.851473.xyz/reports/2026-08-28/">
+  <meta property="og:image" content="https://daily.851473.xyz/reports/2026-08-28/cover.png">
+  <meta name="report-contract" content="nuclear-daily-v2">
+  <link rel="canonical" href="https://daily.851473.xyz/reports/2026-08-28/">
+  <title>核电智慧巡检与工业智能化行业日报 · 2026-08-28</title>
+  <style>
+    :root {
+      --accent: #117b99;
+      --accent-strong: #0a334d;
+      --accent-soft: #dff3f8;
+      --page: #f2f6f8;
+      --surface: #ffffff;
+      --text: #132630;
+      --muted: #60727b;
+      --border: #d9e5e9;
+      --shadow: 0 12px 36px rgba(12, 58, 78, .08);
+      --radius-card: 18px;
+      --space-card: 24px;
+    }
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body { margin: 0; background: var(--page); color: var(--text); font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang SC", "Microsoft YaHei", sans-serif; font-size: 15px; line-height: 1.7; overflow-wrap: anywhere; }
+    img { max-width: 100%; height: auto; }
+    a { color: var(--accent); text-decoration-thickness: 1px; text-underline-offset: 3px; }
+    a:hover { color: var(--accent-strong); }
+    a:focus-visible { outline: 3px solid var(--accent-soft); outline-offset: 3px; border-radius: 4px; }
+    .wrap { width: min(1120px, calc(100% - 32px)); margin-inline: auto; }
+    .hero { padding: 52px 0 46px; color: #fff; background: radial-gradient(circle at 82% 18%, var(--accent) 0, transparent 30%), linear-gradient(135deg, var(--accent-strong), var(--accent)); border-bottom: 4px solid var(--accent-soft); }
+    .eyebrow { color: rgba(255, 255, 255, .78); font-size: 12px; font-weight: 800; letter-spacing: .16em; text-transform: uppercase; }
+    .hero h1 { max-width: 880px; margin: 10px 0 14px; font-size: clamp(30px, 5vw, 54px); line-height: 1.14; text-wrap: balance; }
+    .hero .lead { max-width: 820px; margin: 0; color: rgba(255, 255, 255, .86); font-size: clamp(15px, 2vw, 17px); }
+    .meta { display: flex; flex-wrap: wrap; gap: 9px; margin-top: 22px; }
+    .pill { padding: 6px 11px; border: 1px solid rgba(255, 255, 255, .28); border-radius: 999px; background: rgba(255, 255, 255, .09); font-size: 12px; }
+    .summary { position: relative; margin-top: -24px; }
+    .summary-grid { display: grid; grid-template-columns: 1.4fr repeat(2, minmax(0, 1fr)); gap: 12px; }
+    .card { padding: var(--space-card); border: 1px solid var(--border); border-radius: var(--radius-card); background: var(--surface); box-shadow: var(--shadow); }
+    .summary-card { min-width: 0; padding: 20px; }
+    .summary-card.primary { background: var(--accent-soft); border-color: var(--accent); }
+    .summary-card b { display: block; margin-bottom: 5px; color: var(--accent-strong); font-size: 13px; }
+    .summary-card strong { display: block; color: var(--accent); font-size: clamp(20px, 3vw, 26px); line-height: 1.25; }
+    .summary-card p { margin: 6px 0 0; color: var(--muted); font-size: 13px; }
+    main { padding: 34px 0 56px; }
+    .layout { display: grid; grid-template-columns: minmax(0, 1fr) 250px; gap: 24px; align-items: start; }
+    .content { min-width: 0; }
+    .content > .card { margin-bottom: 18px; }
+    .toc { position: sticky; top: 16px; padding: 18px; box-shadow: 0 4px 18px rgba(24, 51, 41, .05); }
+    .toc h2 { margin: 0 0 10px; color: var(--muted); font-size: 12px; letter-spacing: .12em; }
+    .toc a { display: block; padding: 6px 0; color: var(--muted); font-size: 13px; text-decoration: none; }
+    .toc a:hover { color: var(--accent); }
+    .section-head { display: flex; align-items: flex-start; justify-content: space-between; gap: 14px; margin-bottom: 6px; padding-bottom: 14px; border-bottom: 1px solid var(--border); }
+    .section-head h2 { margin: 0; color: var(--accent-strong); font-size: clamp(19px, 3vw, 23px); line-height: 1.35; }
+    .kicker { margin-bottom: 4px; color: var(--accent); font-size: 12px; font-weight: 800; letter-spacing: .08em; }
+    .rank { color: var(--muted); font-size: 12px; white-space: nowrap; }
+    .item { padding: 19px 0; border-bottom: 1px dashed var(--border); }
+    .item:last-child { padding-bottom: 2px; border-bottom: 0; }
+    .item h3 { margin: 0 0 8px; font-size: 18px; line-height: 1.45; text-wrap: pretty; }
+    .item p { margin: 7px 0; color: var(--muted); font-size: 14px; }
+    .tags { display: flex; flex-wrap: wrap; gap: 7px; margin: 9px 0; }
+    .tag { padding: 3px 8px; border-radius: 999px; background: var(--accent-soft); color: var(--accent-strong); font-size: 11px; font-weight: 800; }
+    .tag.warn { background: #fff0d8; color: #8a5a10; }
+    .tag.risk { background: #fae5e1; color: #a7332c; }
+    .verdict { margin-top: 12px; padding: 12px 14px; border-left: 3px solid var(--accent); border-radius: 0 10px 10px 0; background: var(--accent-soft); font-size: 14px; }
+    .source { margin-top: 10px; color: var(--muted); font-size: 12px; }
+    .source a { margin-right: 10px; }
+    .mini-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 12px; margin-top: 16px; }
+    .mini-card { padding: 16px; border: 1px solid var(--border); border-radius: 14px; background: var(--page); }
+    .mini-card h3 { margin: 0 0 7px; font-size: 16px; }
+    .mini-card p { margin: 6px 0; color: var(--muted); font-size: 13px; }
+    .table-wrap { max-width: 100%; margin-top: 14px; overflow-x: auto; border-radius: 12px; }
+    .table-wrap:focus-visible { outline: 3px solid var(--accent-soft); outline-offset: 2px; }
+    table { width: 100%; min-width: 620px; border-collapse: collapse; font-size: 13px; }
+    th, td { padding: 11px 10px; border-bottom: 1px solid var(--border); text-align: left; vertical-align: top; }
+    th { background: var(--accent-soft); color: var(--accent-strong); }
+    .note { margin-top: 15px; padding: 11px 13px; border-radius: 10px; background: var(--page); color: var(--muted); font-size: 12px; }
+    footer { padding: 0 16px 32px; color: var(--muted); text-align: center; font-size: 12px; }
+    @media (max-width: 900px) {
+      .summary-grid { grid-template-columns: 1fr 1fr; }
+      .summary-card.primary { grid-column: 1 / -1; }
+      .layout { grid-template-columns: 1fr; }
+      .toc { position: static; display: none; }
+    }
+    @media (max-width: 640px) {
+      .wrap { width: min(100% - 24px, 1120px); }
+      .hero { padding: 40px 0 38px; }
+      .summary-grid, .mini-grid { grid-template-columns: 1fr; }
+      .summary-card.primary { grid-column: auto; }
+      .card { padding: 19px 17px; }
+      .section-head { display: block; }
+      .rank { display: block; margin-top: 6px; white-space: normal; }
+    }
+  </style>
+</head>
+<body>
+  <header class="hero">
+    <div class="wrap">
+      <div class="eyebrow">DAILY BRIEFING</div>
+      <h1>核电智慧巡检与工业智能化行业日报</h1>
+      <p class="lead">Ultralytics 修正训练集验证口径，昨日固定样本基线必须重跑；本地 2U 边缘 AI 进入量产，但核电应用仍须隔离验证。</p>
+      <div class="meta"><span class="pill">2026年8月28日星期五 · 星期五</span><span class="pill">Asia/Shanghai</span></div>
+    </div>
+  </header>
+
+  <div class="wrap summary" aria-label="今日摘要">
+    <div class="summary-grid">
+      <section class="card summary-card primary"><b>今日一句话结论</b><strong>先修正验证基线，再谈模型升级；边缘 Agent 只做只读辅助。</strong><p>评估口径变化会直接影响昨天的固定样本结论。</p></section>
+      <section class="card summary-card"><b>今日新增</b><strong>1 个技术修正</strong><p>v8.4.131 修复训练集验证增强与 fraction 分片选择。</p></section>
+      <section class="card summary-card"><b>建议动作</b><strong>重跑 A/B</strong><p>冻结样本清单、增强开关与版本，复核全部指标。</p></section>
+    </div>
+  </div>
+
+  <main class="wrap layout">
+    <div class="content">
+      <section id="industry" class="card">
+        <div class="section-head"><div><div class="kicker">01 · INDUSTRY</div><h2>一、今日重大行业事件</h2></div><div class="rank">最多 3–5 条</div></div>
+        <article class="item"><h3>Ultralytics v8.4.131 修正训练集验证口径</h3><div class="tags"><span class="tag">今日发布</span><span class="tag">验证可信度</span><span class="tag risk">基线需重跑</span></div><p><b>已确认事实：</b>Ultralytics 于上海时间 8 月 28 日 01:35 发布 v8.4.131。新版本让 <code>split=train</code> 验证稳定使用不含 Mosaic、MixUp、Random Perspective 的验证流水线，并按请求的 split 选择数据 fraction；官方说明旧行为会造成崩溃或不可靠指标，影响检测、分割、OBB、RT-DETR 与 YOLOE 验证。</p><div class="verdict"><b>判断：</b>这是相较昨日 v8.4.130 的实质修正。昨天建议的固定样本 A/B 若包含 <code>split=train</code>，其历史指标不能直接与新版本横向比较；需要把 split、增强开关和样本清单纳入同一证据契约。</div><p><b>建议行动：</b>算法与 QA 今天重跑 v8.4.130/131 同一黄金集，分别核对 train/val/test、样本 ID、增强配置、召回、误报和难例；结果一致前不升级生产。</p><div class="source">来源：<a href="https://github.com/ultralytics/ultralytics/releases/tag/v8.4.131" rel="noopener noreferrer">Ultralytics GitHub Release｜v8.4.131</a></div></article>
+        <article class="item"><h3>Aetina 推出量产 2U 本地 AI 智能体服务器</h3><div class="tags"><span class="tag">首次纳入</span><span class="tag">本地部署</span><span class="tag warn">非国产方案</span></div><p><b>已确认事实：</b>Aetina 于 8 月 27 日发布 MegaEdge AIP-RQ87：500mm 深 2U 机箱，Intel Core Ultra 5/7/9、最高 256GB DDR5、PCIe Gen5 x16，可配置 NVIDIA RTX PRO 6000 Blackwell 或 Qualcomm Cloud AI 100 Ultra；系统提供 2000W 电源与 10GbE，厂商称已量产并取得 CE、FCC Class A、UKCA 认证。</p><div class="verdict"><b>判断：</b>竞争焦点正从“模型接口”转向可维护的本地算力节点、双加速卡供电和数据不出域。该产品未披露核电项目、国产化、宽温抗震、长期供货、离线补丁或核安全认证，不能据宣传直接进入核电方案。</div><p><b>建议行动：</b>产品团队把其 2U 深度、双卡功耗、10GbE 和免工具维护作为竞品规格线；国产方案须在同机架空间内给出能耗、噪声、冗余、驱动锁定和 72 小时满载实测，不照搬 Agent 自动化边界。</p><div class="source">来源：<a href="https://www.aetina-ai.cn/about-news-detail.php?i=1254" rel="noopener noreferrer">Aetina 官方发布｜MegaEdge AIP-RQ87（2026-08-27）</a></div></article>
+        <article class="item"><h3>核电监管与项目侧今日无高价值新增</h3><p><b>已确认事实：</b>截至 09:05，国家核安全局公开要闻与核动力厂监管页面未显示相较 8 月 27 日新增的核电智慧巡检招标、中标、上线、扩容或监管要求；公开检索未命中不代表不存在非公开项目。</p><div class="verdict"><b>判断：</b>田湾 7 号机组带核调试、徐大堡建造质量闭环等已在前期日报说明，今日没有新节点，不重复进入主体。</div><p><b>建议行动：</b>继续等待临界、并网、正式采购、现场实测或验收证据，再升级机会等级。</p><div class="source">核验入口：<a href="https://nnsa.mee.gov.cn/ywdt/" rel="noopener noreferrer">国家核安全局｜要闻动态</a><a href="https://nnsa.mee.gov.cn/ywdh/fyd/" rel="noopener noreferrer">核动力厂和研究堆</a></div></article>
+      </section>
+
+      <section id="inspection" class="card">
+        <div class="section-head"><div><div class="kicker">02 · INSPECTION</div><h2>二、智慧巡检最新动态</h2></div><div class="rank">最多 3 条</div></div>
+        <article class="item"><h3>固定样本巡检基线必须补上“无增强验证”证据</h3><p><b>采购方与当前阶段：</b>今日没有新的核电采购方；这是对昨日 v8.4.130 固定样本验证方案的工程修正。v8.4.131 明确修复 <code>split=train</code> 时误用训练增强的问题。</p><p><b>技术与市场价值：</b>仪表读数、阀位、PPE、异物、渗漏和机器人视频都可能包含小目标与强反光，随机增强会改变评估难度并掩盖真实回归。适合核电非安全级 AI 辅助巡检，但必须保留原图、样本 ID、split、增强状态、阈值与人工结论。</p><p><b>工程化限制：</b>版本修复不证明核电数据上的精度，也不证明国产 NPU、视频解码或长稳兼容；训练集验证只能用于诊断，最终验收仍应使用冻结且隔离的测试集。</p><div class="verdict"><b>建议行动：</b>立即验证：为每次评估导出 manifest，显式记录 <code>augment=false</code>、split、fraction 类型、文件哈希和版本；旧报告若无法还原这些字段，标记为不可比较。</div><div class="source">依据：<a href="https://github.com/ultralytics/ultralytics/releases/tag/v8.4.131" rel="noopener noreferrer">Ultralytics v8.4.131</a></div></article>
+        <article class="item"><h3>今日无新的核电智慧巡检项目级公告</h3><p><b>采购方与当前阶段：</b>未核验到新的正式招标、中标、上线或扩容。南网数科小水电智能巡检设备仍等待 9 月 1 日响应与谈判，今日无新增结果。</p><p><b>技术与市场价值：</b>保持“中心算力＋移动采集＋对象标识＋证据链”的同构需求研究，但不把小水电项目外推为核电业绩。</p><div class="verdict"><b>建议行动：</b>未取得南网采购文件者不追投；已取得者只按采购文件推进，其他团队等待成交与验收口径。</div><div class="source">跟踪来源：<a href="https://www.bidding.csg.cn/fzbgg/1200440024.jhtml" rel="noopener noreferrer">南方电网供应链统一服务平台｜采购公告</a></div></article>
+      </section>
+
+      <section id="ai" class="card">
+        <div class="section-head"><div><div class="kicker">03 · AI</div><h2>三、AI 视觉与多模态技术进展</h2></div><div class="rank">最多 2–3 条</div></div>
+        <article class="item"><h3>v8.4.131：验证可靠性提升，Apple Core AI 仍属实验路径</h3><p><b>核心能力与核电场景：</b>除验证修正外，新版本为 YOLO26 增加 Apple Core AI 导出与推理，可生成 <code>.aimodel</code>，支持 FP32 和可选 FP16；同时修复模型尺度匹配、YOLOE 类别重排、分布式训练 class weights 等问题。对核电最直接的价值是验证口径修正与类别顺序变化后提示嵌入正确刷新。</p><p><b>工程化限制：</b>Core AI 当前固定输入尺寸、不支持动态 shape 或 NMS 导出，要求 Apple silicon/macOS 26，导出资产面向 iOS 27/macOS 27，且尚不支持官方 iOS/Flutter SDK。它不覆盖主流国产边缘硬件，也没有核电数据、误漏报、功耗、离线升级和审查证据。</p><div class="verdict"><b>跟进建议：验证修正立即回归；Core AI 持续跟踪，暂不投入生产。</b>生产候选仍围绕客户指定的国产 CPU/NPU 与隔离网络，Apple 路径仅用于研发侧可视化或便携演示，不进入现场主力架构。</div><div class="source">来源：<a href="https://github.com/ultralytics/ultralytics/releases/tag/v8.4.131" rel="noopener noreferrer">Ultralytics GitHub Release｜v8.4.131</a></div></article>
+      </section>
+
+      <section id="domestic" class="card">
+        <div class="section-head"><div><div class="kicker">04 · DOMESTIC STACK</div><h2>四、国产硬件与边缘智能专项</h2></div><div class="rank">最多 3–5 条</div></div>
+        <div class="mini-grid">
+          <article class="mini-card"><h3>4.1 国产 CPU 与服务器</h3><p><b>今日无高价值新增。</b>中心侧继续以客户指定国产 CPU 承载样本谱系、证据归档、只读检索与审计导出；对标 2U 竞品时必须给出双电源、热设计、10GbE、备件和长期支持。</p></article>
+          <article class="mini-card"><h3>4.2 国产 GPU / NPU 与 AI 加速</h3><p><b>今日无新的适配证据。</b>v8.4.131 修复的是框架验证路径，不证明昇腾、寒武纪、海光 DCU 或 RKNN 兼容；每个模型、算子、量化和驱动组合仍需独立验收。</p></article>
+          <article class="mini-card"><h3>4.3 国产边缘算力设备</h3><p>主力仍是低功耗盒式节点承载视频接入、缓存、推理与健康监测。采购前用同一无增强黄金集实测断网、掉电、温升降频、码流异常和 72 小时长稳。</p></article>
+          <article class="mini-card"><h3>4.4 国产操作系统与基础软件</h3><p>在麒麟、统信或 openEuler 上锁定容器、编解码、驱动与推理框架；评估 manifest 必须记录 split、增强开关、fraction 类型、SBOM、阈值和结果哈希。</p></article>
+        </div>
+        <article class="item"><h3>4.5 对智慧核电的部署建议</h3><p><b>今日国产化部署结论：</b>视觉边缘推理以“客户指定国产 NPU 盒式节点＋本地缓存＋人工复核”为主力；厂级平台以国产 CPU 服务器和对象存储为主力；RAG / AI Agent 仅做权限内只读检索、证据关联和缺项提示。先修正评估口径，再比较后端。</p><div class="verdict"><b>适配结论：</b>主力：国产 CPU/NPU 组合，统一 manifest 与黄金集后 PoC 采用；备选：x86/CUDA 仅作精度和吞吐对照。Apple Core AI 与 Aetina 2U 平台暂不进入生产，只有在客户明确场景、供应链和合规约束满足后再评估。</div></article>
+      </section>
+
+      <section id="data" class="card">
+        <div class="section-head"><div><div class="kicker">05 · DATA &amp; TWIN</div><h2>五、工业数据治理与数字孪生趋势</h2></div></div>
+        <article class="item"><h3>评估谱系必须把“数据切分与增强状态”升为一等字段</h3><p><b>已落地证据：</b>v8.4.131 官方明确，旧版 <code>split=train</code> 会意外应用训练增强，并修正了 fraction 按请求 split 选择的行为。这说明仅记录模型版本和最终指标不足以复现评估。</p><div class="verdict"><b>判断：</b>工业数据治理的短期价值是让每个指标可回到样本、切分、增强、配置类型、模型、运行时、硬件和人工结论；数字孪生只提供对象与位置上下文，Agent 只读查询这条谱系。</div><p><b>建议行动：</b>平台团队今天给评估运行对象新增 <code>dataset_split</code>、<code>augmentation_enabled</code>、<code>fraction_value/type</code> 和样本 manifest 哈希；禁止 Agent 自动修改阈值、关单或触发生产控制。</p><div class="source">依据：<a href="https://github.com/ultralytics/ultralytics/releases/tag/v8.4.131" rel="noopener noreferrer">Ultralytics v8.4.131</a></div></article>
+      </section>
+
+      <section id="competitors" class="card">
+        <div class="section-head"><div><div class="kicker">06 · COMPETITORS</div><h2>六、竞争对手动态</h2></div><div class="rank">最多 3 条</div></div>
+        <article class="item"><h3>Aetina 把私有 Agent 与多模态能力装入 500mm 深 2U 机箱</h3><p><b>已确认事实：</b>AIP-RQ87 已进入量产，支持 Intel Core Ultra、最高 256GB DDR5、双高功耗加速卡、2000W 电源和 10GbE，厂商主打私有 LLM、RAG、多模态与智能自动化，并强调免工具维护。</p><div class="verdict"><b>判断：</b>竞争对象已从单块加速卡扩展到“机架空间＋供电散热＋维护＋软件入口”的整机交付。其公开材料没有核电现场或国产化证据，真正差异化仍是可审查数据、低功耗边缘节点、国产兼容矩阵和受控 Agent。</div><p><b>建议策略：</b>对标其可维护性和整机交付，不对标无边界自动化；把国产 2U 中心节点、低功耗边缘盒、只读 Agent 网关拆成可独立验收的三层产品。</p><div class="source">来源：<a href="https://www.aetina-ai.cn/about-news-detail.php?i=1254" rel="noopener noreferrer">Aetina 官方发布</a></div></article>
+        <article class="item"><h3>今日无核电数字化竞争对手项目级新增</h3><p><b>已确认事实：</b>未核验到目标厂商新的核电智慧巡检中标、上线、扩容或国产化现场实测。公开产品发布不能替代项目证据。</p><div class="verdict"><b>判断：</b>继续按公告、候选人、合同/中标、上线范围、现场指标、复购扩容分级；只有证据等级变化才进入主体。</div><p><b>建议策略：</b>本周补齐 2U 中心节点与盒式边缘节点的竞品矩阵，项目线索保持账户研究，不虚构金额或客户。</p></article>
+      </section>
+
+      <section id="opportunities" class="card">
+        <div class="section-head"><div><div class="kicker">07 · OPPORTUNITIES</div><h2>七、商业机会</h2></div><div class="rank">优先 1–5 个</div></div>
+        <article class="item"><h3>今日无新增可投核电智慧巡检机会</h3><p><b>机会内容：</b>截至信息截点，未发现新的公开招标、资格预审、竞争性谈判或联合验证公告。南网数科小水电设备包已结束文件获取，今日没有新的成交或验收信息。</p><p><b>匹配判断：</b>公司应优先修正评估证据链与国产多后端基线，而不是把产品发布或已关闭报名窗口包装成新增商机。</p><div class="verdict"><b>推荐行动：</b>核电账户保持 C 级研究；出现采购主体、预算、技术规格或正式需求访谈后再升级。南网项目仅由已取得文件且资格满足的团队继续推进。</div><div class="source">跟踪来源：<a href="https://www.bidding.csg.cn/fzbgg/1200440024.jhtml" rel="noopener noreferrer">南网数科小水电智能巡检配套设备公告</a></div></article>
+      </section>
+
+      <section id="tracking" class="card">
+        <div class="section-head"><div><div class="kicker">08 · TRACKING</div><h2>八、持续跟踪事项</h2></div></div>
+        <div class="table-wrap" tabindex="0"><table><thead><tr><th>事项名称</th><th>当前状态</th><th>今日是否有实质新增</th><th>下一观察节点</th></tr></thead><tbody><tr><td>田湾 7 号机组</td><td>带核调试；监管公开信息仍停留在 8 月 25 日装料监督</td><td>无</td><td>首次临界、并网或正式数字化采购</td></tr><tr><td>Ultralytics 边缘视觉基线</td><td>v8.4.131 修正训练集验证增强与 split/fraction 选择</td><td>有：昨日固定样本基线需重跑</td><td>v8.4.130/131 同样本无增强 A/B 与难例复核</td></tr><tr><td>南网数科小水电智能巡检配套设备</td><td>文件获取结束，响应与谈判预计 9 月 1 日</td><td>无</td><td>响应、谈判、成交公示与验收口径</td></tr><tr><td>Aetina AIP-RQ87</td><td>厂商称已量产，主打 2U 私有 AI 与 Agent</td><td>首次纳入竞品跟踪</td><td>公开售价、交付周期、满载功耗、长稳与实际客户案例</td></tr><tr><td>核电智慧巡检公开采购</td><td>持续核查中</td><td>无项目级新增</td><td>采购公告、中标、上线、验收或扩容</td></tr></tbody></table></div>
+      </section>
+
+      <section id="insights" class="card">
+        <div class="section-head"><div><div class="kicker">09 · INSIGHT</div><h2>九、今日技术洞察</h2></div></div>
+        <article class="item"><h3>一至三年机会：把评估方法本身做成可审查产品</h3><p><b>结论：</b>最大商业机会是交付“场景黄金集＋无增强评估＋国产多后端结果＋人工复核”的验证服务。立即验证的是 split、增强与 fraction 类型对指标的影响；长期壁垒来自核电对象/规程语义、真实难例、现场接口、审计历史和国产兼容矩阵。</p><p><b>依据：</b>v8.4.131 用一次修复证明评估流水线细节可以改变指标可信度；Aetina 的量产 2U 产品则证明通用本地算力越来越标准化。硬件差异会缩小，可复现证据和安全边界更难复制。</p><div class="verdict"><b>建议行动：</b>产品、算法、QA 与交付共同发布“视觉证据包 v0.2”：强制保存 split、增强、fraction 类型、样本清单、模型、运行时、后端、阈值和人工结论；用同一套契约验收国产中心与边缘节点。</div></article>
+      </section>
+
+      <section id="actions" class="card">
+        <div class="section-head"><div><div class="kicker">10 · ACTION</div><h2>十、给公司的建议</h2></div></div>
+        <div class="mini-grid">
+          <article class="mini-card"><h3>今日建议（3 条）</h3><p>① 算法与 QA 重跑 v8.4.130/131 的 train/val/test A/B；② 平台团队把 split、增强与 fraction 类型加入评估谱系；③ 产品团队完成国产 2U 中心节点对 AIP-RQ87 的规格差距表。</p></article>
+          <article class="mini-card"><h3>短期行动（1–3 个月）</h3><p>冻结分层黄金集、无增强评估模板和三类推理后端；完成 72 小时长稳、断网掉电、热降频与回滚报告；让任一指标能在两分钟内追溯到样本和配置。</p></article>
+          <article class="mini-card"><h3>中长期规划（6–24 个月）</h3><p>形成核电对象/规程语义层、不可变证据湖、模型与阈值注册表、国产兼容矩阵和只读 Agent 网关；按建造、调试、运行与检修沉淀可复制验证包。</p></article>
+        </div>
+        <article class="item"><h3>安全边界</h3><p>AI 仅作辅助决策；核安全、生产控制、质量关闭和网络安全相关输出必须人机协同、人工复核、规程优先。模型或 Agent 不得自动放行、关闭问题、修改控制参数或控制安全级系统。</p></article>
+      </section>
+
+      <section id="method" class="card">
+        <div class="section-head"><div><div class="kicker">METHODOLOGY</div><h2>信息说明</h2></div></div>
+        <p class="note">信息截点：2026 年 8 月 28 日 09:05（Asia/Shanghai）。优先核验监管机构、官方采购平台、企业官网与开源项目官方 Release；v8.4.131 的 GitHub 发布时间 2026-08-27 17:35 UTC 对应上海时间 8 月 28 日 01:35。发布日期早于今天但首次纳入的 Aetina 产品已明确标注。未找到公开信息不等于不存在非公开项目；厂商标称性能与认证不等于核电适用或现场实测。</p>
+      </section>
+    </div>
+
+    <aside class="card toc" aria-label="本期目录">
+      <h2>本期目录</h2>
+      <a href="#industry">01 重大行业事件</a>
+      <a href="#inspection">02 智慧巡检</a>
+      <a href="#ai">03 AI 视觉与多模态</a>
+      <a href="#domestic">04 国产硬件与边缘智能</a>
+      <a href="#data">05 数据治理与数字孪生</a>
+      <a href="#competitors">06 竞争对手</a>
+      <a href="#opportunities">07 商业机会</a>
+      <a href="#tracking">08 持续跟踪</a>
+      <a href="#insights">09 技术洞察</a>
+      <a href="#actions">10 公司建议</a>
+      <a href="#method">信息说明</a>
+    </aside>
+  </main>
+
+  <footer>每日推送 · 2026-08-28 · <a href="/archive/">查看历史归档</a></footer>
+</body>
+</html>
