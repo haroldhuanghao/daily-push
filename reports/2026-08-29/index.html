@@ -1,0 +1,213 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="v8.4.132 修正昇腾 NPU 验证偏差；深蓄多模态巡检项目开放，但投标资格先于方案热度。">
+  <meta property="og:title" content="核电智慧巡检与工业智能化行业日报 · 2026-08-29">
+  <meta property="og:description" content="v8.4.132 修正昇腾 NPU 验证偏差；深蓄多模态巡检项目开放，但投标资格先于方案热度。">
+  <meta property="og:type" content="article">
+  <meta property="og:url" content="https://daily.851473.xyz/reports/2026-08-29/">
+  <meta property="og:image" content="https://daily.851473.xyz/reports/2026-08-29/cover.png">
+  <meta name="report-contract" content="nuclear-daily-v2">
+  <link rel="canonical" href="https://daily.851473.xyz/reports/2026-08-29/">
+  <title>核电智慧巡检与工业智能化行业日报 · 2026-08-29</title>
+  <style>
+    :root {
+      --accent: #087fa3;
+      --accent-strong: #073755;
+      --accent-soft: #dff3f8;
+      --page: #f1f5f7;
+      --surface: #ffffff;
+      --text: #14252e;
+      --muted: #63747c;
+      --border: #d8e4e8;
+      --shadow: 0 12px 36px rgba(11, 54, 75, .08);
+      --radius-card: 18px;
+      --space-card: 24px;
+    }
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body { margin: 0; background: var(--page); color: var(--text); font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang SC", "Microsoft YaHei", sans-serif; font-size: 15px; line-height: 1.7; overflow-wrap: anywhere; }
+    img { max-width: 100%; height: auto; }
+    a { color: var(--accent); text-decoration-thickness: 1px; text-underline-offset: 3px; }
+    a:hover { color: var(--accent-strong); }
+    a:focus-visible { outline: 3px solid var(--accent-soft); outline-offset: 3px; border-radius: 4px; }
+    .wrap { width: min(1120px, calc(100% - 32px)); margin-inline: auto; }
+    .hero { padding: 52px 0 46px; color: #fff; background: radial-gradient(circle at 82% 18%, var(--accent) 0, transparent 30%), linear-gradient(135deg, var(--accent-strong), var(--accent)); border-bottom: 4px solid var(--accent-soft); }
+    .eyebrow { color: rgba(255, 255, 255, .78); font-size: 12px; font-weight: 800; letter-spacing: .16em; text-transform: uppercase; }
+    .hero h1 { max-width: 880px; margin: 10px 0 14px; font-size: clamp(30px, 5vw, 54px); line-height: 1.14; text-wrap: balance; }
+    .hero .lead { max-width: 820px; margin: 0; color: rgba(255, 255, 255, .86); font-size: clamp(15px, 2vw, 17px); }
+    .meta { display: flex; flex-wrap: wrap; gap: 9px; margin-top: 22px; }
+    .pill { padding: 6px 11px; border: 1px solid rgba(255, 255, 255, .28); border-radius: 999px; background: rgba(255, 255, 255, .09); font-size: 12px; }
+    .summary { position: relative; margin-top: -24px; }
+    .summary-grid { display: grid; grid-template-columns: 1.4fr repeat(2, minmax(0, 1fr)); gap: 12px; }
+    .card { padding: var(--space-card); border: 1px solid var(--border); border-radius: var(--radius-card); background: var(--surface); box-shadow: var(--shadow); }
+    .summary-card { min-width: 0; padding: 20px; }
+    .summary-card.primary { background: var(--accent-soft); border-color: var(--accent); }
+    .summary-card b { display: block; margin-bottom: 5px; color: var(--accent-strong); font-size: 13px; }
+    .summary-card strong { display: block; color: var(--accent); font-size: clamp(20px, 3vw, 26px); line-height: 1.25; }
+    .summary-card p { margin: 6px 0 0; color: var(--muted); font-size: 13px; }
+    main { padding: 34px 0 56px; }
+    .layout { display: grid; grid-template-columns: minmax(0, 1fr) 250px; gap: 24px; align-items: start; }
+    .content { min-width: 0; }
+    .content > .card { margin-bottom: 18px; }
+    .toc { position: sticky; top: 16px; padding: 18px; box-shadow: 0 4px 18px rgba(24, 51, 41, .05); }
+    .toc h2 { margin: 0 0 10px; color: var(--muted); font-size: 12px; letter-spacing: .12em; }
+    .toc a { display: block; padding: 6px 0; color: var(--muted); font-size: 13px; text-decoration: none; }
+    .toc a:hover { color: var(--accent); }
+    .section-head { display: flex; align-items: flex-start; justify-content: space-between; gap: 14px; margin-bottom: 6px; padding-bottom: 14px; border-bottom: 1px solid var(--border); }
+    .section-head h2 { margin: 0; color: var(--accent-strong); font-size: clamp(19px, 3vw, 23px); line-height: 1.35; }
+    .kicker { margin-bottom: 4px; color: var(--accent); font-size: 12px; font-weight: 800; letter-spacing: .08em; }
+    .rank { color: var(--muted); font-size: 12px; white-space: nowrap; }
+    .item { padding: 19px 0; border-bottom: 1px dashed var(--border); }
+    .item:last-child { padding-bottom: 2px; border-bottom: 0; }
+    .item h3 { margin: 0 0 8px; font-size: 18px; line-height: 1.45; text-wrap: pretty; }
+    .item p { margin: 7px 0; color: var(--muted); font-size: 14px; }
+    .tags { display: flex; flex-wrap: wrap; gap: 7px; margin: 9px 0; }
+    .tag { padding: 3px 8px; border-radius: 999px; background: var(--accent-soft); color: var(--accent-strong); font-size: 11px; font-weight: 800; }
+    .tag.warn { background: #fff0d8; color: #8a5a10; }
+    .tag.risk { background: #fae5e1; color: #a7332c; }
+    .verdict { margin-top: 12px; padding: 12px 14px; border-left: 3px solid var(--accent); border-radius: 0 10px 10px 0; background: var(--accent-soft); font-size: 14px; }
+    .source { margin-top: 10px; color: var(--muted); font-size: 12px; }
+    .source a { margin-right: 10px; }
+    .mini-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 12px; margin-top: 16px; }
+    .mini-card { padding: 16px; border: 1px solid var(--border); border-radius: 14px; background: var(--page); }
+    .mini-card h3 { margin: 0 0 7px; font-size: 16px; }
+    .mini-card p { margin: 6px 0; color: var(--muted); font-size: 13px; }
+    .table-wrap { max-width: 100%; margin-top: 14px; overflow-x: auto; border-radius: 12px; }
+    .table-wrap:focus-visible { outline: 3px solid var(--accent-soft); outline-offset: 2px; }
+    table { width: 100%; min-width: 620px; border-collapse: collapse; font-size: 13px; }
+    th, td { padding: 11px 10px; border-bottom: 1px solid var(--border); text-align: left; vertical-align: top; }
+    th { background: var(--accent-soft); color: var(--accent-strong); }
+    .note { margin-top: 15px; padding: 11px 13px; border-radius: 10px; background: var(--page); color: var(--muted); font-size: 12px; }
+    footer { padding: 0 16px 32px; color: var(--muted); text-align: center; font-size: 12px; }
+    @media (max-width: 900px) {
+      .summary-grid { grid-template-columns: 1fr 1fr; }
+      .summary-card.primary { grid-column: 1 / -1; }
+      .layout { grid-template-columns: 1fr; }
+      .toc { position: static; display: none; }
+    }
+    @media (max-width: 640px) {
+      .wrap { width: min(100% - 24px, 1120px); }
+      .hero { padding: 40px 0 38px; }
+      .summary-grid, .mini-grid { grid-template-columns: 1fr; }
+      .summary-card.primary { grid-column: auto; }
+      .card { padding: 19px 17px; }
+      .section-head { display: block; }
+      .rank { display: block; margin-top: 6px; white-space: normal; }
+    }
+  </style>
+</head>
+<body>
+  <header class="hero">
+    <div class="wrap">
+      <div class="eyebrow">DAILY BRIEFING</div>
+      <h1>核电智慧巡检与工业智能化行业日报</h1>
+      <p class="lead">v8.4.132 修正昇腾 NPU 验证偏差；深蓄多模态巡检项目开放，但投标资格先于方案热度。</p>
+      <div class="meta"><span class="pill">2026年8月29日星期六 · 星期六</span><span class="pill">Asia/Shanghai</span></div>
+    </div>
+  </header>
+
+  <div class="wrap summary" aria-label="今日摘要">
+    <div class="summary-grid">
+      <section class="card summary-card primary"><b>今日一句话结论</b><strong>先锁定昇腾验证口径，再决定深蓄四足机器人投标。</strong><p>性能证据与资格门槛今天都比概念演示更重要。</p></section>
+      <section class="card summary-card"><b>今日新增</b><strong>1 个核电事件＋2 个技术/商机信号</strong><p>台山 0 级渗漏、昇腾验证修正、深蓄巡检公开招标。</p></section>
+      <section class="card summary-card"><b>建议动作</b><strong>重跑指标，先做资格闸门</strong><p>不完整批次单列；四足业绩不满足则不投。</p></section>
+    </div>
+  </div>
+
+  <main class="wrap layout">
+    <div class="content">
+      <section id="industry" class="card">
+        <div class="section-head"><div><div class="kicker">01 · INDUSTRY</div><h2>一、今日重大行业事件</h2></div><div class="rank">3 条实质新增</div></div>
+        <article class="item"><h3>台山核电厂 2 号机组传输池边界门渗漏，定为 0 级运行事件</h3><div class="tags"><span class="tag">核安全运行</span><span class="tag warn">巡检证据</span></div><p><b>已确认事实：</b>国家核安全局 8 月 28 日公布：8 月 24 日台山核电厂 2 号机组功率运行期间，工作人员发现传输池边界门渗漏，导致燃料厂房地面局部积水；经处理已止漏并完成清理。机组保持安全状态，无放射性物质对外释放，营运单位按 INES 界定为 0 级。</p><div class="verdict"><b>判断：</b>这不是 AI 失效证据，也不能从公开信息判断发现手段；但它再次说明“早期渗漏＋局部积水＋现场确认＋处置闭环”是有明确对象、位置、时序和人工责任的辅助巡检场景。</div><p><b>建议行动：</b>场景团队把边界门、地漏和相邻地面纳入渗漏/积水难例库，联合可见光、液位或湿度信号做提示；所有告警由值班人员按规程复核，AI 不触发生产控制或自动关单。</p><div class="source">来源：<a href="https://nnsa.mee.gov.cn/ywdh/fyd/202608/t20260828_1164659.html" rel="noopener noreferrer">国家核安全局｜台山核电厂 2 号机组运行事件（2026-08-28）</a></div></article>
+        <article class="item"><h3>v8.4.132 修正昇腾 NPU 的 NMS 超时与不完整批次 mAP 偏差</h3><div class="tags"><span class="tag">上海时间今日发布</span><span class="tag">国产 NPU</span><span class="tag risk">指标需重跑</span></div><p><b>已确认事实：</b>Ultralytics GitHub 于 8 月 28 日 18:05 UTC（上海时间 8 月 29 日 02:05）发布 v8.4.132。官方说明：在支持的 Ascend NPU 环境中改用优化的 torchvision NMS 路径，修复重复 NMS 超时警告，并防止不完整批次生成错误 mAP；同时把列表式 <code>fraction</code> 扩展到 test split。</p><div class="verdict"><b>判断：</b>这是相较昨日 v8.4.131 的实质新增。凡昇腾验证出现 NMS time-limit 或最后一个 batch 不满，历史 mAP 都不能直接作为国产化选型证据；仅升级版本也不等于核电适用。</div><p><b>建议行动：</b>算法与 QA 今天用固定黄金集重跑 v8.4.131/132，分别保留整批与尾批结果、NMS 耗时、预测数、召回、误报和 mAP；尾批错误复现前，昇腾报告标记为“指标待校正”。</p><div class="source">来源：<a href="https://github.com/ultralytics/ultralytics/releases/tag/v8.4.132" rel="noopener noreferrer">Ultralytics GitHub Release｜v8.4.132</a></div></article>
+        <article class="item"><h3>南网储能公开招标深蓄电站多模态感知智能巡检系统</h3><div class="tags"><span class="tag">公开招标</span><span class="tag">四足机器人</span><span class="tag warn">有条件机会</span></div><p><b>已确认事实：</b>南方电网储能股份有限公司 8 月 28 日公告，标包 2 在深圳蓄能电站建设机器人管控与数据分析系统、可视化看板及本地/网级平台对接，并在地下厂房、开关站部署多传感器四足机器人，覆盖测温、表计识别、缺陷排查和重物搬运拓展。最高投标限价 193.85 万元，服务至 2027 年 12 月 31 日。</p><div class="verdict"><b>判断：</b>这是与核电智慧巡检同构的真实订单信号，但不是核电业绩。项目不接受联合体，且要求投标人具备 2023 年以来已完工的四足仿生机器人研究与应用类似项目业绩，资格闸门高于算法功能匹配。</div><p><b>建议行动：</b>商务今天先核验独立投标主体、已完工合同和完工证明；资格满足才在 9 月 3 日 17:30 前取文件并拆解接口、验收、网络隔离与搬运安全边界。资格不满足则只做账户研究，不借壳或虚构业绩。</p><div class="source">来源：<a href="https://www.bidding.csg.cn/zbgg/1200440598.jhtml" rel="noopener noreferrer">南方电网供应链统一服务平台｜项目 CG0200022002373305</a></div></article>
+      </section>
+
+      <section id="inspection" class="card">
+        <div class="section-head"><div><div class="kicker">02 · INSPECTION</div><h2>二、智慧巡检最新动态</h2></div><div class="rank">2 条</div></div>
+        <article class="item"><h3>深蓄项目把“机器人＋平台＋多模态＋拓展作业”放入同一验收边界</h3><p><b>采购方与当前阶段：</b>南方电网储能股份有限公司公开招标，文件获取至 9 月 3 日 17:30，投标截止和开标为 9 月 21 日 08:30。场景覆盖地下厂房与开关站，要求四足机器人自主导航、多模态感知及网级平台数据互通。</p><p><b>技术与市场价值：</b>温度、表计、缺陷和设备位置信息可复用到核电非安全级辅助巡检；真正可产品化的是任务编排、证据回放、断网续传、对象映射和人工复核，不是单一识别模型。</p><p><b>工程化限制：</b>公开公告未披露具体精度、连续运行时长、坡道门槛、通信覆盖、网络安全和搬运载荷验收值，必须以采购文件为准；搬运属于运动控制，风险边界显著高于只读巡检。</p><div class="verdict"><b>建议行动：</b>资格通过后建立“只读巡检”和“搬运拓展”两个风险包，分别报价、测试和审批；不把 Agent 生成的任务直接下发给机器人。</div><div class="source">来源：<a href="https://www.bidding.csg.cn/zbgg/1200440598.jhtml" rel="noopener noreferrer">南网储能深蓄电站多模态巡检招标公告</a></div></article>
+        <article class="item"><h3>台山事件给渗漏巡检提出“传感器交叉确认”需求</h3><p><b>采购方与当前阶段：</b>本期没有公开采购；台山事件已完成止漏与清理，官方未披露后续采购或技术改造。</p><p><b>技术与市场价值：</b>可见光可定位反光、湿痕与积水边界，湿度/液位可降低光照变化误报，设备对象与工单系统可保存人工复核和处置证据。适合作为核电辅助提示，不替代定期巡检、泄漏率判断或安全功能。</p><p><b>工程化限制：</b>冷凝、清洗水、金属反光、暗区和遮挡都会造成误报；摄像机覆盖、放射环境、网络隔离与现场变更必须经批准。</p><div class="verdict"><b>建议行动：</b>持续跟踪，不因单一事件立即投入生产；先用受控仿真样本验证“视觉＋湿度/液位＋人工复核”的漏报和误报。</div></article>
+      </section>
+
+      <section id="ai" class="card">
+        <div class="section-head"><div><div class="kicker">03 · AI</div><h2>三、AI 视觉与多模态技术进展</h2></div><div class="rank">2 条</div></div>
+        <article class="item"><h3>v8.4.132：test fraction 与昇腾尾批修正进入同一证据契约</h3><p><b>核心能力与核电场景：</b>列表式 <code>fraction</code> 现在可为 train/val/test 分别指定比例，第三个值为 0 时跳过 test 下载；分类子集改为跨类别抽样，而非按类别顺序截取前缀。对核电黄金集，这有利于控制带宽和快速回归，但必须确保稀有缺陷不被采样掉。</p><p><b>工程化限制：</b>子集 mAP 不能代替冻结测试集验收；不同类别基数、最后批次大小、NMS 路径、算子版本和量化都会影响可比性。官方修复没有提供公司数据上的精度、功耗或长稳结论。</p><div class="verdict"><b>跟进建议：立即验证。</b>manifest 增加 train/val/test fraction、采样后类别分布、batch size、最后批次样本数、NMS 后端和超时计数；生产升级仍需人工复核与回滚门槛。</div><div class="source">来源：<a href="https://github.com/ultralytics/ultralytics/releases/tag/v8.4.132" rel="noopener noreferrer">Ultralytics v8.4.132</a></div></article>
+        <article class="item"><h3>江苏辐射监管研讨会给出 AI 落地的五类现实约束</h3><p><b>核心能力与核电场景：</b>江苏省核管中心公布的研讨内容覆盖放射源快速搜寻与定位、无人值守监测、国产多介质立体监测设备，以及固定站、无人机（船）、机器人和实验室联动的“监测—研判—预警—调度—处置—评估”闭环。</p><p><b>工程化限制：</b>与会代表明确提出数据储备不足、算法可解释性弱、法规标准滞后、网络安全隐患、人机权责模糊五类难题，并坚持安全优先、人机协同、循序渐进。研讨会不是采购或核电项目验收证据。</p><div class="verdict"><b>跟进建议：持续跟踪。</b>把五类约束直接转为产品评审清单；先做示范预演和精准核验，未形成标准与责任矩阵前不宣传“自主处置”。</div><div class="source">来源：<a href="https://nnsa.mee.gov.cn/ywdt/gzdt/202608/t20260828_1164661.html" rel="noopener noreferrer">国家核安全局｜人工智能在辐射监管应用专题研讨会</a></div></article>
+      </section>
+
+      <section id="domestic" class="card">
+        <div class="section-head"><div><div class="kicker">04 · DOMESTIC STACK</div><h2>四、国产硬件与边缘智能专项</h2></div><div class="rank">4 类结论</div></div>
+        <div class="mini-grid">
+          <article class="mini-card"><h3>4.1 国产 CPU 与服务器</h3><p><b>今日无新的产品级证据。</b>中心平台继续用客户指定国产 CPU 承载机器人管控、证据归档和只读检索；先核对南网采购文件是否指定架构、数据库、密码模块和平台接口。</p></article>
+          <article class="mini-card"><h3>4.2 国产 GPU / NPU 与 AI 加速</h3><p><b>昇腾为今日主力验证对象。</b>v8.4.132 修正 NMS 超时和尾批 mAP；只有同版本、同批次、同后端复测通过，才进入主力候选。其他国产 NPU 仍按各自算子与量化链独立验收。</p></article>
+          <article class="mini-card"><h3>4.3 国产边缘算力设备</h3><p>四足机器人侧需验证视频/热成像接入、断网缓存、热降频、续航、充电、坡道、湿滑地面和 72 小时任务稳定性；不以峰值 TOPS 替代现场数据。</p></article>
+          <article class="mini-card"><h3>4.4 国产操作系统与基础软件</h3><p>在麒麟、统信或 openEuler 上锁定驱动、torchvision/NMS 路径、容器和编解码版本；SBOM 与运行日志必须能追到每次 mAP 报告。</p></article>
+        </div>
+        <article class="item"><h3>4.5 对智慧核电的部署建议</h3><p><b>今日国产化部署结论：</b>视觉边缘推理主力为“客户指定国产 NPU＋本地缓存＋人工复核”，但昇腾必须先完成 v8.4.132 尾批回归；中心平台主力为国产 CPU 服务器和不可变证据存储；RAG / AI Agent 只做权限内检索、缺项提示和草稿生成。</p><div class="verdict"><b>适配结论：</b>昇腾方案为“PoC 后采用”，不是直接主力；x86/CUDA 仅作精度对照。四足搬运动作暂不进入核电生产候选，待场景风险分析、联锁和人工授权机制完成后再评估。</div></article>
+      </section>
+
+      <section id="data" class="card">
+        <div class="section-head"><div><div class="kicker">05 · DATA &amp; TWIN</div><h2>五、工业数据治理与数字孪生趋势</h2></div></div>
+        <article class="item"><h3>“位置—事件—批次—处置”成为同一条证据链</h3><p><b>已落地证据：</b>台山事件公开信息包含设备对象、位置、发现、处置和安全结论；v8.4.132 则证明最后批次大小与 NMS 路径可直接改变 mAP 可信度；深蓄招标要求机器人平台与电站本地及网级平台互通。</p><div class="verdict"><b>判断：</b>数字孪生的短期价值不是三维展示，而是把边界门、地面区域、机器人任务、传感器片段、模型版本、批次、人工复核和工单处置关联到可审计对象。</div><p><b>建议行动：</b>平台团队新增 <code>asset_id</code>、<code>location_id</code>、<code>batch_size_actual</code>、<code>nms_backend</code>、<code>human_verdict</code> 与 <code>closure_reference</code>；跨网同步只传批准字段并保留传输审计。</p></article>
+        <article class="item"><h3>核岛主设备焊接专项检查强调全过程质量与防造假</h3><p><b>已确认事实：</b>华北、东北核与辐射安全监督站联合检查一重大连基地核岛主设备制造活动，核查质保体系、焊接工艺、操作流程、焊材管理、问题整改、防违规和防造假，并要求问题逐项闭环清零。</p><div class="verdict"><b>判断：</b>工业视觉可辅助识别工序缺项、材料标识和记录一致性，但公开信息没有给出 AI 应用。任何自动识别都不能替代焊接工艺评定、无损检测、持证人员判断或质保签字。</div><p><b>建议行动：</b>把“原始影像不可变、材料批次可追溯、模型建议与人工签字分栏、整改复验成链”加入制造质量方案，暂不承诺自动判定焊缝合格。</p><div class="source">来源：<a href="https://nnsa.mee.gov.cn/ywdt/gzdt/202608/t20260828_1164660.html" rel="noopener noreferrer">国家核安全局｜核岛主设备专项检查</a></div></article>
+      </section>
+
+      <section id="competitors" class="card">
+        <div class="section-head"><div><div class="kicker">06 · COMPETITORS</div><h2>六、竞争对手动态</h2></div><div class="rank">2 条</div></div>
+        <article class="item"><h3>南网项目把既有四足业绩设为进入门槛</h3><p><b>已确认事实：</b>深蓄标包要求 2023 年以来已完工的四足仿生机器人研究与应用类似项目业绩，并提交合同及完工证明；项目不接受联合体。</p><div class="verdict"><b>判断：</b>有算法或平台能力但没有独立完工业绩的厂商无法仅靠生态拼单跨过资格门槛。竞争优势已从演示效果转向交付主体、完工证据、平台接入和机器人运维。</div><p><b>建议策略：</b>立即做资格矩阵；满足者突出对象化证据、离线运行和验收设计，不满足者停止无效投标投入，转向分包市场研究或下一轮联合产品布局。</p><div class="source">来源：<a href="https://www.bidding.csg.cn/zbgg/1200440598.jhtml" rel="noopener noreferrer">南网储能招标公告</a></div></article>
+        <article class="item"><h3>多足/多机械臂与电力视觉大模型进入第三方测试采购阶段</h3><p><b>已确认事实：</b>东莞供电局 8 月 28 日重新公示候选人：多足—多机械臂协同智能变电作业系统第三方测试标包第一候选人为广东粤电科试验检测技术有限公司，报价 25.76 万元；电力视觉大模型智能巡视第三方测试标包第一候选人为广东汇和信息安全技术有限公司，报价 7.161 万元。公示至 8 月 31 日，尚非最终合同。</p><div class="verdict"><b>判断：</b>竞争焦点出现“独立测试证据”付费环节；公司若只提供算法分数而没有测试计划、日志和复验材料，难以形成高可信交付。</div><p><b>建议策略：</b>把第三方测试接口做成标准交付包，明确原始数据、批次、后端、失效案例和人工确认，不对候选结果提前写成中标。</p><div class="source">来源：<a href="https://www.bidding.csg.cn/zbhxrgs/1200440745.jhtml" rel="noopener noreferrer">南方电网供应链统一服务平台｜成交候选人重新公示</a></div></article>
+      </section>
+
+      <section id="opportunities" class="card">
+        <div class="section-head"><div><div class="kicker">07 · OPPORTUNITIES</div><h2>七、商业机会</h2></div><div class="rank">1 个有条件机会</div></div>
+        <article class="item"><h3>运行公司 2026—2027 年深蓄电站多模态感知智能巡检系统建设</h3><p><b>机会内容：</b>采购单位为南方电网储能股份有限公司，标包最高限价 193.85 万元；8 月 28 日 17:30 至 9 月 3 日 17:30 获取文件，9 月 4 日 12:00 前澄清，9 月 21 日 08:30 截止投标并开标。</p><p><b>匹配判断：</b>场景与公司的机器人管控、多模态感知、表计识别、测温、缺陷排查、边缘部署和数据平台能力高度相关；但“不接受联合体＋2023 年以来已完工四足项目”构成硬门槛。机会等级：B（资格满足）/D（资格不满足）。</p><div class="verdict"><b>推荐行动：</b>今天完成 go/no-go：法务和商务核对投标主体及证明材料，技术仅在 go 后下载文件、拆验收条款并安排现场问题清单；不在公告未披露处自行假设载荷、精度或接口。</div><div class="source">来源：<a href="https://www.bidding.csg.cn/zbgg/1200440598.jhtml" rel="noopener noreferrer">招标公告与关键时间节点</a></div></article>
+      </section>
+
+      <section id="tracking" class="card">
+        <div class="section-head"><div><div class="kicker">08 · TRACKING</div><h2>八、持续跟踪事项</h2></div></div>
+        <div class="table-wrap" tabindex="0"><table><thead><tr><th>事项名称</th><th>当前状态</th><th>今日是否有实质新增</th><th>下一观察节点</th></tr></thead><tbody><tr><td>台山 2 号机组传输池边界门渗漏</td><td>已止漏、清理；0 级，无对外放射性释放</td><td>有：首次公布</td><td>官方原因分析、纠正措施或经验反馈</td></tr><tr><td>Ultralytics 国产边缘视觉基线</td><td>v8.4.132 修正昇腾 NMS 与尾批 mAP</td><td>有：昨日基线再次需要回归</td><td>v8.4.131/132 同样本、同批次 A/B</td></tr><tr><td>深蓄电站多模态感知巡检系统</td><td>公开招标；最高限价 193.85 万元</td><td>有：首次纳入</td><td>9 月 3 日取文件截止、9 月 21 日开标</td></tr><tr><td>南网数科小水电智能巡检配套设备</td><td>文件获取已结束</td><td>无</td><td>9 月 1 日响应/谈判、成交和验收口径</td></tr><tr><td>田湾 7 号机组</td><td>带核调试</td><td>无</td><td>首次临界、并网或正式数字化采购</td></tr><tr><td>Aetina AIP-RQ87</td><td>厂商称量产；非国产、无核电证据</td><td>无</td><td>公开售价、长稳、交付与实际客户</td></tr></tbody></table></div>
+      </section>
+
+      <section id="insights" class="card">
+        <div class="section-head"><div><div class="kicker">09 · INSIGHT</div><h2>九、今日技术洞察</h2></div></div>
+        <article class="item"><h3>一至三年机会：把“独立可复验”做成机器人巡检的交付层</h3><p><b>结论：</b>最大商业机会不是再增加一个识别模型，而是提供“场景对象＋多传感器证据＋国产后端＋机器人任务＋人工复核＋第三方复验”的可审查交付包。立即验证昇腾尾批与 NMS；长期壁垒是现场难例、对象语义、完工业绩、合规日志和多设备运维。</p><p><b>依据：</b>v8.4.132 显示后处理与批次细节会扭曲指标；深蓄招标用完工业绩筛选投标人；东莞供电局为机器人和视觉大模型单独采购第三方测试；核监管研讨会同时强调数据、可解释、标准、网络与权责。</p><div class="verdict"><b>建议动作：</b>产品、算法、QA 和交付本周形成“巡检证据包 v0.3”，允许第三方从任一告警回放到原始传感数据、模型/后端、批次、人工结论和工单关闭依据。</div></article>
+      </section>
+
+      <section id="actions" class="card">
+        <div class="section-head"><div><div class="kicker">10 · ACTION</div><h2>十、给公司的建议</h2></div></div>
+        <div class="mini-grid">
+          <article class="mini-card"><h3>今日建议（3 条）</h3><p>① 重跑 v8.4.131/132 昇腾尾批 A/B；② 对深蓄项目完成资格 go/no-go；③ 把渗漏/积水与湿度、液位交叉确认加入受控难例计划。</p></article>
+          <article class="mini-card"><h3>短期行动（1–3 个月）</h3><p>冻结多传感器黄金集和尾批测试；完成国产 NPU、机器人断网/续航/湿滑地面/72 小时长稳报告；建立可供第三方复验的日志与证据导出。</p></article>
+          <article class="mini-card"><h3>中长期规划（6–24 个月）</h3><p>沉淀核电对象与规程语义、不可变证据湖、国产兼容矩阵、机器人任务安全网关和第三方测试伙伴；只读 Agent 辅助检索与缺项提示。</p></article>
+        </div>
+        <article class="item"><h3>安全边界</h3><p>AI 仅作辅助决策；核安全、生产控制、质量关闭、机器人运动与网络安全相关输出必须人机协同、人工复核、规程优先。模型或 Agent 不得自动放行、关闭问题、修改控制参数或控制安全级系统。</p></article>
+      </section>
+
+      <section id="method" class="card">
+        <div class="section-head"><div><div class="kicker">METHODOLOGY</div><h2>信息说明</h2></div></div>
+        <p class="note">信息截点：2026 年 8 月 29 日 11:14（Asia/Shanghai）。优先核验国家核安全局、南方电网供应链统一服务平台和开源项目官方 Release。v8.4.132 的 GitHub 发布时间 2026-08-28 18:05 UTC 对应上海时间 8 月 29 日 02:05。公开公告未披露的信息不作推定；成交候选人不等于最终中标；非核电项目只作为同构需求与竞争信号，不外推为核电业绩。</p>
+      </section>
+    </div>
+
+    <aside class="card toc" aria-label="本期目录">
+      <h2>本期目录</h2>
+      <a href="#industry">01 重大行业事件</a>
+      <a href="#inspection">02 智慧巡检</a>
+      <a href="#ai">03 AI 视觉与多模态</a>
+      <a href="#domestic">04 国产硬件与边缘智能</a>
+      <a href="#data">05 数据治理与数字孪生</a>
+      <a href="#competitors">06 竞争对手</a>
+      <a href="#opportunities">07 商业机会</a>
+      <a href="#tracking">08 持续跟踪</a>
+      <a href="#insights">09 技术洞察</a>
+      <a href="#actions">10 公司建议</a>
+      <a href="#method">信息说明</a>
+    </aside>
+  </main>
+
+  <footer>每日推送 · 2026-08-29 · <a href="/archive/">查看历史归档</a></footer>
+</body>
+</html>
