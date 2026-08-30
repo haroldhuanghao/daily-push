@@ -1,0 +1,210 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="中核武汉机器人已进入多座核电站；Ultralytics 8.4.133–135 改写校准、密集目标召回与算力成本口径。">
+  <meta property="og:title" content="核电智慧巡检与工业智能化行业日报 · 2026-08-30">
+  <meta property="og:description" content="中核武汉机器人已进入多座核电站；Ultralytics 8.4.133–135 改写校准、密集目标召回与算力成本口径。">
+  <meta property="og:type" content="article">
+  <meta property="og:url" content="https://daily.851473.xyz/reports/2026-08-30/">
+  <meta property="og:image" content="https://daily.851473.xyz/reports/2026-08-30/cover.png">
+  <meta name="report-contract" content="nuclear-daily-v2">
+  <link rel="canonical" href="https://daily.851473.xyz/reports/2026-08-30/">
+  <title>核电智慧巡检与工业智能化行业日报 · 2026-08-30</title>
+  <style>
+    :root {
+      --accent: #0d6b4f;
+      --accent-strong: #063d30;
+      --accent-soft: #dff4eb;
+      --page: #f4f6f2;
+      --surface: #ffffff;
+      --text: #13201c;
+      --muted: #65736d;
+      --border: #dfe6e1;
+      --shadow: 0 12px 36px rgba(24, 51, 41, .08);
+      --radius-card: 18px;
+      --space-card: 24px;
+    }
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body { margin: 0; background: var(--page); color: var(--text); font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang SC", "Microsoft YaHei", sans-serif; font-size: 15px; line-height: 1.7; overflow-wrap: anywhere; }
+    img { max-width: 100%; height: auto; }
+    a { color: var(--accent); text-decoration-thickness: 1px; text-underline-offset: 3px; }
+    a:hover { color: var(--accent-strong); }
+    a:focus-visible { outline: 3px solid var(--accent-soft); outline-offset: 3px; border-radius: 4px; }
+    .wrap { width: min(1120px, calc(100% - 32px)); margin-inline: auto; }
+    .hero { padding: 52px 0 46px; color: #fff; background: radial-gradient(circle at 82% 18%, var(--accent) 0, transparent 30%), linear-gradient(135deg, var(--accent-strong), var(--accent)); border-bottom: 4px solid var(--accent-soft); }
+    .eyebrow { color: rgba(255, 255, 255, .78); font-size: 12px; font-weight: 800; letter-spacing: .16em; text-transform: uppercase; }
+    .hero h1 { max-width: 880px; margin: 10px 0 14px; font-size: clamp(30px, 5vw, 54px); line-height: 1.14; text-wrap: balance; }
+    .hero .lead { max-width: 820px; margin: 0; color: rgba(255, 255, 255, .86); font-size: clamp(15px, 2vw, 17px); }
+    .meta { display: flex; flex-wrap: wrap; gap: 9px; margin-top: 22px; }
+    .pill { padding: 6px 11px; border: 1px solid rgba(255, 255, 255, .28); border-radius: 999px; background: rgba(255, 255, 255, .09); font-size: 12px; }
+    .summary { position: relative; margin-top: -24px; }
+    .summary-grid { display: grid; grid-template-columns: 1.4fr repeat(2, minmax(0, 1fr)); gap: 12px; }
+    .card { padding: var(--space-card); border: 1px solid var(--border); border-radius: var(--radius-card); background: var(--surface); box-shadow: var(--shadow); }
+    .summary-card { min-width: 0; padding: 20px; }
+    .summary-card.primary { background: var(--accent-soft); border-color: var(--accent); }
+    .summary-card b { display: block; margin-bottom: 5px; color: var(--accent-strong); font-size: 13px; }
+    .summary-card strong { display: block; color: var(--accent); font-size: clamp(20px, 3vw, 26px); line-height: 1.25; }
+    .summary-card p { margin: 6px 0 0; color: var(--muted); font-size: 13px; }
+    main { padding: 34px 0 56px; }
+    .layout { display: grid; grid-template-columns: minmax(0, 1fr) 250px; gap: 24px; align-items: start; }
+    .content { min-width: 0; }
+    .content > .card { margin-bottom: 18px; }
+    .toc { position: sticky; top: 16px; padding: 18px; box-shadow: 0 4px 18px rgba(24, 51, 41, .05); }
+    .toc h2 { margin: 0 0 10px; color: var(--muted); font-size: 12px; letter-spacing: .12em; }
+    .toc a { display: block; padding: 6px 0; color: var(--muted); font-size: 13px; text-decoration: none; }
+    .toc a:hover { color: var(--accent); }
+    .section-head { display: flex; align-items: flex-start; justify-content: space-between; gap: 14px; margin-bottom: 6px; padding-bottom: 14px; border-bottom: 1px solid var(--border); }
+    .section-head h2 { margin: 0; color: var(--accent-strong); font-size: clamp(19px, 3vw, 23px); line-height: 1.35; }
+    .kicker { margin-bottom: 4px; color: var(--accent); font-size: 12px; font-weight: 800; letter-spacing: .08em; }
+    .rank { color: var(--muted); font-size: 12px; white-space: nowrap; }
+    .item { padding: 19px 0; border-bottom: 1px dashed var(--border); }
+    .item:last-child { padding-bottom: 2px; border-bottom: 0; }
+    .item h3 { margin: 0 0 8px; font-size: 18px; line-height: 1.45; text-wrap: pretty; }
+    .item p { margin: 7px 0; color: var(--muted); font-size: 14px; }
+    .tags { display: flex; flex-wrap: wrap; gap: 7px; margin: 9px 0; }
+    .tag { padding: 3px 8px; border-radius: 999px; background: var(--accent-soft); color: var(--accent-strong); font-size: 11px; font-weight: 800; }
+    .tag.warn { background: #fff0d8; color: #8a5a10; }
+    .tag.risk { background: #fae5e1; color: #a7332c; }
+    .verdict { margin-top: 12px; padding: 12px 14px; border-left: 3px solid var(--accent); border-radius: 0 10px 10px 0; background: var(--accent-soft); font-size: 14px; }
+    .source { margin-top: 10px; color: var(--muted); font-size: 12px; }
+    .source a { margin-right: 10px; }
+    .mini-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 12px; margin-top: 16px; }
+    .mini-card { padding: 16px; border: 1px solid var(--border); border-radius: 14px; background: var(--page); }
+    .mini-card h3 { margin: 0 0 7px; font-size: 16px; }
+    .mini-card p { margin: 6px 0; color: var(--muted); font-size: 13px; }
+    .table-wrap { max-width: 100%; margin-top: 14px; overflow-x: auto; border-radius: 12px; }
+    .table-wrap:focus-visible { outline: 3px solid var(--accent-soft); outline-offset: 2px; }
+    table { width: 100%; min-width: 620px; border-collapse: collapse; font-size: 13px; }
+    th, td { padding: 11px 10px; border-bottom: 1px solid var(--border); text-align: left; vertical-align: top; }
+    th { background: var(--accent-soft); color: var(--accent-strong); }
+    .note { margin-top: 15px; padding: 11px 13px; border-radius: 10px; background: var(--page); color: var(--muted); font-size: 12px; }
+    footer { padding: 0 16px 32px; color: var(--muted); text-align: center; font-size: 12px; }
+    @media (max-width: 900px) {
+      .summary-grid { grid-template-columns: 1fr 1fr; }
+      .summary-card.primary { grid-column: 1 / -1; }
+      .layout { grid-template-columns: 1fr; }
+      .toc { position: static; display: none; }
+    }
+    @media (max-width: 640px) {
+      .wrap { width: min(100% - 24px, 1120px); }
+      .hero { padding: 40px 0 38px; }
+      .summary-grid, .mini-grid { grid-template-columns: 1fr; }
+      .summary-card.primary { grid-column: auto; }
+      .card { padding: 19px 17px; }
+      .section-head { display: block; }
+      .rank { display: block; margin-top: 6px; white-space: normal; }
+    }
+  </style>
+</head>
+<body>
+  <header class="hero">
+    <div class="wrap">
+      <div class="eyebrow">DAILY BRIEFING</div>
+      <h1>核电智慧巡检与工业智能化行业日报</h1>
+      <p class="lead">中核武汉机器人已进入多座核电站；Ultralytics 8.4.133–135 改写校准、密集目标召回与算力成本口径。</p>
+      <div class="meta"><span class="pill">2026年8月30日 · 星期日</span><span class="pill">Asia/Shanghai</span></div>
+    </div>
+  </header>
+
+  <div class="wrap summary" aria-label="今日摘要">
+    <div class="summary-grid">
+      <section class="card summary-card primary"><b>今日一句话结论</b><strong>先重跑校准与密集目标基线，再复制核电机器人能力。</strong><p>评估口径和现场证据今天都比功能清单更重要。</p></section>
+      <section class="card summary-card"><b>今日新增</b><strong>1 个核电应用信号＋3 个版本更新</strong><p>机器人进入多电站；校准、召回与训练成本口径连续变化。</p></section>
+      <section class="card summary-card"><b>建议动作</b><strong>冻结版本，建立场景证据包</strong><p>48 小时内完成 8.4.132/135 A/B 与机器人证据索引。</p></section>
+    </div>
+  </div>
+
+  <main class="wrap layout">
+    <div class="content">
+      <section id="industry" class="card">
+        <div class="section-head"><div><div class="kicker">01 · INDUSTRY</div><h2>一、今日重大行业事件</h2></div><div class="rank">3 条实质新增</div></div>
+        <article class="item"><h3>官方披露中核武汉两类机器人已形成核电现场应用</h3><div class="tags"><span class="tag">核电机器人</span><span class="tag">已投入使用</span><span class="tag warn">证据待拆解</span></div><p><b>已确认事实：</b>国家国防科技工业局 8 月 29 日发布世界机器人大会报道：中核武汉水下浮游探测机器人已在多座核电站投入使用；蒸汽发生器检修定位机器人管板对孔定位精度为 ±1 毫米，并展示耐辐照关节模组与六轴机械臂。报道所述大会于 8 月 19—23 日举行。</p><div class="verdict"><b>判断：</b>这把竞争门槛从“能做样机”推到“能跨电站复用并经受高辐射、水下和检修窗口约束”。但公开材料未给出电站名单、连续作业时长、故障率、人工介入次数与验收方法，不能直接外推为所有核电场景成熟。</div><p><b>建议行动：</b>行业与产品团队建立两类机器人证据索引，优先核验应用电站、作业对象、辐照剂量、定位/检测验收报告、维保主体和停堆窗口节拍；对外只引用已公开指标。</p><div class="source">来源：<a href="https://www.sastind.gov.cn/n10086200/n10086331/c10771822/content.html" rel="noopener noreferrer">国家国防科技工业局｜军工集团亮相世界机器人大会（2026-08-29）</a></div></article>
+        <article class="item"><h3>v8.4.133 同时改变 INT8 校准子集与推理预处理路径</h3><div class="tags"><span class="tag">上海时间 8 月 29 日晚</span><span class="tag">工业视觉</span><span class="tag risk">基线需重跑</span></div><p><b>已确认事实：</b>Ultralytics GitHub 于 8 月 29 日 12:53 UTC（上海时间 20:53）发布 v8.4.133：修复分类与检测 INT8 导出校准的 <code>fraction</code> 处理，避免请求子集时意外用全数据集校准；把通道重排与连续化操作移到推理设备，并在受支持的 x86 CPU 上为原生 PyTorch 推理和独立验证自动启用 channels-last；自定义检测集可在 <code>save_json=True</code> 时输出按目标尺寸划分的 mAP。</p><div class="verdict"><b>判断：</b>昨日 v8.4.132 只解决昇腾 NMS 与尾批指标仍不够；校准样本数、预处理位置和内存布局今天也成为版本相关变量。旧 INT8 文件、延迟数据和小目标 mAP 不能与新版本无条件横向比较。</div><p><b>建议行动：</b>冻结同一模型、校准样本 ID、图像尺寸、batch 与后端，在 8.4.132/135 上分别导出并记录实际校准样本数、量化误差、端到端延迟、设备利用率及小/中/大目标召回。</p><div class="source">来源：<a href="https://github.com/ultralytics/ultralytics/releases/tag/v8.4.133" rel="noopener noreferrer">Ultralytics GitHub Release｜v8.4.133</a></div></article>
+        <article class="item"><h3>v8.4.134/135 改写密集目标 OOM 回退、max_det 与调参成本</h3><div class="tags"><span class="tag">上海时间今日发布</span><span class="tag">密集目标</span><span class="tag warn">召回与成本变化</span></div><p><b>已确认事实：</b>v8.4.134 与 v8.4.135 分别于上海时间 8 月 30 日 02:07、04:26 发布。前者在 TaskAlignedAssigner 显存不足时改为逐图 GPU 重试，并把超参数调优默认次数由 10 提高到 300；后者在检测、分割、姿态与 OBB 任务中读取单图最大标注数，默认 <code>max_det</code> 过低时自动上调，自定义值保留但会警告可能限制召回。</p><div class="verdict"><b>判断：</b>表计密集盘面、紧固件群和管线部件场景可能暴露历史 <code>max_det</code> 截断；新版可减少“低召回被误判为模型能力不足”，但更高候选数会增加验证与后处理开销，模型头和导出格式本身仍可能设上限。默认 300 次调参也会显著放大算力预算。</div><p><b>建议行动：</b>先统计黄金集中每图标注数 P50/P95/最大值，再显式锁定 <code>max_det</code> 与调参次数；对密集场景复核召回、误报、显存、功耗和 P95 延迟，不让框架默认值替代工程配置。</p><div class="source">来源：<a href="https://github.com/ultralytics/ultralytics/releases/tag/v8.4.134" rel="noopener noreferrer">Ultralytics v8.4.134</a><a href="https://github.com/ultralytics/ultralytics/releases/tag/v8.4.135" rel="noopener noreferrer">Ultralytics v8.4.135</a></div></article>
+      </section>
+
+      <section id="inspection" class="card">
+        <div class="section-head"><div><div class="kicker">02 · INSPECTION</div><h2>二、智慧巡检最新动态</h2></div><div class="rank">2 条</div></div>
+        <article class="item"><h3>水下检测与蒸汽发生器定位进入“跨站复制＋专用作业”阶段</h3><p><b>采购方与当前阶段：</b>本期没有公开采购方或新招标；官方报道确认水下浮游探测机器人已在多座核电站投入使用，蒸汽发生器检修定位机器人具备 ±1 毫米管板对孔定位公开指标。</p><p><b>技术与市场价值：</b>前者适合水下、辐射或人员难以接近的检测，后者适合大修窗口内重复定位作业；可切入的产品层不是通用机器人外壳，而是任务编排、位置标定、检测数据回放、人工复核和跨机组配置管理。</p><p><b>工程化限制：</b>公开信息未说明环境剂量、悬浮稳定性、检测漏报、定位复现性、失效回收与大修节拍；任何运动和检修动作都必须由规程、联锁和人员授权约束。</p><div class="verdict"><b>建议行动：持续跟踪并做证据化对标。</b>不基于展会报道启动仿制；先获得可核验验收维度，再评估传感、平台或维保协作切口。</div><div class="source">来源：<a href="https://www.sastind.gov.cn/n10086200/n10086331/c10771822/content.html" rel="noopener noreferrer">国家国防科技工业局官方报道</a></div></article>
+        <article class="item"><h3>深蓄多模态巡检项目今日无状态变化</h3><p><b>采购方与当前阶段：</b>南方电网储能股份有限公司项目仍处于公开招标期，文件获取截止 9 月 3 日 17:30，投标截止与开标为 9 月 21 日 08:30；今天未发现资格、限价或时间节点的新公告。</p><p><b>技术与市场价值：</b>四足机器人、测温、表计识别、缺陷排查、平台互通与搬运仍与核电非安全级辅助巡检同构，但它不是核电业绩。</p><p><b>工程化限制：</b>不接受联合体并要求 2023 年以来已完工四足仿生机器人类似业绩，仍是首要资格闸门；搬运动作与只读巡检必须分开评估。</p><div class="verdict"><b>建议行动：</b>只允许资格已核验通过的团队继续取文件与拆标；不满足独立投标和完工业绩时停止本轮投入。</div><div class="source">来源：<a href="https://www.bidding.csg.cn/zbgg/1200440598.jhtml" rel="noopener noreferrer">南方电网供应链统一服务平台｜项目 CG0200022002373305</a></div></article>
+      </section>
+
+      <section id="ai" class="card">
+        <div class="section-head"><div><div class="kicker">03 · AI</div><h2>三、AI 视觉与多模态技术进展</h2></div><div class="rank">2 条</div></div>
+        <article class="item"><h3>INT8 校准子集与预处理设备成为可审查配置</h3><p><b>核心能力与核电场景：</b>v8.4.133 修正校准 <code>fraction</code>，并把部分预处理移到推理设备。适合对表计、渗漏、异物和人员防护类模型做离线量化与边缘时延验证；按尺寸 mAP 可帮助暴露远距离小目标退化。</p><p><b>工程化限制：</b>官方仅保证框架行为，未提供公司数据、国产 NPU、网络隔离或现场功耗结论；设备侧预处理还会改变 CPU/GPU/NPU 分工，必须测端到端而非只测模型执行时间。</p><div class="verdict"><b>跟进建议：立即验证。</b>模型清单新增 calibration split、fraction、样本哈希、预处理设备、内存布局、导出后端与量化参数；生产包未通过固定黄金集人工复核前不升级。</div><div class="source">来源：<a href="https://github.com/ultralytics/ultralytics/releases/tag/v8.4.133" rel="noopener noreferrer">Ultralytics v8.4.133</a></div></article>
+        <article class="item"><h3>密集场景的“单图对象数”必须进入验收合同</h3><p><b>核心能力与核电场景：</b>v8.4.134/135 面向拥挤数据集降低目标分配 OOM 回退成本，并根据单图最大标注数调整默认 <code>max_det</code>。适合表盘群、螺栓群、阀门阵列和密集管线部件的验证。</p><p><b>工程化限制：</b>提高 <code>max_det</code> 可能增加后处理延迟、显存和功耗；导出格式或模型查询数仍可能限制输出。公开 xView 基准不能替代核电场景实测，自动调参也不提供可解释性或核安全保证。</p><div class="verdict"><b>跟进建议：立即验证，生产暂不升级。</b>把单图对象数分布、候选上限、截断计数、召回和 P95 延迟写入验收；对固定查询模型单独检查结构上限。</div><div class="source">来源：<a href="https://github.com/ultralytics/ultralytics/releases/tag/v8.4.134" rel="noopener noreferrer">v8.4.134</a><a href="https://github.com/ultralytics/ultralytics/releases/tag/v8.4.135" rel="noopener noreferrer">v8.4.135</a></div></article>
+      </section>
+
+      <section id="domestic" class="card">
+        <div class="section-head"><div><div class="kicker">04 · DOMESTIC STACK</div><h2>四、国产硬件与边缘智能专项</h2></div><div class="rank">4 类结论</div></div>
+        <div class="mini-grid">
+          <article class="mini-card"><h3>4.1 国产 CPU 与服务器</h3><p><b>今日无新的国产 CPU 产品级证据。</b>v8.4.133 自动 channels-last 只明确覆盖受支持的 x86 CPU；国产架构不得沿用该收益结论。中心平台继续以客户指定国产 CPU 承载管控、证据归档和只读检索，并逐架构实测。</p></article>
+          <article class="mini-card"><h3>4.2 国产 GPU / NPU 与 AI 加速</h3><p><b>主力候选仍为客户指定国产 NPU，PoC 后采用。</b>昇腾需把 8.4.132 的 NMS/尾批修正与 8.4.133 的校准修正合并回归；其他国产加速卡按各自算子、量化与输出上限独立验收。</p></article>
+          <article class="mini-card"><h3>4.3 国产边缘算力设备</h3><p>中核机器人应用证明专用装备路线有现场价值，但未公开边缘芯片、功耗与网络方案。设备候选须验证多视频接入、断网缓存、热降频、辐射/湿热适应、故障回收和 72 小时稳定性。</p></article>
+          <article class="mini-card"><h3>4.4 国产操作系统与基础软件</h3><p>在麒麟、统信或 openEuler 上显式锁定 Python、框架、NMS、预处理、容器和编解码版本；不要把 x86 oneDNN 自动优化当作跨架构默认能力。</p></article>
+        </div>
+        <article class="item"><h3>4.5 对智慧核电的部署建议</h3><p><b>今日国产化部署结论：</b>视觉边缘推理采用“客户指定国产 NPU＋本地缓存＋人工复核”，中心平台采用国产 CPU 服务器与不可变证据存储；RAG / AI Agent 仅做权限内检索、缺项提示和草稿生成。立即 PoC 的风险是 INT8 校准样本、密集目标上限、预处理设备和导出格式容量不一致。</p><div class="verdict"><b>适配结论：</b>国产 NPU 为 PoC 后主力，国产 CPU 推理为备选；未经固定黄金集、长稳、网络隔离和回滚验证的 8.4.135 暂不进入生产。x86/CUDA 只作精度与时延对照。</div></article>
+      </section>
+
+      <section id="data" class="card">
+        <div class="section-head"><div><div class="kicker">05 · DATA &amp; TWIN</div><h2>五、工业数据治理与数字孪生趋势</h2></div></div>
+        <article class="item"><h3>评估谱系必须同时记录对象密度与校准数据</h3><p><b>已落地证据：</b>v8.4.133–135 把 calibration fraction、预处理设备、单图最大标注数、<code>max_det</code> 与调参次数变成会影响结果的显式变量；中核机器人公开应用又要求把机器人、作业对象、位置、检测数据、人工复核与维保记录串联。</p><div class="verdict"><b>建议行动：</b>模型/数字孪生对象新增 <code>calibration_sample_ids</code>、<code>preprocess_device</code>、<code>objects_per_image</code>、<code>max_det</code>、<code>export_capacity</code> 与 <code>human_review_id</code>；商业化产品优先提供跨版本可重放的证据包，而非只给最终 mAP。</div><div class="source">来源：<a href="https://github.com/ultralytics/ultralytics/releases/tag/v8.4.133" rel="noopener noreferrer">v8.4.133</a><a href="https://github.com/ultralytics/ultralytics/releases/tag/v8.4.135" rel="noopener noreferrer">v8.4.135</a></div></article>
+      </section>
+
+      <section id="competitors" class="card">
+        <div class="section-head"><div><div class="kicker">06 · COMPETITORS</div><h2>六、竞争对手动态</h2></div><div class="rank">1 条</div></div>
+        <article class="item"><h3>中核武汉：以专用机器人、耐辐照部件和多站应用构筑壁垒</h3><p><b>已确认事实：</b>官方 8 月 29 日报道把水下浮游探测机器人、蒸汽发生器检修定位机器人、耐辐照关节模组与六轴机械臂放在同一核电专用装备能力谱系中，并明确前者已在多座核电站使用。</p><div class="verdict"><b>建议策略：</b>不在专用本体上正面复制；差异化建设多机器人任务编排、跨站配置、证据审计、算法回归与人工复核平台。如寻求生态合作，先确认接口开放性、数据权属和维保责任。</div><div class="source">来源：<a href="https://www.sastind.gov.cn/n10086200/n10086331/c10771822/content.html" rel="noopener noreferrer">国家国防科技工业局（2026-08-29）</a></div></article>
+      </section>
+
+      <section id="opportunities" class="card">
+        <div class="section-head"><div><div class="kicker">07 · OPPORTUNITIES</div><h2>七、商业机会</h2></div><div class="rank">1 个存量机会</div></div>
+        <article class="item"><h3>深蓄电站多模态感知智能巡检｜仅限资格通过团队</h3><p><b>机会内容：</b>南网储能公开招标仍要求机器人管控与数据分析、可视化、平台对接及多传感器四足机器人；最高投标限价 193.85 万元，文件获取截止 9 月 3 日 17:30。今日无新公告。</p><p><b>匹配判断：</b>平台、视觉、边缘离线和网络隔离能力匹配，但不接受联合体且要求 2023 年以来已完工四足仿生机器人类似业绩；机会等级取决于资格，不能以技术方案补齐主体业绩。</p><div class="verdict"><b>推荐行动：</b>资格通过则今天完成采购文件获取、接口/验收/安全条款拆解与报价责任表；资格不通过则列为账户研究，暂不投入投标。</div><div class="source">来源：<a href="https://www.bidding.csg.cn/zbgg/1200440598.jhtml" rel="noopener noreferrer">南方电网供应链统一服务平台｜招标公告</a></div></article>
+      </section>
+
+      <section id="tracking" class="card">
+        <div class="section-head"><div><div class="kicker">08 · TRACKING</div><h2>八、持续跟踪事项</h2></div></div>
+        <div class="table-wrap" tabindex="0"><table><thead><tr><th>事项名称</th><th>当前状态</th><th>今日是否有实质新增</th><th>下一观察节点</th></tr></thead><tbody><tr><td>Ultralytics 国产后端验证</td><td>最新版本升至 8.4.135；昨日 8.4.132 基线尚需合并回归</td><td>有：校准、密集目标与调参默认值变化</td><td>8.4.132/135 固定黄金集 A/B 与 72 小时长稳</td></tr><tr><td>中核武汉核电专用机器人</td><td>官方称水下机器人已在多座核电站使用</td><td>有：多站应用与 ±1 毫米定位指标公开</td><td>电站清单、验收方法、故障率与维保采购</td></tr><tr><td>深蓄多模态巡检招标</td><td>公开招标期，资格闸门不变</td><td>无</td><td>9 月 3 日 17:30 文件截止；9 月 21 日开标</td></tr><tr><td>台山 2 号机组边界门渗漏</td><td>已止漏清理，0 级运行事件</td><td>无</td><td>后续原因分析、整改或采购公告</td></tr></tbody></table></div>
+      </section>
+
+      <section id="insights" class="card">
+        <div class="section-head"><div><div class="kicker">09 · INSIGHT</div><h2>九、今日技术洞察</h2></div></div>
+        <article class="item"><h3>一至三年机会：成为专用机器人与国产算力之间的证据层</h3><p><b>结论：</b>最大商业机会不是再造一台通用机器人，而是让水下、检修、四足等异构装备在国产边缘算力上形成可配置、可回放、可人工复核的交付证据。立即验证的是校准样本、对象密度、输出上限与端到端时延；长期壁垒是跨机组场景库、版本谱系、验收合同和故障处置数据。</p><p><b>依据：</b>中核武汉已展示专用装备与跨站应用，说明本体壁垒正在形成；Ultralytics 连续三个版本又证明评估结果会被框架默认值和数据分布改变。国产化价值在离线可控与供应链适配，但必须用同一证据契约约束。</p><div class="verdict"><b>建议动作：</b>平台、算法与测试团队用 30 个密集盘面/部件群样本做证据包 v0.1，并把一条脱敏机器人任务完整回放到“采集—推理—告警—人工复核—关闭”。</div></article>
+      </section>
+
+      <section id="actions" class="card">
+        <div class="section-head"><div><div class="kicker">10 · ACTION</div><h2>十、给公司的建议</h2></div></div>
+        <div class="mini-grid">
+          <article class="mini-card"><h3>今日建议（3 条）</h3><p>① 算法/QA 冻结 8.4.132 与 8.4.135，显式锁定 calibration fraction、<code>max_det</code> 和 trials；② 行业团队建立中核武汉两类机器人证据索引；③ 商务只在深蓄资格通过后继续投标投入。</p></article>
+          <article class="mini-card"><h3>短期行动（1–3 个月）</h3><p>测试负责人完成 x86、客户指定国产 NPU 与备选国产 CPU 的精度/时延/功耗/72 小时矩阵；平台负责人交付机器人证据包 v0.1；行业负责人核验至少 2 类专用机器人验收维度。</p></article>
+          <article class="mini-card"><h3>中长期规划（6–24 个月）</h3><p>形成异构机器人管控、跨站场景资产、国产算力兼容矩阵和不可变审计链；AI Agent 只在权限内检索与缺项提示，人机责任、规程和人工复核始终优先。</p></article>
+        </div>
+      </section>
+
+      <section id="method" class="card">
+        <div class="section-head"><div><div class="kicker">METHODOLOGY</div><h2>信息说明</h2></div></div>
+        <p class="note">信息截点为 2026 年 8 月 30 日上午（Asia/Shanghai）。优先核验国家监管/主管部门、官方招投标平台与开源项目官方仓库；版本发布时间按 GitHub UTC 转换为上海时间。展会报道中的应用范围与性能指标来自主管部门公开材料，尚未取得具体电站验收报告；未确认内容不作为投标、选型或生产升级依据。</p>
+      </section>
+    </div>
+
+    <aside class="card toc" aria-label="本期目录">
+      <h2>本期目录</h2>
+      <a href="#industry">01 重大行业事件</a>
+      <a href="#inspection">02 智慧巡检</a>
+      <a href="#ai">03 AI 视觉与多模态</a>
+      <a href="#domestic">04 国产硬件与边缘智能</a>
+      <a href="#data">05 数据治理与数字孪生</a>
+      <a href="#competitors">06 竞争对手</a>
+      <a href="#opportunities">07 商业机会</a>
+      <a href="#tracking">08 持续跟踪</a>
+      <a href="#insights">09 技术洞察</a>
+      <a href="#actions">10 公司建议</a>
+      <a href="#method">信息说明</a>
+    </aside>
+  </main>
+
+  <footer>每日推送 · 2026-08-30 · <a href="/archive/">查看历史归档</a></footer>
+</body>
+</html>
