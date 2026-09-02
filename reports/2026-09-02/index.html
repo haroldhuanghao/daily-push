@@ -1,0 +1,219 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="v8.4.138 暴露兼容性与量化口径风险；广东电网 479 万元机器人标包开启，今天先做资格闸门与回归证据。">
+  <meta property="og:title" content="核电智慧巡检与工业智能化行业日报 · 2026-09-02">
+  <meta property="og:description" content="v8.4.138 暴露兼容性与量化口径风险；广东电网 479 万元机器人标包开启，今天先做资格闸门与回归证据。">
+  <meta property="og:type" content="article">
+  <meta property="og:url" content="https://daily.851473.xyz/reports/2026-09-02/">
+  <meta property="og:image" content="https://daily.851473.xyz/reports/2026-09-02/cover.png">
+  <meta name="report-contract" content="nuclear-daily-v2">
+  <link rel="canonical" href="https://daily.851473.xyz/reports/2026-09-02/">
+  <title>核电智慧巡检与工业智能化行业日报 · 2026-09-02</title>
+  <style>
+    :root {
+      --accent: #087ea4;
+      --accent-strong: #083344;
+      --accent-soft: #e0f2fe;
+      --page: #f3f7fa;
+      --surface: #ffffff;
+      --text: #102a35;
+      --muted: #60727b;
+      --border: #d8e4e9;
+      --shadow: 0 12px 36px rgba(8, 51, 68, .08);
+      --radius-card: 18px;
+      --space-card: 24px;
+    }
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body { margin: 0; background: var(--page); color: var(--text); font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang SC", "Microsoft YaHei", sans-serif; font-size: 15px; line-height: 1.7; overflow-wrap: anywhere; }
+    img { max-width: 100%; height: auto; }
+    a { color: var(--accent); text-decoration-thickness: 1px; text-underline-offset: 3px; }
+    a:hover { color: var(--accent-strong); }
+    a:focus-visible { outline: 3px solid var(--accent-soft); outline-offset: 3px; border-radius: 4px; }
+    .wrap { width: min(1120px, calc(100% - 32px)); margin-inline: auto; }
+    .hero { padding: 52px 0 46px; color: #fff; background: radial-gradient(circle at 82% 18%, var(--accent) 0, transparent 30%), linear-gradient(135deg, var(--accent-strong), var(--accent)); border-bottom: 4px solid var(--accent-soft); }
+    .eyebrow { color: rgba(255, 255, 255, .78); font-size: 12px; font-weight: 800; letter-spacing: .16em; text-transform: uppercase; }
+    .hero h1 { max-width: 880px; margin: 10px 0 14px; font-size: clamp(30px, 5vw, 54px); line-height: 1.14; text-wrap: balance; }
+    .hero .lead { max-width: 820px; margin: 0; color: rgba(255, 255, 255, .86); font-size: clamp(15px, 2vw, 17px); }
+    .meta { display: flex; flex-wrap: wrap; gap: 9px; margin-top: 22px; }
+    .pill { padding: 6px 11px; border: 1px solid rgba(255, 255, 255, .28); border-radius: 999px; background: rgba(255, 255, 255, .09); font-size: 12px; }
+    .summary { position: relative; margin-top: -24px; }
+    .summary-grid { display: grid; grid-template-columns: 1.4fr repeat(2, minmax(0, 1fr)); gap: 12px; }
+    .card { padding: var(--space-card); border: 1px solid var(--border); border-radius: var(--radius-card); background: var(--surface); box-shadow: var(--shadow); }
+    .summary-card { min-width: 0; padding: 20px; }
+    .summary-card.primary { background: var(--accent-soft); border-color: var(--accent); }
+    .summary-card b { display: block; margin-bottom: 5px; color: var(--accent-strong); font-size: 13px; }
+    .summary-card strong { display: block; color: var(--accent); font-size: clamp(20px, 3vw, 26px); line-height: 1.25; }
+    .summary-card p { margin: 6px 0 0; color: var(--muted); font-size: 13px; }
+    main { padding: 34px 0 56px; }
+    .layout { display: grid; grid-template-columns: minmax(0, 1fr) 250px; gap: 24px; align-items: start; }
+    .content { min-width: 0; }
+    .content > .card { margin-bottom: 18px; }
+    .toc { position: sticky; top: 16px; padding: 18px; box-shadow: 0 4px 18px rgba(24, 51, 41, .05); }
+    .toc h2 { margin: 0 0 10px; color: var(--muted); font-size: 12px; letter-spacing: .12em; }
+    .toc a { display: block; padding: 6px 0; color: var(--muted); font-size: 13px; text-decoration: none; }
+    .toc a:hover { color: var(--accent); }
+    .section-head { display: flex; align-items: flex-start; justify-content: space-between; gap: 14px; margin-bottom: 6px; padding-bottom: 14px; border-bottom: 1px solid var(--border); }
+    .section-head h2 { margin: 0; color: var(--accent-strong); font-size: clamp(19px, 3vw, 23px); line-height: 1.35; }
+    .kicker { margin-bottom: 4px; color: var(--accent); font-size: 12px; font-weight: 800; letter-spacing: .08em; }
+    .rank { color: var(--muted); font-size: 12px; white-space: nowrap; }
+    .item { padding: 19px 0; border-bottom: 1px dashed var(--border); }
+    .item:last-child { padding-bottom: 2px; border-bottom: 0; }
+    .item h3 { margin: 0 0 8px; font-size: 18px; line-height: 1.45; text-wrap: pretty; }
+    .item p { margin: 7px 0; color: var(--muted); font-size: 14px; }
+    .tags { display: flex; flex-wrap: wrap; gap: 7px; margin: 9px 0; }
+    .tag { padding: 3px 8px; border-radius: 999px; background: var(--accent-soft); color: var(--accent-strong); font-size: 11px; font-weight: 800; }
+    .tag.warn { background: #fff0d8; color: #8a5a10; }
+    .tag.risk { background: #fae5e1; color: #a7332c; }
+    .verdict { margin-top: 12px; padding: 12px 14px; border-left: 3px solid var(--accent); border-radius: 0 10px 10px 0; background: var(--accent-soft); font-size: 14px; }
+    .source { margin-top: 10px; color: var(--muted); font-size: 12px; }
+    .source a { margin-right: 10px; }
+    .mini-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 12px; margin-top: 16px; }
+    .mini-card { padding: 16px; border: 1px solid var(--border); border-radius: 14px; background: var(--page); }
+    .mini-card h3 { margin: 0 0 7px; font-size: 16px; }
+    .mini-card p { margin: 6px 0; color: var(--muted); font-size: 13px; }
+    .table-wrap { max-width: 100%; margin-top: 14px; overflow-x: auto; border-radius: 12px; }
+    .table-wrap:focus-visible { outline: 3px solid var(--accent-soft); outline-offset: 2px; }
+    table { width: 100%; min-width: 620px; border-collapse: collapse; font-size: 13px; }
+    th, td { padding: 11px 10px; border-bottom: 1px solid var(--border); text-align: left; vertical-align: top; }
+    th { background: var(--accent-soft); color: var(--accent-strong); }
+    .note { margin-top: 15px; padding: 11px 13px; border-radius: 10px; background: var(--page); color: var(--muted); font-size: 12px; }
+    footer { padding: 0 16px 32px; color: var(--muted); text-align: center; font-size: 12px; }
+    @media (max-width: 900px) {
+      .summary-grid { grid-template-columns: 1fr 1fr; }
+      .summary-card.primary { grid-column: 1 / -1; }
+      .layout { grid-template-columns: 1fr; }
+      .toc { position: static; display: none; }
+    }
+    @media (max-width: 640px) {
+      .wrap { width: min(100% - 24px, 1120px); }
+      .hero { padding: 40px 0 38px; }
+      .summary-grid, .mini-grid { grid-template-columns: 1fr; }
+      .summary-card.primary { grid-column: auto; }
+      .card { padding: 19px 17px; }
+      .section-head { display: block; }
+      .rank { display: block; margin-top: 6px; white-space: normal; }
+    }
+  </style>
+</head>
+<body>
+  <header class="hero">
+    <div class="wrap">
+      <div class="eyebrow">DAILY BRIEFING</div>
+      <h1>核电智慧巡检与工业智能化行业日报</h1>
+      <p class="lead">v8.4.138 暴露兼容性与量化口径风险；广东电网 479 万元机器人标包开启，今天先做资格闸门与回归证据。</p>
+      <div class="meta"><span class="pill">2026年9月2日 · 星期三</span><span class="pill">Asia/Shanghai</span></div>
+    </div>
+  </header>
+
+  <div class="wrap summary" aria-label="今日摘要">
+    <div class="summary-grid">
+      <section class="card summary-card primary"><b>今日一句话结论</b><strong>先锁定模型与量化证据，再抢占机器人招标窗口</strong><p>框架稳定性与投标资格今天都需要前置闸门。</p></section>
+      <section class="card summary-card"><b>今日新增</b><strong>3 项证实信号</strong><p>1 个视觉框架版本、2 组工业智能化公开招标。</p></section>
+      <section class="card summary-card"><b>建议动作</b><strong>两张清单</strong><p>上午完成回归矩阵与机器人投标资格/型式试验清单。</p></section>
+    </div>
+  </div>
+
+  <main class="wrap layout">
+    <div class="content">
+      <section id="industry" class="card">
+        <div class="section-head"><div><div class="kicker">01 · INDUSTRY</div><h2>一、今日重大行业事件</h2></div><div class="rank">3 条</div></div>
+        <article class="item">
+          <h3>v8.4.138 修复旧检查点、YOLO-World 与 channels-last 组合故障</h3>
+          <div class="tags"><span class="tag">上海时间 9 月 2 日 07:01</span><span class="tag">工业视觉</span><span class="tag warn">兼容性修复</span></div>
+          <p><b>已确认事实：</b>Ultralytics 于 9 月 1 日 23:01 UTC 发布 v8.4.138：恢复 8.4.95 之前旧检查点相关类的受限加载与 YOLO-World 加载；以 <code>reshape</code> 修复 MuSGD 在 channels-last 非连续梯度下崩溃；SAM/SAM2/SAM3 特征提取改用推理模式；同时修复空目标批次的 DDP 梯度、分布式调参失败数据集记录，并明确不同导出后端下 <code>quantize</code> 不代表统一精度。</p>
+          <div class="verdict"><b>判断：</b>相较昨日 v8.4.137，这是对默认 channels-last 变更的直接稳定性补丁，也说明“能加载、能跑、量化参数相同”不足以证明跨版本和跨后端等价。核电视觉应把旧资产兼容、空目标工况、内存布局和真实计算精度纳入升级闸门。</div>
+          <p><b>建议行动：</b>冻结 8.4.137/138 双基线，使用旧检查点、YOLO-World、空目标批次、SAM 连续推理和目标国产后端各跑一组回归；记录模型哈希、布局、实际精度、峰值内存、误漏报与人工复核结果。</p>
+          <div class="source">来源：<a href="https://github.com/ultralytics/ultralytics/releases/tag/v8.4.138" rel="noopener noreferrer">Ultralytics GitHub Release｜v8.4.138</a></div>
+        </article>
+        <article class="item"><h3>广东电网启动 479 万元电缆隧道智能巡检机器人招标</h3><div class="tags"><span class="tag">公开招标</span><span class="tag">电缆隧道机器人</span><span class="tag warn">资格与安全双闸门</span></div><p><b>已确认事实：</b>广东电网 9 月 1 日 18:58 发布专项物资招标，其中电缆隧道智能巡检机器人标包预计需求金额及最高限价均为 479 万元。文件获取期为 9 月 1 日 23:59 至 9 月 7 日 23:59，投标截止 10 月 19 日 09:00；国内产品要求制造商投标，不接受联合体，需近 60 个月至少 1 份同品类供货合同及对应发票，并提供第三方型式试验或含型式试验内容的检测报告。数字终端还涉及采购前置评估、到货安全抽检与自主可控审查。</p><div class="verdict"><b>判断：</b>这是可形成订单的相邻工业场景，不等于核电采购。真正门槛是制造商身份、可核验业绩、型式试验和网络安全整改能力；算法演示只能作为其中一环。</div><p><b>建议行动：</b>今天完成 go/no-go：逐项核对制造商主体、合同与发票、型式试验、物联网终端安全和自主可控材料；资格齐全再下载文件并拆解技术清单，否则仅作为产品路线与生态伙伴样本。</p><div class="source">来源：<a href="https://www.bidding.csg.cn/zbgg/1200441085.jhtml" rel="noopener noreferrer">南方电网供应链统一服务平台｜CG0300022002376630（2026-09-01）</a></div></article>
+        <article class="item"><h3>海南电网把灾中决策、推理大模型与离线地图列入专项研发招标</h3><div class="tags"><span class="tag">极端灾害韧性</span><span class="tag">数字孪生</span><span class="tag">人机协同</span></div><p><b>已确认事实：</b>海南电网 9 月 1 日 17:19 发布 9 个标包的科技研发服务专项招标。与工业智能化直接相关的标包包括：高韧性数字化管控平台 1091.25 万元、主配网运行态势感知 345.6 万元、AI 定值全过程智能管控 283.9 万元；公告还明确灾中应急调度决策、灾后恢复、推理大模型、多层图数据库、智能告警，以及离线地图压缩、脱密与加密。文件获取至 9 月 10 日 18:00，投标截止 10 月 9 日 09:00。</p><div class="verdict"><b>判断：</b>该招标给出一条可迁移到核电应急辅助的产品边界：离线数据、态势感知、仿真校核与人类调度决策必须分层。它不能证明相关方案已适用于核安全级控制，更不能把大模型输出直接接入保护或生产控制。</div><p><b>建议行动：</b>平台团队提炼“离线资源图—事件图谱—规则/仿真校核—建议—人工授权—回放审计”参考架构；商务团队仅在具备电力调度、OS2/智瞰生态和科研交付能力时评估投标或联合生态。</p><div class="source">来源：<a href="https://www.bidding.csg.cn/zbgg/1200441040.jhtml" rel="noopener noreferrer">南方电网供应链统一服务平台｜CG0700022002328595（2026-09-01）</a></div></article>
+      </section>
+
+      <section id="inspection" class="card">
+        <div class="section-head"><div><div class="kicker">02 · INSPECTION</div><h2>二、智慧巡检最新动态</h2></div><div class="rank">2 条</div></div>
+        <article class="item"><h3>电缆隧道机器人采购将“运行评价＋履约评价＋安全抽检”串成验收链</h3><p><b>采购方与当前阶段：</b>采购方为广东电网有限责任公司，处于公开招标阶段；机器人标包 479 万元，尚未形成中标或部署事实。</p><p><b>技术与市场价值：</b>公告把运行评价按“电缆隧道巡检机器人在线监测装置”、履约评价按“机器人”执行，并要求第三方型式试验。对核电机器人产品的可迁移启示是把移动本体、在线监测、数字终端安全和持续履约分开举证。</p><p><b>工程化限制：</b>公开公告未给出隧道坡度、轨道/轮式形态、续航、定位、气体/温度/可见光传感器、误漏报、断网缓存和故障撤离参数，必须以招标文件为准。</p><div class="verdict"><b>建议行动：资格通过后立即获取文件。</b>产品、质量与安全团队共同建立“环境适应—传感—导航—告警—网络安全—型式试验—运行评价”证据矩阵。</div><div class="source">来源：<a href="https://www.bidding.csg.cn/zbgg/1200441085.jhtml" rel="noopener noreferrer">广东电网机器人专项招标</a></div></article>
+        <article class="item"><h3>今日仍无新的核电智慧巡检采购或上线证据</h3><p><b>采购方与当前阶段：</b>截至 9 月 2 日 09:00（Asia/Shanghai），核电监管与企业公开来源未出现新的核电智慧巡检招标、中标或正式上线；广东电网项目属于相邻电力场景。</p><p><b>技术与市场价值：</b>深蓄多模态巡检仍是临近截止的存量机会；广东电网标包可补齐机器人资质、型式试验与网络安全清单。</p><p><b>工程化限制：</b>不得以电缆隧道、电网灾害研发或通用框架修复推断核电客户预算、核安全级适用性或现场验收结论。</p><div class="verdict"><b>建议行动：</b>销售不扩写核电案例；产品把相邻场景要求转成可复用证据包，并坚持人工复核、规程优先。</div></article>
+      </section>
+
+      <section id="ai" class="card">
+        <div class="section-head"><div><div class="kicker">03 · AI</div><h2>三、AI 视觉与多模态技术进展</h2></div><div class="rank">2 条</div></div>
+        <article class="item"><h3>SAM 推理模式优化适合验证长时交互分割，不构成现场性能保证</h3><p><b>核心能力与核电场景：</b>v8.4.138 将 SAM、SAM2、SAM3 图像嵌入计算放入推理模式，避免重复推理保留不必要的自动求导图。它适合离线缺陷轮廓标注、人员辅助复核和工单证据整理的内存稳定性验证。</p><p><b>工程化限制：</b>官方未提供核电缺陷数据、边缘设备功耗、长稳、辐射/粉尘/反光条件或误漏报结果；内存下降不代表分割准确率、提示一致性和审查可解释性达标。</p><div class="verdict"><b>跟进建议：立即做隔离验证。</b>对同一图像连续提取 1000 次嵌入，记录峰值内存、时延、输出哈希与人工修订量；只用于辅助标注和复核，不自动放行。</div><div class="source">来源：<a href="https://github.com/ultralytics/ultralytics/releases/tag/v8.4.138" rel="noopener noreferrer">Ultralytics v8.4.138</a></div></article>
+        <article class="item"><h3>量化参数需升级为“后端实际精度”证据</h3><p><b>核心能力与核电场景：</b>v8.4.138 文档澄清 <code>quantize</code> 在不同导出格式中可能选择或请求不同运行时精度。对表计、异物、渗漏和人员行为识别，这要求将“配置值”与“部署后端实际执行”分开记录。</p><p><b>工程化限制：</b>国产 NPU 的算子回退、混合精度、校准集、预处理和 NMS 可能改变精度、时延与功耗；通用文档不能替代设备侧 profiler、输出对齐和独立黄金集。</p><div class="verdict"><b>跟进建议：生产暂不随版本升级。</b>为 ONNX、客户指定国产 NPU 和 CPU 备选分别导出，保存图优化日志、算子精度/回退清单和逐样本差异；人工审批版本晋级。</div><div class="source">来源：<a href="https://github.com/ultralytics/ultralytics/releases/tag/v8.4.138" rel="noopener noreferrer">Ultralytics v8.4.138</a></div></article>
+      </section>
+
+      <section id="domestic" class="card">
+        <div class="section-head"><div><div class="kicker">04 · DOMESTIC STACK</div><h2>四、国产硬件与边缘智能专项</h2></div><div class="rank">4 项结论</div></div>
+        <div class="mini-grid">
+          <article class="mini-card"><h3>4.1 国产 CPU 与服务器</h3><p><b>今日无新产品级证据。</b>中心平台继续以客户指定国产 CPU 为主力，要求模型资产、事件图谱、规则和审计日志离线可用；不把 v8.4.138 的分类预处理优化外推为国产 CPU 收益。</p></article>
+          <article class="mini-card"><h3>4.2 国产 GPU / NPU 与 AI 加速</h3><p><b>PoC 后采用。</b>对客户指定国产 NPU 逐后端核验量化实际精度、算子回退、输入解码和 NMS；CUDA channels-last 与 MuSGD 修复不是国产加速卡适配证据。</p></article>
+          <article class="mini-card"><h3>4.3 国产边缘算力设备</h3><p>广东电网公告把数字终端到货安全抽检和配件整改写入采购链。机器人边缘设备需验证断网缓存、热降频、72 小时长稳、故障撤离、远程升级与回滚。</p></article>
+          <article class="mini-card"><h3>4.4 国产操作系统与基础软件</h3><p>麒麟、统信或 openEuler 环境锁定 Python、推理 SDK、OpenCV、编解码、容器与驱动；保存 SBOM、漏洞处置、国产化测评和现场版本基线。</p></article>
+        </div>
+        <article class="item"><h3>4.5 对智慧核电的部署建议</h3><p><b>今日国产化部署结论：</b>边缘视觉采用“客户指定国产 NPU＋本地缓存＋人工复核”，中心采用国产 CPU 服务器、离线事件图谱与不可变证据存储；RAG/AI Agent 只做权限内检索、证据编排和缺项提示。</p><div class="verdict"><b>适配结论：</b>国产 CPU 中心平台为主力；客户指定国产 NPU 为 PoC 后边缘主力，国产 CPU 推理为备选；v8.4.138 只进入隔离验证环境，未通过旧模型、量化、空目标、72 小时长稳、网络隔离和回滚验证前暂不进生产。</div></article>
+      </section>
+
+      <section id="data" class="card">
+        <div class="section-head"><div><div class="kicker">05 · DATA &amp; TWIN</div><h2>五、工业数据治理与数字孪生趋势</h2></div></div>
+        <article class="item"><h3>海南电网招标把灾前、灾中、灾后数据与决策链拆成可交付模块</h3><p><b>已落地证据：</b>公开招标明确基于海南 OS2 与南网智瞰建设高韧性数字化管控平台，集成故障动态感知、灾中应急调度决策支持和灾后恢复；另要求多层图数据库设备链接研判、智能告警、离线地图压缩/脱密/加密及示范应用。</p><div class="verdict"><b>建议行动：</b>数据底座建立 <code>event_id</code>、设备/空间关系、原始证据哈希、规则/模型版本、仿真输入输出、建议、授权人和回放结果；面向核电时坚持 AI 辅助、人机协同、人工复核和规程优先。</div><div class="source">来源：<a href="https://www.bidding.csg.cn/zbgg/1200441040.jhtml" rel="noopener noreferrer">海南电网科技研发专项招标</a></div></article>
+      </section>
+
+      <section id="competitors" class="card">
+        <div class="section-head"><div><div class="kicker">06 · COMPETITORS</div><h2>六、竞争对手动态</h2></div><div class="rank">1 项中标结果</div></div>
+        <article class="item"><h3>中国移动与百度分别进入广州供电局边缘 AI 运营和 AI 漏洞评估</h3><p><b>已确认事实：</b>广州供电局 9 月 1 日发布数字技术相关项目中标结果：中国移动通信集团广东有限公司中标“人工智能平台（广州局边缘节点）运营支持”，北京百度网讯科技有限公司中标“人工智能信息系统漏洞评估技术应用”。公告未披露合同金额、产品型号或核电应用。</p><div class="verdict"><b>建议策略：</b>竞争对标不能只看模型精度，应覆盖边缘节点持续运营、身份/网络防护、AI 系统漏洞评估和整改闭环；可优先与具备运营或安全测评资质的生态伙伴组合，而不是自建全部能力。</div><div class="source">来源：<a href="https://www.bidding.csg.cn/zbhxrgs/1200440994.jhtml" rel="noopener noreferrer">南方电网供应链统一服务平台｜CG2700022002314361（2026-09-01）</a></div></article>
+      </section>
+
+      <section id="opportunities" class="card">
+        <div class="section-head"><div><div class="kicker">07 · OPPORTUNITIES</div><h2>七、商业机会</h2></div><div class="rank">3 个</div></div>
+        <article class="item"><h3>广东电网电缆隧道智能巡检机器人｜479 万元</h3><p><b>机会内容：</b>公开招标，文件获取至 9 月 7 日 23:59，投标截止 10 月 19 日 09:00；国内产品限制造商投标，不接受联合体，要求近 60 个月同品类供货合同及发票、第三方型式试验/检测报告。</p><p><b>匹配判断：</b>产品方向高度匹配，但资格闸门刚性；数字终端涉及自主可控、网络安全前置评估、到货抽检与不合格配件免费整改。资格与检测证据齐全为 A 级，否则为研究样本。</p><div class="verdict"><b>推荐行动：</b>今天由商务、质量、安全共同签署 go/no-go；通过后下载文件、预约澄清并建立差距闭环。</div><div class="source">来源：<a href="https://www.bidding.csg.cn/zbgg/1200441085.jhtml" rel="noopener noreferrer">广东电网专项物资招标</a></div></article>
+        <article class="item"><h3>海南电网高韧性数字化与 AI 研发｜三标包合计 1720.75 万元</h3><p><b>机会内容：</b>高韧性数字化管控平台 1091.25 万元、主配网运行态势感知 345.6 万元、AI 定值全过程智能管控 283.9 万元；文件获取至 9 月 10 日 18:00，投标截止 10 月 9 日 09:00。</p><p><b>匹配判断：</b>数据治理、图谱、AI Agent、离线部署和审计能力匹配；但电力调度、OS2/智瞰接口、仿真校核和科研成果交付是专业门槛。具备生态伙伴为 B+，单独投标需谨慎。</p><div class="verdict"><b>推荐行动：</b>48 小时内完成生态图和标包选择，只进入能力闭环清晰的 1 个标包；在方案中明确 AI 只输出建议，保护与调度操作由规则、仿真和授权人员控制。</div><div class="source">来源：<a href="https://www.bidding.csg.cn/zbgg/1200441040.jhtml" rel="noopener noreferrer">海南电网科技研发专项招标</a></div></article>
+        <article class="item"><h3>深蓄电站多模态智能巡检｜文件获取明日截止</h3><p><b>机会内容：</b>南网储能标包 2 最高投标限价 193.85 万元，覆盖机器人管控与数据分析、可视化、平台对接、多传感器四足机器人及搬运拓展；文件获取截止 9 月 3 日 17:30，澄清截止 9 月 4 日 12:00，投标与开标为 9 月 21 日 08:30。今日未发现资格、限价或时间节点变更。</p><p><b>匹配判断：</b>平台、视觉和边缘离线能力匹配，但不接受联合体，并要求 2023 年以来已完工的四足仿生机器人研究与应用类似业绩；资格决定机会等级。</p><div class="verdict"><b>推荐行动：</b>资格已通过者今天完成文件获取和问题清单，明日前形成澄清稿；资格不满足者停止投标投入。</div><div class="source">来源：<a href="https://www.bidding.csg.cn/zbgg/1200440598.jhtml" rel="noopener noreferrer">南方电网供应链统一服务平台｜CG0200022002373305</a></div></article>
+      </section>
+
+      <section id="tracking" class="card">
+        <div class="section-head"><div><div class="kicker">08 · TRACKING</div><h2>八、持续跟踪事项</h2></div></div>
+        <div class="table-wrap" tabindex="0"><table><thead><tr><th>事项名称</th><th>当前状态</th><th>今日是否有实质新增</th><th>下一观察节点</th></tr></thead><tbody><tr><td>Ultralytics 版本链</td><td>v8.4.138 已发布，修复 8.4.137 后续稳定性问题</td><td>有</td><td>旧模型、量化、SAM 长时与空目标 A/B 结果</td></tr><tr><td>广东电网机器人标包</td><td>公开招标，479 万元</td><td>有</td><td>9 月 7 日 23:59 文件获取截止</td></tr><tr><td>深蓄多模态巡检</td><td>公开招标，资格闸门未变</td><td>无</td><td>9 月 3 日 17:30 文件获取截止</td></tr><tr><td>核电智慧巡检新增采购</td><td>今日未发现合格新增</td><td>无</td><td>后续招标、中标、上线或实测突破</td></tr></tbody></table></div>
+      </section>
+
+      <section id="insights" class="card">
+        <div class="section-head"><div><div class="kicker">09 · INSIGHT</div><h2>九、今日技术洞察</h2></div></div>
+        <article class="item"><h3>一至三年机会：把“模型可用”升级为“交付证据可验”</h3><p><b>结论：</b>短期订单入口是机器人和韧性数字平台，真正壁垒不是单一模型，而是旧资产兼容、实际量化精度、型式试验、网络安全、离线运行、人工授权与回放审计的一体化证据包。国产化价值在可控供应链和隔离部署，但每个后端必须独立验证。</p><p><b>依据：</b>v8.4.138 同时修复旧检查点、内存布局和分布式边界，并澄清量化口径；广东电网把业绩、型式试验、安全抽检和自主可控写入采购；海南电网把离线地图、图数据库、仿真与决策支持拆成标包。</p><div class="verdict"><b>建议动作：</b>本周交付“可审计交付包 v0.1”：版本/模型哈希、实际精度与算子回退、环境与长稳测试、网络安全材料、型式试验映射、人工授权和一键回放。</div></article>
+      </section>
+
+      <section id="actions" class="card">
+        <div class="section-head"><div><div class="kicker">10 · ACTION</div><h2>十、给公司的建议</h2></div></div>
+        <div class="mini-grid">
+          <article class="mini-card"><h3>今日建议（3 条）</h3><p>① 完成广东机器人与深蓄项目资格/文件双清单；② 冻结 8.4.137/138 并启动旧模型、量化和 SAM 长时回归；③ 为海南标包选择 1 个生态切入点，不承诺 AI 自动控制。</p></article>
+          <article class="mini-card"><h3>短期行动（1–3 个月）</h3><p>质量团队补齐型式试验与运行评价映射；算法团队完成跨后端精度/时延/功耗/72 小时矩阵；平台团队交付离线事件图谱、授权与回放审计最小闭环。</p></article>
+          <article class="mini-card"><h3>中长期规划（6–24 个月）</h3><p>形成机器人本体—边缘推理—厂级平台—安全运营的证据化产品线，沉淀国产软硬件兼容矩阵、现场失效样本、第三方检测与生态伙伴网络。</p></article>
+        </div>
+      </section>
+
+      <section id="method" class="card">
+        <div class="section-head"><div><div class="kicker">METHODOLOGY</div><h2>信息说明</h2></div></div>
+        <p class="note">信息截点为 2026 年 9 月 2 日 09:00（Asia/Shanghai）。优先核验官方 GitHub Release、南方电网供应链平台、国家核安全局与核电企业公开信息；未发现新的核电智慧巡检采购或上线证据。金额、资格和时间均以采购文件及平台后续更正为准；所有技术判断均为基于公开事实的工程推断，不替代核安全审查、现场试验、人工授权和规程。</p>
+      </section>
+    </div>
+
+    <aside class="card toc" aria-label="本期目录">
+      <h2>本期目录</h2>
+      <a href="#industry">01 重大行业事件</a>
+      <a href="#inspection">02 智慧巡检</a>
+      <a href="#ai">03 AI 视觉与多模态</a>
+      <a href="#domestic">04 国产硬件与边缘智能</a>
+      <a href="#data">05 数据治理与数字孪生</a>
+      <a href="#competitors">06 竞争对手</a>
+      <a href="#opportunities">07 商业机会</a>
+      <a href="#tracking">08 持续跟踪</a>
+      <a href="#insights">09 技术洞察</a>
+      <a href="#actions">10 公司建议</a>
+      <a href="#method">信息说明</a>
+    </aside>
+  </main>
+
+  <footer>每日推送 · 2026-09-02 · <a href="/archive/">查看历史归档</a></footer>
+</body>
+</html>
