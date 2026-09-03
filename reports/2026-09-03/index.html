@@ -1,0 +1,234 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="深圳供电局把证据链、机房多模态、智能体、数字孪生和信创适配拆成可验收标的；今天先完成深蓄取件，再做资格分流。">
+  <meta property="og:title" content="核电智慧巡检与工业智能化行业日报 · 2026-09-03">
+  <meta property="og:description" content="深圳供电局把证据链、机房多模态、智能体、数字孪生和信创适配拆成可验收标的；今天先完成深蓄取件，再做资格分流。">
+  <meta property="og:type" content="article">
+  <meta property="og:url" content="https://daily.851473.xyz/reports/2026-09-03/">
+  <meta property="og:image" content="https://daily.851473.xyz/reports/2026-09-03/cover.png">
+  <meta name="report-contract" content="nuclear-daily-v2">
+  <link rel="canonical" href="https://daily.851473.xyz/reports/2026-09-03/">
+  <title>核电智慧巡检与工业智能化行业日报 · 2026-09-03</title>
+  <style>
+    :root {
+      --accent: #0d6b4f;
+      --accent-strong: #063d30;
+      --accent-soft: #dff4eb;
+      --page: #f4f6f2;
+      --surface: #ffffff;
+      --text: #13201c;
+      --muted: #65736d;
+      --border: #dfe6e1;
+      --shadow: 0 12px 36px rgba(24, 51, 41, .08);
+      --radius-card: 18px;
+      --space-card: 24px;
+    }
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body { margin: 0; background: var(--page); color: var(--text); font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang SC", "Microsoft YaHei", sans-serif; font-size: 15px; line-height: 1.7; overflow-wrap: anywhere; }
+    img { max-width: 100%; height: auto; }
+    a { color: var(--accent); text-decoration-thickness: 1px; text-underline-offset: 3px; }
+    a:hover { color: var(--accent-strong); }
+    a:focus-visible { outline: 3px solid var(--accent-soft); outline-offset: 3px; border-radius: 4px; }
+    .wrap { width: min(1120px, calc(100% - 32px)); margin-inline: auto; }
+    .hero { padding: 52px 0 46px; color: #fff; background: radial-gradient(circle at 82% 18%, var(--accent) 0, transparent 30%), linear-gradient(135deg, var(--accent-strong), var(--accent)); border-bottom: 4px solid var(--accent-soft); }
+    .eyebrow { color: rgba(255, 255, 255, .78); font-size: 12px; font-weight: 800; letter-spacing: .16em; text-transform: uppercase; }
+    .hero h1 { max-width: 880px; margin: 10px 0 14px; font-size: clamp(30px, 5vw, 54px); line-height: 1.14; text-wrap: balance; }
+    .hero .lead { max-width: 820px; margin: 0; color: rgba(255, 255, 255, .86); font-size: clamp(15px, 2vw, 17px); }
+    .meta { display: flex; flex-wrap: wrap; gap: 9px; margin-top: 22px; }
+    .pill { padding: 6px 11px; border: 1px solid rgba(255, 255, 255, .28); border-radius: 999px; background: rgba(255, 255, 255, .09); font-size: 12px; }
+    .summary { position: relative; margin-top: -24px; }
+    .summary-grid { display: grid; grid-template-columns: 1.4fr repeat(2, minmax(0, 1fr)); gap: 12px; }
+    .card { padding: var(--space-card); border: 1px solid var(--border); border-radius: var(--radius-card); background: var(--surface); box-shadow: var(--shadow); }
+    .summary-card { min-width: 0; padding: 20px; }
+    .summary-card.primary { background: var(--accent-soft); border-color: var(--accent); }
+    .summary-card b { display: block; margin-bottom: 5px; color: var(--accent-strong); font-size: 13px; }
+    .summary-card strong { display: block; color: var(--accent); font-size: clamp(20px, 3vw, 26px); line-height: 1.25; }
+    .summary-card p { margin: 6px 0 0; color: var(--muted); font-size: 13px; }
+    main { padding: 34px 0 56px; }
+    .layout { display: grid; grid-template-columns: minmax(0, 1fr) 250px; gap: 24px; align-items: start; }
+    .content { min-width: 0; }
+    .content > .card { margin-bottom: 18px; }
+    .toc { position: sticky; top: 16px; padding: 18px; box-shadow: 0 4px 18px rgba(24, 51, 41, .05); }
+    .toc h2 { margin: 0 0 10px; color: var(--muted); font-size: 12px; letter-spacing: .12em; }
+    .toc a { display: block; padding: 6px 0; color: var(--muted); font-size: 13px; text-decoration: none; }
+    .toc a:hover { color: var(--accent); }
+    .section-head { display: flex; align-items: flex-start; justify-content: space-between; gap: 14px; margin-bottom: 6px; padding-bottom: 14px; border-bottom: 1px solid var(--border); }
+    .section-head h2 { margin: 0; color: var(--accent-strong); font-size: clamp(19px, 3vw, 23px); line-height: 1.35; }
+    .kicker { margin-bottom: 4px; color: var(--accent); font-size: 12px; font-weight: 800; letter-spacing: .08em; }
+    .rank { color: var(--muted); font-size: 12px; white-space: nowrap; }
+    .item { padding: 19px 0; border-bottom: 1px dashed var(--border); }
+    .item:last-child { padding-bottom: 2px; border-bottom: 0; }
+    .item h3 { margin: 0 0 8px; font-size: 18px; line-height: 1.45; text-wrap: pretty; }
+    .item p { margin: 7px 0; color: var(--muted); font-size: 14px; }
+    .tags { display: flex; flex-wrap: wrap; gap: 7px; margin: 9px 0; }
+    .tag { padding: 3px 8px; border-radius: 999px; background: var(--accent-soft); color: var(--accent-strong); font-size: 11px; font-weight: 800; }
+    .tag.warn { background: #fff0d8; color: #8a5a10; }
+    .tag.risk { background: #fae5e1; color: #a7332c; }
+    .verdict { margin-top: 12px; padding: 12px 14px; border-left: 3px solid var(--accent); border-radius: 0 10px 10px 0; background: var(--accent-soft); font-size: 14px; }
+    .source { margin-top: 10px; color: var(--muted); font-size: 12px; }
+    .source a { margin-right: 10px; }
+    .mini-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 12px; margin-top: 16px; }
+    .mini-card { padding: 16px; border: 1px solid var(--border); border-radius: 14px; background: var(--page); }
+    .mini-card h3 { margin: 0 0 7px; font-size: 16px; }
+    .mini-card p { margin: 6px 0; color: var(--muted); font-size: 13px; }
+    .table-wrap { max-width: 100%; margin-top: 14px; overflow-x: auto; border-radius: 12px; }
+    .table-wrap:focus-visible { outline: 3px solid var(--accent-soft); outline-offset: 2px; }
+    table { width: 100%; min-width: 620px; border-collapse: collapse; font-size: 13px; }
+    th, td { padding: 11px 10px; border-bottom: 1px solid var(--border); text-align: left; vertical-align: top; }
+    th { background: var(--accent-soft); color: var(--accent-strong); }
+    .note { margin-top: 15px; padding: 11px 13px; border-radius: 10px; background: var(--page); color: var(--muted); font-size: 12px; }
+    footer { padding: 0 16px 32px; color: var(--muted); text-align: center; font-size: 12px; }
+    @media (max-width: 900px) {
+      .summary-grid { grid-template-columns: 1fr 1fr; }
+      .summary-card.primary { grid-column: 1 / -1; }
+      .layout { grid-template-columns: 1fr; }
+      .toc { position: static; display: none; }
+    }
+    @media (max-width: 640px) {
+      .wrap { width: min(100% - 24px, 1120px); }
+      .hero { padding: 40px 0 38px; }
+      .summary-grid, .mini-grid { grid-template-columns: 1fr; }
+      .summary-card.primary { grid-column: auto; }
+      .card { padding: 19px 17px; }
+      .section-head { display: block; }
+      .rank { display: block; margin-top: 6px; white-space: normal; }
+    }
+  </style>
+</head>
+<body>
+  <header class="hero">
+    <div class="wrap">
+      <div class="eyebrow">DAILY BRIEFING</div>
+      <h1>核电智慧巡检与工业智能化行业日报</h1>
+      <p class="lead">深圳供电局把证据链、机房多模态、智能体、数字孪生和信创适配拆成可验收标的；今天先完成深蓄取件，再做资格分流。</p>
+      <div class="meta"><span class="pill">2026年9月3日 · 星期四</span><span class="pill">Asia/Shanghai</span><span class="pill">信息截点 09:00</span></div>
+    </div>
+  </header>
+
+  <div class="wrap summary" aria-label="今日摘要">
+    <div class="summary-grid">
+      <section class="card summary-card primary"><b>今日一句话结论</b><strong>先完成深蓄取件，再分流深圳电网 AI、孪生与信创标的。</strong><p>截止节点与独立投标资格，今天都早于方案扩写。</p></section>
+      <section class="card summary-card"><b>今日新增</b><strong>3 组采购信号</strong><p>4395.78 万创新项目、2788.68 万数字化项目、190.6 万风险监测。</p></section>
+      <section class="card summary-card"><b>建议动作</b><strong>双线资格筛选</strong><p>17:30 前处理深蓄取件；今天完成深圳标的 go/no-go。</p></section>
+    </div>
+  </div>
+
+  <main class="wrap layout">
+    <div class="content">
+      <section id="industry" class="card">
+        <div class="section-head"><div><div class="kicker">01 · INDUSTRY</div><h2>一、今日重大行业事件</h2></div><div class="rank">最多 3–5 条</div></div>
+        <article class="item">
+          <h3>深圳供电局 4395.78 万元创新项目把“取证—诊断—监护—自愈”拆成独立标的</h3>
+          <div class="tags"><span class="tag">公开招标</span><span class="tag">工业 AI</span><span class="tag warn">高价值新增</span></div>
+          <p><b>已确认事实：</b>南方电网供应链平台 9 月 2 日 11:33 发布深圳供电局 14 个创新标的，预计采购金额 4395.775479 万元。其中事故事件与作业违章智能取证及推理分析标的 410.18 万元，交付平台 1 套；OCS 异常自愈与机房异常行为智能诊断标的 385.5 万元，要求大模型日志分析、核心节点潜在异常识别和机房作业异常行为识别准确性均不低于 90%；调度语音监护与风险推演标的 342.19 万元，要求单值语音复盘不超过 3 分钟、风险推演正确率不低于 80%，完成时第三方测试。</p>
+          <div class="verdict"><b>判断：</b>采购方已把知识图谱、多源证据、RAG、RPA、多模态行为识别和数字镜像写成可验收交付，而不是概念咨询。对核电迁移最有价值的是“证据抽取—人工复核—报告生成”的只读辅助链；OCS 自愈与调度联动触及生产控制，不能直接照搬。</div>
+          <p><b>建议行动：</b>商务今天按标的 6、10、11 分别核对主体资格、既有交付和第三方测试能力；产品只承诺证据回放、建议生成与人工授权，不把大模型或 RPA 直接接入核电生产控制。</p>
+          <div class="source">来源：<a href="https://www.bidding.csg.cn/zbgg/1200441123.jhtml" rel="noopener noreferrer">南方电网供应链统一服务平台｜CG0900022002368300（2026-09-02）</a></div>
+        </article>
+        <article class="item">
+          <h3>深圳供电局另投 2788.68 万元建设知识助手、数字孪生与信创运维</h3>
+          <div class="tags"><span class="tag">数字化采购</span><span class="tag">信创适配</span><span class="tag">数字孪生</span></div>
+          <p><b>已确认事实：</b>同日 14:31 发布的 9 个数字化标的预计采购 2788.679456 万元。与本日报直接相关的标的包括：230.21888 万元 RPA 场景推广及往期流程国产化改造、307.640874 万元信创操作系统运维工具集中适配、409.929394 万元综合停电填报/审批/问答助手、386.83481 万元运调分析辅助工具，以及 414.160986 万元数据中心基础设施智能管控与数字孪生。文件获取至 9 月 8 日 16:00，澄清至 9 月 9 日 16:00，投标截止 9 月 23 日 09:00；各标的不接受联合体。</p>
+          <div class="verdict"><b>判断：</b>“国产化迁移、运维工具、知识助手、告警工单、账物与动环融合”被放在同一采购周期，表明竞争门槛已从单点模型转为既有系统改造、数据映射、权限审计和持续运维。</div>
+          <p><b>建议行动：</b>今天建立标的 5–8 能力矩阵：信创兼容清单、知识来源治理、告警到工单闭环、数字孪生对象模型和离线交付证据；不满足独立投标或存量系统改造能力的标的不投入。</p>
+          <div class="source">来源：<a href="https://www.bidding.csg.cn/zbgg/1200441135.jhtml" rel="noopener noreferrer">南方电网供应链统一服务平台｜CG0900022002365215（2026-09-02）</a></div>
+        </article>
+        <article class="item">
+          <h3>广州电力交易中心以 190.6 万元采购风险监测原型与因果证据链</h3>
+          <div class="tags"><span class="tag">数据治理</span><span class="tag">知识图谱</span><span class="tag warn">相邻场景</span></div>
+          <p><b>已确认事实：</b>广州电力交易中心 9 月 2 日 18:27 发布风险监测研究招标，最高限价 190.6 万元，覆盖履约风险、市场力与串谋报价，要求融合交易结算、经营管理和信用历史数据，并以机器学习、行为序列、复杂网络及知识图谱进行识别、归因和影响量化，交付原型设计 1 套。文件获取至 9 月 9 日 18:00，项目不接受联合体。</p>
+          <div class="verdict"><b>判断：</b>采购价值不在“用了图算法”，而在指标定义、数据来源、合理约束与异常行为的区分以及监管证据。该方法可迁移到工业异常分析，但市场风控数据与核电设备数据不能混作同一模型或同一验收口径。</div>
+          <p><b>建议行动：</b>数据团队把本项目拆成“规则基线、图谱归因、证据链、人工裁决”四个能力件；只有具备电力市场数据和研究交付能力时才参与本标。</p>
+          <div class="source">来源：<a href="https://www.bidding.csg.cn/zbgg/1200441185.jhtml" rel="noopener noreferrer">南方电网供应链统一服务平台｜CG1800022002329949（2026-09-02）</a></div>
+        </article>
+      </section>
+
+      <section id="inspection" class="card">
+        <div class="section-head"><div><div class="kicker">02 · INSPECTION</div><h2>二、智慧巡检最新动态</h2></div><div class="rank">最多 3 条</div></div>
+        <article class="item"><h3>今日无新的核电智慧巡检采购或上线证据</h3><p><b>采购方与当前阶段：</b>截至 9 月 3 日 09:00（Asia/Shanghai），已核验的监管、核电企业和主要公开招投标来源未出现新的核电智慧巡检招标、中标或正式上线；今天新增均来自相邻电力场景。</p><p><b>技术与市场价值：</b>深圳供电局事故取证、机房行为识别、数字孪生与知识助手可补充核电非安全级辅助巡检的证据链和运维能力，但不能转写为核电业绩。</p><p><b>工程化限制：</b>核电现场仍需独立验证误漏报、辐射/温湿度/电磁环境、断网降级、算力功耗、可解释性、人员授权和规程边界。</p><div class="verdict"><b>建议行动：</b>行业团队不扩写核电案例；产品把深圳标的要求转成可复验能力清单，销售材料明确“相邻场景、待核电验证”。</div></article>
+        <article class="item"><h3>深蓄多模态巡检今天 17:30 停止获取文件</h3><p><b>采购方与当前阶段：</b>南网储能标包最高限价 193.85 万元，覆盖机器人管控与数据分析、可视化、本地/网级平台对接、多传感器四足机器人、测温、表计识别、缺陷排查和重物搬运拓展。今天 17:30 截止获取文件，明日 12:00 截止澄清，9 月 21 日 08:30 投标与开标；今日未发现资格、限价或节点变更。</p><p><b>技术与市场价值：</b>这是与核电非安全级辅助巡检高度同构的存量机会，但不接受联合体，并要求 2023 年以来已完工的四足仿生机器人研究与应用类似业绩。</p><div class="verdict"><b>建议行动：</b>资格通过者在 17:30 前确认文件已下载、可打开且版本完整，并今天完成接口/验收/安全/搬运边界清单；资格不满足者停止投标投入，不以技术方案替代主体业绩。</div><div class="source">来源：<a href="https://www.bidding.csg.cn/zbgg/1200440598.jhtml" rel="noopener noreferrer">南方电网供应链统一服务平台｜CG0200022002373305</a></div></article>
+      </section>
+
+      <section id="ai" class="card">
+        <div class="section-head"><div><div class="kicker">03 · AI</div><h2>三、AI 视觉与多模态技术进展</h2></div><div class="rank">最多 2–3 条</div></div>
+        <article class="item"><h3>多模态能力首次同时落到日志、机房行为和调度语音三种验收对象</h3><p><b>核心能力与核电场景：</b>深圳创新招标把 eBPF 多模态采集、RAG 预案、RPA 处置、电子围栏、智能执法仪、异常行为识别、语音校核和全过程回溯写入标的。核电可优先迁移日志辅助诊断、现场行为提示、语音复盘和事故证据汇总。</p><p><b>工程化限制：</b>公开的 90% 与 80% 指标未披露样本分层、严重度权重、类别不均衡、开放集、延迟和误告警成本；“自动处置”“闭环联动”在核安全或生产控制场景必须经确定性规则、权限校验和人工授权。</p><div class="verdict"><b>跟进建议：</b>立即建立三套分离黄金集：日志异常、机房行为、调度语音；逐项记录召回率、误报率、时延、证据完整性和人工接管，不用一个综合准确率替代安全验收。</div><div class="source">来源：<a href="https://www.bidding.csg.cn/zbgg/1200441123.jhtml" rel="noopener noreferrer">深圳供电局创新项目招标公告</a></div></article>
+        <article class="item"><h3>Ultralytics 最新仍为 v8.4.138，今日不新增版本结论</h3><p><b>核心能力与核电场景：</b>截至信息截点，官方仓库最新标签仍为 v8.4.138；昨日已完整报道旧检查点、YOLO-World、MuSGD、SAM/DDP 和量化精度修复，今天没有足以重复进入主体的新版本。</p><p><b>工程化限制：</b>现有回归尚未完成前继续追逐补丁会扩大变量；版本稳定不等于国产 NPU、离线视频流或核电难例已经通过验证。</p><div class="verdict"><b>跟进建议：</b>持续跟踪，生产暂不升级；完成 8.4.137/138 旧模型、量化、空目标、SAM 长时与国产后端 A/B 后再给出版本结论。</div><div class="source">来源：<a href="https://github.com/ultralytics/ultralytics/releases" rel="noopener noreferrer">Ultralytics 官方 Releases</a></div></article>
+      </section>
+
+      <section id="domestic" class="card">
+        <div class="section-head"><div><div class="kicker">04 · DOMESTIC STACK</div><h2>四、国产硬件与边缘智能专项</h2></div><div class="rank">最多 3–5 条</div></div>
+        <div class="mini-grid">
+          <article class="mini-card"><h3>4.1 国产 CPU 与服务器</h3><p><b>今日无硬件新品进入：</b>深圳数字化招标要求信创操作系统运维工具集中适配，但未指定 CPU、服务器品牌或架构。主力继续采用已验证平台；不得从“信创”二字推断采购清单。</p></article>
+          <article class="mini-card"><h3>4.2 国产 GPU / NPU 与 AI 加速</h3><p><b>持续 PoC：</b>日志大模型、多模态行为识别和语音推演需要分别测吞吐、时延、显存、算子回退和精度。主力/备选必须由同样本测试决定，昇腾等后端暂不因招标出现而直接进入生产。</p></article>
+          <article class="mini-card"><h3>4.3 国产边缘算力设备</h3><p><b>立即补证据：</b>机房摄像、执法仪、电子围栏和 eBPF 数据采集跨越视频、主机与边缘端。优先验证断网缓存、时间同步、可信启动、远程升级回滚与 72 小时长稳。</p></article>
+          <article class="mini-card"><h3>4.4 国产操作系统与基础软件</h3><p><b>本期最明确机会：</b>307.640874 万元标的要求统一运行库、日志管理、终端运维数字员工、基线管理和可视化，并完成往期流程国产化改造。核心是兼容矩阵与迁移证据，不是桌面演示。</p></article>
+        </div>
+        <article class="item"><h3>4.5 对智慧核电的部署建议</h3><p><b>今日国产化部署结论：</b>视觉边缘推理采用“已验证国产 CPU＋通过回归的 NPU/加速卡＋国产操作系统”作为 PoC 主力；厂级知识库与 Agent 部署在隔离区，RAG 只读检索、引用原文、记录版本和人工结论。备选后端保留同模型导出与 CPU 降级路径。</p><p><b>关键锁定风险：</b>先锁操作系统版本、运行库、驱动、模型格式、精度模式、视频编解码、时间同步和补丁回滚；新硬件、新驱动或 v8.4.138 在完成黄金集、压力、断网和长稳测试前不得进入生产。</p><div class="verdict"><b>适配结论：</b>国产操作系统运维与证据链能力立即建设；GPU/NPU 继续 PoC 后采用；大模型自动处置与生产控制联动暂不进入核电生产环境。</div><div class="source">来源：<a href="https://www.bidding.csg.cn/zbgg/1200441135.jhtml" rel="noopener noreferrer">深圳供电局数字化项目招标公告</a></div></article>
+      </section>
+
+      <section id="data" class="card">
+        <div class="section-head"><div><div class="kicker">05 · DATA &amp; TWIN</div><h2>五、工业数据治理与数字孪生趋势</h2></div></div>
+        <article class="item"><h3>对象、行为、证据和工单被要求进入同一可回溯数据链</h3><p><b>已落地证据：</b>深圳创新项目要求构建典型场景知识图谱、多源证据链和全过程复盘；数字化项目要求融合 IT 账物、动环、视频、资产与数字孪生；广州电力交易中心则明确“主体—行为—价格—影响”的因果链条、指标定义和数据来源。</p><div class="verdict"><b>判断：</b>短期可销售的数字孪生不是三维大屏，而是统一对象 ID、时序证据、规则版本、模型版本、人工裁决和工单闭环。三维视图只是入口，审计和复验才是交付壁垒。</div><p><b>建议行动：</b>平台团队本周定义 <code>asset_id</code>、<code>actor_id</code>、<code>event_id</code>、<code>evidence_uri</code>、<code>rule_version</code>、<code>model_version</code>、<code>human_verdict</code> 和 <code>closure_reference</code>；每条 AI 结论必须能回到原始数据与授权人。</p><div class="source">来源：<a href="https://www.bidding.csg.cn/zbgg/1200441123.jhtml" rel="noopener noreferrer">深圳供电局创新项目</a><a href="https://www.bidding.csg.cn/zbgg/1200441135.jhtml" rel="noopener noreferrer">深圳供电局数字化项目</a><a href="https://www.bidding.csg.cn/zbgg/1200441185.jhtml" rel="noopener noreferrer">广州电力交易中心风险监测项目</a></div></article>
+      </section>
+
+      <section id="competitors" class="card">
+        <div class="section-head"><div><div class="kicker">06 · COMPETITORS</div><h2>六、竞争对手动态</h2></div><div class="rank">最多 3 条</div></div>
+        <article class="item"><h3>本期没有可核验的新中标方；采购条件已给出竞争画像</h3><p><b>已确认事实：</b>深圳两组项目均为刚发布的公开招标，尚未产生中标结果；创新项目要求研究平台、第三方测试、专利和多年度报告，数字化项目要求既有系统建设、国产化改造和持续运维，各标的不接受联合体。</p><div class="verdict"><b>建议策略：</b>竞争分析不猜厂商名单，改用证据画像：①电网既有系统经验；②知识图谱/多模态/语音/数字孪生的可运行产品；③信创兼容矩阵；④第三方测试和源代码/文档交付；⑤独立投标能力。缺两项以上即列为合作生态研究而非主投。</div><div class="source">来源：<a href="https://www.bidding.csg.cn/zbgg/1200441123.jhtml" rel="noopener noreferrer">创新项目资格与交付要求</a><a href="https://www.bidding.csg.cn/zbgg/1200441135.jhtml" rel="noopener noreferrer">数字化项目资格与交付要求</a></div></article>
+      </section>
+
+      <section id="opportunities" class="card">
+        <div class="section-head"><div><div class="kicker">07 · OPPORTUNITIES</div><h2>七、商业机会</h2></div><div class="rank">优先 1–5 个</div></div>
+        <article class="item"><h3>A｜深圳供电局事故/违章智能取证与推理分析</h3><p><b>机会内容：</b>公开招标，预计 410.18 万元，交付知识图谱、多源信息融合、证据链、复盘、报告辅助生成和平台 1 套；文件获取至 9 月 8 日 16:00，投标截止 9 月 23 日 09:00。</p><p><b>匹配判断：</b>与核电巡检证据链、事件复盘和人工审查高度同构，且不涉及直接控制。若具备独立投标、知识图谱、工业数据治理和平台交付能力，机会等级 A；否则为 C。</p><div class="verdict"><b>推荐行动：</b>今天确定 go/no-go；go 后 24 小时内形成数据源、证据保全、图谱对象、报告模板和第三方验证五张清单。</div><div class="source">来源：<a href="https://www.bidding.csg.cn/zbgg/1200441123.jhtml" rel="noopener noreferrer">CG0900022002368300｜标的 6</a></div></article>
+        <article class="item"><h3>B｜深圳供电局 OCS 与机房异常智能诊断</h3><p><b>机会内容：</b>预计 385.5 万元，含 eBPF 多模态采集、日志大模型、RAG 预案、RPA 自动处置、高保真数字孪生、电子围栏和异常行为识别；三项准确性指标均不低于 90%。</p><p><b>匹配判断：</b>日志诊断、机房行为与孪生匹配度高，但 OCS 自愈/RPA 自动处置安全责任重，且公开指标定义不足。机会等级 B（具备电力监控与安全测试）/D（仅有通用大模型）。</p><div class="verdict"><b>推荐行动：</b>先索取技术条件书，提出样本、指标分母、误报/漏报、回滚、人工授权、网络分区和故障注入问题；未能明确边界前不承诺自动处置。</div><div class="source">来源：<a href="https://www.bidding.csg.cn/zbgg/1200441123.jhtml" rel="noopener noreferrer">CG0900022002368300｜标的 10</a></div></article>
+        <article class="item"><h3>B｜深圳供电局信创运维、知识助手与数字孪生三类标的</h3><p><b>机会内容：</b>信创操作系统运维 307.640874 万元、综合停电智能填报/审批/问答助手 409.929394 万元、数据中心基础设施智能改造 414.160986 万元；文件获取至 9 月 8 日 16:00。</p><p><b>匹配判断：</b>适合拥有国产操作系统兼容、RAG 知识治理、IT/OT 资产映射、动环/视频接入和运维平台团队的厂商。三标跨度大，应分开评估，不因同一公告而捆绑承诺。</p><div class="verdict"><b>推荐行动：</b>分别指定 OS 适配、知识助手、孪生平台负责人，今天完成独立资格和产品复用率评估；只主投复用率高且能独立交付的标的。</div><div class="source">来源：<a href="https://www.bidding.csg.cn/zbgg/1200441135.jhtml" rel="noopener noreferrer">CG0900022002365215｜标的 5、6、8</a></div></article>
+        <article class="item"><h3>存量｜深蓄电站多模态感知智能巡检</h3><p><b>机会内容：</b>最高限价 193.85 万元，今日 17:30 停止获取文件，明日 12:00 停止澄清；要求独立投标和 2023 年以来已完工四足仿生机器人类似业绩。</p><p><b>匹配判断：</b>技术匹配但资格闸门不变。机会等级 B（资格与完工证明齐全）/D（任一缺失）。</p><div class="verdict"><b>推荐行动：</b>17:30 前完成“账号可用—项目已参加—文件完整—版本可打开—团队留档”五步确认；错过取件即停止本轮投入。</div><div class="source">来源：<a href="https://www.bidding.csg.cn/zbgg/1200440598.jhtml" rel="noopener noreferrer">CG0200022002373305｜关键节点</a></div></article>
+      </section>
+
+      <section id="tracking" class="card">
+        <div class="section-head"><div><div class="kicker">08 · TRACKING</div><h2>八、持续跟踪事项</h2></div></div>
+        <div class="table-wrap" tabindex="0"><table><thead><tr><th>事项名称</th><th>当前状态</th><th>今日是否有实质新增</th><th>下一观察节点</th></tr></thead><tbody><tr><td>深圳供电局创新项目</td><td>14 标的公开招标，预计 4395.78 万元</td><td>有：首次纳入</td><td>9 月 8 日取件、9 月 9 日澄清、9 月 23 日开标</td></tr><tr><td>深圳供电局数字化项目</td><td>9 标的公开招标，预计 2788.68 万元</td><td>有：首次纳入</td><td>9 月 8 日取件、9 月 9 日澄清、9 月 23 日开标</td></tr><tr><td>广州电力交易风险监测</td><td>公开招标，最高限价 190.6 万元</td><td>有：首次纳入</td><td>9 月 9 日取件、9 月 10 日澄清、9 月 23 日开标</td></tr><tr><td>深蓄多模态巡检</td><td>公开招标，今天 17:30 停止取件</td><td>无：资格与节点未变</td><td>9 月 4 日澄清、9 月 21 日开标</td></tr><tr><td>广东电网隧道机器人</td><td>479 万元公开招标</td><td>无</td><td>9 月 7 日 23:59 文件获取截止</td></tr><tr><td>Ultralytics 版本链</td><td>最新仍为 v8.4.138</td><td>无新版本</td><td>8.4.137/138 旧模型、量化、SAM 与国产后端 A/B</td></tr><tr><td>核电智慧巡检新增采购</td><td>今日未发现合格新增</td><td>无</td><td>后续招标、中标、上线或实测突破</td></tr></tbody></table></div>
+      </section>
+
+      <section id="insights" class="card">
+        <div class="section-head"><div><div class="kicker">09 · INSIGHT</div><h2>九、今日技术洞察</h2></div></div>
+        <article class="item"><h3>一至三年机会：把“智能诊断”做成分层授权、可第三方复验的工业证据平台</h3><p><b>结论：</b>近期最大机会不是再包装一个通用 Agent，而是把视频、日志、语音、设备对象、规则和工单接成可回放证据链，并把建议、审批、执行分层。立即验证多模态时间对齐、引用准确、误漏报、断网与回滚；长期壁垒是现场难例、对象语义、权限模型、国产兼容矩阵和独立交付业绩。</p><p><b>依据：</b>深圳项目同时采购事故取证平台、OCS 日志/机房多模态、调度语音监护、知识助手、信创运维和数字孪生；验收既含准确性与时延，也含第三方测试、专利、源代码/报告和长期交付。广州项目进一步要求指标定义、数据来源和因果证据。</p><div class="verdict"><b>建议动作：</b>产品、数据、算法、安全和交付团队在 30 天内完成“工业证据平台 v0.1”：只读采集、对象映射、证据时间线、模型/规则版本、人工裁决、工单闭环和审计导出；自动处置作为独立高风险模块，不与基础平台默认绑定。</div></article>
+      </section>
+
+      <section id="actions" class="card">
+        <div class="section-head"><div><div class="kicker">10 · ACTION</div><h2>十、给公司的建议</h2></div></div>
+        <div class="mini-grid">
+          <article class="mini-card"><h3>今日建议（3 条）</h3><p>① 17:30 前完成深蓄取件五步确认；② 对深圳标的 6/10/11 与数字化 5/6/8 做资格、复用率和安全边界 go/no-go；③ 冻结 v8.4.137/138，继续受控回归。</p></article>
+          <article class="mini-card"><h3>短期行动（1–3 个月）</h3><p>由产品负责人交付工业证据平台 v0.1；算法负责人建立日志、行为、语音三套黄金集；信创负责人完成 OS/CPU/NPU/驱动/运行库兼容矩阵；安全负责人完成建议—审批—执行权限模型和故障注入。</p></article>
+          <article class="mini-card"><h3>中长期规划（6–24 个月）</h3><p>沉淀核电非安全级巡检对象图谱与难例库，形成边缘采集、厂级证据平台、只读 RAG/Agent、数字孪生和第三方复验的产品线；以跨站点长稳和审计证据建立壁垒。</p></article>
+        </div>
+      </section>
+
+      <section id="method" class="card">
+        <div class="section-head"><div><div class="kicker">METHODOLOGY</div><h2>信息说明</h2></div></div>
+        <p class="note">信息截点为 2026 年 9 月 3 日 09:00（Asia/Shanghai）。事实优先核验南方电网供应链统一服务平台、国家核安全局及开源项目官方仓库；金额、日期和指标按公告正文/标的表交叉读取。公开公告未披露的数据集定义、现场精度、软硬件品牌、接口细节和中标方不作推断。电网相邻场景不等于核电业绩；涉及核安全、生产控制与网络安全时，坚持 AI 辅助、人机协同、人工复核、规程优先。</p>
+      </section>
+    </div>
+
+    <aside class="card toc" aria-label="本期目录">
+      <h2>本期目录</h2>
+      <a href="#industry">01 重大行业事件</a>
+      <a href="#inspection">02 智慧巡检</a>
+      <a href="#ai">03 AI 视觉与多模态</a>
+      <a href="#domestic">04 国产硬件与边缘智能</a>
+      <a href="#data">05 数据治理与数字孪生</a>
+      <a href="#competitors">06 竞争对手</a>
+      <a href="#opportunities">07 商业机会</a>
+      <a href="#tracking">08 持续跟踪</a>
+      <a href="#insights">09 技术洞察</a>
+      <a href="#actions">10 公司建议</a>
+      <a href="#method">信息说明</a>
+    </aside>
+  </main>
+
+  <footer>每日推送 · 2026-09-03 · <a href="/archive/">查看历史归档</a></footer>
+</body>
+</html>
