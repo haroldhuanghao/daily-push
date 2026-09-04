@@ -1,0 +1,242 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="核电安全健康档案已进入系统演示、数据核查与试点复盘阶段；今天先锁可审计数据链，再验证极端天气辅助。">
+  <meta property="og:title" content="核电智慧巡检与工业智能化行业日报 · 2026-09-04">
+  <meta property="og:description" content="核电安全健康档案已进入系统演示、数据核查与试点复盘阶段；今天先锁可审计数据链，再验证极端天气辅助。">
+  <meta property="og:type" content="article">
+  <meta property="og:url" content="https://daily.851473.xyz/reports/2026-09-04/">
+  <meta property="og:image" content="https://daily.851473.xyz/reports/2026-09-04/cover.png">
+  <meta name="report-contract" content="nuclear-daily-v2">
+  <link rel="canonical" href="https://daily.851473.xyz/reports/2026-09-04/">
+  <title>核电智慧巡检与工业智能化行业日报 · 2026-09-04</title>
+  <style>
+    :root {
+      --accent: #087ea4;
+      --accent-strong: #073763;
+      --accent-soft: #dff4fb;
+      --page: #f3f7fa;
+      --surface: #ffffff;
+      --text: #142434;
+      --muted: #637485;
+      --border: #dce7ee;
+      --shadow: 0 12px 36px rgba(7, 55, 99, .08);
+      --radius-card: 18px;
+      --space-card: 24px;
+    }
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body { margin: 0; background: var(--page); color: var(--text); font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang SC", "Microsoft YaHei", sans-serif; font-size: 15px; line-height: 1.7; overflow-wrap: anywhere; }
+    img { max-width: 100%; height: auto; }
+    a { color: var(--accent); text-decoration-thickness: 1px; text-underline-offset: 3px; }
+    a:hover { color: var(--accent-strong); }
+    a:focus-visible { outline: 3px solid var(--accent-soft); outline-offset: 3px; border-radius: 4px; }
+    .wrap { width: min(1120px, calc(100% - 32px)); margin-inline: auto; }
+    .hero { padding: 52px 0 46px; color: #fff; background: radial-gradient(circle at 82% 18%, var(--accent) 0, transparent 30%), linear-gradient(135deg, var(--accent-strong), var(--accent)); border-bottom: 4px solid var(--accent-soft); }
+    .eyebrow { color: rgba(255, 255, 255, .78); font-size: 12px; font-weight: 800; letter-spacing: .16em; text-transform: uppercase; }
+    .hero h1 { max-width: 880px; margin: 10px 0 14px; font-size: clamp(30px, 5vw, 54px); line-height: 1.14; text-wrap: balance; }
+    .hero .lead { max-width: 820px; margin: 0; color: rgba(255, 255, 255, .86); font-size: clamp(15px, 2vw, 17px); }
+    .meta { display: flex; flex-wrap: wrap; gap: 9px; margin-top: 22px; }
+    .pill { padding: 6px 11px; border: 1px solid rgba(255, 255, 255, .28); border-radius: 999px; background: rgba(255, 255, 255, .09); font-size: 12px; }
+    .summary { position: relative; margin-top: -24px; }
+    .summary-grid { display: grid; grid-template-columns: 1.4fr repeat(2, minmax(0, 1fr)); gap: 12px; }
+    .card { padding: var(--space-card); border: 1px solid var(--border); border-radius: var(--radius-card); background: var(--surface); box-shadow: var(--shadow); }
+    .summary-card { min-width: 0; padding: 20px; }
+    .summary-card.primary { background: var(--accent-soft); border-color: var(--accent); }
+    .summary-card b { display: block; margin-bottom: 5px; color: var(--accent-strong); font-size: 13px; }
+    .summary-card strong { display: block; color: var(--accent); font-size: clamp(20px, 3vw, 26px); line-height: 1.25; }
+    .summary-card p { margin: 6px 0 0; color: var(--muted); font-size: 13px; }
+    main { padding: 34px 0 56px; }
+    .layout { display: grid; grid-template-columns: minmax(0, 1fr) 250px; gap: 24px; align-items: start; }
+    .content { min-width: 0; }
+    .content > .card { margin-bottom: 18px; }
+    .toc { position: sticky; top: 16px; padding: 18px; box-shadow: 0 4px 18px rgba(24, 51, 41, .05); }
+    .toc h2 { margin: 0 0 10px; color: var(--muted); font-size: 12px; letter-spacing: .12em; }
+    .toc a { display: block; padding: 6px 0; color: var(--muted); font-size: 13px; text-decoration: none; }
+    .toc a:hover { color: var(--accent); }
+    .section-head { display: flex; align-items: flex-start; justify-content: space-between; gap: 14px; margin-bottom: 6px; padding-bottom: 14px; border-bottom: 1px solid var(--border); }
+    .section-head h2 { margin: 0; color: var(--accent-strong); font-size: clamp(19px, 3vw, 23px); line-height: 1.35; }
+    .kicker { margin-bottom: 4px; color: var(--accent); font-size: 12px; font-weight: 800; letter-spacing: .08em; }
+    .rank { color: var(--muted); font-size: 12px; white-space: nowrap; }
+    .item { padding: 19px 0; border-bottom: 1px dashed var(--border); }
+    .item:last-child { padding-bottom: 2px; border-bottom: 0; }
+    .item h3 { margin: 0 0 8px; font-size: 18px; line-height: 1.45; text-wrap: pretty; }
+    .item p { margin: 7px 0; color: var(--muted); font-size: 14px; }
+    .tags { display: flex; flex-wrap: wrap; gap: 7px; margin: 9px 0; }
+    .tag { padding: 3px 8px; border-radius: 999px; background: var(--accent-soft); color: var(--accent-strong); font-size: 11px; font-weight: 800; }
+    .tag.warn { background: #fff0d8; color: #8a5a10; }
+    .tag.risk { background: #fae5e1; color: #a7332c; }
+    .verdict { margin-top: 12px; padding: 12px 14px; border-left: 3px solid var(--accent); border-radius: 0 10px 10px 0; background: var(--accent-soft); font-size: 14px; }
+    .source { margin-top: 10px; color: var(--muted); font-size: 12px; }
+    .source a { margin-right: 10px; }
+    .mini-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 12px; margin-top: 16px; }
+    .mini-card { padding: 16px; border: 1px solid var(--border); border-radius: 14px; background: var(--page); }
+    .mini-card h3 { margin: 0 0 7px; font-size: 16px; }
+    .mini-card p { margin: 6px 0; color: var(--muted); font-size: 13px; }
+    .table-wrap { max-width: 100%; margin-top: 14px; overflow-x: auto; border-radius: 12px; }
+    .table-wrap:focus-visible { outline: 3px solid var(--accent-soft); outline-offset: 2px; }
+    table { width: 100%; min-width: 620px; border-collapse: collapse; font-size: 13px; }
+    th, td { padding: 11px 10px; border-bottom: 1px solid var(--border); text-align: left; vertical-align: top; }
+    th { background: var(--accent-soft); color: var(--accent-strong); }
+    .note { margin-top: 15px; padding: 11px 13px; border-radius: 10px; background: var(--page); color: var(--muted); font-size: 12px; }
+    footer { padding: 0 16px 32px; color: var(--muted); text-align: center; font-size: 12px; }
+    @media (max-width: 900px) {
+      .summary-grid { grid-template-columns: 1fr 1fr; }
+      .summary-card.primary { grid-column: 1 / -1; }
+      .layout { grid-template-columns: 1fr; }
+      .toc { position: static; display: none; }
+    }
+    @media (max-width: 640px) {
+      .wrap { width: min(100% - 24px, 1120px); }
+      .hero { padding: 40px 0 38px; }
+      .summary-grid, .mini-grid { grid-template-columns: 1fr; }
+      .summary-card.primary { grid-column: auto; }
+      .card { padding: 19px 17px; }
+      .section-head { display: block; }
+      .rank { display: block; margin-top: 6px; white-space: normal; }
+    }
+  </style>
+</head>
+<body>
+  <header class="hero">
+    <div class="wrap">
+      <div class="eyebrow">DAILY BRIEFING</div>
+      <h1>核电智慧巡检与工业智能化行业日报</h1>
+      <p class="lead">核电安全健康档案已进入系统演示、数据核查与试点复盘阶段；今天先锁可审计数据链，再验证极端天气辅助。</p>
+      <div class="meta"><span class="pill">2026年9月4日 · 星期五</span><span class="pill">信息截点 09:00</span><span class="pill">Asia/Shanghai</span></div>
+    </div>
+  </header>
+
+  <div class="wrap summary" aria-label="今日摘要">
+    <div class="summary-grid">
+      <section class="card summary-card primary"><b>今日一句话结论</b><strong>先建可审计健康档案，再验证极端天气辅助</strong><p>监管侧与集团侧系统已演示，下一步是数据对标、试点复盘和场景落地。</p></section>
+      <section class="card summary-card"><b>今日新增</b><strong>2 项核电监管信号</strong><p>健康档案体系推进、两座核电厂台风经验反馈。</p></section>
+      <section class="card summary-card"><b>可投机会</b><strong>485 万元</strong><p>多模态设备建模 145 万元；数据空间与气象仿真 340 万元。</p></section>
+    </div>
+  </div>
+
+  <main class="wrap layout">
+    <div class="content">
+      <section id="industry" class="card">
+        <div class="section-head"><div><div class="kicker">01 · INDUSTRY</div><h2>一、今日重大行业事件</h2></div><div class="rank">最多 3–5 条</div></div>
+        <article class="item">
+          <h3>核电安全健康档案从“建系统”进入数据核查、试点复盘和场景落地</h3>
+          <div class="tags"><span class="tag">核安全监管</span><span class="tag warn">高优先级</span></div>
+          <p><b>已确认事实：</b>国家核安全局 9 月 3 日披露，2026 年第五次核电安全健康档案体系建设推进会现场演示了监管侧及各集团信息系统；当前数据治理初见成效、数据核查机制已落地、应用场景持续推进，近期任务包括数据对标入库、一线需求调研、场景开发和试点复盘。</p>
+          <div class="verdict"><b>判断：</b>监管与集团都已有可运行系统，竞争点正在从“做一个平台”转向数据口径、证据追溯、跨主体共享边界和试点复验。公开信息未披露采购、系统供应商、数据范围或 AI 决策权限，不能据此推断订单。</div>
+          <p><b>建议行动：</b>今天把现有巡检平台映射成“对象—状态—证据—核查—复盘”五层清单，逐项标明数据责任人、版本、来源、人工结论与更正记录；缺追溯字段的能力不进入客户演示。</p>
+          <div class="source">来源：<a href="https://nnsa.mee.gov.cn/ywdt/gzdt/202609/t20260903_1165020.html" rel="noopener noreferrer">国家核安全局｜2026 年第五次核电安全健康档案体系建设推进会（2026-09-03）</a></div>
+        </article>
+        <article class="item">
+          <h3>白龙、太平岭把台风应对经验反馈聚焦到设备防水、应急电源与取水可靠性</h3>
+          <div class="tags"><span class="tag">极端天气</span><span class="tag risk">安全边界</span></div>
+          <p><b>已确认事实：</b>国家核安全局 9 月 3 日披露，监管部门组织两座核电厂总结台风预警响应、人员撤离、构筑物和设备防护、物资储备、取水保障等实践，并要求评估预案、提高现场模块和厂房防护、保障应急电源与取水可靠性。</p>
+          <div class="verdict"><b>判断：</b>这为气象预警、资产状态、人员位置、物资和应急演练建立了明确数据场景，但它首先是工程防护和规程管理问题；AI 只能辅助汇总、校核与演练，不能替代设计基准、值班判断或应急指挥。</div>
+          <p><b>建议行动：</b>以台风前 72 小时至灾后复盘为轴，整理只读辅助原型：预警来源、设备/构筑物清单、检查证据、物资状态、人工签批和异常升级；禁止自动下发控制指令。</p>
+          <div class="source">来源：<a href="https://nnsa.mee.gov.cn/ywdt/gzdt/202609/t20260903_1165019.html" rel="noopener noreferrer">国家核安全局｜白龙、太平岭核电厂台风应对经验总结（2026-09-03）</a></div>
+        </article>
+        <article class="item">
+          <h3>南网以 340 万元采购多模态数据空间与气象风险预警/应急仿真</h3>
+          <div class="tags"><span class="tag">相邻行业</span><span class="tag warn">公开招标</span></div>
+          <p><b>已确认事实：</b>南网数字运营软件科技 9 月 3 日发布两个标的：110 万元建设城市电网多模态数据空间，覆盖管廊、环境监测、电碳流、风险评价和重过载监控；230 万元建设气象、台风、强对流预警及应急仿真演练平台。文件获取至 9 月 9 日 18:00，10 月 9 日 09:00 投标与开标，不接受联合体。</p>
+          <div class="verdict"><b>判断：</b>核电的健康档案与台风经验反馈，与相邻电力行业正在付费建设的数据空间和仿真平台形成同一能力链：多源数据治理—风险识别—场景演练—人工处置—复盘留痕。</div>
+          <p><b>建议行动：</b>分别评估数据空间和气象仿真标的，不捆绑承诺；具备独立投标及既有数据平台能力者今天取件，核对数据源、实时性、地图/模型接口、预警评价和验收口径。</p>
+          <div class="source">来源：<a href="https://www.bidding.csg.cn/zbgg/1200441273.jhtml" rel="noopener noreferrer">南方电网供应链统一服务平台｜CG2100022002396875（2026-09-03）</a></div>
+        </article>
+        <article class="item">
+          <h3>南网科研院 145 万元采购“图纸＋视觉＋点云＋动态重构”设备建模</h3>
+          <div class="tags"><span class="tag">数字孪生</span><span class="tag warn">公开谈判</span></div>
+          <p><b>已确认事实：</b>9 月 3 日公告要求研究多格式图纸解析、图纸到几何模型、零部件装配与运动规则库、二维视觉与三维点云融合、位移/异常形变识别和轻量化动态重构。最高限价 145 万元；不接受联合体；9 月 7 日 17:00 停止取件，9 月 11 日 09:00 截止响应。</p>
+          <div class="verdict"><b>判断：</b>买方要的不是一次性三维建模，而是随实物变化可更新的资产模型。核电迁移价值高，但必须处理图纸版本、坐标基准、遮挡/反光、小形变阈值、点云噪声、模型误差传播和配置管理。</div>
+          <p><b>建议行动：</b>今天完成独立投标 go/no-go；若进入，优先准备“图纸解析准确性、视觉/点云配准误差、形变检测最小可识别量、模型更新时延、人工复核与版本回退”验收矩阵。</p>
+          <div class="source">来源：<a href="https://www.bidding.csg.cn/fzbgg/1200441274.jhtml" rel="noopener noreferrer">南方电网供应链统一服务平台｜CG1500062002369718（2026-09-03）</a></div>
+        </article>
+      </section>
+
+      <section id="inspection" class="card">
+        <div class="section-head"><div><div class="kicker">02 · INSPECTION</div><h2>二、智慧巡检最新动态</h2></div><div class="rank">最多 3 条</div></div>
+        <article class="item"><h3>核电智慧巡检无新采购；健康档案给出系统接入方向</h3><p><b>采购方与当前阶段：</b>截至 9 月 4 日 09:00，未发现新的核电智慧巡检招标、中标或规模化上线证据；国家核安全局披露的是体系推进与系统演示，不是采购公告。</p><p><b>技术与市场价值：</b>巡检产品应输出可入档的结构化对象、状态、原始证据、模型/规则版本、人工复核和更正记录，避免只输出告警截图。</p><div class="verdict"><b>建议行动：</b>产品团队本周选 20 条历史巡检记录做“可入健康档案”回放，验收从检出率扩展到证据完整率、字段一致率、可追溯率和人工复核闭环率。</div></article>
+        <article class="item"><h3>设备动态孪生是相邻场景机会，暂不能当作核电业绩</h3><p><b>采购方与当前阶段：</b>南网科研院公开谈判采购，包含图纸、视觉、点云和异常形变识别，尚未产生中标或上线结果。</p><p><b>技术与市场价值：</b>可迁移到非安全级设备盘点、变更核查、检修前后对比和巡检路径规划；不适合未经验证用于安全级设备状态判定。</p><div class="verdict"><b>建议行动：</b>算法、三维与配置管理团队共同准备小规模 PoC；必须保留原始图纸/点云、变换矩阵、误差报告与人工批准。</div></article>
+      </section>
+
+      <section id="ai" class="card">
+        <div class="section-head"><div><div class="kicker">03 · AI</div><h2>三、AI 视觉与多模态技术进展</h2></div><div class="rank">最多 2–3 条</div></div>
+        <article class="item"><h3>多模态动态重构必须拆成四项可测能力</h3><p><b>核心能力与核电场景：</b>把图纸解析、二维/点云配准、形变识别、轻量化更新分开，可服务设备台账核对、检修变更复核和数字孪生更新。</p><p><b>工程化限制：</b>公开公告没有披露数据规模、精度、时延或误报阈值；核电现场还要验证遮挡、低照、反光、振动、辐射/温湿度、坐标漂移、离线运行、算力功耗和审查可解释性。</p><div class="verdict"><b>跟进建议：</b>立即验证，但只在隔离测试区做 PoC；四项能力分别出误差预算，任何模型自动更新都需人工审批和可回退版本。</div><div class="source">来源：<a href="https://www.bidding.csg.cn/fzbgg/1200441274.jhtml" rel="noopener noreferrer">南网科研院多模态设备建模采购</a></div></article>
+        <article class="item"><h3>Ultralytics 最新仍为 v8.4.138，今日不重复版本结论</h3><p><b>核心能力与核电场景：</b>官方远程标签核验未发现 v8.4.138 之后的新版本；旧检查点、量化、SAM/DDP 和国产后端回归仍沿用前期计划。</p><p><b>工程化限制：</b>没有新版本不代表现有版本已通过核电难例、断网、长稳或国产算力验证。</p><div class="verdict"><b>跟进建议：</b>持续跟踪，生产暂不升级；把研发资源转向受控回归和证据留存。</div><div class="source">来源：<a href="https://github.com/ultralytics/ultralytics/releases" rel="noopener noreferrer">Ultralytics 官方 Releases（截至 2026-09-04 09:00）</a></div></article>
+      </section>
+
+      <section id="domestic" class="card">
+        <div class="section-head"><div><div class="kicker">04 · DOMESTIC STACK</div><h2>四、国产硬件与边缘智能专项</h2></div><div class="rank">最多 3–5 条</div></div>
+        <div class="mini-grid">
+          <article class="mini-card"><h3>4.1 国产 CPU 与服务器</h3><p><b>今日无合格新品或采购：</b>主力继续使用已通过兼容和长稳验证的平台；健康档案系统新增事实不包含硬件品牌、架构或算力规模。</p></article>
+          <article class="mini-card"><h3>4.2 国产 GPU / NPU 与 AI 加速</h3><p><b>PoC 后采用：</b>图纸解析、点云融合和气象仿真应分开测吞吐、显存、算子回退、精度与功耗；主力和备选由同样本结果决定。</p></article>
+          <article class="mini-card"><h3>4.3 国产边缘算力设备</h3><p><b>持续验证：</b>主力选已验证的离线边缘节点，重点补齐多相机/点云时间同步、断网缓存、可信启动、补丁回滚和 72 小时长稳。</p></article>
+          <article class="mini-card"><h3>4.4 国产操作系统与基础软件</h3><p><b>立即建设：</b>系统版本、数据库/中间件、驱动和模型运行库必须进入配置基线；身份、外协、跨层级访问和会话留痕按最小权限设计。</p></article>
+        </div>
+        <article class="item"><h3>4.5 对智慧核电的部署建议</h3><p><b>今日国产化部署结论：</b>视觉/点云边缘推理以已验证国产 CPU＋PoC 通过的 NPU＋国产操作系统为主力，保留 CPU 降级；健康档案、RAG 与 Agent 部署在隔离区，只读引用原始证据并记录人工结论。</p><p><b>关键锁定风险：</b>锁定操作系统、数据库、中间件、驱动、模型格式、精度模式、坐标系、时间同步、身份权限和回滚策略；不能从“算力配置研讨”推断设备采购。</p><div class="verdict"><b>适配结论：</b>数据治理、权限审计和配置基线立即建设；国产 GPU/NPU PoC 后采用；自动改档、自动处置及生产控制联动暂不进入生产环境。</div><div class="source">来源：<a href="https://nnsa.mee.gov.cn/ywdt/gzdt/202609/t20260903_1165020.html" rel="noopener noreferrer">核电安全健康档案体系推进会</a><a href="https://www.bidding.csg.cn/fzbgg/1200441278.jhtml" rel="noopener noreferrer">南网 98.1 万元身份权限管理采购</a></div></article>
+      </section>
+
+      <section id="data" class="card">
+        <div class="section-head"><div><div class="kicker">05 · DATA &amp; TWIN</div><h2>五、工业数据治理与数字孪生趋势</h2></div></div>
+        <article class="item"><h3>健康档案的最小交付物是可核查数据链，不是单一数据库</h3><p><b>已落地证据：</b>监管侧与各集团系统已现场演示，数据核查机制已落地；会议明确继续数据对标入库、一线需求调研、场景开发和试点复盘。</p><div class="verdict"><b>判断：</b>可复用产品应同时具备数据字典、来源与责任、质量规则、版本更正、权限、跨主体共享边界、证据引用、人工结论和复盘工单。三维孪生与 AI Agent 只能消费这条受控数据链。</div><p><b>建议行动：</b>数据团队 30 天内交付健康档案最小数据合同：对象 ID、指标口径、时间、来源、证据 URI、质量状态、规则/模型版本、人工裁决、更正链和授权范围。</p><div class="source">来源：<a href="https://nnsa.mee.gov.cn/ywdt/gzdt/202609/t20260903_1165020.html" rel="noopener noreferrer">国家核安全局｜健康档案体系建设</a></div></article>
+        <article class="item"><h3>身份权限成为 Agent 与跨层级数据共享的前置工程</h3><p><b>已落地证据：</b>南网数据平台与安全公司 9 月 3 日以 98.1 万元采购实名身份、临时/外协用户、组织岗位、跨层级访问、无密码认证、接口与认证数据、网省级联会话和权限时效合规能力，工期 3 个月。</p><div class="verdict"><b>判断：</b>工业 AI 的商业交付必须把“谁能看、谁能建议、谁能批准、谁能执行”做成平台能力；账号生命周期和会话审计不是上线后的补丁。</div><p><b>建议行动：</b>安全与平台团队把人员、岗位、外协、服务账号、设备身份和 Agent 身份纳入统一权限模型；生产操作坚持人工授权和最小权限。</p><div class="source">来源：<a href="https://www.bidding.csg.cn/fzbgg/1200441278.jhtml" rel="noopener noreferrer">南方电网供应链统一服务平台｜CG2100062002396071（2026-09-03）</a></div></article>
+      </section>
+
+      <section id="competitors" class="card">
+        <div class="section-head"><div><div class="kicker">06 · COMPETITORS</div><h2>六、竞争对手动态</h2></div><div class="rank">最多 3 条</div></div>
+        <article class="item"><h3>今日无可核验的新中标方；买方能力栈已更清晰</h3><p><b>已确认事实：</b>四项新增均处于体系推进、公开招标或公开谈判阶段，未披露供应商和中标结果。南网两个项目均不接受联合体。</p><div class="verdict"><b>建议策略：</b>竞争画像聚焦六项证据：核电/电力数据治理、图纸与点云算法、气象风险与仿真、身份权限、第三方可复验、独立交付。公司只在可复用能力覆盖且责任边界清晰的标的主投，不猜测竞争者名称。</div></article>
+      </section>
+
+      <section id="opportunities" class="card">
+        <div class="section-head"><div><div class="kicker">07 · OPPORTUNITIES</div><h2>七、商业机会</h2></div><div class="rank">优先 1–5 个</div></div>
+        <article class="item"><h3>A｜南网科研院多模态设备动静态自动建模</h3><p><b>机会内容：</b>公开谈判，最高限价 145 万元，覆盖图纸解析、装配/运动规则、视觉与点云融合、异常形变识别及轻量化动态重构；9 月 7 日 17:00 停止取件，9 月 11 日 09:00 截止响应。</p><p><b>匹配判断：</b>拥有 CAD/图纸解析、三维点云、机器视觉、配置管理和可复验指标者为 A；仅有三维展示或通用视觉者为 D。不接受联合体，合作资源不能替代主体交付能力。</p><div class="verdict"><b>推荐行动：</b>今天完成资格和能力 go/no-go；go 后当天下载文件并建立五项验收矩阵，未具备独立团队则停止投标投入。</div><div class="source">来源：<a href="https://www.bidding.csg.cn/fzbgg/1200441274.jhtml" rel="noopener noreferrer">CG1500062002369718</a></div></article>
+        <article class="item"><h3>B｜南网数字运营多模态数据空间与气象应急仿真</h3><p><b>机会内容：</b>公开招标，两个独立标的分别为 110 万元和 230 万元；9 月 9 日 18:00 停止取件，10 月 9 日 09:00 投标与开标。</p><p><b>匹配判断：</b>数据空间要求多源图层、实时交互和风险应用；气象标的要求台风/强对流预警与演练。适合已有电力 GIS/数据平台或气象风险产品的独立投标人，不能把核电安全场景经验当作电网业绩替代。</p><div class="verdict"><b>推荐行动：</b>分标评估复用率；数据、GIS、应急三方在 24 小时内列出已有组件、需新建接口和无法承诺指标，只选复用率高的一标。</div><div class="source">来源：<a href="https://www.bidding.csg.cn/zbgg/1200441273.jhtml" rel="noopener noreferrer">CG2100022002396875</a></div></article>
+        <article class="item"><h3>B｜南网 98.1 万元身份权限闭环</h3><p><b>机会内容：</b>公开谈判，三个月内完成实名、外协、组织岗位、跨层级访问、无密码认证、网省级联、会话和权限时效管理。</p><p><b>匹配判断：</b>与工业数据平台和 AI Agent 的权限底座高度相关，但需要成熟 IAM、级联认证和审计交付能力；通用账号页面不足以匹配。</p><div class="verdict"><b>推荐行动：</b>安全负责人核对现有 IAM 产品覆盖、接口和三个月交付资源；缺级联认证或生命周期闭环即降级为生态跟踪。</div><div class="source">来源：<a href="https://www.bidding.csg.cn/fzbgg/1200441278.jhtml" rel="noopener noreferrer">CG2100062002396071</a></div></article>
+      </section>
+
+      <section id="tracking" class="card">
+        <div class="section-head"><div><div class="kicker">08 · TRACKING</div><h2>八、持续跟踪事项</h2></div></div>
+        <div class="table-wrap" tabindex="0"><table><thead><tr><th>事项名称</th><th>当前状态</th><th>今日是否有实质新增</th><th>下一观察节点</th></tr></thead><tbody><tr><td>核电安全健康档案体系</td><td>监管侧及各集团系统已演示；数据核查机制落地</td><td>有：首次纳入</td><td>数据对标入库、试点复盘、场景落地或采购</td></tr><tr><td>白龙/太平岭台风经验反馈</td><td>完成监管组织的经验总结</td><td>有：首次纳入</td><td>预案修订、工程整改、演练或采购</td></tr><tr><td>南网科研院多模态建模</td><td>145 万元公开谈判</td><td>有：首次纳入</td><td>9 月 7 日取件、9 月 11 日谈判</td></tr><tr><td>南网数据空间/气象仿真</td><td>110 万元＋230 万元公开招标</td><td>有：首次纳入</td><td>9 月 9 日取件、10 月 9 日开标</td></tr><tr><td>深蓄多模态巡检</td><td>取件已于 9 月 3 日 17:30 截止</td><td>无公开变更</td><td>今天 12:00 澄清截止、9 月 21 日开标</td></tr><tr><td>深圳供电局创新/数字化项目</td><td>两组公开招标合计约 7184.45 万元</td><td>无</td><td>9 月 8 日取件、9 月 23 日开标</td></tr><tr><td>广东电网隧道机器人</td><td>479 万元公开招标</td><td>无</td><td>9 月 7 日 23:59 文件获取截止</td></tr><tr><td>Ultralytics 版本链</td><td>最新仍为 v8.4.138</td><td>无新版本</td><td>旧模型、量化、SAM 与国产后端 A/B</td></tr></tbody></table></div>
+      </section>
+
+      <section id="insights" class="card">
+        <div class="section-head"><div><div class="kicker">09 · INSIGHT</div><h2>九、今日技术洞察</h2></div></div>
+        <article class="item"><h3>一至三年机会：把健康档案做成“可核查数据底座＋场景化辅助”</h3><p><b>结论：</b>最大商业机会不是独立大模型或三维大屏，而是贯通巡检证据、设备配置、风险场景、身份权限和人工结论的可审计健康档案；上层再叠加极端天气辅助、动态孪生和只读 Agent。</p><p><b>依据：</b>核安全监管已要求数据对标入库、数据核查、试点复盘与场景落地；相邻电力采购同时为多模态数据空间、气象仿真、动态设备建模和身份权限付费。</p><p><b>验证重点：</b>数据完整性/一致性/可追溯性，图纸—点云配准与误差预算，预警提前量和漏报/误报，断网降级，权限与会话审计，人工接管和版本回退。</p><div class="verdict"><b>建议动作：</b>30 天内做“健康档案证据链 v0.1”，90 天内用台风场景跑一次桌面演练；国产 CPU/OS 为主力基线，NPU 经同样本 PoC 后采用，自动控制暂不投入。</div></article>
+      </section>
+
+      <section id="actions" class="card">
+        <div class="section-head"><div><div class="kicker">10 · ACTION</div><h2>十、给公司的建议</h2></div></div>
+        <div class="mini-grid">
+          <article class="mini-card"><h3>今日建议（3 条）</h3><p>① 产品与数据团队完成健康档案字段差距表；② 投标负责人对 145 万元建模项目在今天完成 go/no-go；③ 安全团队给台风辅助原型划定只读、人工签批和禁止自动控制边界。</p></article>
+          <article class="mini-card"><h3>短期行动（1–3 个月）</h3><p>产品负责人交付证据链 v0.1；算法/三维团队建立图纸—视觉—点云误差集；应急团队完成一次台风桌面演练；信创负责人固化 OS/CPU/NPU/驱动/中间件矩阵。</p></article>
+          <article class="mini-card"><h3>中长期规划（6–24 个月）</h3><p>沉淀跨站点健康档案数据合同、巡检难例库、极端天气场景库和权限模型，形成边缘采集、受控数据底座、动态孪生、只读 Agent 与第三方复验的一体化产品线。</p></article>
+        </div>
+      </section>
+
+      <section id="method" class="card">
+        <div class="section-head"><div><div class="kicker">METHODOLOGY</div><h2>信息说明</h2></div></div>
+        <p class="note">信息截点为 2026 年 9 月 4 日 09:00（Asia/Shanghai）。主体优先使用国家核安全局、南方电网供应链统一服务平台和开源项目官方仓库。核电健康档案与台风会议未披露采购金额、供应商或具体系统边界；本文判断均为基于公开事实的推断。涉及核安全、生产控制和应急指挥时，坚持 AI 辅助决策、人机协同、人工复核与规程优先。</p>
+      </section>
+    </div>
+
+    <aside class="card toc" aria-label="本期目录">
+      <h2>本期目录</h2>
+      <a href="#industry">01 重大行业事件</a>
+      <a href="#inspection">02 智慧巡检</a>
+      <a href="#ai">03 AI 视觉与多模态</a>
+      <a href="#domestic">04 国产硬件与边缘智能</a>
+      <a href="#data">05 数据治理与数字孪生</a>
+      <a href="#competitors">06 竞争对手</a>
+      <a href="#opportunities">07 商业机会</a>
+      <a href="#tracking">08 持续跟踪</a>
+      <a href="#insights">09 技术洞察</a>
+      <a href="#actions">10 公司建议</a>
+      <a href="#method">信息说明</a>
+    </aside>
+  </main>
+
+  <footer>每日推送 · 2026-09-04 · <a href="/archive/">查看历史归档</a></footer>
+</body>
+</html>
