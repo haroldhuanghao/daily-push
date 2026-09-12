@@ -1,0 +1,196 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="先核视频交付，再验分割权重：筛选386.95万元边缘视频与285万元数据治理采购，验证Ultralytics 8.4.147/148的灰度增强和SAM 3.1加载修复。核电巡检未核实到新订单。">
+  <meta property="og:title" content="核电智慧巡检与工业智能化行业日报 · 2026-09-12">
+  <meta property="og:description" content="先核视频交付，再验分割权重：筛选386.95万元边缘视频与285万元数据治理采购，验证Ultralytics 8.4.147/148的灰度增强和SAM 3.1加载修复。核电巡检未核实到新订单。">
+  <meta property="og:type" content="article">
+  <meta property="og:url" content="https://daily.851473.xyz/reports/2026-09-12/">
+  <meta property="og:image" content="https://daily.851473.xyz/reports/2026-09-12/cover.png">
+  <meta name="report-contract" content="nuclear-daily-v2">
+  <link rel="canonical" href="https://daily.851473.xyz/reports/2026-09-12/">
+  <title>核电智慧巡检与工业智能化行业日报 · 2026-09-12</title>
+  <style>
+    :root {
+      --accent: #126487;
+      --accent-strong: #082d48;
+      --accent-soft: #e0f2f8;
+      --page: #f3f6f9;
+      --surface: #ffffff;
+      --text: #162c3b;
+      --muted: #5d7180;
+      --border: #dbe5eb;
+      --shadow: 0 12px 36px rgba(24, 51, 41, .08);
+      --radius-card: 18px;
+      --space-card: 24px;
+    }
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body { margin: 0; background: var(--page); color: var(--text); font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang SC", "Microsoft YaHei", sans-serif; font-size: 15px; line-height: 1.7; overflow-wrap: anywhere; }
+    img { max-width: 100%; height: auto; }
+    a { color: var(--accent); text-decoration-thickness: 1px; text-underline-offset: 3px; }
+    a:hover { color: var(--accent-strong); }
+    a:focus-visible { outline: 3px solid var(--accent-soft); outline-offset: 3px; border-radius: 4px; }
+    .wrap { width: min(1120px, calc(100% - 32px)); margin-inline: auto; }
+    .hero { padding: 52px 0 46px; color: #fff; background: radial-gradient(circle at 82% 18%, var(--accent) 0, transparent 30%), linear-gradient(135deg, var(--accent-strong), var(--accent)); border-bottom: 4px solid var(--accent-soft); }
+    .eyebrow { color: rgba(255, 255, 255, .78); font-size: 12px; font-weight: 800; letter-spacing: .16em; text-transform: uppercase; }
+    .hero h1 { max-width: 880px; margin: 10px 0 14px; font-size: clamp(30px, 5vw, 54px); line-height: 1.14; text-wrap: balance; }
+    .hero .lead { max-width: 820px; margin: 0; color: rgba(255, 255, 255, .86); font-size: clamp(15px, 2vw, 17px); }
+    .meta { display: flex; flex-wrap: wrap; gap: 9px; margin-top: 22px; }
+    .pill { padding: 6px 11px; border: 1px solid rgba(255, 255, 255, .28); border-radius: 999px; background: rgba(255, 255, 255, .09); font-size: 12px; }
+    .summary { position: relative; margin-top: -24px; }
+    .summary-grid { display: grid; grid-template-columns: 1.4fr repeat(2, minmax(0, 1fr)); gap: 12px; }
+    .card { padding: var(--space-card); border: 1px solid var(--border); border-radius: var(--radius-card); background: var(--surface); box-shadow: var(--shadow); }
+    .summary-card { min-width: 0; padding: 20px; }
+    .summary-card.primary { background: var(--accent-soft); border-color: var(--accent); }
+    .summary-card b { display: block; margin-bottom: 5px; color: var(--accent-strong); font-size: 13px; }
+    .summary-card strong { display: block; color: var(--accent); font-size: clamp(20px, 3vw, 26px); line-height: 1.25; }
+    .summary-card p { margin: 6px 0 0; color: var(--muted); font-size: 13px; }
+    main { padding: 34px 0 56px; }
+    .layout { display: grid; grid-template-columns: minmax(0, 1fr) 250px; gap: 24px; align-items: start; }
+    .content { min-width: 0; }
+    .content > .card { margin-bottom: 18px; }
+    .toc { position: sticky; top: 16px; padding: 18px; box-shadow: 0 4px 18px rgba(24, 51, 41, .05); }
+    .toc h2 { margin: 0 0 10px; color: var(--muted); font-size: 12px; letter-spacing: .12em; }
+    .toc a { display: block; padding: 6px 0; color: var(--muted); font-size: 13px; text-decoration: none; }
+    .toc a:hover { color: var(--accent); }
+    .section-head { display: flex; align-items: flex-start; justify-content: space-between; gap: 14px; margin-bottom: 6px; padding-bottom: 14px; border-bottom: 1px solid var(--border); }
+    .section-head h2 { margin: 0; color: var(--accent-strong); font-size: clamp(19px, 3vw, 23px); line-height: 1.35; }
+    .kicker { margin-bottom: 4px; color: var(--accent); font-size: 12px; font-weight: 800; letter-spacing: .08em; }
+    .rank { color: var(--muted); font-size: 12px; white-space: nowrap; }
+    .item { padding: 19px 0; border-bottom: 1px dashed var(--border); }
+    .item:last-child { padding-bottom: 2px; border-bottom: 0; }
+    .item h3 { margin: 0 0 8px; font-size: 18px; line-height: 1.45; text-wrap: pretty; }
+    .item p { margin: 7px 0; color: var(--muted); font-size: 14px; }
+    .tags { display: flex; flex-wrap: wrap; gap: 7px; margin: 9px 0; }
+    .tag { padding: 3px 8px; border-radius: 999px; background: var(--accent-soft); color: var(--accent-strong); font-size: 11px; font-weight: 800; }
+    .tag.warn { background: #fff0d8; color: #8a5a10; }
+    .tag.risk { background: #fae5e1; color: #a7332c; }
+    .verdict { margin-top: 12px; padding: 12px 14px; border-left: 3px solid var(--accent); border-radius: 0 10px 10px 0; background: var(--accent-soft); font-size: 14px; }
+    .source { margin-top: 10px; color: var(--muted); font-size: 12px; }
+    .source a { margin-right: 10px; }
+    .mini-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 12px; margin-top: 16px; }
+    .mini-card { padding: 16px; border: 1px solid var(--border); border-radius: 14px; background: var(--page); }
+    .mini-card h3 { margin: 0 0 7px; font-size: 16px; }
+    .mini-card p { margin: 6px 0; color: var(--muted); font-size: 13px; }
+    .table-wrap { max-width: 100%; margin-top: 14px; overflow-x: auto; border-radius: 12px; }
+    .table-wrap:focus-visible { outline: 3px solid var(--accent-soft); outline-offset: 2px; }
+    table { width: 100%; min-width: 620px; border-collapse: collapse; font-size: 13px; }
+    th, td { padding: 11px 10px; border-bottom: 1px solid var(--border); text-align: left; vertical-align: top; }
+    th { background: var(--accent-soft); color: var(--accent-strong); }
+    .note { margin-top: 15px; padding: 11px 13px; border-radius: 10px; background: var(--page); color: var(--muted); font-size: 12px; }
+    footer { padding: 0 16px 32px; color: var(--muted); text-align: center; font-size: 12px; }
+    @media (max-width: 900px) {
+      .summary-grid { grid-template-columns: 1fr 1fr; }
+      .summary-card.primary { grid-column: 1 / -1; }
+      .layout { grid-template-columns: 1fr; }
+      .toc { position: static; display: none; }
+    }
+    @media (max-width: 640px) {
+      .wrap { width: min(100% - 24px, 1120px); }
+      .hero { padding: 40px 0 38px; }
+      .summary-grid, .mini-grid { grid-template-columns: 1fr; }
+      .summary-card.primary { grid-column: auto; }
+      .card { padding: 19px 17px; }
+      .section-head { display: block; }
+      .rank { display: block; margin-top: 6px; white-space: normal; }
+    }
+  </style>
+</head>
+<body>
+  <header class="hero">
+    <div class="wrap">
+      <div class="eyebrow">DAILY BRIEFING</div>
+      <h1>核电智慧巡检与工业智能化行业日报</h1>
+      <p class="lead">先核视频交付，再验分割权重：筛选386.95万元边缘视频与285万元数据治理采购，验证Ultralytics 8.4.147/148的灰度增强和SAM 3.1加载修复。核电巡检未核实到新订单。</p>
+      <div class="meta"><span class="pill">2026年9月12日 · 星期六</span><span class="pill">Asia/Shanghai</span></div>
+    </div>
+  </header>
+
+  <div class="wrap summary" aria-label="今日摘要">
+    <div class="summary-grid">
+      <section class="card summary-card primary"><b>今日一句话结论</b><strong>先核视频交付，再验分割权重</strong><p>商务核对履约资源；算法核对灰度数据与权重加载证据。</p></section>
+      <section class="card summary-card"><b>今日新增</b><strong>2 项采购＋2 个版本</strong><p>另补录 1 项仪控设备监管检查；无核电巡检新订单证据。</p></section>
+      <section class="card summary-card"><b>建议动作</b><strong>验收表＋回归集</strong><p>两项新采购均不接受联合体；先做独立履约筛选。</p></section>
+    </div>
+  </div>
+
+  <main class="wrap layout">
+    <div class="content">
+      <section id="industry" class="card">
+        <div class="section-head"><div><div class="kicker">01 · INDUSTRY</div><h2>一、今日重大行业事件</h2></div><div class="rank">2 项新公告＋1 项补录</div></div>
+<article class="item"><h3>1. 边缘视频建设二次招标，覆盖算法全量管理</h3><p><b>已确认事实：</b>南方电网数据平台与安全（广东）有限公司于 9 月 11 日 18:03:45 发布边缘侧视频数据中心二次招标，范围包含视频资源、汇聚、治理、智能分析、算法管理、权限与安全等开发部署。相较本仓库既有报道，这是首次收录该项目；二次招标不代表已中标或上线。</p><div class="verdict"><b>判断：</b>巡检产品的进入点扩展到视频与算法运维底座。能否对接既有视频系统、复用权限体系并完成验收，比单模型演示更影响可交付性。</div><p><b>建议行动：</b>产品与交付共同列出已有组件、需新建接口、测试数据与验收责任，金额、期限和合同风险见商业机会。</p><div class="source">来源：<a href="https://www.bidding.csg.cn/zbgg/1200442385.jhtml" rel="noopener noreferrer">边缘侧视频数据中心二次招标｜2026-09-11</a></div></article><article class="item"><h3>2. 数据治理以四类组件形成独立采购</h3><p><b>已确认事实：</b>同一采购方 9 月 11 日 18:02:21 发布数据融合治理及可视化运维组件项目，明确采购非结构化处理、数据供给、资源流向监测和运维可视化组件开发。</p><div class="verdict"><b>判断：</b>数据可追踪与可运维已形成具体交付需求；它可支撑知识库与巡检证据服务，但公告没有确认采购大模型 Agent 或数字孪生引擎。</div><p><b>建议行动：</b>数据团队提交字段、血缘、权限和异常回放演示清单；商务单独核算五个月验收周期，避免与视频项目共用未落实的人员承诺。</p><div class="source">来源：<a href="https://www.bidding.csg.cn/zbgg/1200442382.jhtml" rel="noopener noreferrer">数据融合治理及可视化运维组件招标｜2026-09-11</a></div></article><article class="item"><h3>3. 首次补录：核安全仪控设备检查关注质保与国产化难点</h3><p><b>已确认事实：</b>国家核安全局网站 9 月 8 日披露，华北、华东监督站对上海自动化仪表有限公司开展设计制造综合检查，采用文件与质量记录抽查、现场核查和访谈，检查质保运行并反馈整改要求，交流涉及国产化难点。原文未披露采购或具体问题清单。</p><div class="verdict"><b>判断：</b>国产化交付不能只提供软硬件兼容表，还需要设计、制造、配置变更和整改的质量证据。这是历史事项补录，不冒充今天新政策。</div><p><b>建议行动：</b>质量负责人检查公司可提供的版本追溯、测试审批与整改闭环样例；按业主适用规程核实准入要求，AI 只辅助查证。</p><div class="source">来源：<a href="https://nnsa.mee.gov.cn/ywdt/gzdt/202609/t20260908_1165328.html" rel="noopener noreferrer">仪控设备综合检查｜2026-09-08，首次补录</a></div></article>
+      </section>
+
+      <section id="inspection" class="card">
+        <div class="section-head"><div><div class="kicker">02 · INSPECTION</div><h2>二、智慧巡检最新动态</h2></div></div>
+<p class="note">今日无高价值核电智慧巡检新增：截至信息截点，未核实到新的核电巡检订单、中标或生产上线。以下仅为本期边缘视频采购的场景分析，不另计一项新闻。</p><article class="item"><h3>边缘视频底座：把可用视频变成可复核巡检证据</h3><p><b>已确认事实：</b>本期视频项目处于二次招标阶段，包含视频智能分析与算法应用管理；公开公告没有给出核电客户、算法精度或机器人配置。</p><div class="verdict"><b>判断：</b>可迁移方向是非安全级设备外观、现场作业辅助筛查和历史异常回放。只读接入与人工复核适合先行验证，不能推断已具备生产控制权限。</div><p><b>工程化限制：</b>需要低照、反光、遮挡与跨摄像头数据；逐类核算误漏报，验证压缩丢帧、断网缓存、时钟偏差、边缘温升和功耗。网络隔离、访问权限、原始片段和规则版本均需审查；辐射及受限区域按现场规程另行评估。</p><p><b>建议行动／投入：</b>立即验证现有视频接入与证据回放链路，量化并发、存储和人工复核负担；在未取得技术规范前，仅做桌面方案与可控离线样例。</p><div class="source">来源：<a href="https://www.bidding.csg.cn/zbgg/1200442385.jhtml" rel="noopener noreferrer">边缘侧视频数据中心二次招标｜2026-09-11</a></div></article>
+      </section>
+
+      <section id="ai" class="card">
+        <div class="section-head"><div><div class="kicker">03 · AI</div><h2>三、AI 视觉与多模态技术进展</h2></div><div class="rank">2 项实质版本增量</div></div>
+<article class="item"><h3>1. v8.4.147：灰度增强生效后，重查细小缺陷的保留</h3><p><b>已确认事实：</b>官方发布于 UTC 9 月 11 日 04:46:38，即上海 9 月 11 日 12:46:38，晚于上期截点。Albumentations 扩展至单通道输入；SAM 增加小掩膜区域过滤并修复裁剪提示缩放、直接生成的置信度过滤。</p><div class="verdict"><b>判断：</b>灰度图的训练分布与分割结果可能变化。去小区域会清除噪点，也可能清除真实细裂纹；“输出更干净”不能直接等同于质量更好。</div><p><b>核电适用与工程限制：</b>适合非安全级图像筛查及标注辅助。立即用同一灰度样本、增强随机种子和裂纹标注比较 146/147；重点看微小目标漏检、孔洞保留及裁剪边界。现场光照、污渍、相机位深与归一化需单独记录；测显存、功耗、延迟并保留离线依赖与人工复核证据。</p><p><b>建议行动／投入：</b>立即验证：先盘点增强配置是否实际作用于单通道，再按缺陷尺寸设定过滤参数并回滚对照。核电现场规程、网络隔离和审查要求优先；尚未完成公司模型实测。</p><div class="source">来源：<a href="https://github.com/ultralytics/ultralytics/releases/tag/v8.4.147" rel="noopener noreferrer">Ultralytics v8.4.147｜上海时间 2026-09-11</a></div></article><article class="item"><h3>2. v8.4.148：SAM 3.1 图像预测修正权重映射</h3><p><b>已确认事实：</b>官方发布于 UTC 9 月 11 日 16:52:02，即上海 9 月 12 日 00:52:02。修复 SAM 3.1 检查点部分组件可能静默随机初始化的问题，支持点、框、文本与图像示例提示的图像预测；Object Multiplex 视频跟踪尚未移植，权重下载受 Meta 访问门槛约束。</p><div class="verdict"><b>判断：</b>采用过相关检查点的试验需要回看加载与输出证据，不能仅凭程序能运行就判定模型正确。此次发布不构成国产设备兼容或核电验收结论。</div><p><b>核电适用与工程限制：</b>可用于离线缺陷掩膜标注与人工复核；不直接进入安全级判断。低照、反光、细小缺陷须有本域数据，记录提示敏感性和误漏报；测目标设备内存、算力功耗、导出算子及延迟，确认权重许可、离线分发、隔离网络与结果可解释性。</p><p><b>建议行动／投入：</b>立即验证图像路径的权重完整性、固定提示结果与人工标签；视频路径持续跟踪，暂不基于本次修复推进生产。</p><div class="source">来源：<a href="https://github.com/ultralytics/ultralytics/releases/tag/v8.4.148" rel="noopener noreferrer">Ultralytics v8.4.148｜上海时间 2026-09-12</a></div></article>
+      </section>
+
+      <section id="domestic" class="card">
+        <div class="section-head"><div><div class="kicker">04 · DOMESTIC STACK</div><h2>四、国产硬件与边缘智能专项</h2></div></div>
+<p class="note">今日未核实到符合准入条件的国产 CPU/GPU/NPU、边缘设备或操作系统新发布。以下是针对本期采购与技术变化的部署建议，不是新品报道，也不代表已完成公司适配。</p><div class="mini-grid"><article class="mini-card"><h3>4.1 国产 CPU 与服务器</h3><p><b>事实依据：</b>本期数据组件需要开发与验收，公告未指定 CPU 品牌。</p><p><b>判断与建议行动：</b>厂级数据、权限与审计服务以已通过项目验证的国产 CPU 组合为主力候选；未验证型号 PoC 后采用。先跑数据库驱动、非结构化解析与备份恢复用例。</p></article><article class="mini-card"><h3>4.2 国产 GPU / NPU</h3><p><b>事实依据：</b>SAM 3.1 修复发生在框架权重加载层，未证明国产推理引擎兼容。</p><p><b>判断与建议行动：</b>新加速卡组合一律 PoC 后采用。先核算子、精度、内存和导出差异，再比较图像掩膜与人工标签；未通过的方案暂不进生产。</p></article><article class="mini-card"><h3>4.3 国产边缘设备</h3><p><b>事实依据：</b>视频采购列出治理与算法管理，但公开公告没有给出终端硬件指标。</p><p><b>判断与建议行动：</b>已验收的视频网关作主力候选；新设备 PoC 后采用。验证多流接入、断链缓存、温升功耗、远程回滚；禁止按峰值算力替代并发实测。</p></article><article class="mini-card"><h3>4.4 国产操作系统与基础软件</h3><p><b>事实依据：</b>本期发布未提供国产 OS 适配认证。</p><p><b>判断与建议行动：</b>现有受支持版本作主力候选，同架构可回退镜像为备选；新版本 PoC 后采用。锁定驱动、解码、容器、证书与离线包，验证升级回退。</p></article></div><article class="item"><h3>4.5 对智慧核电的部署建议</h3><p><b>今日国产化部署结论：</b>视觉边缘优先保留已验收的小模型路径；SAM 3.1 先在厂级隔离试验区用于人工标注辅助。厂级数据底座优先建立对象、时间、权限与版本关联；RAG／AI Agent 仅提供带来源的只读建议，不自动修改生产配置。</p><div class="verdict"><b>判断：</b>主力是项目已验证组合；国产新卡、新 OS 与 SAM 3.1 组合均须 PoC 后采用，未通过准确性、功耗、隔离与审查门槛的暂不进生产。</div><p><b>建议行动：</b>交付负责人建立型号—驱动—OS—模型—配置—测试证据矩阵，保存配置基线及人工批准记录。</p><div class="source">来源：<a href="https://www.bidding.csg.cn/zbgg/1200442385.jhtml" rel="noopener noreferrer">边缘侧视频数据中心二次招标｜2026-09-11</a> <a href="https://www.bidding.csg.cn/zbgg/1200442382.jhtml" rel="noopener noreferrer">数据融合治理及可视化运维组件招标｜2026-09-11</a> <a href="https://github.com/ultralytics/ultralytics/releases/tag/v8.4.148" rel="noopener noreferrer">Ultralytics v8.4.148｜上海时间 2026-09-12</a></div></article>
+      </section>
+
+      <section id="data" class="card">
+        <div class="section-head"><div><div class="kicker">05 · DATA &amp; TWIN</div><h2>五、工业数据治理与数字孪生趋势</h2></div></div>
+<article class="item"><h3>从“有数据”推进到“知道数据如何被使用”</h3><p><b>已确认事实：</b>本期治理采购把数据资源流向监测与数据供给、非结构化处理、可视化运维并列，仍处于招标阶段，未披露已建成平台的效果指标。</p><div class="verdict"><b>判断：</b>产品机会是为每份检修文档、每段视频和每个推断保留来源、加工版本、权限和调用记录。数字孪生可消费这些证据，但仅有可视化界面不等于形成可信孪生。</div><p><b>建议行动：</b>数据负责人先做一条“源文档／视频→处理组件→服务接口→人工复核”的可回放样例；用缺失来源、权限撤回、重复对象与时间错位测试异常处理。投入建议：立即验证既有组件，现场隔离与审计批准后再接真实业务。</p><div class="source">来源：<a href="https://www.bidding.csg.cn/zbgg/1200442382.jhtml" rel="noopener noreferrer">数据融合治理及可视化运维组件招标｜2026-09-11</a></div></article>
+      </section>
+
+      <section id="competitors" class="card">
+        <div class="section-head"><div><div class="kicker">06 · COMPETITORS</div><h2>六、竞争对手动态</h2></div></div>
+<p class="note">今日无高价值新增：本轮未核实到新的竞争对手核电巡检中标、生产上线或国产化验收结果，不以营销信息凑足三条。</p><article class="item"><h3>建议策略：用可验收证据建立差异</h3><p><b>判断：</b>本期采购所需的视频权限、算法版本和数据流向能力，可作为竞品比较维度；没有可核实的交付记录时，不给厂商排名。</p><p><b>建议行动：</b>售前准备同场景、同样本演示表，要求记录原始数据、模型版本、人工复核和异常回放；两项新采购不接受联合体，不能把生态合作意向当作投标资格。</p></article>
+      </section>
+
+      <section id="opportunities" class="card">
+        <div class="section-head"><div><div class="kicker">07 · OPPORTUNITIES</div><h2>七、商业机会</h2></div><div class="rank">2 个新机会，均待资格核对</div></div>
+<article class="item"><h3>机会 A｜边缘侧视频数据中心，386.95 万元</h3><p><b>已确认事实：</b>采购方为南方电网数据平台与安全（广东）有限公司，9 月 11 日二次招标，项目编号 CG2100022002379882；单包概算与最高限价均为 386.95 万元。工期至 2027 年 4 月 18 日，具体以合同为准。文件获取截至 9 月 18 日 23:59:59，投标截至 10 月 13 日 09:00。</p><p><b>资格与履约门槛：</b>不接受联合体，要求符合公告规定的近三年审计财务报告等材料。付款分 30%／40%／30%，须满足相应方案、初验、终验条件，收到等额发票后 60 日内付款；延期每日按合同价 2‰计违约金，超过十个工作日存在解约风险。</p><div class="verdict"><b>判断：</b>高匹配、条件性推进：已有视频平台和交付团队的价值高于单一算法团队。金额是采购概算／限价，不是公司订单；并发、安全、接口、数据与验收细则仍须取得技术规范核对。</div><p><b>建议行动：</b>商务与交付今日做独立承接资格、资源排期及现金流筛选；可行后在文件截止前获取正式资料。核电迁移另行 PoC，AI 辅助决策、人机协同、人工复核、规程优先。</p><div class="source">来源：<a href="https://www.bidding.csg.cn/zbgg/1200442385.jhtml" rel="noopener noreferrer">边缘侧视频数据中心二次招标｜2026-09-11</a></div></article><article class="item"><h3>机会 B｜数据融合治理与可视化运维，285 万元</h3><p><b>已确认事实：</b>同一采购方 9 月 11 日招标，项目编号 CG2100022002405729；单包概算与最高限价均为 285 万元，合同签订后五个月内验收。文件获取截至 9 月 18 日 23:59:59，投标截至 10 月 13 日 18:00，注意与机会 A 相差九小时。</p><p><b>资格与履约门槛：</b>不接受联合体，要求公告规定的审计财务材料；30%／40%／30%分阶段付款，条件满足并收到发票后 60 日内支付。延期每日违约金为合同价 1‰，超过十个工作日存在解约风险。公告不收质量保证金，但质量义务仍依合同履行。</p><div class="verdict"><b>判断：</b>中高匹配、条件性推进：适合已有解析、服务编排和数据血缘组件的团队；五个月验收限制从零开发的空间。需核实接口数量、非结构化格式、历史数据质量及第三方依赖。</div><p><b>建议行动：</b>数据负责人制作“已有／需改造／缺失”的四类组件清单；商务核对技术规范和审计材料，明确验收样本、环境提供及缺陷处置责任后再决定投标。</p><div class="source">来源：<a href="https://www.bidding.csg.cn/zbgg/1200442382.jhtml" rel="noopener noreferrer">数据融合治理及可视化运维组件招标｜2026-09-11</a></div></article>
+      </section>
+
+      <section id="tracking" class="card">
+        <div class="section-head"><div><div class="kicker">08 · TRACKING</div><h2>八、持续跟踪事项</h2></div></div>
+<p class="note">存量事项仅列状态与下一节点；“无”指本轮未核实到实质新增，不代表公司已报名或采购方没有其他公告。下列时间均为上海时间，参与前须复核平台变更。</p><div class="table-wrap" tabindex="0"><table><thead><tr><th>事项名称</th><th>当前状态</th><th>今日是否有实质新增</th><th>下一观察节点</th></tr></thead><tbody><tr><td>广州检测／攀爬机器人二次招标<br><a href="https://www.bidding.csg.cn/zbgg/1200442202.jhtml" rel="noopener noreferrer">广州科技二次招标｜2026-09-10</a></td><td>仅标的 1、3、4、5、6 重开；公司参与未知</td><td>无；保持上期状态</td><td>9 月 16 日 18:00 文件截止；10 月 9 日 09:00 投标</td></tr><tr><td>三维数字化移交框架<br><a href="https://www.bidding.csg.cn/zbgg/1200442220.jhtml" rel="noopener noreferrer">三维移交框架｜2026-09-10</a></td><td>采购中；收入、计量条款待核</td><td>无</td><td>9 月 17 日 23:59:59 文件截止；10 月 12 日 09:00 投标</td></tr><tr><td>新致力终端加工框架<br><a href="https://www.bidding.csg.cn/zbgg/1200441734.jhtml" rel="noopener noreferrer">新致力终端加工｜2026-09-08</a></td><td>待制造、测试与独立履约评估</td><td>无</td><td>9 月 15 日 23:59:59 文件截止</td></tr><tr><td>电算工程运维工具<br><a href="https://www.bidding.csg.cn/zbgg/1200441737.jhtml" rel="noopener noreferrer">电算工程运维工具｜2026-09-08</a></td><td>公司资格与参与状态未知</td><td>无</td><td>9 月 14 日 23:59:59 文件截止</td></tr><tr><td>梅州指挥系统运维<br><a href="https://www.bidding.csg.cn/zbgg/1200441703.jhtml" rel="noopener noreferrer">梅州运维｜2026-09-07</a></td><td>待业绩与单位成本筛选</td><td>无</td><td>9 月 14 日 23:00 文件截止</td></tr><tr><td>台风分析服务二次框架<br><a href="https://www.bidding.csg.cn/zbgg/1200441698.jhtml" rel="noopener noreferrer">台风分析服务｜2026-09-07</a></td><td>待气象业绩与成本筛选</td><td>无</td><td>9 月 14 日 23:59:59 文件截止</td></tr><tr><td>深蓄多模态巡检<br><a href="https://www.bidding.csg.cn/zbgg/1200440598.jhtml" rel="noopener noreferrer">深蓄多模态巡检｜原公告</a></td><td>获取窗口已过；仅已有效参与者可继续</td><td>无</td><td>9 月 21 日 08:30 递交截止</td></tr><tr><td>广州巡检机器人框架<br><a href="https://www.bidding.csg.cn/zbgg/1200441520.jhtml" rel="noopener noreferrer">广州机器人框架｜2026-09-04</a></td><td>9 月 10 日文件窗口已过</td><td>无；不按仍可报名推荐</td><td>核对已获取资格后的投标安排及后续变更</td></tr></tbody></table></div>
+      </section>
+
+      <section id="insights" class="card">
+        <div class="section-head"><div><div class="kicker">09 · INSIGHT</div><h2>九、今日技术洞察</h2></div></div>
+<article class="item"><h3>未来 1–3 年：销售可审查的视觉交付包</h3><p><b>判断：</b>本期视频和治理采购提供了底座开发的预算证据，SAM 修复则表明“模型能加载”仍不等于“结果可信”。据此推断，可复用的接入、权重校验、版本追溯、人工审核和运行监测组合，有望成为长期服务能力；这不是对市场规模或收入的预测。</p><p><b>验证重点与壁垒：</b>优先积累固定灰度样本、细小缺陷分层标注、提示一致性、断链回放与跨设备回归集。把长期壁垒放在现场数据使用授权、验收规则、故障处置记录和国产兼容证据，而非单次演示的效果。</p><p><b>国产化价值与能力建设：</b>将模型层修复映射到国产 CPU、加速器、OS 和视频解码的实测矩阵；端侧使用经验证的小模型，厂级隔离环境承接辅助标注和知识检索。AI 建议保留来源、人工确认及回滚路径。</p><p><b>建议行动：</b>由产品、算法、交付和质保共同维护一份交付证据目录；本周先完成单个场景的离线回放，验收指标由客户规程与业务损失确定。</p><div class="source">来源：<a href="https://www.bidding.csg.cn/zbgg/1200442385.jhtml" rel="noopener noreferrer">边缘侧视频数据中心二次招标｜2026-09-11</a> <a href="https://www.bidding.csg.cn/zbgg/1200442382.jhtml" rel="noopener noreferrer">数据融合治理及可视化运维组件招标｜2026-09-11</a> <a href="https://github.com/ultralytics/ultralytics/releases/tag/v8.4.148" rel="noopener noreferrer">Ultralytics v8.4.148｜上海时间 2026-09-12</a></div></article>
+      </section>
+
+      <section id="actions" class="card">
+        <div class="section-head"><div><div class="kicker">10 · ACTION</div><h2>十、给公司的建议</h2></div></div>
+<div class="mini-grid"><article class="mini-card"><h3>今日建议（3 条）</h3><p>1. 商务＋交付：完成两项新采购的资格、资源和现金流初筛；把 10 月 13 日两场不同截止时间分别记入项目表。</p><p>2. 算法：建立 146/147 灰度增强对照与 147/148 SAM 3.1 权重加载对照，人工复核小缺陷保留；未经验证不升级生产。</p><p>3. 质量＋商务：整理仪控交付的版本与整改证据样例；核实 9 月 14 日到期存量商机是否已获取文件，不把未知状态写成已参与。</p></article><article class="mini-card"><h3>短期行动（1–3 个月）</h3><p>产品负责人交付视频证据与数据流向最小闭环；算法负责人维护经人工标注的场景回归集；交付负责人完成至少一个目标国产组合的断网、回滚和负载验证。以来源可追溯、结果可复现、权限可撤回作为验收维度，具体阈值须与客户确认。</p></article><article class="mini-card"><h3>中长期规划（6–24 个月）</h3><p>构建按厂区规程配置的证据服务、模型版本管理和兼容矩阵；沉淀场景数据与验收能力，形成可复用边缘产品及运维服务。RAG／AI Agent 保持只读辅助与授权审批，逐步拓展至多模态检索和数字孪生证据关联。</p></article></div>
+      </section>
+
+      <section id="method" class="card">
+        <div class="section-head"><div><div class="kicker">METHODOLOGY</div><h2>信息说明</h2></div></div>
+<p class="note">信息截点：2026-09-12 11:00（Asia/Shanghai）。自动化本次延迟执行，未将 09:00 后的检索伪称为早间完成。对照 2026-09-11 已发布日报与历史全文去重；新招标于 9 月 11 日晚发布，两项技术版本均晚于上期 09:00 截点。仪控检查为 9 月 8 日历史首次补录。正文保留全部必需栏目，无合格新增时明确简写。</p><p class="note">来源为国家核安全局原文、南方电网官方采购公告及 Ultralytics 官方发布记录。部分网页搜索解析不稳定，使用同域官方 HTML 复核并在本地草稿区保存快照。公司投标资格、报名、真实设备与模型实测均未核实；技术规范书细节未取得，不据公告扩写精度、性能、国产认证或客户采购。以上“判断”“建议行动”均为基于事实的编辑分析，核安全及生产场景坚持 AI 辅助决策、人机协同、人工复核、规程优先。</p>
+      </section>
+    </div>
+
+    <aside class="card toc" aria-label="本期目录">
+      <h2>本期目录</h2>
+      <a href="#industry">01 重大行业事件</a>
+      <a href="#inspection">02 智慧巡检</a>
+      <a href="#ai">03 AI 视觉与多模态</a>
+      <a href="#domestic">04 国产硬件与边缘智能</a>
+      <a href="#data">05 数据治理与数字孪生</a>
+      <a href="#competitors">06 竞争对手</a>
+      <a href="#opportunities">07 商业机会</a>
+      <a href="#tracking">08 持续跟踪</a>
+      <a href="#insights">09 技术洞察</a>
+      <a href="#actions">10 公司建议</a>
+      <a href="#method">信息说明</a>
+    </aside>
+  </main>
+
+  <footer>每日推送 · 2026-09-12 · <a href="/archive/">查看历史归档</a></footer>
+</body>
+</html>
