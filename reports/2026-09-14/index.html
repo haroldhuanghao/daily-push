@@ -1,0 +1,196 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="先验降级告警，再锁交付边界：验证Ultralytics 8.4.149/150的CPU回退、续训和权重加载；补录小浣熊麒麟适配，筛除纯劳务巡检错配。今日核电巡检无已核实新订单，优先处理到期商机。">
+  <meta property="og:title" content="核电智慧巡检与工业智能化行业日报 · 2026-09-14">
+  <meta property="og:description" content="先验降级告警，再锁交付边界：验证Ultralytics 8.4.149/150的CPU回退、续训和权重加载；补录小浣熊麒麟适配，筛除纯劳务巡检错配。今日核电巡检无已核实新订单，优先处理到期商机。">
+  <meta property="og:type" content="article">
+  <meta property="og:url" content="https://daily.851473.xyz/reports/2026-09-14/">
+  <meta property="og:image" content="https://daily.851473.xyz/reports/2026-09-14/cover.png">
+  <meta name="report-contract" content="nuclear-daily-v2">
+  <link rel="canonical" href="https://daily.851473.xyz/reports/2026-09-14/">
+  <title>核电智慧巡检与工业智能化行业日报 · 2026-09-14</title>
+  <style>
+    :root {
+      --accent: #126487;
+      --accent-strong: #082d48;
+      --accent-soft: #e0f2f8;
+      --page: #f3f6f9;
+      --surface: #ffffff;
+      --text: #162c3b;
+      --muted: #5d7180;
+      --border: #dbe5eb;
+      --shadow: 0 12px 36px rgba(24, 51, 41, .08);
+      --radius-card: 18px;
+      --space-card: 24px;
+    }
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body { margin: 0; background: var(--page); color: var(--text); font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang SC", "Microsoft YaHei", sans-serif; font-size: 15px; line-height: 1.7; overflow-wrap: anywhere; }
+    img { max-width: 100%; height: auto; }
+    a { color: var(--accent); text-decoration-thickness: 1px; text-underline-offset: 3px; }
+    a:hover { color: var(--accent-strong); }
+    a:focus-visible { outline: 3px solid var(--accent-soft); outline-offset: 3px; border-radius: 4px; }
+    .wrap { width: min(1120px, calc(100% - 32px)); margin-inline: auto; }
+    .hero { padding: 52px 0 46px; color: #fff; background: radial-gradient(circle at 82% 18%, var(--accent) 0, transparent 30%), linear-gradient(135deg, var(--accent-strong), var(--accent)); border-bottom: 4px solid var(--accent-soft); }
+    .eyebrow { color: rgba(255, 255, 255, .78); font-size: 12px; font-weight: 800; letter-spacing: .16em; text-transform: uppercase; }
+    .hero h1 { max-width: 880px; margin: 10px 0 14px; font-size: clamp(30px, 5vw, 54px); line-height: 1.14; text-wrap: balance; }
+    .hero .lead { max-width: 820px; margin: 0; color: rgba(255, 255, 255, .86); font-size: clamp(15px, 2vw, 17px); }
+    .meta { display: flex; flex-wrap: wrap; gap: 9px; margin-top: 22px; }
+    .pill { padding: 6px 11px; border: 1px solid rgba(255, 255, 255, .28); border-radius: 999px; background: rgba(255, 255, 255, .09); font-size: 12px; }
+    .summary { position: relative; margin-top: -24px; }
+    .summary-grid { display: grid; grid-template-columns: 1.4fr repeat(2, minmax(0, 1fr)); gap: 12px; }
+    .card { padding: var(--space-card); border: 1px solid var(--border); border-radius: var(--radius-card); background: var(--surface); box-shadow: var(--shadow); }
+    .summary-card { min-width: 0; padding: 20px; }
+    .summary-card.primary { background: var(--accent-soft); border-color: var(--accent); }
+    .summary-card b { display: block; margin-bottom: 5px; color: var(--accent-strong); font-size: 13px; }
+    .summary-card strong { display: block; color: var(--accent); font-size: clamp(20px, 3vw, 26px); line-height: 1.25; }
+    .summary-card p { margin: 6px 0 0; color: var(--muted); font-size: 13px; }
+    main { padding: 34px 0 56px; }
+    .layout { display: grid; grid-template-columns: minmax(0, 1fr) 250px; gap: 24px; align-items: start; }
+    .content { min-width: 0; }
+    .content > .card { margin-bottom: 18px; }
+    .toc { position: sticky; top: 16px; padding: 18px; box-shadow: 0 4px 18px rgba(24, 51, 41, .05); }
+    .toc h2 { margin: 0 0 10px; color: var(--muted); font-size: 12px; letter-spacing: .12em; }
+    .toc a { display: block; padding: 6px 0; color: var(--muted); font-size: 13px; text-decoration: none; }
+    .toc a:hover { color: var(--accent); }
+    .section-head { display: flex; align-items: flex-start; justify-content: space-between; gap: 14px; margin-bottom: 6px; padding-bottom: 14px; border-bottom: 1px solid var(--border); }
+    .section-head h2 { margin: 0; color: var(--accent-strong); font-size: clamp(19px, 3vw, 23px); line-height: 1.35; }
+    .kicker { margin-bottom: 4px; color: var(--accent); font-size: 12px; font-weight: 800; letter-spacing: .08em; }
+    .rank { color: var(--muted); font-size: 12px; white-space: nowrap; }
+    .item { padding: 19px 0; border-bottom: 1px dashed var(--border); }
+    .item:last-child { padding-bottom: 2px; border-bottom: 0; }
+    .item h3 { margin: 0 0 8px; font-size: 18px; line-height: 1.45; text-wrap: pretty; }
+    .item p { margin: 7px 0; color: var(--muted); font-size: 14px; }
+    .tags { display: flex; flex-wrap: wrap; gap: 7px; margin: 9px 0; }
+    .tag { padding: 3px 8px; border-radius: 999px; background: var(--accent-soft); color: var(--accent-strong); font-size: 11px; font-weight: 800; }
+    .tag.warn { background: #fff0d8; color: #8a5a10; }
+    .tag.risk { background: #fae5e1; color: #a7332c; }
+    .verdict { margin-top: 12px; padding: 12px 14px; border-left: 3px solid var(--accent); border-radius: 0 10px 10px 0; background: var(--accent-soft); font-size: 14px; }
+    .source { margin-top: 10px; color: var(--muted); font-size: 12px; }
+    .source a { margin-right: 10px; }
+    .mini-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 12px; margin-top: 16px; }
+    .mini-card { padding: 16px; border: 1px solid var(--border); border-radius: 14px; background: var(--page); }
+    .mini-card h3 { margin: 0 0 7px; font-size: 16px; }
+    .mini-card p { margin: 6px 0; color: var(--muted); font-size: 13px; }
+    .table-wrap { max-width: 100%; margin-top: 14px; overflow-x: auto; border-radius: 12px; }
+    .table-wrap:focus-visible { outline: 3px solid var(--accent-soft); outline-offset: 2px; }
+    table { width: 100%; min-width: 620px; border-collapse: collapse; font-size: 13px; }
+    th, td { padding: 11px 10px; border-bottom: 1px solid var(--border); text-align: left; vertical-align: top; }
+    th { background: var(--accent-soft); color: var(--accent-strong); }
+    .note { margin-top: 15px; padding: 11px 13px; border-radius: 10px; background: var(--page); color: var(--muted); font-size: 12px; }
+    footer { padding: 0 16px 32px; color: var(--muted); text-align: center; font-size: 12px; }
+    @media (max-width: 900px) {
+      .summary-grid { grid-template-columns: 1fr 1fr; }
+      .summary-card.primary { grid-column: 1 / -1; }
+      .layout { grid-template-columns: 1fr; }
+      .toc { position: static; display: none; }
+    }
+    @media (max-width: 640px) {
+      .wrap { width: min(100% - 24px, 1120px); }
+      .hero { padding: 40px 0 38px; }
+      .summary-grid, .mini-grid { grid-template-columns: 1fr; }
+      .summary-card.primary { grid-column: auto; }
+      .card { padding: 19px 17px; }
+      .section-head { display: block; }
+      .rank { display: block; margin-top: 6px; white-space: normal; }
+    }
+  </style>
+</head>
+<body>
+  <header class="hero">
+    <div class="wrap">
+      <div class="eyebrow">DAILY BRIEFING</div>
+      <h1>核电智慧巡检与工业智能化行业日报</h1>
+      <p class="lead">先验降级告警，再锁交付边界：验证Ultralytics 8.4.149/150的CPU回退、续训和权重加载；补录小浣熊麒麟适配，筛除纯劳务巡检错配。今日核电巡检无已核实新订单，优先处理到期商机。</p>
+      <div class="meta"><span class="pill">2026年9月14日 · 星期一</span><span class="pill">Asia/Shanghai</span></div>
+    </div>
+  </header>
+
+  <div class="wrap summary" aria-label="今日摘要">
+    <div class="summary-grid">
+      <section class="card summary-card primary"><b>今日一句话结论</b><strong>先验降级告警，再锁交付边界</strong><p>算法复核设备回退，商务完成本周截止事项筛选。</p></section>
+      <section class="card summary-card"><b>今日新增</b><strong>2 个版本＋2 项补录</strong><p>版本发布于上期截点之后；适配与劳务采购均明确标为补录。</p></section>
+      <section class="card summary-card"><b>建议动作</b><strong>回退可见，履约可证</strong><p>不把程序运行成功当作时延达标，不把巡视劳务当成AI订单。</p></section>
+    </div>
+  </div>
+
+  <main class="wrap layout">
+    <div class="content">
+      <section id="industry" class="card">
+        <div class="section-head"><div><div class="kicker">01 · INDUSTRY</div><h2>一、今日重大行业事件</h2></div><div class="rank">3 项交付信号</div></div>
+<p class="note">截至上海时间 2026-09-14 09:00，本次公开来源检索未核实到核电智慧巡检的新采购、中标或生产上线；不以一般会议与宣传活动凑数。以下为影响交付的技术新增和首次补录。</p><article class="item"><h3>1. 视觉交付需要把设备回退纳入验收</h3><p><b>已确认事实：</b>Ultralytics 9 月 12 日发布 8.4.149 与 8.4.150，均晚于上一期 11:00 信息截点，涉及 ONNX 回退、续训及受限权重加载。具体变更在 AI 栏展开。</p><div class="verdict"><b>判断：</b>程序能继续运行仍不足以证明现场服务达标；边缘产品需要把实际执行设备、模型来源和超时状态交给运维人员。</div><p><b>建议行动：</b>产品负责人将“实际执行后端＋降级提示＋超时处置”加入验收草案；先用测试故障触发验证。</p><div class="source">来源：<a href="https://github.com/ultralytics/ultralytics/releases/tag/v8.4.149" rel="noopener noreferrer">Ultralytics v8.4.149｜2026-09-12</a> <a href="https://github.com/ultralytics/ultralytics/releases/tag/v8.4.150" rel="noopener noreferrer">Ultralytics v8.4.150｜2026-09-12</a></div></article><article class="item"><h3>2. 首次补录：国产桌面 AI 进入应用商店交付</h3><p><b>已确认事实：</b>商汤官网 9 月 9 日宣布 Raccoon Work 完成银河麒麟适配、上架软件商店，并支持 openKylin。原文同时提及私有化支持；本仓库此前未报道。</p><div class="verdict"><b>判断：</b>国产桌面工作流有了可验证的产品交付动作，但应用商店版本与内网私有化方案的具体边界仍需核对。</div><p><b>建议行动：</b>对照账号、文件和工具权限制作核电辅助办公准入表；具体适配结论见国产化栏。</p><div class="source">来源：<a href="https://www.sensetime.com/cn/news/raccoon-work-ai" rel="noopener noreferrer">商汤官网｜2026-09-09，首次补录</a></div></article><article class="item"><h3>3. 首次补录：巡视巡检采购需要先辨明合同性质</h3><p><b>已确认事实：</b>海南电网 9 月 11 日公告的一张网示范基地采购属于运维运营劳务，包含设备巡视、保洁安防与接待等服务。</p><div class="verdict"><b>判断：</b>公告中的“巡检”不能直接计为机器人、工业视觉或 AI 软件的新增订单；承接能力首先是现场运营。</div><p><b>建议行动：</b>商务将其列为低匹配筛选项；完整金额、期限与退出条件见商业机会栏。</p><div class="source">来源：<a href="https://www.bidding.csg.cn/zbgg/1200442351.jhtml" rel="noopener noreferrer">海南一张网示范基地｜2026-09-11，首次补录</a></div></article>
+      </section>
+
+      <section id="inspection" class="card">
+        <div class="section-head"><div><div class="kicker">02 · INSPECTION</div><h2>二、智慧巡检最新动态</h2></div><div class="rank">无新增核电项目</div></div>
+<p class="note">今日无高价值核电智慧巡检新增。没有已核实的新设备交付、机器人中标或核电生产上线证据。</p><article class="item"><h3>存量技术验证：故障回退必须让值班人员看见</h3><p><b>已确认事实：</b>本期 8.4.149 的 ONNX CUDA 不可用场景会回退 CPU 并发出警告，属于软件能力变更，不是现场实测结果。</p><div class="verdict"><b>判断：</b>在非安全级表计读数、外观缺陷筛查中，回退可能改变时延和处理帧数；核电适用性要由现场条件与人工复核能力决定。</div><p><b>建议行动／投入：</b>立即验证：用授权的低照、反光、遮挡样本，分别测漏报、误报、端到端时延、丢帧、内存和功耗；断网隔离条件下验证告警、人工接管与记录留存。受辐照、高温、受限空间设备另行准入，不让 AI 直接控制生产。</p><div class="source">来源：<a href="https://github.com/ultralytics/ultralytics/releases/tag/v8.4.149" rel="noopener noreferrer">Ultralytics v8.4.149｜2026-09-12</a></div></article>
+      </section>
+
+      <section id="ai" class="card">
+        <div class="section-head"><div><div class="kicker">03 · AI</div><h2>三、AI 视觉与多模态技术进展</h2></div><div class="rank">2 个已发布版本</div></div>
+<article class="item"><h3>1. v8.4.149：续训数据与 CPU 回退需要显式核对</h3><p><b>已确认事实：</b>官方发布时间为 UTC 9 月 12 日 06:20:24（上海 14:20:24）。续训保留检查点的数据集，显式 data 参数优先；修复关闭 AMP 的检查点续训。ONNX 在创建会话后检查 CUDA，缺失时警告并回退 CPU；RT-DETR 的 LiteRT 坐标归一化亦有修复。</p><div class="verdict"><b>判断：</b>影响断点恢复和跨后端部署的可重复性。尤其应监控“成功返回但设备已变化”的状态，不能沿用加速卡时延承诺。</div><p><b>核电适用与工程化限制：</b>适合非安全级视觉辅助。固定同一现场数据集、标签、输入尺寸和阈值，对比 148/149；分别核对误漏报、续训数据路径、AMP 状态、坐标与实际后端，记录隔离环境依赖、算力功耗、恶劣光照和人工审查证据。</p><p><b>建议行动／投入：</b>立即验证；注入执行后端缺失和断点续训场景，要求告警可检索、超时可识别、输出可复核，未通过前维持已验收版本。</p><div class="source">来源：<a href="https://github.com/ultralytics/ultralytics/releases/tag/v8.4.149" rel="noopener noreferrer">Ultralytics v8.4.149｜2026-09-12</a></div></article><article class="item"><h3>2. v8.4.150：受限加载修复，YOLO27 仍未发布</h3><p><b>已确认事实：</b>官方发布时间为 UTC 9 月 12 日 15:11:19（上海 23:11:19）。受限加载按检查点实际引用类解析，修复融合 YOLOE 绑定并兼容旧 NumPy 元数据与内嵌 CLIP；Sentry 避免捕获命令行参数与局部变量。YOLO27 页面只是预告，权重、包支持和发布日期尚不可用。</p><div class="verdict"><b>判断：</b>重点是可信模型包的恢复与诊断边界，不是新模型精度提升。加载白名单仍不等于任意外部权重可信，YOLO27 不应进入本期生产选型。</div><p><b>核电适用与工程化限制：</b>适合非安全级视觉模型包交付与离线恢复；固定样本集检查融合前后误漏报与输出差异，实测冷启动、内存及功耗，并审查异常日志和网络外发。低照、反光、遮挡与国产后端兼容性仍须独立实测。</p><p><b>建议行动／投入：</b>立即验证 148/150 的可信旧检查点、融合模型及拒绝加载场景；固化哈希、依赖清单和回滚包，保留人工审批。YOLO27 暂不投入生产适配。</p><div class="source">来源：<a href="https://github.com/ultralytics/ultralytics/releases/tag/v8.4.150" rel="noopener noreferrer">Ultralytics v8.4.150｜2026-09-12</a></div></article>
+      </section>
+
+      <section id="domestic" class="card">
+        <div class="section-head"><div><div class="kicker">04 · DOMESTIC STACK</div><h2>四、国产硬件与边缘智能专项</h2></div><div class="rank">存量选型与 1 项适配补录</div></div>
+<p class="note">CPU、GPU/NPU 和边缘整机今日无已核实的高价值硬件新增；以下为本期技术变化对应的验证任务，不宣称已完成兼容认证或公司 PoC。</p><div class="mini-grid"><article class="mini-card"><h3>4.1 国产 CPU 与服务器</h3><p><b>已确认事实：</b>本期软件出现 CPU 回退路径，未给出国产 CPU 性能结果。</p><p><b>判断：</b>架构支持不能替代目标服务器的时延证据。</p><p><b>建议行动／结论：</b>现有已验收组合继续作为主力；新增 CPU 组合 PoC 后采用，测高并发、离线安装和恢复。</p></article><article class="mini-card"><h3>4.2 国产 GPU / NPU 与 AI 加速</h3><p><b>已确认事实：</b>上述 CUDA 修复未声明国产 GPU/NPU 执行后端适配。</p><p><b>判断：</b>不能将其推及其他编译器、算子库或驱动。</p><p><b>建议行动／结论：</b>候选加速方案 PoC 后采用；逐模型核对算子、精度、后处理、功耗和真实执行设备。</p></article><article class="mini-card"><h3>4.3 国产边缘算力设备</h3><p><b>已确认事实：</b>本期没有新整机发布或现场验收证据。</p><p><b>判断：</b>回退会改变容量预算，稳定吞吐比单次推理成功更能反映交付能力。</p><p><b>建议行动／结论：</b>新设备 PoC 后采用；验证多路视频、温升、掉电、断链和降级告警，未经验证暂不进入生产环境。</p></article><article class="mini-card"><h3>4.4 国产操作系统与基础软件</h3><p><b>已确认事实：</b>9 月 9 日商汤披露麒麟适配覆盖登录、文件处理、工具调用、任务执行和预览。</p><p><b>判断：</b>适配覆盖具体工作流，但公告不是核电内网准入证明。</p><p><b>建议行动／结论：</b>辅助办公候选 PoC 后采用；索取精确 OS/CPU 兼容矩阵、离线授权及私有化部署说明。</p><div class="source"><a href="https://www.sensetime.com/cn/news/raccoon-work-ai" rel="noopener noreferrer">商汤官网｜2026-09-09，首次补录</a></div></article></div><article class="item"><h3>4.5 今日国产化部署结论</h3><p><b>已确认事实：</b>本期已核实的是软件变更和桌面适配，未开展本公司的硬件或模型实测。</p><div class="verdict"><b>判断：</b>视觉边缘推理、厂级平台和 RAG/Agent 应分别验收；“能安装”不能合并证明模型精度、离线授权与权限安全。</div><p><b>建议行动：</b>主力保持客户已验收栈；备选限定在相同 OS、驱动、模型与接口版本的可复现镜像。新增国产加速栈及办公 Agent 均 PoC 后采用；控制系统写入、无人复核操作暂不进入生产环境。所有 PoC 覆盖数据授权、误漏报、现场环境、功耗、网络隔离、可解释证据和人工审查。</p><div class="source">来源：<a href="https://github.com/ultralytics/ultralytics/releases/tag/v8.4.149" rel="noopener noreferrer">Ultralytics v8.4.149｜2026-09-12</a> <a href="https://github.com/ultralytics/ultralytics/releases/tag/v8.4.150" rel="noopener noreferrer">Ultralytics v8.4.150｜2026-09-12</a> <a href="https://www.sensetime.com/cn/news/raccoon-work-ai" rel="noopener noreferrer">商汤官网｜2026-09-09，首次补录</a></div></article>
+      </section>
+
+      <section id="data" class="card">
+        <div class="section-head"><div><div class="kicker">05 · DATA &amp; TWIN</div><h2>五、工业数据治理与数字孪生趋势</h2></div></div>
+<p class="note">今日无高价值工业数据治理或数字孪生新项目进展。此前数据治理与三维移交采购只列入持续跟踪，不再次作为新增订单。</p><article class="item"><h3>能力建设任务：把模型运行状态纳入证据链</h3><p><b>已确认事实：</b>本期版本变化涉及续训数据选择、检查点解析和执行后端回退。</p><div class="verdict"><b>判断：</b>一份可复核的巡检记录应能够解释使用了哪份模型、哪组数据和哪种计算后端，否则同一缺陷结论难以回溯。此为产品判断，不代表已上线。</div><p><b>建议行动：</b>数据负责人定义设备编号、采集时间、模型哈希、数据版本、执行后端、降级状态与人工复核结果字段；先用模拟故障生成完整记录。用于核电时只辅助判断，离线留存并按项目权限审查。</p><div class="source">来源：<a href="https://github.com/ultralytics/ultralytics/releases/tag/v8.4.149" rel="noopener noreferrer">Ultralytics v8.4.149｜2026-09-12</a> <a href="https://github.com/ultralytics/ultralytics/releases/tag/v8.4.150" rel="noopener noreferrer">Ultralytics v8.4.150｜2026-09-12</a></div></article>
+      </section>
+
+      <section id="competitors" class="card">
+        <div class="section-head"><div><div class="kicker">06 · COMPETITORS</div><h2>六、竞争对手动态</h2></div><div class="rank">1 项首次补录</div></div>
+<article class="item"><h3>商汤：国产桌面交付链路已形成公开动作</h3><p><b>已确认事实：</b>9 月 9 日官网确认 Raccoon Work 麒麟软件商店上架；属于本期首次补录，没有核电客户中标或巡检上线证据。</p><div class="verdict"><b>判断：</b>通用文档和任务助手已有生态竞争，公司更适合补足行业证据引用、设备身份关联、权限隔离与审计交接。</div><p><b>建议行动：</b>持续跟踪；以脱敏巡检记录开展隔离评估，核对离线授权、工具最小权限、日志导出及删除机制。核电辅助办公仅 PoC 后采用，现场动作保持人工批准。</p><div class="source">来源：<a href="https://www.sensetime.com/cn/news/raccoon-work-ai" rel="noopener noreferrer">商汤官网｜2026-09-09，首次补录</a></div></article><p class="note">未核实到另外两项合格竞争进展，本栏不凑满三条。</p>
+      </section>
+
+      <section id="opportunities" class="card">
+        <div class="section-head"><div><div class="kicker">07 · OPPORTUNITIES</div><h2>七、商业机会</h2></div><div class="rank">1 项首次补录，低匹配</div></div>
+<article class="item"><h3>筛选级／低匹配：海南一张网示范基地运维运营</h3><p><b>已确认事实：</b>9 月 11 日公告，项目 CG0700022002339177；预计采购额及最高限价均为 362.94 万元，服务期 36 个月。范围以巡视维护、保洁安防、配件更换及接待等劳务为主，不接受联合体。文件获取截至 9 月 18 日 18:00，投标截止 10 月 9 日 09:00。</p><p><b>合同与匹配判断：</b>总价包干，月度费用按中标总价除以 36，再乘月度考核得分比例结算。纯算法或平台团队匹配低；公告未确立 AI 软件、机器人或国产边缘设备采购要求，不预认软件收入。</p><p><b>建议行动：</b>暂不投入独立投标准备；商务先核对公司是否具备海南现场运营团队、人员资格和考核履约资源。只有业主明确认可数字化增量需求并形成合法采购路径，再安排方案预研；不臆测可分包或可联合投标。</p><div class="source">来源：<a href="https://www.bidding.csg.cn/zbgg/1200442351.jhtml" rel="noopener noreferrer">海南一张网示范基地｜2026-09-11，首次补录</a></div></article><p class="note">本项是首次发现的历史公告筛选记录，不是 9 月 14 日新发招标。无其他已核实新商机；现有采购的本周动作集中列于下表，公司报名、资格与取件状态均待内部核对。</p>
+      </section>
+
+      <section id="tracking" class="card">
+        <div class="section-head"><div><div class="kicker">08 · TRACKING</div><h2>八、持续跟踪事项</h2></div></div>
+<p class="note">以下是存量事项的一行状态记录；“到截止日”是时间提醒，不算项目实质新增。未检索到变更不等于不存在变更，提交前须核对采购平台澄清与自身资格。</p><div class="table-wrap" tabindex="0"><table><thead><tr><th>事项名称／原始来源</th><th>当前状态</th><th>今日是否有实质新增</th><th>下一观察节点（上海时间）</th></tr></thead><tbody><tr><td>电算工程运维工具<br><a href="https://www.bidding.csg.cn/zbgg/1200441737.jhtml" rel="noopener noreferrer">电算工程运维工具｜2026-09-08</a></td><td>原招标有效状态以采购平台为准；30 天交付、制造商或唯一授权门槛</td><td>无；今日到取件末日</td><td>9 月 14 日 23:59:59 前核对资格并完成取件决策；投标 9 月 29 日 09:00</td></tr><tr><td>梅州应急指挥运维<br><a href="https://www.bidding.csg.cn/zbgg/1200441703.jhtml" rel="noopener noreferrer">梅州应急指挥运维｜2026-09-07</a></td><td>原公告取件期内，参与情况未确认</td><td>无；今日到取件末日</td><td>9 月 14 日 23:00 前核对现场人员与资料</td></tr><tr><td>台风分析服务<br><a href="https://www.bidding.csg.cn/zbgg/1200441698.jhtml" rel="noopener noreferrer">台风分析服务｜2026-09-07</a></td><td>原公告取件期内，气象专业履约需确认</td><td>无；今日到取件末日</td><td>9 月 14 日 23:59:59 前完成取舍</td></tr><tr><td>新致力终端加工框架<br><a href="https://www.bidding.csg.cn/zbgg/1200441734.jhtml" rel="noopener noreferrer">新致力终端加工｜2026-09-08</a></td><td>制造加工及售后能力门槛不变</td><td>无</td><td>取件 9 月 15 日 23:59:59；投标 9 月 29 日 09:00</td></tr><tr><td>广州科技二次招标<br><a href="https://www.bidding.csg.cn/zbgg/1200442202.jhtml" rel="noopener noreferrer">广州科技二次招标｜2026-09-10</a></td><td>仅标的 1、3、4、5、6 重招，不能将表中标的 2 视为开放</td><td>无</td><td>取件 9 月 16 日 18:00；投标 10 月 9 日 09:00</td></tr><tr><td>三维数字化移交框架<br><a href="https://www.bidding.csg.cn/zbgg/1200442220.jhtml" rel="noopener noreferrer">三维移交框架｜2026-09-10</a></td><td>业务量、结算与平台接口仍需合同澄清</td><td>无</td><td>取件 9 月 17 日 23:59:59；投标 10 月 12 日 09:00</td></tr><tr><td>边缘视频／数据治理组件<br><a href="https://www.bidding.csg.cn/zbgg/1200442385.jhtml" rel="noopener noreferrer">边缘视频二次招标｜2026-09-11</a><br><a href="https://www.bidding.csg.cn/zbgg/1200442382.jhtml" rel="noopener noreferrer">数据治理组件招标｜2026-09-11</a></td><td>上期已完整报道；需技术规范与独立履约评审</td><td>无</td><td>均于 9 月 18 日 23:59:59 截止取件；分别核对验收、付款与违约条款</td></tr><tr><td>深蓄多模态巡检<br><a href="https://www.bidding.csg.cn/zbgg/1200440598.jhtml" rel="noopener noreferrer">深蓄多模态巡检｜原公告</a></td><td>取件窗口已过，仅已合法取得资格者推进</td><td>无</td><td>有效参与者于 9 月 21 日 08:30 前完成投标文件核对</td></tr></tbody></table></div>
+      </section>
+
+      <section id="insights" class="card">
+        <div class="section-head"><div><div class="kicker">09 · INSIGHT</div><h2>九、今日技术洞察</h2></div></div>
+<article class="item"><h3>未来 1–3 年：交付壁垒落在可审查的运行证据</h3><p><b>已确认事实／依据：</b>本期两个版本修复揭示了数据路径、权重和执行设备等可影响复现的环节；麒麟适配则展示了通用助手的工作流交付方向。</p><div class="verdict"><b>判断：</b>公司可验证的机会是把视觉模型、国产设备和人工规程连成可追溯的产品交付包。长期壁垒来自场景缺陷数据、异常回退案例、跨设备兼容矩阵和客户认可的验收模板，不应按新版本数量衡量能力。</div><p><b>验证重点与国产化价值：</b>优先证明模型一致性、执行设备透明、隔离恢复和证据可导出；用统一测试包减少每种国产设备重复集成的成本。核电只进入非安全级辅助环节，AI 辅助决策、人机协同、人工复核、规程优先。</p><p><b>建议行动：</b>算法、平台与交付负责人共同建设一个“运行证据包”样例，包含合规数据来源、误漏报分层结果、功耗时延、离线部署、降级日志和审批记录。此为建议任务，尚未执行客户验证。</p><div class="source">来源：<a href="https://github.com/ultralytics/ultralytics/releases/tag/v8.4.149" rel="noopener noreferrer">Ultralytics v8.4.149｜2026-09-12</a> <a href="https://github.com/ultralytics/ultralytics/releases/tag/v8.4.150" rel="noopener noreferrer">Ultralytics v8.4.150｜2026-09-12</a> <a href="https://www.sensetime.com/cn/news/raccoon-work-ai" rel="noopener noreferrer">商汤官网｜2026-09-09，首次补录</a></div></article>
+      </section>
+
+      <section id="actions" class="card">
+        <div class="section-head"><div><div class="kicker">10 · ACTION</div><h2>十、给公司的建议</h2></div></div>
+<div class="mini-grid"><article class="mini-card"><h3>今日建议（3 条）</h3><p>1. <b>商务：</b>上午核对今日到期三项存量商机的资格、取件及人员资源，给出参与／放弃记录；纯劳务项目先筛除能力错配。</p><p>2. <b>算法与交付：</b>启动 148/149/150 受控回归，先验证 CPU 回退可见、续训数据一致、可信权重加载与超时处置。</p><p>3. <b>产品与安全：</b>完成国产桌面助手的内网准入问题表，使用脱敏资料评估权限和审计，禁止直接接入生产控制。</p></article><article class="mini-card"><h3>短期行动（1–3 个月）</h3><p><b>交付负责人：</b>选定一个经客户同意的非安全级场景及两组候选国产设备组合，固化样本与指标；输出误漏报、P95 时延、功耗、隔离安装和回滚证据。阈值由客户场景确认，不预设虚构达标结果。</p></article><article class="mini-card"><h3>中长期规划（6–24 个月）</h3><p><b>研发负责人：</b>沉淀设备／模型／OS 兼容矩阵与可复用证据链组件；建立缺陷数据版本管理、人工复核反馈和只读行业助手能力，用可审查交付包支持多项目复制。</p></article></div>
+      </section>
+
+      <section id="method" class="card">
+        <div class="section-head"><div><div class="kicker">METHODOLOGY</div><h2>信息说明</h2></div></div>
+<p class="note">信息截点：2026-09-14 09:00（Asia/Shanghai）。本次运行在 09:17 启动，按已公开的截点前事实编写；最近一期为 2026-09-12（截点 11:00），未补造 9 月 13 日日报。核对国家核安全局、南网采购公告、开源官方发布与企业官网，并对历史全文去重。9 月 12 日下午／晚间的两次版本发布属于相较上期新增；9 月 9 日麒麟适配与 9 月 11 日海南劳务公告明确标注首次补录。通用搜索线索未经原始来源验证不入正文。“今日无高价值新增”仅指本次已核实来源范围，不代表全行业没有活动。</p><p class="note">新闻事实、编辑判断与建议任务分别标示。软件说明是项目方发布内容，尚无本公司模型、国产设备或核电场景实测；企业适配声明不等于独立验收。金额是公告预算／限价而非本公司收入，取件与投标资格须内部核对。AI 辅助决策、人机协同、人工复核、规程优先。</p><p class="source">核安全检索入口：<a href="https://nnsa.mee.gov.cn/ywdt/gzdt/" rel="noopener noreferrer">国家核安全局监管动态｜本次检索入口</a></p><p class="note">本期永久地址：<a href="https://daily.851473.xyz/reports/2026-09-14/">https://daily.851473.xyz/reports/2026-09-14/</a></p>
+      </section>
+    </div>
+
+    <aside class="card toc" aria-label="本期目录">
+      <h2>本期目录</h2>
+      <a href="#industry">01 重大行业事件</a>
+      <a href="#inspection">02 智慧巡检</a>
+      <a href="#ai">03 AI 视觉与多模态</a>
+      <a href="#domestic">04 国产硬件与边缘智能</a>
+      <a href="#data">05 数据治理与数字孪生</a>
+      <a href="#competitors">06 竞争对手</a>
+      <a href="#opportunities">07 商业机会</a>
+      <a href="#tracking">08 持续跟踪</a>
+      <a href="#insights">09 技术洞察</a>
+      <a href="#actions">10 公司建议</a>
+      <a href="#method">信息说明</a>
+    </aside>
+  </main>
+
+  <footer>每日推送 · 2026-09-14 · <a href="/archive/">查看历史归档</a></footer>
+</body>
+</html>
