@@ -1,0 +1,192 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="先筛可交付电网数字化项目，再锁定视觉推理回归：今天核对414.58万元场景集成资格，研发验证8.4.157的TensorRT变化。">
+  <meta property="og:title" content="核电智慧巡检与工业智能化行业日报 · 2026-09-21">
+  <meta property="og:description" content="先筛可交付电网数字化项目，再锁定视觉推理回归：今天核对414.58万元场景集成资格，研发验证8.4.157的TensorRT变化。">
+  <meta property="og:type" content="article">
+  <meta property="og:url" content="https://daily.851473.xyz/reports/2026-09-21/">
+  <meta property="og:image" content="https://daily.851473.xyz/reports/2026-09-21/cover.png">
+  <meta name="report-contract" content="nuclear-daily-v2">
+  <link rel="canonical" href="https://daily.851473.xyz/reports/2026-09-21/">
+  <title>核电智慧巡检与工业智能化行业日报 · 2026-09-21</title>
+  <style>
+    :root {
+      --accent: #0d6b4f;
+      --accent-strong: #063d30;
+      --accent-soft: #dff4eb;
+      --page: #f4f6f2;
+      --surface: #ffffff;
+      --text: #13201c;
+      --muted: #65736d;
+      --border: #dfe6e1;
+      --shadow: 0 12px 36px rgba(24, 51, 41, .08);
+      --radius-card: 18px;
+      --space-card: 24px;
+    }
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body { margin: 0; background: var(--page); color: var(--text); font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang SC", "Microsoft YaHei", sans-serif; font-size: 15px; line-height: 1.7; overflow-wrap: anywhere; }
+    img { max-width: 100%; height: auto; }
+    a { color: var(--accent); text-decoration-thickness: 1px; text-underline-offset: 3px; }
+    a:hover { color: var(--accent-strong); }
+    a:focus-visible { outline: 3px solid var(--accent-soft); outline-offset: 3px; border-radius: 4px; }
+    .wrap { width: min(1120px, calc(100% - 32px)); margin-inline: auto; }
+    .hero { padding: 52px 0 46px; color: #fff; background: radial-gradient(circle at 82% 18%, var(--accent) 0, transparent 30%), linear-gradient(135deg, var(--accent-strong), var(--accent)); border-bottom: 4px solid var(--accent-soft); }
+    .eyebrow { color: rgba(255, 255, 255, .78); font-size: 12px; font-weight: 800; letter-spacing: .16em; text-transform: uppercase; }
+    .hero h1 { max-width: 880px; margin: 10px 0 14px; font-size: clamp(30px, 5vw, 54px); line-height: 1.14; text-wrap: balance; }
+    .hero .lead { max-width: 820px; margin: 0; color: rgba(255, 255, 255, .86); font-size: clamp(15px, 2vw, 17px); }
+    .meta { display: flex; flex-wrap: wrap; gap: 9px; margin-top: 22px; }
+    .pill { padding: 6px 11px; border: 1px solid rgba(255, 255, 255, .28); border-radius: 999px; background: rgba(255, 255, 255, .09); font-size: 12px; }
+    .summary { position: relative; margin-top: -24px; }
+    .summary-grid { display: grid; grid-template-columns: 1.4fr repeat(2, minmax(0, 1fr)); gap: 12px; }
+    .card { padding: var(--space-card); border: 1px solid var(--border); border-radius: var(--radius-card); background: var(--surface); box-shadow: var(--shadow); }
+    .summary-card { min-width: 0; padding: 20px; }
+    .summary-card.primary { background: var(--accent-soft); border-color: var(--accent); }
+    .summary-card b { display: block; margin-bottom: 5px; color: var(--accent-strong); font-size: 13px; }
+    .summary-card strong { display: block; color: var(--accent); font-size: clamp(20px, 3vw, 26px); line-height: 1.25; }
+    .summary-card p { margin: 6px 0 0; color: var(--muted); font-size: 13px; }
+    main { padding: 34px 0 56px; }
+    .layout { display: grid; grid-template-columns: minmax(0, 1fr) 250px; gap: 24px; align-items: start; }
+    .content { min-width: 0; }
+    .content > .card { margin-bottom: 18px; }
+    .toc { position: sticky; top: 16px; padding: 18px; box-shadow: 0 4px 18px rgba(24, 51, 41, .05); }
+    .toc h2 { margin: 0 0 10px; color: var(--muted); font-size: 12px; letter-spacing: .12em; }
+    .toc a { display: block; padding: 6px 0; color: var(--muted); font-size: 13px; text-decoration: none; }
+    .toc a:hover { color: var(--accent); }
+    .section-head { display: flex; align-items: flex-start; justify-content: space-between; gap: 14px; margin-bottom: 6px; padding-bottom: 14px; border-bottom: 1px solid var(--border); }
+    .section-head h2 { margin: 0; color: var(--accent-strong); font-size: clamp(19px, 3vw, 23px); line-height: 1.35; }
+    .kicker { margin-bottom: 4px; color: var(--accent); font-size: 12px; font-weight: 800; letter-spacing: .08em; }
+    .rank { color: var(--muted); font-size: 12px; white-space: nowrap; }
+    .item { padding: 19px 0; border-bottom: 1px dashed var(--border); }
+    .item:last-child { padding-bottom: 2px; border-bottom: 0; }
+    .item h3 { margin: 0 0 8px; font-size: 18px; line-height: 1.45; text-wrap: pretty; }
+    .item p { margin: 7px 0; color: var(--muted); font-size: 14px; }
+    .tags { display: flex; flex-wrap: wrap; gap: 7px; margin: 9px 0; }
+    .tag { padding: 3px 8px; border-radius: 999px; background: var(--accent-soft); color: var(--accent-strong); font-size: 11px; font-weight: 800; }
+    .tag.warn { background: #fff0d8; color: #8a5a10; }
+    .tag.risk { background: #fae5e1; color: #a7332c; }
+    .verdict { margin-top: 12px; padding: 12px 14px; border-left: 3px solid var(--accent); border-radius: 0 10px 10px 0; background: var(--accent-soft); font-size: 14px; }
+    .source { margin-top: 10px; color: var(--muted); font-size: 12px; }
+    .source a { margin-right: 10px; }
+    .mini-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 12px; margin-top: 16px; }
+    .mini-card { padding: 16px; border: 1px solid var(--border); border-radius: 14px; background: var(--page); }
+    .mini-card h3 { margin: 0 0 7px; font-size: 16px; }
+    .mini-card p { margin: 6px 0; color: var(--muted); font-size: 13px; }
+    .table-wrap { max-width: 100%; margin-top: 14px; overflow-x: auto; border-radius: 12px; }
+    .table-wrap:focus-visible { outline: 3px solid var(--accent-soft); outline-offset: 2px; }
+    table { width: 100%; min-width: 620px; border-collapse: collapse; font-size: 13px; }
+    th, td { padding: 11px 10px; border-bottom: 1px solid var(--border); text-align: left; vertical-align: top; }
+    th { background: var(--accent-soft); color: var(--accent-strong); }
+    .note { margin-top: 15px; padding: 11px 13px; border-radius: 10px; background: var(--page); color: var(--muted); font-size: 12px; }
+    footer { padding: 0 16px 32px; color: var(--muted); text-align: center; font-size: 12px; }
+    @media (max-width: 900px) {
+      .summary-grid { grid-template-columns: 1fr 1fr; }
+      .summary-card.primary { grid-column: 1 / -1; }
+      .layout { grid-template-columns: 1fr; }
+      .toc { position: static; display: none; }
+    }
+    @media (max-width: 640px) {
+      .wrap { width: min(100% - 24px, 1120px); }
+      .hero { padding: 40px 0 38px; }
+      .summary-grid, .mini-grid { grid-template-columns: 1fr; }
+      .summary-card.primary { grid-column: auto; }
+      .card { padding: 19px 17px; }
+      .section-head { display: block; }
+      .rank { display: block; margin-top: 6px; white-space: normal; }
+    }
+  </style>
+</head>
+<body>
+  <header class="hero">
+    <div class="wrap">
+      <div class="eyebrow">DAILY BRIEFING</div>
+      <h1>核电智慧巡检与工业智能化行业日报</h1>
+      <p class="lead">先筛可交付电网数字化项目，再锁定视觉推理回归：今天核对414.58万元场景集成资格，研发验证8.4.157的TensorRT变化。</p>
+      <div class="meta"><span class="pill">2026年9月21日 · 星期一</span><span class="pill">信息截点 09:00 · Asia/Shanghai</span></div>
+    </div>
+  </header>
+
+  <div class="wrap summary" aria-label="今日摘要">
+    <div class="summary-grid"><section class="card summary-card primary"><b>今日一句话结论</b><strong>先筛可交付项目，再锁推理回归</strong><p>商务核资格与成本，研发锁版本、设备和回滚。</p></section><section class="card summary-card"><b>今日新增</b><strong>414.58 万元场景集成</strong><p>南网数字电网设备加装及集成招标今日 08:33 发布。</p></section><section class="card summary-card"><b>建议动作</b><strong>今天完成两项核对</strong><p>核对关键产品授权与独立履约；安排 8.4.157 回归。</p></section></div>
+  </div>
+
+  <main class="wrap layout">
+    <div class="content">
+      <section id="industry" class="card">
+        <div class="section-head"><div><div class="kicker">01 · INDUSTRY</div><h2>一、今日重大行业事件</h2></div><div class="rank">精选事实与部署判断</div></div>
+<p class="note">相较 9 月 20 日新增；采购公告是机会信号，不等于中标或收入确认。</p><article class="item"><h3>1. 南网数字电网：输变配用电场景设备加装及集成</h3><p><b>已确认事实：</b>公告于 2026-09-21 08:33:12 发布，项目编号 CG2100022002409623，概算及最高限价 414.579628 万元；覆盖输电、变电、配电、计量、基础软件平台、硬件验证和智慧工程调试，合同签订后 40 个工作日完成方案与供货，工期至 2027 年 6 月。</p><div class="verdict"><b>判断：</b>设备、数据接入、测试和集成调试是一体交付，算法单点切入不足；机会更适合有设备供应链、现场实施和平台集成能力的联合内部方案，但公告不接受联合体。</div><p><b>建议行动：</b>商务今天完成关键产品清单、制造商/唯一授权、审计财务和既有业绩核对；研发拆分视觉、数据接入和测试验收包，不把概算当作订单。</p><p class="source">来源：<a href="https://www.bidding.csg.cn/zbgg/1200443485.jhtml" rel="noopener noreferrer">南方电网供应链｜2026-09-21</a></p></article><article class="item"><h3>2. 深圳供电局：智慧监督系统升级与应急能力评估</h3><p><b>已确认事实：</b>9 月 20 日 17:07:30 发布，两个标的概算分别为 1378.8631 万元和 47.2185 万元；范围含承包商管理、人员评价、监督驾驶舱、有限空间作业管控、应急一张图及静态/动态应急评估。</p><div class="verdict"><b>判断：</b>与数据治理、驾驶舱和证据链能力高度相关，但服务类交付包含培训、现场评估与报告，不宜只按软件项目报价。</div><p><b>建议行动：</b>先做资格、服务半径和交付人员测算；若无独立履约能力则暂不投入，不假设允许联合体。</p><p class="source">来源：<a href="https://www.bidding.csg.cn/zbgg/1200443474.jhtml" rel="noopener noreferrer">南方电网供应链｜2026-09-20</a></p></article>
+      </section>
+
+      <section id="inspection" class="card">
+        <div class="section-head"><div><div class="kicker">02 · INSPECTION</div><h2>二、智慧巡检最新动态</h2></div><div class="rank">精选事实</div></div>
+<p class="note">今日未核实新的核电智慧巡检采购、中标或生产上线；南网深蓄多模态巡检仍为存量跟踪。</p><article class="item"><h3>存量任务：把多模态巡检拆成可验收证据</h3><p><b>已确认事实：</b>深蓄项目原公告包含四足机器人、多传感器、测温、表计识别和缺陷排查；今日未核实澄清、中标或公司参与状态。</p><div class="verdict"><b>判断：</b>核电适用场景仍需脱敏数据、人工复核和规程边界；监管或采购文本没有证明 AI 已上线。</div><p><b>建议行动：</b>产品与质保各选一个设备对象，建立原图、传感器、模型版本、告警原因、工单和人工签署链；只做非安全级辅助验证。</p><p class="source">来源：<a href="https://www.bidding.csg.cn/zbgg/1200440598.jhtml" rel="noopener noreferrer">深蓄多模态巡检原公告</a></p></article>
+      </section>
+
+      <section id="ai" class="card">
+        <div class="section-head"><div><div class="kicker">03 · AI</div><h2>三、AI 视觉与多模态技术进展</h2></div><div class="rank">2 个重点版本</div></div>
+<article class="item"><h3>1. Ultralytics v8.4.157：TensorRT FP16/INT8 与静态图优化</h3><p><b>已确认事实：</b>官方页面显示 9 月 20 日 13:58 UTC 发布（上海 9 月 20 日 21:58），改进 TensorRT FP16/INT8 引擎、SiLU 融合和支持静态形状的 CUDA Graph，并调整 YOLOE-26 prompt-free 双 head 与 NMS 选择。官方描述“最高 20%”是上游预期，非本公司实测。</p><p><b>工程限制：</b>需授权脱敏数据、低照度/反光/小缺陷分层集，内网白名单依赖；保留配置、校准、输出和人工复核证据，不替代法定检验。</p><div class="verdict"><b>判断：</b>适合做非安全级视觉边缘推理的升级候选，但静态形状、嵌入式 NMS、DLA 和动态引擎限制会改变收益；国产加速卡兼容性不能由 TensorRT 文档推断。</div><p><b>建议行动：</b>立即做 8.4.156/157 同权重、同缺陷集、同输入的浮点/FP16/INT8 回归，记录误漏报、P95 时延、功耗、温升、驱动和回滚；通过后再决定 PoC 后采用。</p><p class="source">来源：<a href="https://github.com/ultralytics/ultralytics/releases/tag/v8.4.157" rel="noopener noreferrer">Ultralytics v8.4.157｜官方发布</a></p></article><article class="item"><h3>2. 与 8.4.156 的连续性：数据与量化仍需锁定</h3><p><b>已确认事实：</b>前一期 8.4.156 已改变远程 NDJSON 缓存与量化范围处理；今日未发现新核电现场测试或国产 NPU 验收证据。</p><div class="verdict"><b>判断：</b>版本升级必须把数据清单、校准输入和后端算子当作同一变更单元。</div><p><b>建议行动：</b>研发将版本、权重、数据哈希、导出参数和设备驱动写入回归清单；没有一致性证据则维持现版本。</p><p class="source">来源：<a href="https://github.com/ultralytics/ultralytics/releases/tag/v8.4.157" rel="noopener noreferrer">Ultralytics 官方版本链</a></p></article>
+      </section>
+
+      <section id="domestic" class="card">
+        <div class="section-head"><div><div class="kicker">04 · DOMESTIC STACK</div><h2>四、国产硬件与边缘智能专项</h2></div><div class="rank">精选事实与部署判断</div></div>
+<p class="note">今日未核实新的国产 CPU/GPU/NPU 发布或核电部署结果；龙芯官网 9 月 20 日披露的是安全能力荣誉，不能替代型号适配证据。</p><div class="mini-grid"><article class="mini-card"><h3>4.1 CPU 与服务器</h3><p><b>判断：</b>主力沿用已验收组合；国产 CPU 仅在驱动、数据库、推理后端和运维矩阵通过后替换。</p><p><b>结论：</b>PoC 后采用，未经验证暂不进生产。</p></article><article class="mini-card"><h3>4.2 GPU / NPU</h3><p><b>判断：</b>8.4.157 的 TensorRT 变化不能证明国产加速卡可用。</p><p><b>结论：</b>逐设备测算子覆盖、精度、功耗和回退日志后再采用。</p></article><article class="mini-card"><h3>4.3 边缘设备</h3><p><b>判断：</b>优先验证摄像头接入、断网缓存、掉电恢复、温升和长稳。</p><p><b>结论：</b>仅列 PoC 候选，暂不宣称主力。</p></article><article class="mini-card"><h3>4.4 OS 与基础软件</h3><p><b>已确认事实：</b>龙芯官网 9 月 20 日披露获 CNNVD 基础软硬件漏洞管理优秀企业称号。</p><p><b>判断：</b>安全能力信号不等于核电场景认证。</p><p><b>结论：</b>持续跟踪，按项目逐项审查。</p><p class="source">来源：<a href="https://loongson.cn/" rel="noopener noreferrer">龙芯中科｜2026-09-20</a></p></article></div><article class="item"><h3>4.5 今日部署建议</h3><p><b>主力：</b>维持客户已验收的中心平台与边缘组合；模型后端可替换。</p><p><b>备选：</b>国产 CPU/加速卡/OS 先做离线 PoC，锁定许可、网络隔离、解释性和回滚。</p><div class="verdict"><b>结论：</b>PoC 后采用；未完成目标设备实测前，不进入生产和安全相关控制。</div></article>
+      </section>
+
+      <section id="data" class="card">
+        <div class="section-head"><div><div class="kicker">05 · DATA &amp; TWIN</div><h2>五、工业数据治理与数字孪生趋势</h2></div></div>
+<article class="item"><h3>从招标验收到数据对象治理</h3><p><b>已确认事实：</b>南网数字电网项目明确设备购置、安装、测试、数据接入和集成调试；深圳智慧监督项目覆盖人员评价、驾驶舱和应急一张图。</p><div class="verdict"><b>判断：</b>两类项目共同要求“设备—人员—事件—证据—验收”关联，数字孪生应服务于可追溯交付，不以三维展示替代记录。</div><p><b>建议行动：</b>用一个脱敏设备对象建立数据字典、来源哈希、权限、模型版本、整改状态和复核签署；先交付证据链，再扩展孪生展示。</p><p class="source">来源：<a href="https://www.bidding.csg.cn/zbgg/1200443485.jhtml" rel="noopener noreferrer">南网设备集成公告</a></p><p class="source">来源：<a href="https://www.bidding.csg.cn/zbgg/1200443474.jhtml" rel="noopener noreferrer">深圳智慧监督公告</a></p></article>
+      </section>
+
+      <section id="competitors" class="card">
+        <div class="section-head"><div><div class="kicker">06 · COMPETITORS</div><h2>六、竞争对手动态</h2></div><div class="rank">精选事实</div></div>
+<article class="item"><h3>南网数字运营：客户档案与智能客服平台化采购</h3><p><b>已确认事实：</b>9 月 20 日 11:02:05 公告，概算包括客户档案管理认证 602.38 万元、95598 平台优化 183.25 万元、智能客服 203.03 万元；范围含全链路监控、智能质检和智能外呼。</p><div class="verdict"><b>判断：</b>竞争重点从单一模型转向数据模型、流程改造、灾备和可审计服务；与核电场景可迁移的是质检、事件分类和全链路监控方法。</div><p><b>建议行动：</b>持续跟踪其交付边界与生态伙伴；公司产品按行业规则、来源链和离线隔离形成差异。</p><p class="source">来源：<a href="https://www.bidding.csg.cn/zbgg/1200443339.jhtml" rel="noopener noreferrer">南方电网供应链｜2026-09-20</a></p></article><article class="item"><h3>国产基础软件安全生态：龙芯安全能力信号</h3><p><b>已确认事实：</b>龙芯官网 9 月 20 日披露获 CNNVD 相关荣誉；未披露本期核电项目或性能测试。</p><div class="verdict"><b>判断：</b>可作为国产化生态观察项，不能写成客户认证或生产部署。</div><p><b>建议行动：</b>持续跟踪漏洞响应、LoongOS/Loongnix 版本与目标设备适配，暂不承诺替换。</p><p class="source">来源：<a href="https://loongson.cn/" rel="noopener noreferrer">龙芯中科｜2026-09-20</a></p></article>
+      </section>
+
+      <section id="opportunities" class="card">
+        <div class="section-head"><div><div class="kicker">07 · OPPORTUNITIES</div><h2>七、商业机会</h2></div><div class="rank">2 个条件筛选项</div></div>
+<article class="item"><h3>优先筛选：南网数字电网场景设备集成，414.58 万元</h3><p><b>已确认事实：</b>项目今日 08:33 发布，固定总价，40 个工作日完成方案设计及设备供货，至 2027 年 6 月；不接受联合体，关键产品须制造商或唯一授权代理商，需近三年审计财务报告。</p><div class="verdict"><b>判断：</b>高相关但交付面宽，若无设备、现场和集成能力，纯软件团队匹配不足；金额是概算/限价，不是保证收入。</div><p><b>建议行动：</b>今天完成关键产品与唯一授权、现金流和既有案例清单；未满足资质或履约能力则暂不投入。</p><p class="source">来源：<a href="https://www.bidding.csg.cn/zbgg/1200443485.jhtml" rel="noopener noreferrer">南网数字电网场景设备集成公告</a></p></article><article class="item"><h3>条件筛选：深圳智慧监督升级，1378.86 万元标的</h3><p><b>已确认事实：</b>项目含承包商管理、监督驾驶舱、有限空间作业管控与应急一张图，服务至 2026 年底，不接受联合体。</p><div class="verdict"><b>判断：</b>与证据链和数据治理匹配，但需现场评估、培训和应急服务能力。</div><p><b>建议行动：</b>商务在 9 月 22 日前完成服务资源与资格核对；不具备独立履约能力则放弃。</p><p class="source">来源：<a href="https://www.bidding.csg.cn/zbgg/1200443474.jhtml" rel="noopener noreferrer">深圳供电局公告</a></p></article>
+      </section>
+
+      <section id="tracking" class="card">
+        <div class="section-head"><div><div class="kicker">08 · TRACKING</div><h2>八、持续跟踪事项</h2></div></div>
+<p class="note">旧项目无实质新增只保留状态；公司参与、取件和澄清均需内部确认。</p><div class="table-wrap" tabindex="0"><table><thead><tr><th>事项／来源</th><th>当前状态</th><th>今日新增</th><th>下一观察节点</th></tr></thead><tbody><tr><td><a href="https://www.bidding.csg.cn/zbgg/1200440598.jhtml" rel="noopener noreferrer">深蓄多模态巡检</a></td><td>原公告项目，资格和参与状态未知</td><td>无</td><td>核对澄清、中标及有效参与资格</td></tr><tr><td><a href="https://www.bidding.csg.cn/zbgg/1200443339.jhtml" rel="noopener noreferrer">南网数字运营软件</a></td><td>9 月 20 日公告，需核对服务边界</td><td>无（昨日已收录）</td><td>资格、技术附件和交付资源</td></tr><tr><td><a href="https://www.bidding.csg.cn/zbgg/1200443442.jhtml" rel="noopener noreferrer">海南现场安全监督</a></td><td>9 月 20 日 18:41 公告，291.4124 万元，12 个月</td><td>今日无新增</td><td>核对专用资格与文件获取截止</td></tr></tbody></table></div>
+      </section>
+
+      <section id="insights" class="card">
+        <div class="section-head"><div><div class="kicker">09 · INSIGHT</div><h2>九、今日技术洞察</h2></div></div>
+<article class="item"><h3>1–3 年机会：可审查的现场交付包</h3><p><b>已确认事实：</b>今日新增项目同时要求设备安装、数据接入、测试、监督驾驶舱或应急评估；v8.4.157 又要求固定形状、驱动与后端协同。</p><div class="verdict"><b>判断：</b>长期壁垒是行业数据、验收规则、跨设备回归和交付团队的组合，而非单一模型速度。国产化价值在替换后端、可维护和隔离部署。</div><p><b>建议行动：</b>产品、研发、质保共建“对象—数据—模型—设备—人工签署”验收包，先在非安全级场景验证，再按客户审查扩展。</p><p class="source">来源：<a href="https://www.bidding.csg.cn/zbgg/1200443485.jhtml" rel="noopener noreferrer">场景集成公告</a></p><p class="source">来源：<a href="https://github.com/ultralytics/ultralytics/releases/tag/v8.4.157" rel="noopener noreferrer">v8.4.157 官方发布</a></p></article>
+      </section>
+
+      <section id="actions" class="card">
+        <div class="section-head"><div><div class="kicker">10 · ACTION</div><h2>十、给公司的建议</h2></div></div>
+<div class="mini-grid"><article class="mini-card"><h3>今天</h3><p>商务核对 414.58 万元项目的关键产品授权、财务、案例与独立履约；研发锁 8.4.157 回归矩阵；质保定义证据字段。</p></article><article class="mini-card"><h3>1–3 个月</h3><p>完成离线只读 PoC、误漏报与时延报告、国产设备兼容矩阵和权限回滚测试，形成可审查交付包。</p></article><article class="mini-card"><h3>6–24 个月</h3><p>建设跨 CPU/OS/加速后端的模型与数据治理平台，沉淀核电规则、复核反馈和现场实施能力。</p></article></div>
+      </section>
+
+      <section id="method" class="card">
+        <div class="section-head"><div><div class="kicker">METHODOLOGY</div><h2>信息说明</h2></div></div>
+<p class="note">信息截点：2026-09-21 09:00（Asia/Shanghai）。重点来源为国家核安全局、南方电网供应链、Ultralytics 官方发布页和龙芯官网；已与 9 月 20 日日报去重。采购概算不等于订单，软件版本说明不等于本公司实测，AI 仅作辅助决策、人机协同、人工复核、规程优先。</p><p class="note">本期永久地址：<a href="https://daily.851473.xyz/reports/2026-09-21/" rel="noopener noreferrer">https://daily.851473.xyz/reports/2026-09-21/</a>；封面为抽象示意，不代表真实厂区、客户或已部署产品。</p>
+      </section>
+    </div>
+
+    <aside class="card toc" aria-label="本期目录">
+      <h2>本期目录</h2>
+      <a href="#industry">01 重大行业事件</a>
+      <a href="#inspection">02 智慧巡检</a>
+      <a href="#ai">03 AI 视觉与多模态</a>
+      <a href="#domestic">04 国产硬件与边缘智能</a>
+      <a href="#data">05 数据治理与数字孪生</a>
+      <a href="#competitors">06 竞争对手</a>
+      <a href="#opportunities">07 商业机会</a>
+      <a href="#tracking">08 持续跟踪</a>
+      <a href="#insights">09 技术洞察</a>
+      <a href="#actions">10 公司建议</a>
+      <a href="#method">信息说明</a>
+    </aside>
+  </main>
+
+  <footer>每日推送 · 2026-09-21 · <a href="/archive/">查看历史归档</a></footer>
+</body>
+</html>
