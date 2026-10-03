@@ -1,0 +1,200 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="先筛机巡图像融合，再验图纸审核与人工复核。">
+  <meta property="og:title" content="核电智慧巡检与工业智能化行业日报 · 2026-10-03">
+  <meta property="og:description" content="先筛机巡图像融合，再验图纸审核与人工复核。">
+  <meta property="og:type" content="article">
+  <meta property="og:url" content="https://daily.851473.xyz/reports/2026-10-03/">
+  <meta property="og:image" content="https://daily.851473.xyz/reports/2026-10-03/cover.png">
+  <meta name="report-contract" content="nuclear-daily-v2">
+  <link rel="canonical" href="https://daily.851473.xyz/reports/2026-10-03/">
+  <title>核电智慧巡检与工业智能化行业日报 · 2026-10-03</title>
+  <style>
+    :root {
+      --accent: #0d6b4f;
+      --accent-strong: #063d30;
+      --accent-soft: #dff4eb;
+      --page: #f4f6f2;
+      --surface: #ffffff;
+      --text: #13201c;
+      --muted: #65736d;
+      --border: #dfe6e1;
+      --shadow: 0 12px 36px rgba(24, 51, 41, .08);
+      --radius-card: 18px;
+      --space-card: 24px;
+    }
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body { margin: 0; background: var(--page); color: var(--text); font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang SC", "Microsoft YaHei", sans-serif; font-size: 15px; line-height: 1.7; overflow-wrap: anywhere; }
+    img { max-width: 100%; height: auto; }
+    a { color: var(--accent); text-decoration-thickness: 1px; text-underline-offset: 3px; }
+    a:hover { color: var(--accent-strong); }
+    a:focus-visible { outline: 3px solid var(--accent-soft); outline-offset: 3px; border-radius: 4px; }
+    .wrap { width: min(1120px, calc(100% - 32px)); margin-inline: auto; }
+    .hero { padding: 52px 0 46px; color: #fff; background: radial-gradient(circle at 82% 18%, var(--accent) 0, transparent 30%), linear-gradient(135deg, var(--accent-strong), var(--accent)); border-bottom: 4px solid var(--accent-soft); }
+    .eyebrow { color: rgba(255, 255, 255, .78); font-size: 12px; font-weight: 800; letter-spacing: .16em; text-transform: uppercase; }
+    .hero h1 { max-width: 880px; margin: 10px 0 14px; font-size: clamp(30px, 5vw, 54px); line-height: 1.14; text-wrap: balance; }
+    .hero .lead { max-width: 820px; margin: 0; color: rgba(255, 255, 255, .86); font-size: clamp(15px, 2vw, 17px); }
+    .meta { display: flex; flex-wrap: wrap; gap: 9px; margin-top: 22px; }
+    .pill { padding: 6px 11px; border: 1px solid rgba(255, 255, 255, .28); border-radius: 999px; background: rgba(255, 255, 255, .09); font-size: 12px; }
+    .summary { position: relative; margin-top: -24px; }
+    .summary-grid { display: grid; grid-template-columns: 1.4fr repeat(2, minmax(0, 1fr)); gap: 12px; }
+    .card { padding: var(--space-card); border: 1px solid var(--border); border-radius: var(--radius-card); background: var(--surface); box-shadow: var(--shadow); }
+    .summary-card { min-width: 0; padding: 20px; }
+    .summary-card.primary { background: var(--accent-soft); border-color: var(--accent); }
+    .summary-card b { display: block; margin-bottom: 5px; color: var(--accent-strong); font-size: 13px; }
+    .summary-card strong { display: block; color: var(--accent); font-size: clamp(20px, 3vw, 26px); line-height: 1.25; }
+    .summary-card p { margin: 6px 0 0; color: var(--muted); font-size: 13px; }
+    main { padding: 34px 0 56px; }
+    .layout { display: grid; grid-template-columns: minmax(0, 1fr) 250px; gap: 24px; align-items: start; }
+    .content { min-width: 0; }
+    .content > .card { margin-bottom: 18px; }
+    .toc { position: sticky; top: 16px; padding: 18px; box-shadow: 0 4px 18px rgba(24, 51, 41, .05); }
+    .toc h2 { margin: 0 0 10px; color: var(--muted); font-size: 12px; letter-spacing: .12em; }
+    .toc a { display: block; padding: 6px 0; color: var(--muted); font-size: 13px; text-decoration: none; }
+    .toc a:hover { color: var(--accent); }
+    .section-head { display: flex; align-items: flex-start; justify-content: space-between; gap: 14px; margin-bottom: 6px; padding-bottom: 14px; border-bottom: 1px solid var(--border); }
+    .section-head h2 { margin: 0; color: var(--accent-strong); font-size: clamp(19px, 3vw, 23px); line-height: 1.35; }
+    .kicker { margin-bottom: 4px; color: var(--accent); font-size: 12px; font-weight: 800; letter-spacing: .08em; }
+    .rank { color: var(--muted); font-size: 12px; white-space: nowrap; }
+    .item { padding: 19px 0; border-bottom: 1px dashed var(--border); }
+    .item:last-child { padding-bottom: 2px; border-bottom: 0; }
+    .item h3 { margin: 0 0 8px; font-size: 18px; line-height: 1.45; text-wrap: pretty; }
+    .item p { margin: 7px 0; color: var(--muted); font-size: 14px; }
+    .tags { display: flex; flex-wrap: wrap; gap: 7px; margin: 9px 0; }
+    .tag { padding: 3px 8px; border-radius: 999px; background: var(--accent-soft); color: var(--accent-strong); font-size: 11px; font-weight: 800; }
+    .tag.warn { background: #fff0d8; color: #8a5a10; }
+    .tag.risk { background: #fae5e1; color: #a7332c; }
+    .verdict { margin-top: 12px; padding: 12px 14px; border-left: 3px solid var(--accent); border-radius: 0 10px 10px 0; background: var(--accent-soft); font-size: 14px; }
+    .source { margin-top: 10px; color: var(--muted); font-size: 12px; }
+    .source a { margin-right: 10px; }
+    .mini-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 12px; margin-top: 16px; }
+    .mini-card { padding: 16px; border: 1px solid var(--border); border-radius: 14px; background: var(--page); }
+    .mini-card h3 { margin: 0 0 7px; font-size: 16px; }
+    .mini-card p { margin: 6px 0; color: var(--muted); font-size: 13px; }
+    .table-wrap { max-width: 100%; margin-top: 14px; overflow-x: auto; border-radius: 12px; }
+    .table-wrap:focus-visible { outline: 3px solid var(--accent-soft); outline-offset: 2px; }
+    table { width: 100%; min-width: 620px; border-collapse: collapse; font-size: 13px; }
+    th, td { padding: 11px 10px; border-bottom: 1px solid var(--border); text-align: left; vertical-align: top; }
+    th { background: var(--accent-soft); color: var(--accent-strong); }
+    .note { margin-top: 15px; padding: 11px 13px; border-radius: 10px; background: var(--page); color: var(--muted); font-size: 12px; }
+    footer { padding: 0 16px 32px; color: var(--muted); text-align: center; font-size: 12px; }
+    @media (max-width: 900px) {
+      .summary-grid { grid-template-columns: 1fr 1fr; }
+      .summary-card.primary { grid-column: 1 / -1; }
+      .layout { grid-template-columns: 1fr; }
+      .toc { position: static; display: none; }
+    }
+    @media (max-width: 640px) {
+      .wrap { width: min(100% - 24px, 1120px); }
+      .hero { padding: 40px 0 38px; }
+      .summary-grid, .mini-grid { grid-template-columns: 1fr; }
+      .summary-card.primary { grid-column: auto; }
+      .card { padding: 19px 17px; }
+      .section-head { display: block; }
+      .rank { display: block; margin-top: 6px; white-space: normal; }
+    }
+  </style>
+</head>
+<body>
+  <header class="hero">
+    <div class="wrap">
+      <div class="eyebrow">DAILY BRIEFING</div>
+      <h1>核电智慧巡检与工业智能化行业日报</h1>
+      <p class="lead">先筛机巡图像融合，再验图纸审核与人工复核。</p>
+      <div class="meta"><span class="pill">2026年10月3日星期六 · 星期六</span><span class="pill">Asia/Shanghai</span></div>
+    </div>
+  </header>
+
+  <div class="wrap summary" aria-label="今日摘要">
+    <div class="summary-grid">
+      <section class="card summary-card primary"><b>今日一句话结论</b><strong>先筛机巡图像融合，再验图纸审核与人工复核。</strong><p>节假日补录招采与标准进展；不把跨行业需求写成核电订单。</p></section>
+      <section class="card summary-card"><b>首次补录</b><strong>3 类实质信号</strong><p>贵州机巡研发、海南图纸审核、徐圩高温气冷堆准则。</p></section>
+      <section class="card summary-card"><b>建议动作</b><strong>取标 · 验证</strong><p>商务核资格与规范书；研发建立可复核样包。</p></section>
+    </div>
+  </div>
+
+  <main class="wrap layout">
+    <div class="content">
+      <section id="industry" class="card">
+        <div class="section-head"><div><div class="kicker">01 · INDUSTRY</div><h2>一、今日重大行业事件</h2></div><div class="rank">节假日期间首次补录 · 3 项</div></div>
+        <article class="item"><h3>贵州电网发布 32 包研发招标，机巡图像融合列入采购</h3><p><b>已确认事实：</b>贵州电网 9 月 30 日 22:17 发布项目 CG0600022002404053，共 32 个研发服务标包。其中 1-29“基于 AI 模型的时序机巡图片融合技术研究”预计采购额和最高限价均为 75 万元；1-3“基于大模型数据驱动的配电网隐患故障诊断与精确定位技术研究”为 805 万元。公告称需求一览表和技术规范书在附件，当前页面不足以确认验收指标。</p><div class="verdict"><b>判断：</b>电网已为机巡图像融合与故障诊断设置独立预算；核电可借鉴多时相缺陷对比思路，但资产、工况和合规边界不同，不能推断核电订单。</div><p><b>建议行动：</b>商务优先取得 1-29 的附件 A/B，核时间序列标注、图像配准、误漏报与交付权属；1-3 仅在具备配网领域伙伴和合规数据时评估。</p><div class="source">来源：<a href="https://www.bidding.csg.cn/zbgg/1200444679.jhtml" rel="noopener noreferrer">南网供应链原公告｜2026-09-30</a></div></article>
+        <article class="item"><h3>海南采购单线图 CAD 智能审核工具</h3><p><b>已确认事实：</b>南网数字集团海南公司 9 月 30 日 17:46 发布公开谈判项目 CG2100062002405703，采购一套单线图智能识别与比对智能体，用于配网电子化移交工单的 CAD 图纸审核；预计采购额及最高限价均为 86.2 万元，服务期自合同签订起 150 天。</p><div class="verdict"><b>判断：</b>客户为“图纸—工单”比对付费，反映工程资料审核的明确需求。核电迁移需解决版本、专业符号、变更审批及人工签批，不能直接复用电网模型。</div><p><b>建议行动：</b>产品团队准备脱敏或合成图纸与工单样例，先评估结构解析、版本差异和证据引用；商务核公司是否具有 CAD 工程交付能力。</p><div class="source">来源：<a href="https://www.bidding.csg.cn/fzbgg/1200444688.jhtml" rel="noopener noreferrer">南网供应链原公告｜2026-09-30</a></div></article>
+        <article class="item"><h3>徐圩高温气冷堆安全设计准则获批</h3><p><b>已确认事实：</b>国家核安全局 9 月 29 日披露，已批准江苏徐圩核能供热发电厂高温气冷堆安全设计准则，称其为我国首个获批的小型核动力堆安全设计准则。通报介绍 44 条具体设计准则，覆盖总体要求、屏障、保护与反应性控制、堆芯热量传输、燃料和放射性控制五层面；准则全文未从该通报取得。</p><div class="verdict"><b>判断：</b>新堆型安全设计的审评基准进一步明确；巡检与辅助分析产品应先辨明设备分级和适用规程。该批准本身不构成数字化采购。</div><p><b>建议行动：</b>法规与质保团队取得正式准则及适用范围后，核对现有巡检数据模型是否误把不同堆型、安全等级混用。</p><div class="source">来源：<a href="https://nnsa.mee.gov.cn/ywdt/gzdt/202609/t20260929_1175484.html" rel="noopener noreferrer">国家核安全局｜2026-09-29</a></div></article>
+      </section>
+
+      <section id="inspection" class="card">
+        <div class="section-head"><div><div class="kicker">02 · INSPECTION</div><h2>二、智慧巡检最新动态</h2></div></div>
+        <article class="item"><h3>机巡时序图像融合：先核数据授权与对比基线</h3><p><b>已确认事实：</b>贵州 1-29 标包名称明确为“基于 AI 模型的时序机巡图片融合技术研究”，公开页面未披露传感器、样本规模、准确率或现场验收条件。</p><div class="verdict"><b>判断：</b>核电非安全级巡检可验证同一设备跨时间图像配准、变化检测与证据追溯；光照、角度、遮挡、检修状态变化会造成误报，现场授权和网络隔离仍是前置条件。</div><p><b>建议行动：</b>研发建立公开或授权样本的同点位基线和失败集，输出定位误差、误漏报、人工复核用时；未获规范书前不承诺项目适配。</p><div class="source">来源：<a href="https://www.bidding.csg.cn/zbgg/1200444679.jhtml" rel="noopener noreferrer">贵州电网招标｜2026-09-30</a></div></article><p class="note">截至 2026-10-03 17:30，未核实新的核电智慧巡检采购或机器人规模化上线。</p>
+      </section>
+
+      <section id="ai" class="card">
+        <div class="section-head"><div><div class="kicker">03 · AI</div><h2>三、AI 视觉与多模态技术进展</h2></div></div>
+        <article class="item"><h3>Ultralytics v8.4.165 修正分割输出和部署兼容性</h3><p><b>已确认事实：</b>官方 GitHub 于 9 月 28 日 19:41 UTC（上海时间 9 月 29 日 03:41）发布 v8.4.165，属于此前未入档的版本。更新包括保存语义分割掩码时恢复原图尺寸并去除 letterbox 填充、拒绝未映射类别 ID、修复 Windows OpenVINO 某些机器上的崩溃路径，以及 ONNX 导出时预检最低 opset；另调整深度图缩放对齐。官方未宣称核电性能提升。</p><div class="verdict"><b>判断：</b>原图坐标与语义掩码几何一致性直接影响缺陷位置证据；核电非安全级图像标注和回放可用作受控验证。现场小目标、反光、遮挡、功耗、离线运行、误漏报及审查仍需独立验证。</div><p><b>建议行动／投入建议：</b>立即在隔离环境用已锁定的 v8.4.164 基线做 A/B：比对原图掩码、异常类别、ONNX 和 Windows OpenVINO，记录版本、输入、功耗与人工复核结果；通过前暂不进生产。</p><div class="source">来源：<a href="https://github.com/ultralytics/ultralytics/releases/tag/v8.4.165" rel="noopener noreferrer">Ultralytics 官方发布｜2026-09-28 UTC</a></div></article>
+      </section>
+
+      <section id="domestic" class="card">
+        <div class="section-head"><div><div class="kicker">04 · DOMESTIC STACK</div><h2>四、国产硬件与边缘智能专项</h2></div></div>
+        <div class="mini-grid"><article class="mini-card"><h3>4.1 国产 CPU 与服务器</h3><p>今日无高价值新增。主力沿用已验证组合；新平台需先验证驱动、镜像、离线更新与回滚。</p></article><article class="mini-card"><h3>4.2 国产 GPU / NPU 与 AI 加速</h3><p>贵州招标未指定芯片。候选国产加速器作为备选 PoC，比较分割算子、量化精度、显存、功耗与稳定性。</p></article><article class="mini-card"><h3>4.3 国产边缘算力设备</h3><p>机巡图像融合需测本地缓存、断网重连、时间同步、视频接入及人工接管；现场设备条件未核实。</p></article><article class="mini-card"><h3>4.4 国产操作系统与基础软件</h3><p>今日无已核实的核电适配发布。新 OS、OpenVINO 或其他推理栈应锁定版本和依赖，在隔离环境验证。</p></article></div>
+        <article class="item"><h3>4.5 对智慧核电的部署建议</h3><p><b>今日国产化部署结论：</b>视觉边缘推理以现有经过验收的 CPU／OS／加速组合为主力，国产 NPU 作为备选 PoC；厂级平台及 RAG／Agent 限于非安全级只读试验。高温气冷堆准则获批不等于任何硬件获得核级适用性。</p><div class="verdict"><b>适配结论：</b>主力保持已验证组合；新国产硬件和操作系统仅 PoC 后采用；没有误漏报、离线、网络隔离、审计和规程复核证据前暂不进入生产。</div><div class="source">依据：<a href="https://nnsa.mee.gov.cn/ywdt/gzdt/202609/t20260929_1175484.html" rel="noopener noreferrer">国家核安全局准则通报</a><a href="https://www.bidding.csg.cn/zbgg/1200444679.jhtml" rel="noopener noreferrer">贵州电网招标</a></div></article>
+      </section>
+
+      <section id="data" class="card">
+        <div class="section-head"><div><div class="kicker">05 · DATA &amp; TWIN</div><h2>五、工业数据治理与数字孪生趋势</h2></div></div>
+        <article class="item"><h3>工程图纸审核需要可追溯的数据版本</h3><p><b>已确认事实：</b>海南采购明确要求单线图 CAD 识别并与电子化移交工单比对；贵州 1-29 标包明确采购时序机巡图片融合研究。两者均未公开完整技术规范书。</p><div class="verdict"><b>判断：</b>图纸版本、资产编码、图像时间戳和审核意见若不能关联，AI 结果难以形成可复核的交付证据。数字孪生能力不能仅由这两项采购推定。</div><p><b>建议行动：</b>平台团队定义“文档版本—设备—巡检影像—变更单—人工签批”的只读数据链，记录来源与回滚；先用合成数据演示。</p><div class="source">来源：<a href="https://www.bidding.csg.cn/fzbgg/1200444688.jhtml" rel="noopener noreferrer">海南采购公告</a><a href="https://www.bidding.csg.cn/zbgg/1200444679.jhtml" rel="noopener noreferrer">贵州招标公告</a></div></article>
+      </section>
+
+      <section id="competitors" class="card">
+        <div class="section-head"><div><div class="kicker">06 · COMPETITORS</div><h2>六、竞争对手动态</h2></div></div>
+        <article class="item"><h3>江苏金智科技获贵州配网数字孪生与智能体研究标包</h3><p><b>已确认事实：</b>贵州电网 9 月 30 日中标公告将“新型配电系统真型平台数字孪生与智能体协同关键技术研究与典型场景示范应用”标包的中标人列为江苏金智科技股份有限公司。公告未给出本标包中标金额、验收结果或已上线情况。</p><div class="verdict"><b>判断：</b>竞争者已进入电网孪生与智能体研发采购；这说明市场投入，但不能证明技术已在核电部署。</div><p><b>建议行动：</b>竞争情报仅跟踪合同范围和后续公开验收；公司差异化聚焦巡检证据链、规程约束及离线可审查性。</p><div class="source">来源：<a href="https://www.bidding.csg.cn/zbhxrgs/1200444725.jhtml" rel="noopener noreferrer">贵州电网中标公告｜2026-09-30</a></div></article>
+      </section>
+
+      <section id="opportunities" class="card">
+        <div class="section-head"><div><div class="kicker">07 · OPPORTUNITIES</div><h2>七、商业机会</h2></div><div class="rank">2 项优先筛选</div></div>
+        <article class="item"><h3>优先核标｜贵州 1-29 机巡图像融合研究</h3><p><b>已确认事实：</b>9 月 30 日公告，预算与最高限价 75 万元；取标至 10 月 12 日 23:59:59、澄清至 10 月 13 日 14:00、投标至 10 月 28 日 18:00。公告通用资格不接受联合体，专用资格写“无”，但技术规范书和公司报名状态未核实。</p><div class="verdict"><b>判断：</b>视觉巡检能力匹配度较高；75 万元需核验研发、现场采集与验收成本，不能只凭标包名决定投标。</div><p><b>建议行动：</b>商务在 10 月 12 日前取得附件 A/B，联合研发核样本授权、知识产权、绩效指标和独立履约能力，形成 go/no-go。</p><div class="source">来源：<a href="https://www.bidding.csg.cn/zbgg/1200444679.jhtml" rel="noopener noreferrer">贵州电网原公告｜2026-09-30</a></div></article>
+        <article class="item"><h3>条件筛选｜海南 CAD 图纸智能审核</h3><p><b>已确认事实：</b>9 月 30 日公告，最高限价 86.2 万元；取文件至 10 月 12 日 18:00，响应至 10 月 19 日 09:00。不接受联合体，要求近三年财务资料；公司资质和既有 CAD 能力未核实。</p><div class="verdict"><b>判断：</b>若已有工程图纸解析与人工审核产品，可低成本复用；若需从零开发配网专业符号和系统接口，应谨慎投入。</div><p><b>建议行动：</b>商务核财务与登记条件；产品核规范书中的图纸格式、准确率和工单接口，再决定是否响应。</p><div class="source">来源：<a href="https://www.bidding.csg.cn/fzbgg/1200444688.jhtml" rel="noopener noreferrer">海南采购原公告｜2026-09-30</a></div></article>
+      </section>
+
+      <section id="tracking" class="card">
+        <div class="section-head"><div><div class="kicker">08 · TRACKING</div><h2>八、持续跟踪事项</h2></div></div>
+        <div class="table-wrap" tabindex="0"><table><thead><tr><th>事项／来源</th><th>当前状态</th><th>今日是否实质新增</th><th>下一观察节点</th></tr></thead><tbody><tr><td><a href="https://www.bidding.csg.cn/zbgg/1200444180.jhtml">深圳边侧 AI 六标包</a></td><td>9 月 28 日公告，上期已报道</td><td>未核实新的招标阶段变化</td><td>10 月 8 日 16:00 前核标的 2／4 取标与资格</td></tr><tr><td><a href="https://www.bidding.csg.cn/zbhxrgs/1200444002.jhtml">深圳人形巡检机器人</a></td><td>9 月 24 日候选公示</td><td>未核实正式定标</td><td>核中标公告和交付范围</td></tr><tr><td><a href="https://github.com/ultralytics/ultralytics/releases/tag/v8.4.165">视觉工具回归</a></td><td>首次补录 v8.4.165</td><td>有版本事实，尚无公司实测</td><td>分割掩码、ONNX、OpenVINO A/B</td></tr><tr><td><a href="https://www.mee.gov.cn/ywdt/gsgg/gongshi/gsq/202609/t20260923_1174318.shtml">庄河一期环评</a></td><td>9 月 23 日受理公示</td><td>未核实审批变化</td><td>10 月 13 日公示期结束后核后续审批</td></tr></tbody></table></div>
+      </section>
+
+      <section id="insights" class="card">
+        <div class="section-head"><div><div class="kicker">09 · INSIGHT</div><h2>九、今日技术洞察</h2></div></div>
+        <article class="item"><h3>一至三年机会：把图像和工程资料变成可审查证据链</h3><p><b>已确认事实：</b>贵州分别采购机巡图片融合与故障诊断研究；海南采购 CAD 与工单比对；徐圩准则获批并明确具体堆型的安全设计审评基准。项目跨电网与核电，彼此无直接采购关联。</p><div class="verdict"><b>判断：</b>可复用的长期壁垒是授权数据、时序配准失败集、图纸版本血缘、国产软硬件兼容矩阵和人工复核记录。核电非安全级辅助场景有验证价值，但必须依适用堆型、设备分级和规程逐项审查。</div><p><b>建议行动：</b>研发用公开或授权样本组成“图纸—资产—影像—差异—人工签批”最小演示包；质保制定审计字段与放行门槛，商务用实际规范书校准产品需求。</p></article>
+      </section>
+
+      <section id="actions" class="card">
+        <div class="section-head"><div><div class="kicker">10 · ACTION</div><h2>十、给公司的建议</h2></div></div>
+        <div class="mini-grid"><article class="mini-card"><h3>今日建议（3 条）</h3><p>① 商务取贵州 1-29 与海南 CAD 的规范书并核独立履约资格；② 研发建时序图像和图纸版本的人工复核样包；③ 质保核徐圩准则全文与堆型适用边界。</p></article><article class="mini-card"><h3>短期行动（1–3 个月）</h3><p>形成授权数据集、原图坐标回归、误漏报和断网测试；给出国产设备 PoC 兼容矩阵、功耗及审计结果，设置可复核放行门槛。</p></article><article class="mini-card"><h3>中长期规划（6–24 个月）</h3><p>沉淀跨版本工程资料与巡检影像证据模型，产品化非安全级只读辅助流程。核安全和生产控制坚持 AI 辅助决策、人机协同、人工复核、规程优先。</p></article></div>
+      </section>
+
+      <section id="method" class="card">
+        <div class="section-head"><div><div class="kicker">METHODOLOGY</div><h2>信息说明</h2></div></div>
+        <p class="note">信息截点：2026-10-03 17:30（Asia/Shanghai），本期因运行延迟采用实际截点。对比 9 月 30 日及更早历史正文，以上 9 月 29—30 日事项均为首次补录，不表述为 10 月 3 日当天发布。来源为国家核安全局、南网供应链和开源项目官方发布；检索有限，“未核实”不代表不存在。招标金额为预计额或最高限价，不是中标金额。附件规范书、公司投标资格、核电现场授权及模型实测均未取得。封面是抽象示意，不指向真实厂区、客户或设备。</p>
+      </section>
+    </div>
+
+    <aside class="card toc" aria-label="本期目录">
+      <h2>本期目录</h2>
+      <a href="#industry">01 重大行业事件</a>
+      <a href="#inspection">02 智慧巡检</a>
+      <a href="#ai">03 AI 视觉与多模态</a>
+      <a href="#domestic">04 国产硬件与边缘智能</a>
+      <a href="#data">05 数据治理与数字孪生</a>
+      <a href="#competitors">06 竞争对手</a>
+      <a href="#opportunities">07 商业机会</a>
+      <a href="#tracking">08 持续跟踪</a>
+      <a href="#insights">09 技术洞察</a>
+      <a href="#actions">10 公司建议</a>
+      <a href="#method">信息说明</a>
+    </aside>
+  </main>
+
+  <footer>每日推送 · 2026-10-03 · <a href="/archive/">查看历史归档</a></footer>
+</body>
+</html>
