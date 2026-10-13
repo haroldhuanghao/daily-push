@@ -1,0 +1,214 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="截至10月13日09:05，深圳人形巡检机器人正式中标、YOLO v8.4.176发布；今日先核商机资格与隔离验证。">
+  <meta property="og:title" content="核电智慧巡检与工业智能化行业日报 · 2026-10-13">
+  <meta property="og:description" content="截至10月13日09:05，深圳人形巡检机器人正式中标、YOLO v8.4.176发布；今日先核商机资格与隔离验证。">
+  <meta property="og:type" content="article">
+  <meta property="og:url" content="https://daily.851473.xyz/reports/2026-10-13/">
+  <meta property="og:image" content="https://daily.851473.xyz/reports/2026-10-13/cover.png">
+  <meta name="report-contract" content="nuclear-daily-v2">
+  <link rel="canonical" href="https://daily.851473.xyz/reports/2026-10-13/">
+  <title>核电智慧巡检与工业智能化行业日报 · 2026-10-13</title>
+  <style>
+    :root {
+      --accent: #0d6b4f;
+      --accent-strong: #063d30;
+      --accent-soft: #dff4eb;
+      --page: #f4f6f2;
+      --surface: #ffffff;
+      --text: #13201c;
+      --muted: #65736d;
+      --border: #dfe6e1;
+      --shadow: 0 12px 36px rgba(24, 51, 41, .08);
+      --radius-card: 18px;
+      --space-card: 24px;
+    }
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body { margin: 0; background: var(--page); color: var(--text); font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang SC", "Microsoft YaHei", sans-serif; font-size: 15px; line-height: 1.7; overflow-wrap: anywhere; }
+    img { max-width: 100%; height: auto; }
+    a { color: var(--accent); text-decoration-thickness: 1px; text-underline-offset: 3px; }
+    a:hover { color: var(--accent-strong); }
+    a:focus-visible { outline: 3px solid var(--accent-soft); outline-offset: 3px; border-radius: 4px; }
+    .wrap { width: min(1120px, calc(100% - 32px)); margin-inline: auto; }
+    .hero { padding: 52px 0 46px; color: #fff; background: radial-gradient(circle at 82% 18%, var(--accent) 0, transparent 30%), linear-gradient(135deg, var(--accent-strong), var(--accent)); border-bottom: 4px solid var(--accent-soft); }
+    .eyebrow { color: rgba(255, 255, 255, .78); font-size: 12px; font-weight: 800; letter-spacing: .16em; text-transform: uppercase; }
+    .hero h1 { max-width: 880px; margin: 10px 0 14px; font-size: clamp(30px, 5vw, 54px); line-height: 1.14; text-wrap: balance; }
+    .hero .lead { max-width: 820px; margin: 0; color: rgba(255, 255, 255, .86); font-size: clamp(15px, 2vw, 17px); }
+    .meta { display: flex; flex-wrap: wrap; gap: 9px; margin-top: 22px; }
+    .pill { padding: 6px 11px; border: 1px solid rgba(255, 255, 255, .28); border-radius: 999px; background: rgba(255, 255, 255, .09); font-size: 12px; }
+    .summary { position: relative; margin-top: -24px; }
+    .summary-grid { display: grid; grid-template-columns: 1.4fr repeat(2, minmax(0, 1fr)); gap: 12px; }
+    .card { padding: var(--space-card); border: 1px solid var(--border); border-radius: var(--radius-card); background: var(--surface); box-shadow: var(--shadow); }
+    .summary-card { min-width: 0; padding: 20px; }
+    .summary-card.primary { background: var(--accent-soft); border-color: var(--accent); }
+    .summary-card b { display: block; margin-bottom: 5px; color: var(--accent-strong); font-size: 13px; }
+    .summary-card strong { display: block; color: var(--accent); font-size: clamp(20px, 3vw, 26px); line-height: 1.25; }
+    .summary-card p { margin: 6px 0 0; color: var(--muted); font-size: 13px; }
+    main { padding: 34px 0 56px; }
+    .layout { display: grid; grid-template-columns: minmax(0, 1fr) 250px; gap: 24px; align-items: start; }
+    .content { min-width: 0; }
+    .content > .card { margin-bottom: 18px; }
+    .toc { position: sticky; top: 16px; padding: 18px; box-shadow: 0 4px 18px rgba(24, 51, 41, .05); }
+    .toc h2 { margin: 0 0 10px; color: var(--muted); font-size: 12px; letter-spacing: .12em; }
+    .toc a { display: block; padding: 6px 0; color: var(--muted); font-size: 13px; text-decoration: none; }
+    .toc a:hover { color: var(--accent); }
+    .section-head { display: flex; align-items: flex-start; justify-content: space-between; gap: 14px; margin-bottom: 6px; padding-bottom: 14px; border-bottom: 1px solid var(--border); }
+    .section-head h2 { margin: 0; color: var(--accent-strong); font-size: clamp(19px, 3vw, 23px); line-height: 1.35; }
+    .kicker { margin-bottom: 4px; color: var(--accent); font-size: 12px; font-weight: 800; letter-spacing: .08em; }
+    .rank { color: var(--muted); font-size: 12px; white-space: nowrap; }
+    .item { padding: 19px 0; border-bottom: 1px dashed var(--border); }
+    .item:last-child { padding-bottom: 2px; border-bottom: 0; }
+    .item h3 { margin: 0 0 8px; font-size: 18px; line-height: 1.45; text-wrap: pretty; }
+    .item p { margin: 7px 0; color: var(--muted); font-size: 14px; }
+    .tags { display: flex; flex-wrap: wrap; gap: 7px; margin: 9px 0; }
+    .tag { padding: 3px 8px; border-radius: 999px; background: var(--accent-soft); color: var(--accent-strong); font-size: 11px; font-weight: 800; }
+    .tag.warn { background: #fff0d8; color: #8a5a10; }
+    .tag.risk { background: #fae5e1; color: #a7332c; }
+    .verdict { margin-top: 12px; padding: 12px 14px; border-left: 3px solid var(--accent); border-radius: 0 10px 10px 0; background: var(--accent-soft); font-size: 14px; }
+    .source { margin-top: 10px; color: var(--muted); font-size: 12px; }
+    .source a { margin-right: 10px; }
+    .mini-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 12px; margin-top: 16px; }
+    .mini-card { padding: 16px; border: 1px solid var(--border); border-radius: 14px; background: var(--page); }
+    .mini-card h3 { margin: 0 0 7px; font-size: 16px; }
+    .mini-card p { margin: 6px 0; color: var(--muted); font-size: 13px; }
+    .table-wrap { max-width: 100%; margin-top: 14px; overflow-x: auto; border-radius: 12px; }
+    .table-wrap:focus-visible { outline: 3px solid var(--accent-soft); outline-offset: 2px; }
+    table { width: 100%; min-width: 620px; border-collapse: collapse; font-size: 13px; }
+    th, td { padding: 11px 10px; border-bottom: 1px solid var(--border); text-align: left; vertical-align: top; }
+    th { background: var(--accent-soft); color: var(--accent-strong); }
+    .note { margin-top: 15px; padding: 11px 13px; border-radius: 10px; background: var(--page); color: var(--muted); font-size: 12px; }
+    footer { padding: 0 16px 32px; color: var(--muted); text-align: center; font-size: 12px; }
+    @media (max-width: 900px) {
+      .summary-grid { grid-template-columns: 1fr 1fr; }
+      .summary-card.primary { grid-column: 1 / -1; }
+      .layout { grid-template-columns: 1fr; }
+      .toc { position: static; display: none; }
+    }
+    @media (max-width: 640px) {
+      .wrap { width: min(100% - 24px, 1120px); }
+      .hero { padding: 40px 0 38px; }
+      .summary-grid, .mini-grid { grid-template-columns: 1fr; }
+      .summary-card.primary { grid-column: auto; }
+      .card { padding: 19px 17px; }
+      .section-head { display: block; }
+      .rank { display: block; margin-top: 6px; white-space: normal; }
+    }
+  </style>
+</head>
+<body>
+  <header class="hero">
+    <div class="wrap">
+      <div class="eyebrow">DAILY BRIEFING</div>
+      <h1>核电智慧巡检与工业智能化行业日报</h1>
+      <p class="lead">截至10月13日09:05，深圳人形巡检机器人正式中标、YOLO v8.4.176发布；今日先核商机资格与隔离验证。</p>
+      <div class="meta"><span class="pill">2026年10月13日星期二 · 星期二</span><span class="pill">Asia/Shanghai</span></div>
+    </div>
+  </header>
+
+  <div class="wrap summary" aria-label="今日摘要">
+    <div class="summary-grid">
+      <section class="card summary-card primary"><b>今日一句话结论</b><strong>核验机器人正式中标与模型修复；先定取标资格，再做隔离验证。</strong><p>核电侧限非安全级辅助、人工复核与规程优先。</p></section>
+      <section class="card summary-card"><b>今日新增</b><strong>2项实质进展</strong><p>机器人正式定标；视觉工具链可靠性修复。</p></section>
+      <section class="card summary-card"><b>建议动作</b><strong>先筛资格与验证</strong><p>10月14日前处理两项取标节点。</p></section>
+    </div>
+  </div>
+
+  <main class="wrap layout">
+    <div class="content">
+      <section id="industry" class="card">
+        <div class="section-head"><div><div class="kicker">01 · INDUSTRY</div><h2>一、今日重大行业事件</h2></div><div class="rank">1条此前事项的实质进展</div></div>
+        <article class="item"><h3>深圳变电站人形巡检机器人由候选转为正式中标</h3><div class="tags"><span class="tag">电网相邻场景</span><span class="tag warn">非核电订单</span></div><p><b>已确认事实：</b>南方电网供应链平台10月8日发布深圳供电局公开招标（CG0900022002358762）中标结果：标的3“变电站智能巡检机器人（人形机器人）”中标人为中科开创（广州）智能科技发展有限公司。9月24日仅为第一候选人公示；本次新增是正式定标。公告未披露成交金额、性能或验收结果。</p><div class="verdict"><b>判断：</b>相邻电网巡检从评审迈入供应商确定阶段，说明采购需求已形成；不能推断机器人已交付、核电适用或该企业核电市场份额。</div><p><b>建议行动：</b>竞争情报岗记录最终中标主体，商务通过合规渠道取得技术规范与交付节点；产品对照人工接管、设备安全、影像证据链和维护成本。</p><div class="source">来源：<a href="https://www.bidding.csg.cn/zbhxrgs/1200444895.jhtml" rel="noopener noreferrer">南方电网正式中标公告｜2026-10-08</a> <a href="https://www.bidding.csg.cn/zbhxrgs/1200444002.jhtml" rel="noopener noreferrer">此前候选公示｜2026-09-24</a></div></article>
+      </section>
+
+      <section id="inspection" class="card">
+        <div class="section-head"><div><div class="kicker">02 · INSPECTION</div><h2>二、智慧巡检最新动态</h2></div><div class="rank">1条阶段变化</div></div>
+        <article class="item"><h3>机器人采购阶段已确认，现场能力仍待证据</h3><p><b>已确认事实：</b>10月8日深圳供电局正式公告确定人形巡检机器人标包中标人；公告未附现场运行、误漏报、辐射耐受或核电厂验收数据。</p><div class="verdict"><b>判断：</b>对核电智慧巡检只具备相邻场景观察价值，不能把电网设备合同转写为核电部署案例。</div><p><b>建议行动：</b>方案组维护机器人、固定摄像头与边缘盒子的场景对照表，以授权样本和非安全级只读流程验证到位率、复核时延及故障接管。</p><div class="source">来源：<a href="https://www.bidding.csg.cn/zbhxrgs/1200444895.jhtml" rel="noopener noreferrer">深圳供电局中标公告｜2026-10-08</a></div></article>
+      </section>
+
+      <section id="ai" class="card">
+        <div class="section-head"><div><div class="kicker">03 · AI</div><h2>三、AI 视觉与多模态技术进展</h2></div><div class="rank">1条新版本</div></div>
+        <article class="item"><h3>Ultralytics v8.4.176修复分割、SAM与部署边界</h3><p><b>已确认事实：</b>官方于10月12日20:13 UTC（上海时间10月13日04:13）发布v8.4.176。发布说明称，YOLO-World自定义类别后的检查点不再默认携带CLIP文本编码器，示例从328.5 MB降至25.8 MB且重载预测一致；另修复MobileSAM FP16空掩膜、SAM跨图源状态、YOLOE继续训练分类头、OpenVINO NPU批量与深度输出等问题，并回退降低YOLO26分割mAP的掩膜阈值变更。上述数字为官方示例，非公司测评。</p><div class="verdict"><b>判断：</b>对核电非安全级影像巡检的价值在于降低模型分发负担与减少分割/状态复用错误；OpenVINO NPU修复不能证明国产芯片兼容或核电现场效果。</div><p><b>工程化限制：</b>需授权缺陷图、跨相机和弱光样本、独立验证集，测试误漏报、重载一致性、功耗、断网、日志与人工复核；核电网络隔离、可解释性和变更审查必须按现场规程执行。</p><p><b>建议行动：</b>算法组立即在隔离环境以冻结样本比较v8.4.175/176，重点核对FP16空掩膜、跨源状态、检查点大小和重载输出；通过审查前不升级生产。</p><div class="source">来源：<a href="https://github.com/ultralytics/ultralytics/releases/tag/v8.4.176" rel="noopener noreferrer">Ultralytics官方v8.4.176发布说明</a></div></article>
+      </section>
+
+      <section id="domestic" class="card">
+        <div class="section-head"><div><div class="kicker">04 · DOMESTIC STACK</div><h2>四、国产硬件与边缘智能专项</h2></div><div class="rank">今日无国产栈验收新增</div></div>
+        <div class="mini-grid">
+          <article class="mini-card"><h3>4.1 国产 CPU 与服务器</h3><p>未核实新的核电适配验收。主力采用公司已验收组合；新增CPU/服务器先验证容器、驱动、录像回放与回滚，作为备选。</p></article>
+          <article class="mini-card"><h3>4.2 国产 GPU / NPU 与 AI 加速</h3><p>v8.4.176的OpenVINO NPU修复不是国产NPU证明。国产加速卡需同图比较精度、延迟、功耗与日志；仅PoC通过后采用。</p></article>
+          <article class="mini-card"><h3>4.3 国产边缘算力设备</h3><p>沿用已验收边缘设备为主力。新硬件核视频路数、断网续传、温湿度、远程更新与故障回滚；没有现场数据前暂不进生产。</p></article>
+          <article class="mini-card"><h3>4.4 国产操作系统与基础软件</h3><p>今日未见核电新上线证据。已验收OS/运行时为主力，新OS为备选，须完成驱动、审计、补丁与隔离部署PoC。</p></article>
+        </div>
+        <article class="item"><h3>4.5 对智慧核电的部署建议</h3><p><b>已确认事实：</b>本期模型发布涉及OpenVINO NPU与检查点处理，但未公布核电或国产CPU/GPU/NPU/OS适配验收。</p><div class="verdict"><b>判断与适配结论：</b>视觉边缘推理、厂级平台、RAG和AI Agent以现有已验收栈为主力；国产新组合为备选，隔离PoC后采用；安全级控制与未经审查的自动处置暂不投入。</div><p><b>建议行动：</b>维护硬件—OS—驱动—运行时—模型版本兼容矩阵，记录误漏报、功耗、断网、审计与回滚；所有建议由人员复核，规程优先。</p><div class="source">依据：<a href="https://github.com/ultralytics/ultralytics/releases/tag/v8.4.176" rel="noopener noreferrer">官方版本说明</a></div></article>
+      </section>
+
+      <section id="data" class="card">
+        <div class="section-head"><div><div class="kicker">05 · DATA &amp; TWIN</div><h2>五、工业数据治理与数字孪生趋势</h2></div><div class="rank">今日无高价值新增</div></div>
+        <article class="item"><h3>沿用已报电鸿与云南项目的接口验证任务</h3><p><b>已确认事实：</b>10月8日电鸿边缘智能体平台与10月10日云南智能巡检、数字孪生标包均已在前期日报报道；截至本期未核实采购阶段或验收的新变化。</p><div class="verdict"><b>判断：</b>在没有新进展时，应推进设备ID、影像、时戳、模型版本、人工结论和工单状态的数据契约，不把分标采购写成已建成平台。</div><p><b>建议行动：</b>平台组用授权数据交付一份只读接口样例，并与取得的招标附件逐条核对。</p><div class="source">来源：<a href="https://www.bidding.csg.cn/zbgg/1200444882.jhtml" rel="noopener noreferrer">电鸿项目公告｜2026-10-08</a> <a href="https://www.bidding.csg.cn/zbgg/1200445101.jhtml" rel="noopener noreferrer">云南项目公告｜2026-10-10</a></div></article>
+      </section>
+
+      <section id="competitors" class="card">
+        <div class="section-head"><div><div class="kicker">06 · COMPETITORS</div><h2>六、竞争对手动态</h2></div><div class="rank">1条定标进展</div></div>
+        <article class="item"><h3>中科开创（广州）正式取得深圳人形巡检机器人标包</h3><p><b>已确认事实：</b>10月8日官方正式中标公告将中科开创（广州）列为机器人标包中标人；9月24日已报道其第一候选人身份，本期新增仅为定标。正式公告未披露交付表现与核电客户。</p><div class="verdict"><b>判断：</b>竞争情报从候选主体升级为明确供应商，但无法凭中标推断其算法、国产化或运行可靠性领先。</div><p><b>建议行动：</b>产品和商务建立公开可核的配置、验收和运维对比清单；若无原文证据，不作性能排名。</p><div class="source">来源：<a href="https://www.bidding.csg.cn/zbhxrgs/1200444895.jhtml" rel="noopener noreferrer">南方电网正式中标公告</a></div></article>
+      </section>
+
+      <section id="opportunities" class="card">
+        <div class="section-head"><div><div class="kicker">07 · OPPORTUNITIES</div><h2>七、商业机会</h2></div><div class="rank">存量机会：处理取标窗口</div></div>
+        <article class="item"><h3>电鸿边缘智能体与输电缺陷定级：10月14日取标截止</h3><p><b>已确认事实：</b>南网10月8日电鸿项目和10月9日输电缺陷智能定级二次招标已在前期日报报道；两者公告文件获取均于10月14日23:59:59截止。前者平台研发与一体机标包最高限价分别为220.3万元和62.83万元，后者相关标包最高限价50万元。公司取标、资格和附件状态待核实。</p><div class="verdict"><b>判断：</b>属于电网相邻商机，金额上限不是成交额；取标窗口比重复介绍项目更紧迫。</div><p><b>建议行动：</b>商务今日核登记、审计财报及独立投标要求；算法和交付只在取得附件并测算样本、接口、验收成本后作go/no-go。</p><div class="source">来源：<a href="https://www.bidding.csg.cn/zbgg/1200444882.jhtml" rel="noopener noreferrer">电鸿公告</a> <a href="https://www.bidding.csg.cn/zbgg/1200445090.jhtml" rel="noopener noreferrer">缺陷定级公告</a></div></article>
+        <article class="item"><h3>云南智能巡检与广东边侧巡视：本周继续取标</h3><p><b>已确认事实：</b>10月10日云南标13智能巡检公告文件获取截至10月15日19:00；广东配电AI巡视功能开发标的2公告文件获取截至10月16日23:59:59。两项均为既有报道，未核实公司资格或新采购进展。</p><div class="verdict"><b>判断：</b>优先核技术规范和可交付边界，不能将招标视为核电订单或已上线案例。</div><p><b>建议行动：</b>商务分别在截止前取标并留存回执，研发拆视频接入、人工复核、验收、现场资源与利润率。</p><div class="source">来源：<a href="https://www.bidding.csg.cn/zbgg/1200445101.jhtml" rel="noopener noreferrer">云南公告</a> <a href="https://www.bidding.csg.cn/zbgg/1200445292.jhtml" rel="noopener noreferrer">广东公告</a></div></article>
+      </section>
+
+      <section id="tracking" class="card">
+        <div class="section-head"><div><div class="kicker">08 · TRACKING</div><h2>八、持续跟踪事项</h2></div></div>
+        <div class="table-wrap" tabindex="0"><table><thead><tr><th>事项名称</th><th>当前状态</th><th>今日是否有实质新增</th><th>下一观察节点</th></tr></thead><tbody>
+          <tr><td><a href="https://www.bidding.csg.cn/zbhxrgs/1200444895.jhtml">深圳人形巡检机器人</a></td><td>10月8日正式中标</td><td>有；较前报候选公示新增定标</td><td>合同、供货和验收公开证据</td></tr>
+          <tr><td><a href="https://www.bidding.csg.cn/zbgg/1200444679.jhtml">贵州1-29图像融合</a></td><td>10月12日取标窗口已结束</td><td>无；公司是否取标待核</td><td>10月28日18:00投标截止</td></tr>
+          <tr><td><a href="https://www.bidding.csg.cn/zbgg/1200444882.jhtml">电鸿边缘智能体</a></td><td>10月8日招标</td><td>无</td><td>10月14日23:59:59取标截止</td></tr>
+          <tr><td><a href="https://www.bidding.csg.cn/zbgg/1200445090.jhtml">输电缺陷智能定级</a></td><td>10月9日二次招标</td><td>无</td><td>10月14日23:59:59取标截止</td></tr>
+          <tr><td><a href="https://www.bidding.csg.cn/zbgg/1200445101.jhtml">云南智能巡检标13</a></td><td>10月10日招标</td><td>无</td><td>10月15日19:00取标截止</td></tr>
+          <tr><td><a href="https://www.bidding.csg.cn/zbgg/1200445292.jhtml">广东边侧巡视标的2</a></td><td>10月10日招标</td><td>无</td><td>10月16日23:59:59取标截止</td></tr>
+        </tbody></table></div>
+      </section>
+
+      <section id="insights" class="card">
+        <div class="section-head"><div><div class="kicker">09 · INSIGHT</div><h2>九、今日技术洞察</h2></div></div>
+        <article class="item"><h3>一至三年机会：可回滚、可审查的边侧巡检证据链</h3><p><b>已确认事实：</b>深圳机器人标包正式定标显示相邻场景形成采购；v8.4.176修复分割与跨源状态问题。两者均未提供核电现场性能或国产栈适配证据。</p><div class="verdict"><b>判断：</b>短期验证重点是授权样本上的误漏报、模型重载一致性、离线功耗、断网恢复与人工复核；长期壁垒是数据授权、设备关联、审计记录、运维回滚和国产软硬件兼容矩阵，而非单一模型版本。</div><p><b>建议行动：</b>产品、算法与质保共建非安全级只读PoC，冻结样本和基线，输出可追溯报告；对新国产组合坚持PoC后采用。</p><div class="source">依据：<a href="https://www.bidding.csg.cn/zbhxrgs/1200444895.jhtml" rel="noopener noreferrer">机器人中标公告</a> <a href="https://github.com/ultralytics/ultralytics/releases/tag/v8.4.176" rel="noopener noreferrer">官方版本发布</a></div></article>
+      </section>
+
+      <section id="actions" class="card">
+        <div class="section-head"><div><div class="kicker">10 · ACTION</div><h2>十、给公司的建议</h2></div></div>
+        <div class="mini-grid">
+          <article class="mini-card"><h3>今日建议（3条）</h3><p>① 商务核电鸿与缺陷定级10月14日取标资格，并确认贵州项目是否已取标；② 竞争情报岗将深圳机器人正式中标纳入供应商档案，追合同和验收证据；③ 算法组冻结样本验证v8.4.176关键修复。</p></article>
+          <article class="mini-card"><h3>短期行动（1—3个月）</h3><p>完成v8.4.175/176同图A/B、跨源SAM和FP16掩膜测试；建设影像—设备—模型—人工复核只读证据链，量化误漏报、功耗、断网与回滚。</p></article>
+          <article class="mini-card"><h3>中长期规划（6—24个月）</h3><p>积累合规授权数据、国产栈兼容矩阵与可审查边缘交付模板。核安全和生产控制始终坚持AI辅助决策、人机协同、人工复核、规程优先。</p></article>
+        </div>
+      </section>
+
+      <section id="method" class="card">
+        <div class="section-head"><div><div class="kicker">METHODOLOGY</div><h2>信息说明</h2></div></div>
+        <p class="note">信息截点：2026年10月13日09:05（Asia/Shanghai）。优先核验南方电网官方公告、Ultralytics官方发布和国家核安全局动态，并与前期日报去重。深圳定标公告发布于10月8日，本期作为前报候选公示的阶段进展补录，不写成今日发生；版本发布时间按官方UTC换算。未核实新的核电智慧巡检订单、现场验收或国产栈交付。招标资格、附件与公司参与状态均待核实。封面是抽象示意，不对应真实厂区。</p>
+      </section>
+    </div>
+
+    <aside class="card toc" aria-label="本期目录">
+      <h2>本期目录</h2>
+      <a href="#industry">01 重大行业事件</a>
+      <a href="#inspection">02 智慧巡检</a>
+      <a href="#ai">03 AI 视觉与多模态</a>
+      <a href="#domestic">04 国产硬件与边缘智能</a>
+      <a href="#data">05 数据治理与数字孪生</a>
+      <a href="#competitors">06 竞争对手</a>
+      <a href="#opportunities">07 商业机会</a>
+      <a href="#tracking">08 持续跟踪</a>
+      <a href="#insights">09 技术洞察</a>
+      <a href="#actions">10 公司建议</a>
+      <a href="#method">信息说明</a>
+    </aside>
+  </main>
+
+  <footer>每日推送 · 2026-10-13 · <a href="/archive/">查看历史归档</a></footer>
+</body>
+</html>
