@@ -1,0 +1,166 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="截至10月18日13:48，南网数字运检新增智能引擎辅助开发与新能源厂站应用两包；核电巡检和国产化现场适配暂无高价值新增。">
+  <meta property="og:title" content="核电智慧巡检与工业智能化行业日报 · 2026-10-18">
+  <meta property="og:description" content="截至10月18日13:48，南网数字运检新增智能引擎辅助开发与新能源厂站应用两包；核电巡检和国产化现场适配暂无高价值新增。">
+  <meta property="og:type" content="article">
+  <meta property="og:url" content="https://daily.851473.xyz/reports/2026-10-18/">
+  <meta property="og:image" content="https://daily.851473.xyz/reports/2026-10-18/cover.png">
+  <meta name="report-contract" content="nuclear-daily-v2">
+  <link rel="canonical" href="https://daily.851473.xyz/reports/2026-10-18/">
+  <title>核电智慧巡检与工业智能化行业日报 · 2026-10-18</title>
+  <style>
+    :root {
+      --accent: #0d6b4f;
+      --accent-strong: #063d30;
+      --accent-soft: #dff4eb;
+      --page: #f4f6f2;
+      --surface: #ffffff;
+      --text: #13201c;
+      --muted: #65736d;
+      --border: #dfe6e1;
+      --shadow: 0 12px 36px rgba(24, 51, 41, .08);
+      --radius-card: 18px;
+      --space-card: 24px;
+    }
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body { margin: 0; background: var(--page); color: var(--text); font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang SC", "Microsoft YaHei", sans-serif; font-size: 15px; line-height: 1.7; overflow-wrap: anywhere; }
+    img { max-width: 100%; height: auto; }
+    a { color: var(--accent); text-decoration-thickness: 1px; text-underline-offset: 3px; }
+    a:hover { color: var(--accent-strong); }
+    a:focus-visible { outline: 3px solid var(--accent-soft); outline-offset: 3px; border-radius: 4px; }
+    .wrap { width: min(1120px, calc(100% - 32px)); margin-inline: auto; }
+    .hero { padding: 52px 0 46px; color: #fff; background: radial-gradient(circle at 82% 18%, var(--accent) 0, transparent 30%), linear-gradient(135deg, var(--accent-strong), var(--accent)); border-bottom: 4px solid var(--accent-soft); }
+    .eyebrow { color: rgba(255, 255, 255, .78); font-size: 12px; font-weight: 800; letter-spacing: .16em; text-transform: uppercase; }
+    .hero h1 { max-width: 880px; margin: 10px 0 14px; font-size: clamp(30px, 5vw, 54px); line-height: 1.14; text-wrap: balance; }
+    .hero .lead { max-width: 820px; margin: 0; color: rgba(255, 255, 255, .86); font-size: clamp(15px, 2vw, 17px); }
+    .meta { display: flex; flex-wrap: wrap; gap: 9px; margin-top: 22px; }
+    .pill { padding: 6px 11px; border: 1px solid rgba(255, 255, 255, .28); border-radius: 999px; background: rgba(255, 255, 255, .09); font-size: 12px; }
+    .summary { position: relative; margin-top: -24px; }
+    .summary-grid { display: grid; grid-template-columns: 1.4fr repeat(2, minmax(0, 1fr)); gap: 12px; }
+    .card { padding: var(--space-card); border: 1px solid var(--border); border-radius: var(--radius-card); background: var(--surface); box-shadow: var(--shadow); }
+    .summary-card { min-width: 0; padding: 20px; }
+    .summary-card.primary { background: var(--accent-soft); border-color: var(--accent); }
+    .summary-card b { display: block; margin-bottom: 5px; color: var(--accent-strong); font-size: 13px; }
+    .summary-card strong { display: block; color: var(--accent); font-size: clamp(20px, 3vw, 26px); line-height: 1.25; }
+    .summary-card p { margin: 6px 0 0; color: var(--muted); font-size: 13px; }
+    main { padding: 34px 0 56px; }
+    .layout { display: grid; grid-template-columns: minmax(0, 1fr) 250px; gap: 24px; align-items: start; }
+    .content { min-width: 0; }
+    .content > .card { margin-bottom: 18px; }
+    .toc { position: sticky; top: 16px; padding: 18px; box-shadow: 0 4px 18px rgba(24, 51, 41, .05); }
+    .toc h2 { margin: 0 0 10px; color: var(--muted); font-size: 12px; letter-spacing: .12em; }
+    .toc a { display: block; padding: 6px 0; color: var(--muted); font-size: 13px; text-decoration: none; }
+    .toc a:hover { color: var(--accent); }
+    .section-head { display: flex; align-items: flex-start; justify-content: space-between; gap: 14px; margin-bottom: 6px; padding-bottom: 14px; border-bottom: 1px solid var(--border); }
+    .section-head h2 { margin: 0; color: var(--accent-strong); font-size: clamp(19px, 3vw, 23px); line-height: 1.35; }
+    .kicker { margin-bottom: 4px; color: var(--accent); font-size: 12px; font-weight: 800; letter-spacing: .08em; }
+    .rank { color: var(--muted); font-size: 12px; white-space: nowrap; }
+    .item { padding: 19px 0; border-bottom: 1px dashed var(--border); }
+    .item:last-child { padding-bottom: 2px; border-bottom: 0; }
+    .item h3 { margin: 0 0 8px; font-size: 18px; line-height: 1.45; text-wrap: pretty; }
+    .item p { margin: 7px 0; color: var(--muted); font-size: 14px; }
+    .tags { display: flex; flex-wrap: wrap; gap: 7px; margin: 9px 0; }
+    .tag { padding: 3px 8px; border-radius: 999px; background: var(--accent-soft); color: var(--accent-strong); font-size: 11px; font-weight: 800; }
+    .tag.warn { background: #fff0d8; color: #8a5a10; }
+    .tag.risk { background: #fae5e1; color: #a7332c; }
+    .verdict { margin-top: 12px; padding: 12px 14px; border-left: 3px solid var(--accent); border-radius: 0 10px 10px 0; background: var(--accent-soft); font-size: 14px; }
+    .source { margin-top: 10px; color: var(--muted); font-size: 12px; }
+    .source a { margin-right: 10px; }
+    .mini-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 12px; margin-top: 16px; }
+    .mini-card { padding: 16px; border: 1px solid var(--border); border-radius: 14px; background: var(--page); }
+    .mini-card h3 { margin: 0 0 7px; font-size: 16px; }
+    .mini-card p { margin: 6px 0; color: var(--muted); font-size: 13px; }
+    .table-wrap { max-width: 100%; margin-top: 14px; overflow-x: auto; border-radius: 12px; }
+    .table-wrap:focus-visible { outline: 3px solid var(--accent-soft); outline-offset: 2px; }
+    table { width: 100%; min-width: 620px; border-collapse: collapse; font-size: 13px; }
+    th, td { padding: 11px 10px; border-bottom: 1px solid var(--border); text-align: left; vertical-align: top; }
+    th { background: var(--accent-soft); color: var(--accent-strong); }
+    .note { margin-top: 15px; padding: 11px 13px; border-radius: 10px; background: var(--page); color: var(--muted); font-size: 12px; }
+    footer { padding: 0 16px 32px; color: var(--muted); text-align: center; font-size: 12px; }
+    @media (max-width: 900px) {
+      .summary-grid { grid-template-columns: 1fr 1fr; }
+      .summary-card.primary { grid-column: 1 / -1; }
+      .layout { grid-template-columns: 1fr; }
+      .toc { position: static; display: none; }
+    }
+    @media (max-width: 640px) {
+      .wrap { width: min(100% - 24px, 1120px); }
+      .hero { padding: 40px 0 38px; }
+      .summary-grid, .mini-grid { grid-template-columns: 1fr; }
+      .summary-card.primary { grid-column: auto; }
+      .card { padding: 19px 17px; }
+      .section-head { display: block; }
+      .rank { display: block; margin-top: 6px; white-space: normal; }
+    }
+  </style>
+</head>
+<body>
+  <header class="hero">
+    <div class="wrap">
+      <div class="eyebrow">DAILY BRIEFING</div>
+      <h1>核电智慧巡检与工业智能化行业日报</h1>
+      <p class="lead">今日仅新增数字运检两包；先核资格，再做只读场景验证。本期将电网公开采购与核电适配分开判断。</p>
+      <div class="meta"><span class="pill">2026年10月18日 · 星期日</span><span class="pill">Asia/Shanghai</span></div>
+    </div>
+  </header>
+
+  <div class="wrap summary" aria-label="今日摘要">
+    <div class="summary-grid">
+      <section class="card summary-card primary"><b>今日一句话结论</b><strong>今日仅新增数字运检两包；先核资格，再做只读场景验证</strong><p>先查取标资格和附件，再决定是否投入方案。</p></section>
+      <section class="card summary-card"><b>今日新增</b><strong>1项采购，2个标包</strong><p>电网数字运检采购；不是核电订单或现场验证。</p></section>
+      <section class="card summary-card"><b>建议动作</b><strong>10月23日前核取标</strong><p>商务核资格；产品与质保列只读验证边界。</p></section>
+    </div>
+  </div>
+
+  <main class="wrap layout">
+    <div class="content">
+      <section id="industry" class="card"><div class="section-head"><div><div class="kicker">01 · INDUSTRY</div><h2>一、今日重大行业事件</h2></div><div class="rank">1项首次报道</div></div>
+<article class="item"><h3>南网数字运检采购智能引擎开发与新能源厂站应用服务</h3><div class="tags"><span class="tag">电网相邻市场</span><span class="tag warn">公开招标</span></div><p><b>已确认事实：</b>南方电网数字电网科技（广东）有限公司10月16日17:33公告专项采购，编号CG2100022002420985。标的1为自然语言处理模块、智能引擎集成、规则库可视化等辅助开发，概算和最高限价185.18万元；标的2为新能源厂站智能应用场景开发与试点配合，概算和最高限价811.78万元。两包合计996.96万元，均为电网技术服务，未披露核电场景或已完成的效果指标。</p><div class="verdict"><b>判断：</b>采购将引擎、规则展示与场景验证拆为可交付服务，提示公司应明确标准能力和现场定制的边界。公告金额是预算上限，不能当作合同收入。</div><p><b>建议行动：</b>商务在10月23日23:59:59取标截止前核主体、财务审计材料、交付资源与供应商登记；产品组取得技术规范书后判断是否具备投标条件。</p><div class="source">来源：<a href="https://www.bidding.csg.cn/zbgg/1200445973.jhtml" rel="noopener noreferrer">南网数字运检招标公告（10月16日）</a></div></article></section>
+
+      <section id="inspection" class="card"><div class="section-head"><div><div class="kicker">02 · INSPECTION</div><h2>二、智慧巡检最新动态</h2></div><div class="rank">今日无高价值新增</div></div><article class="item"><h3>核电智慧巡检未见新的公开采购或上线证据</h3><p><b>已确认事实：</b>本期核对国家核安全局公开动态和南网采购公告；新采购是数字运检辅助开发及新能源厂站应用，并未明示核电智慧巡检订单。10月16日梅州多光巡检仍为已报道的候选公示。</p><div class="verdict"><b>判断：</b>可借鉴电网的场景试点与用户培训要求，但机载多光、电网厂站和核电受控区域的环境、准入及审查要求不同。</div><p><b>建议行动：</b>巡检团队继续用授权的非安全级影像做采集、误漏报、断网缓存和人工复核清单；等待梅州最终结果再更新竞争判断。</p><div class="source">来源：<a href="https://www.bidding.csg.cn/zbgg/1200445973.jhtml" rel="noopener noreferrer">数字运检采购</a>；<a href="https://www.bidding.csg.cn/zbhxrgs/1200445916.jhtml" rel="noopener noreferrer">梅州多光巡检候选公示</a>；<a href="https://nnsa.mee.gov.cn/ywdt/" rel="noopener noreferrer">国家核安全局动态</a></div></article></section>
+
+      <section id="ai" class="card"><div class="section-head"><div><div class="kicker">03 · AI</div><h2>三、AI 视觉与多模态技术进展</h2></div><div class="rank">今日无高价值新增</div></div><article class="item"><h3>从模型更新转向规则与引擎的可验证交付</h3><p><b>已确认事实：</b>本期核对的Ultralytics官方版本仍为10月16日已报道的v8.4.178；新采购要求自然语言处理、智能引擎二次开发和规则库展示，未公开模型架构、准确率或核电测试结果。</p><div class="verdict"><b>判断：</b>核电非安全级巡检可试用规则辅助归类和检索；样本授权、误漏报、现场光照与遮挡、边缘功耗、网络隔离、解释性和审查记录仍是工程限制。采购文本不能证明AI已在核电投产。</div><p><b>建议行动：</b>投入建议为持续跟踪：先冻结数据与人工标签，在隔离环境比较规则与模型输出，记录误漏报、时延、回滚和人工确认；未通过复核前暂不进入生产控制。</p><div class="source">来源：<a href="https://www.bidding.csg.cn/zbgg/1200445973.jhtml" rel="noopener noreferrer">南网采购范围</a>；<a href="https://github.com/ultralytics/ultralytics/releases/tag/v8.4.178" rel="noopener noreferrer">Ultralytics官方既有版本</a></div></article></section>
+
+      <section id="domestic" class="card"><div class="section-head"><div><div class="kicker">04 · DOMESTIC STACK</div><h2>四、国产硬件与边缘智能专项</h2></div><div class="rank">今日无新适配证据</div></div><div class="mini-grid"><article class="mini-card"><h3>4.1 国产 CPU 与服务器</h3><p>新采购未指定可据以认定的国产CPU型号。已验收组合为主力；新CPU须完成驱动、数据库、容器和回滚PoC后采用。</p></article><article class="mini-card"><h3>4.2 国产 GPU / NPU 与 AI 加速</h3><p>公告未给加速芯片或算力指标。现有已验证推理栈为主力，国产GPU/NPU作备选；先测算子覆盖、精度与功耗。</p></article><article class="mini-card"><h3>4.3 国产边缘算力设备</h3><p>新能源厂站试点不等于核电边缘适配。新设备需核离线运行、视频接入、环境可靠性和现场维护，PoC后采用。</p></article><article class="mini-card"><h3>4.4 国产操作系统与基础软件</h3><p>本期无新增核电OS验收证据。已验收系统为主力；新OS作备选，先测驱动、补丁、审计与应用迁移。</p></article></div><article class="item"><h3>4.5 对智慧核电的部署建议</h3><p><b>已确认事实：</b>10月16日数字运检公告描述服务范围、金额和投标条件，未公开国产软硬件组合与核电现场性能。</p><div class="verdict"><b>适配结论：</b>视觉边缘推理、厂级RAG和AI Agent以已审查、隔离且只读的组合为主力；新国产芯片、边缘盒与OS为备选，PoC后采用；自动控制决策暂不进入生产。</div><p><b>建议行动：</b>架构组统一记录模型版本、驱动、时延、功耗、断网恢复、审计和人工接管结果；AI辅助决策、人机协同、人工复核、规程优先。</p><div class="source">依据：<a href="https://www.bidding.csg.cn/zbgg/1200445973.jhtml" rel="noopener noreferrer">南网公告</a></div></article></section>
+
+      <section id="data" class="card"><div class="section-head"><div><div class="kicker">05 · DATA &amp; TWIN</div><h2>五、工业数据治理与数字孪生趋势</h2></div></div><article class="item"><h3>规则库展示与场景试点进入同一采购计划</h3><p><b>已确认事实：</b>10月16日数字运检公告标的1包括规则库可视化和智能引擎集成，标的2包括新能源厂站场景试点验证、部署和用户培训；公告未给数字孪生交付指标。昨日已报道的防城港核电数据服务规模本期无新增公开节点。</p><div class="verdict"><b>判断：</b>可交付的数据与规则能力需要连到试点验收，不能仅展示原型；核电客户仍应以数据权限、质量规则、业务责任和审计为准。</div><p><b>建议行动：</b>产品组做只读规则库样例，逐项标注数据源、版本、审批人、异常处理和验收证据；没有可核验业务场景时暂缓数字孪生投入。</p><div class="source">来源：<a href="https://www.bidding.csg.cn/zbgg/1200445973.jhtml" rel="noopener noreferrer">数字运检公告</a></div></article></section>
+
+      <section id="competitors" class="card"><div class="section-head"><div><div class="kicker">06 · COMPETITORS</div><h2>六、竞争对手动态</h2></div><div class="rank">今日无高价值新增</div></div><article class="item"><h3>既有候选人仍待最终结果</h3><p><b>已确认事实：</b>梅州多光巡检和广州虚假验收治理项目10月16日发布的第一候选人公示已在昨日日报报道，公示期至10月19日；本期未核得两项目最终中标或核电交付信息。</p><div class="verdict"><b>判断：</b>候选公示只能说明竞标排序，尚不能作为交付能力或行业占有率证据。</div><p><b>建议行动：</b>商务等待正式结果公告，届时再比较公开技术路线与服务边界。</p><div class="source">来源：<a href="https://www.bidding.csg.cn/zbhxrgs/1200445916.jhtml" rel="noopener noreferrer">梅州候选公示</a>；<a href="https://www.bidding.csg.cn/zbhxrgs/1200445967.jhtml" rel="noopener noreferrer">广州候选公示</a></div></article></section>
+
+      <section id="opportunities" class="card"><div class="section-head"><div><div class="kicker">07 · OPPORTUNITIES</div><h2>七、商业机会</h2></div><div class="rank">1项新增，2项存量</div></div><article class="item"><h3>南网数字运检两包：先核取标资格</h3><p><b>已确认事实：</b>10月16日公告CG2100022002420985，185.18万元智能引擎辅助开发和811.78万元新能源厂站智能应用，文件获取至10月23日23:59:59，投标截止11月9日09:00。资格后审，要求近三年审计财务材料，不接受联合体；技术规范书需登录平台获取。</p><div class="verdict"><b>判断：</b>与工业AI平台、规则引擎及试点交付相邻，属于电网机会，不是核电订单；我方资格、服务资源和附件适配尚未核实。</div><p><b>建议行动：</b>商务先做资格和资源go/no-go；若达标，产品与交付分别估算两包工作量，拿到附件后再决定投标。未达标则只保留需求研究。</p><div class="source">来源：<a href="https://www.bidding.csg.cn/zbgg/1200445973.jhtml" rel="noopener noreferrer">南网招标公告</a></div></article><article class="item"><h3>贵州视频巡视与南网数据治理框架：继续按节点跟踪</h3><p><b>已确认事实：</b>此前已报道的贵州站端视频巡视采购取标至10月20日；南网变电数据治理框架取标至10月22日。核验范围内无新的中标或技术变更。</p><div class="verdict"><b>判断：</b>存量商机的下一步是核资格和附件，不应重复计作今日新增。</div><p><b>建议行动：</b>商务分别确认是否已取标与满足资格；未取得文件不估计可交付范围。</p><div class="source">来源：<a href="https://www.bidding.csg.cn/zbgg/1200445725.jhtml" rel="noopener noreferrer">贵州原公告</a>；<a href="https://www.bidding.csg.cn/zbgg/1200445815.jhtml" rel="noopener noreferrer">南网数据治理原公告</a></div></article></section>
+
+      <section id="tracking" class="card"><div class="section-head"><div><div class="kicker">08 · TRACKING</div><h2>八、持续跟踪事项</h2></div></div><div class="table-wrap" tabindex="0"><table><thead><tr><th>事项名称</th><th>当前状态</th><th>今日是否有实质新增</th><th>下一观察节点</th></tr></thead><tbody><tr><td><a href="https://www.bidding.csg.cn/zbgg/1200445973.jhtml" rel="noopener noreferrer">南网数字运检两包</a></td><td>10月16日晚公告，首次报道</td><td>有；公开招标</td><td>10月23日取标截止；11月9日截标</td></tr><tr><td><a href="https://www.bidding.csg.cn/zbgg/1200445725.jhtml" rel="noopener noreferrer">贵州站端视频巡视</a></td><td>招标中</td><td>无</td><td>10月20日取标截止</td></tr><tr><td><a href="https://www.bidding.csg.cn/zbgg/1200445815.jhtml" rel="noopener noreferrer">南网变电数据治理框架</a></td><td>招标中</td><td>无</td><td>10月22日取标截止</td></tr><tr><td><a href="https://www.bidding.csg.cn/zbhxrgs/1200445916.jhtml" rel="noopener noreferrer">梅州多光巡检试制</a></td><td>第一候选公示</td><td>无</td><td>10月19日公示结束、结果公告</td></tr><tr><td><a href="https://www.bidding.csg.cn/zbhxrgs/1200445967.jhtml" rel="noopener noreferrer">广州虚假验收治理</a></td><td>第一候选公示</td><td>无</td><td>10月19日公示结束、结果公告</td></tr></tbody></table></div></section>
+
+      <section id="insights" class="card"><div class="section-head"><div><div class="kicker">09 · INSIGHT</div><h2>九、今日技术洞察</h2></div></div><article class="item"><h3>一至三年机会：可验收的规则、数据与人工复核链</h3><p><b>已确认事实：</b>新增采购分别要求智能引擎与规则库展示、厂站场景试点与用户培训；未公开核电适配或模型指标。</p><div class="verdict"><b>判断：</b>可复制壁垒可能在设备主数据、规则版本、现场数据权限、异常证据、人工签署与持续运维的统一交付。国产化价值须由经审查的软硬件兼容和可靠性实测支撑。</div><p><b>建议行动：</b>产品组构建“只读数据—规则触发—原始证据—人工确认”样例；算法组测误漏报，架构组测隔离与功耗，质保定义审查门槛。通过客户授权后再做PoC。</p><div class="source">依据：<a href="https://www.bidding.csg.cn/zbgg/1200445973.jhtml" rel="noopener noreferrer">数字运检采购范围</a></div></article></section>
+
+      <section id="actions" class="card"><div class="section-head"><div><div class="kicker">10 · ACTION</div><h2>十、给公司的建议</h2></div></div><div class="mini-grid"><article class="mini-card"><h3>今日建议（2条）</h3><p>① 商务核数字运检两包的财务、登记与交付资格；② 产品、质保列出只读规则引擎与场景试点的验收证据，供取标后评估。</p></article><article class="mini-card"><h3>短期行动（1—3个月）</h3><p>完成一个授权数据的规则库与人工复核样例；以数据可追溯、误漏报可复现、权限和回滚可审查为里程碑。</p></article><article class="mini-card"><h3>中长期规划（6—24个月）</h3><p>积累设备主数据、工业规则、国产软硬件兼容矩阵与可复用交付模板；核安全与生产控制场景始终遵守规程优先、人工复核。</p></article></div></section>
+
+      <section id="method" class="card"><div class="section-head"><div><div class="kicker">METHODOLOGY</div><h2>信息说明</h2></div></div><p class="note">信息截点：2026年10月18日13:48（Asia/Shanghai）。核对南网官方招标和候选公示、国家核安全局公开动态、Ultralytics官方版本，并对照昨日和历史日报去重。10月16日晚公告为本期首次报道；预算不等于成交，电网试点不等于核电投产。公司资格、登录后附件、现场指标和国产栈实测未核。封面是抽象示意，不对应真实厂区。</p></section>
+
+      
+    </div>
+
+    <aside class="card toc" aria-label="本期目录">
+      <h2>本期目录</h2>
+      <a href="#industry">01 重大行业事件</a>
+      <a href="#inspection">02 智慧巡检</a>
+      <a href="#ai">03 AI 视觉与多模态</a>
+      <a href="#domestic">04 国产硬件与边缘智能</a>
+      <a href="#data">05 数据治理与数字孪生</a>
+      <a href="#competitors">06 竞争对手</a>
+      <a href="#opportunities">07 商业机会</a>
+      <a href="#tracking">08 持续跟踪</a>
+      <a href="#insights">09 技术洞察</a>
+      <a href="#actions">10 公司建议</a>
+      <a href="#method">信息说明</a>
+    </aside>
+  </main>
+
+  <footer>每日推送 · 2026-10-18 · <a href="/archive/">查看历史归档</a></footer>
+</body>
+</html>
