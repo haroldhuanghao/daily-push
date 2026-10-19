@@ -1,0 +1,195 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="截至10月19日09:04，补报Ultralytics v8.4.179—182的RKNN和标注修复、海南电网技防采购；核电巡检暂无新订单。">
+  <meta property="og:title" content="核电智慧巡检与工业智能化行业日报 · 2026-10-19">
+  <meta property="og:description" content="截至10月19日09:04，补报Ultralytics v8.4.179—182的RKNN和标注修复、海南电网技防采购；核电巡检暂无新订单。">
+  <meta property="og:type" content="article">
+  <meta property="og:url" content="https://daily.851473.xyz/reports/2026-10-19/">
+  <meta property="og:image" content="https://daily.851473.xyz/reports/2026-10-19/cover.png">
+  <meta name="report-contract" content="nuclear-daily-v2">
+  <link rel="canonical" href="https://daily.851473.xyz/reports/2026-10-19/">
+  <title>核电智慧巡检与工业智能化行业日报 · 2026-10-19</title>
+  <style>
+    :root {
+      --accent: #0d6b4f;
+      --accent-strong: #063d30;
+      --accent-soft: #dff4eb;
+      --page: #f4f6f2;
+      --surface: #ffffff;
+      --text: #13201c;
+      --muted: #65736d;
+      --border: #dfe6e1;
+      --shadow: 0 12px 36px rgba(24, 51, 41, .08);
+      --radius-card: 18px;
+      --space-card: 24px;
+    }
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body { margin: 0; background: var(--page); color: var(--text); font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang SC", "Microsoft YaHei", sans-serif; font-size: 15px; line-height: 1.7; overflow-wrap: anywhere; }
+    img { max-width: 100%; height: auto; }
+    a { color: var(--accent); text-decoration-thickness: 1px; text-underline-offset: 3px; }
+    a:hover { color: var(--accent-strong); }
+    a:focus-visible { outline: 3px solid var(--accent-soft); outline-offset: 3px; border-radius: 4px; }
+    .wrap { width: min(1120px, calc(100% - 32px)); margin-inline: auto; }
+    .hero { padding: 52px 0 46px; color: #fff; background: radial-gradient(circle at 82% 18%, var(--accent) 0, transparent 30%), linear-gradient(135deg, var(--accent-strong), var(--accent)); border-bottom: 4px solid var(--accent-soft); }
+    .eyebrow { color: rgba(255, 255, 255, .78); font-size: 12px; font-weight: 800; letter-spacing: .16em; text-transform: uppercase; }
+    .hero h1 { max-width: 880px; margin: 10px 0 14px; font-size: clamp(30px, 5vw, 54px); line-height: 1.14; text-wrap: balance; }
+    .hero .lead { max-width: 820px; margin: 0; color: rgba(255, 255, 255, .86); font-size: clamp(15px, 2vw, 17px); }
+    .meta { display: flex; flex-wrap: wrap; gap: 9px; margin-top: 22px; }
+    .pill { padding: 6px 11px; border: 1px solid rgba(255, 255, 255, .28); border-radius: 999px; background: rgba(255, 255, 255, .09); font-size: 12px; }
+    .summary { position: relative; margin-top: -24px; }
+    .summary-grid { display: grid; grid-template-columns: 1.4fr repeat(2, minmax(0, 1fr)); gap: 12px; }
+    .card { padding: var(--space-card); border: 1px solid var(--border); border-radius: var(--radius-card); background: var(--surface); box-shadow: var(--shadow); }
+    .summary-card { min-width: 0; padding: 20px; }
+    .summary-card.primary { background: var(--accent-soft); border-color: var(--accent); }
+    .summary-card b { display: block; margin-bottom: 5px; color: var(--accent-strong); font-size: 13px; }
+    .summary-card strong { display: block; color: var(--accent); font-size: clamp(20px, 3vw, 26px); line-height: 1.25; }
+    .summary-card p { margin: 6px 0 0; color: var(--muted); font-size: 13px; }
+    main { padding: 34px 0 56px; }
+    .layout { display: grid; grid-template-columns: minmax(0, 1fr) 250px; gap: 24px; align-items: start; }
+    .content { min-width: 0; }
+    .content > .card { margin-bottom: 18px; }
+    .toc { position: sticky; top: 16px; padding: 18px; box-shadow: 0 4px 18px rgba(24, 51, 41, .05); }
+    .toc h2 { margin: 0 0 10px; color: var(--muted); font-size: 12px; letter-spacing: .12em; }
+    .toc a { display: block; padding: 6px 0; color: var(--muted); font-size: 13px; text-decoration: none; }
+    .toc a:hover { color: var(--accent); }
+    .section-head { display: flex; align-items: flex-start; justify-content: space-between; gap: 14px; margin-bottom: 6px; padding-bottom: 14px; border-bottom: 1px solid var(--border); }
+    .section-head h2 { margin: 0; color: var(--accent-strong); font-size: clamp(19px, 3vw, 23px); line-height: 1.35; }
+    .kicker { margin-bottom: 4px; color: var(--accent); font-size: 12px; font-weight: 800; letter-spacing: .08em; }
+    .rank { color: var(--muted); font-size: 12px; white-space: nowrap; }
+    .item { padding: 19px 0; border-bottom: 1px dashed var(--border); }
+    .item:last-child { padding-bottom: 2px; border-bottom: 0; }
+    .item h3 { margin: 0 0 8px; font-size: 18px; line-height: 1.45; text-wrap: pretty; }
+    .item p { margin: 7px 0; color: var(--muted); font-size: 14px; }
+    .tags { display: flex; flex-wrap: wrap; gap: 7px; margin: 9px 0; }
+    .tag { padding: 3px 8px; border-radius: 999px; background: var(--accent-soft); color: var(--accent-strong); font-size: 11px; font-weight: 800; }
+    .tag.warn { background: #fff0d8; color: #8a5a10; }
+    .tag.risk { background: #fae5e1; color: #a7332c; }
+    .verdict { margin-top: 12px; padding: 12px 14px; border-left: 3px solid var(--accent); border-radius: 0 10px 10px 0; background: var(--accent-soft); font-size: 14px; }
+    .source { margin-top: 10px; color: var(--muted); font-size: 12px; }
+    .source a { margin-right: 10px; }
+    .mini-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 12px; margin-top: 16px; }
+    .mini-card { padding: 16px; border: 1px solid var(--border); border-radius: 14px; background: var(--page); }
+    .mini-card h3 { margin: 0 0 7px; font-size: 16px; }
+    .mini-card p { margin: 6px 0; color: var(--muted); font-size: 13px; }
+    .table-wrap { max-width: 100%; margin-top: 14px; overflow-x: auto; border-radius: 12px; }
+    .table-wrap:focus-visible { outline: 3px solid var(--accent-soft); outline-offset: 2px; }
+    table { width: 100%; min-width: 620px; border-collapse: collapse; font-size: 13px; }
+    th, td { padding: 11px 10px; border-bottom: 1px solid var(--border); text-align: left; vertical-align: top; }
+    th { background: var(--accent-soft); color: var(--accent-strong); }
+    .note { margin-top: 15px; padding: 11px 13px; border-radius: 10px; background: var(--page); color: var(--muted); font-size: 12px; }
+    footer { padding: 0 16px 32px; color: var(--muted); text-align: center; font-size: 12px; }
+    @media (max-width: 900px) {
+      .summary-grid { grid-template-columns: 1fr 1fr; }
+      .summary-card.primary { grid-column: 1 / -1; }
+      .layout { grid-template-columns: 1fr; }
+      .toc { position: static; display: none; }
+    }
+    @media (max-width: 640px) {
+      .wrap { width: min(100% - 24px, 1120px); }
+      .hero { padding: 40px 0 38px; }
+      .summary-grid, .mini-grid { grid-template-columns: 1fr; }
+      .summary-card.primary { grid-column: auto; }
+      .card { padding: 19px 17px; }
+      .section-head { display: block; }
+      .rank { display: block; margin-top: 6px; white-space: normal; }
+    }
+  </style>
+</head>
+<body>
+  <header class="hero">
+    <div class="wrap">
+      <div class="eyebrow">DAILY BRIEFING</div>
+      <h1>核电智慧巡检与工业智能化行业日报</h1>
+      <p class="lead">截至10月19日09:04，补报Ultralytics v8.4.179—182的RKNN和标注修复、海南电网技防采购；核电巡检暂无新订单。</p>
+      <div class="meta"><span class="pill">2026年10月19日星期一 · 星期一</span><span class="pill">Asia/Shanghai</span></div>
+    </div>
+  </header>
+
+  <div class="wrap summary" aria-label="今日摘要">
+    <div class="summary-grid">
+      <section class="card summary-card primary"><b>今日一句话结论</b><strong>补核RKNN与标注修复；海南技防标包先查授权和替代料</strong><p>先固定导出与标注版本，再决定设备标包是否参与。</p></section>
+      <section class="card summary-card"><b>今日新增</b><strong>2类首次补报</strong><p>模型修复与电网技防招标均非今日新发布。</p></section>
+      <section class="card summary-card"><b>建议动作</b><strong>先核资格，再复测</strong><p>商务查授权及替代料；算法组锁定基线。</p></section>
+    </div>
+  </div>
+
+  <main class="wrap layout">
+    <div class="content">
+      <section id="industry" class="card">
+        <div class="section-head"><div><div class="kicker">01 · INDUSTRY</div><h2>一、今日重大行业事件</h2></div><div class="rank">1项首次补报</div></div>
+        <article class="item"><h3>海南变电站技防改造采购智能分析与多类摄像设备</h3><div class="tags"><span class="tag">电网相邻市场</span><span class="tag warn">公开招标</span></div><p><b>已确认事实：</b>海南电力产业发展有限责任公司10月16日20:13公告技防安全系统类设备采购，编号CG0700022002380028，预计金额及最高限价均为130.81万元。采购缘于变电站智能化反恐怖技防改造，主要设备包括智能分析一体机、红外摄像机、全景凝视摄像机及门禁设备；合同签订后30天内交货。公告未披露核电用途或现场识别效果。</p><div class="verdict"><b>判断：</b>这是安防设备集成交付需求，与核电非安全级视频接入有工程共性，但厂区准入、数据权限和安全审查不能照搬。金额是招标上限，不是成交额。</div><p><b>建议行动：</b>商务在10月22日18:00取标截止前核制造商授权、服务承诺、单品牌单型号授权限制及交货能力；供应链核禁用器件与替代料。资格不满足则不投标。</p><div class="source">来源：<a href="https://www.bidding.csg.cn/zbgg/1200446061.jhtml" rel="noopener noreferrer">南网供应链招标公告（10月16日）</a></div></article>
+    </section>
+
+      <section id="inspection" class="card">
+        <div class="section-head"><div><div class="kicker">02 · INSPECTION</div><h2>二、智慧巡检最新动态</h2></div><div class="rank">核电无高价值新增</div></div>
+        <article class="item"><h3>技防采购可供视频接入验证，不能代替核电巡检证据</h3><p><b>已确认事实：</b>海南10月16日公告明确为变电站技防改造设备；截至本期信息截点，所核国家核安全局动态未见新的核电智慧巡检采购或上线公告。此前梅州多光巡检仍停留在候选公示。</p><div class="verdict"><b>判断：</b>多路摄像与本地分析可作为授权非安全级试验的参考；智能安防项目不能证明核电缺陷识别、辐射环境适应或生产控制可用。</div><p><b>建议行动：</b>巡检组以授权视频核接入协议、断网缓存、误漏报与人工复核记录；不接入安全级控制链。</p><div class="source">来源：<a href="https://www.bidding.csg.cn/zbgg/1200446061.jhtml" rel="noopener noreferrer">海南技防招标</a><a href="https://nnsa.mee.gov.cn/ywdt/" rel="noopener noreferrer">国家核安全局动态</a><a href="https://www.bidding.csg.cn/zbhxrgs/1200445916.jhtml" rel="noopener noreferrer">梅州候选公示</a></div></article>
+    </section>
+
+      <section id="ai" class="card">
+        <div class="section-head"><div><div class="kicker">03 · AI</div><h2>三、AI 视觉与多模态技术进展</h2></div><div class="rank">版本修复首次补报</div></div>
+        <article class="item"><h3>v8.4.179—182修复导出、同名标注与异常框校验</h3><p><b>已确认事实：</b>Ultralytics于10月17日发布v8.4.179、v8.4.180，10月18日发布v8.4.181、v8.4.182。v8.4.179将rknn-toolkit2限制在2.5以下，以避开官方报告的2.5.0导出失败；v8.4.180调整验证标签的相对路径；v8.4.181修复自动标注中同名图片的标签对应，并改善旋转框跟踪及分割内存使用；v8.4.182拒收负宽高标注框并升级数据缓存版本。本期是首次补报，并非10月19日新发布。</p><div class="verdict"><b>判断：</b>对核电非安全级缺陷图像和边缘视觉试验，文件同名、异常框及RKNN导出都可能改变测试结论；发布说明不能证明实际误漏报或国产设备可用。现场光照、遮挡、算力功耗、网络隔离、可解释性与审查仍须单独验证。</div><p><b>建议行动：</b>投入建议为立即验证：算法组冻结数据集、文件清单与标签哈希，在隔离环境做v8.4.178/182对照；瑞芯微PoC锁定rknn-toolkit2版本并复测导出、精度、时延及回滚。人工复核前不用于生产控制。</p><div class="source">来源：<a href="https://github.com/ultralytics/ultralytics/releases/tag/v8.4.179" rel="noopener noreferrer">v8.4.179</a><a href="https://github.com/ultralytics/ultralytics/releases/tag/v8.4.180" rel="noopener noreferrer">v8.4.180</a><a href="https://github.com/ultralytics/ultralytics/releases/tag/v8.4.181" rel="noopener noreferrer">v8.4.181</a><a href="https://github.com/ultralytics/ultralytics/releases/tag/v8.4.182" rel="noopener noreferrer">v8.4.182</a></div></article>
+    </section>
+
+      <section id="domestic" class="card">
+        <div class="section-head"><div><div class="kicker">04 · DOMESTIC STACK</div><h2>四、国产硬件与边缘智能专项</h2></div><div class="rank">RKNN约束有新增</div></div>
+        <div class="mini-grid"><article class="mini-card"><h3>4.1 国产 CPU 与服务器</h3><p>本期无可核验的新CPU或服务器核电验收。已审查组合为主力；新型号完成驱动、数据库、容器与回滚PoC后采用。</p></article><article class="mini-card"><h3>4.2 国产 GPU / NPU 与 AI 加速</h3><p>v8.4.179提示RKNN工具链2.5.0导出风险。既有已验证推理栈为主力；瑞芯微NPU仅作备选，锁版并完成精度、功耗与稳定性PoC后采用。</p></article><article class="mini-card"><h3>4.3 国产边缘算力设备</h3><p>海南公告有智能分析一体机采购，未披露芯片型号。新边缘设备先测多路视频、断网、温升及维护能力，PoC后采用。</p></article><article class="mini-card"><h3>4.4 国产操作系统与基础软件</h3><p>本期未见新OS适配证据。已验收系统为主力；新OS作备选，先测驱动、补丁和审计日志。</p></article></div>
+        <article class="item"><h3>4.5 对智慧核电的部署建议</h3><p><b>已确认事实：</b>v8.4.179修正RKNN导出依赖，海南招标另要求投标产品不得使用美光器件；公告未给核电国产化验收结果。</p><div class="verdict"><b>适配结论：</b>视觉边缘推理、厂级RAG与AI Agent继续以已审查且只读隔离的组合为主力；RKNN设备及新OS为备选，PoC后采用；未经审查的自动控制暂不进生产。</div><p><b>建议行动：</b>架构与供应链共建芯片、存储、驱动、模型、工具链版本矩阵，记录替代料来源、导出一致性、功耗和回滚。AI辅助决策、人机协同、人工复核、规程优先。</p><div class="source">来源：<a href="https://github.com/ultralytics/ultralytics/releases/tag/v8.4.179" rel="noopener noreferrer">官方RKNN修复</a><a href="https://www.bidding.csg.cn/zbgg/1200446061.jhtml" rel="noopener noreferrer">海南设备资格条款</a></div></article>
+    </section>
+
+      <section id="data" class="card">
+        <div class="section-head"><div><div class="kicker">05 · DATA &amp; TWIN</div><h2>五、工业数据治理与数字孪生趋势</h2></div></div>
+        <article class="item"><h3>标注路径与缓存版本应纳入数据治理</h3><p><b>已确认事实：</b>v8.4.180—182连续修改验证标签路径、自动标注同名文件处理和异常框检查；昨日已报道的数字运检采购与防城港数据治理案例，本期未见新的验收节点。</p><div class="verdict"><b>判断：</b>工业视觉数据治理应保存原图唯一标识、标签版本、校验结果和人工签署；仅靠文件名会削弱缺陷追溯。数字孪生本期无新增交付证据。</div><p><b>建议行动：</b>数据组在只读样本库补做同名图像与负宽高标签扫描，列出受影响样本并由人工复核；暂缓无验收场景的数字孪生扩建。</p><div class="source">来源：<a href="https://github.com/ultralytics/ultralytics/releases/tag/v8.4.180" rel="noopener noreferrer">v8.4.180</a><a href="https://github.com/ultralytics/ultralytics/releases/tag/v8.4.181" rel="noopener noreferrer">v8.4.181</a><a href="https://github.com/ultralytics/ultralytics/releases/tag/v8.4.182" rel="noopener noreferrer">v8.4.182</a></div></article>
+    </section>
+
+      <section id="competitors" class="card">
+        <div class="section-head"><div><div class="kicker">06 · COMPETITORS</div><h2>六、竞争对手动态</h2></div><div class="rank">今日无高价值新增</div></div>
+        <article class="item"><h3>海南新标尚无中标者；既有候选仍待结果</h3><p><b>已确认事实：</b>海南项目仍为10月16日公开招标。梅州多光巡检10月16日公示的是中标候选人，公示期至10月19日；本期未核得最终中标、核电部署或验收证据。</p><div class="verdict"><b>判断：</b>不能凭招标或候选排序推断厂商份额和现场效果。</div><p><b>建议行动：</b>商务跟踪最终公告后再比较设备品牌、授权链和交付范围。</p><div class="source">来源：<a href="https://www.bidding.csg.cn/zbgg/1200446061.jhtml" rel="noopener noreferrer">海南招标</a><a href="https://www.bidding.csg.cn/zbhxrgs/1200445916.jhtml" rel="noopener noreferrer">梅州候选公示</a></div></article>
+    </section>
+
+      <section id="opportunities" class="card">
+        <div class="section-head"><div><div class="kicker">07 · OPPORTUNITIES</div><h2>七、商业机会</h2></div><div class="rank">1项首次补报，2项存量</div></div>
+        <article class="item"><h3>海南技防设备标包：授权与替代料决定是否参与</h3><p><b>已确认事实：</b>10月16日公告的130.81万元上限标包，10月22日18:00停止取标、11月10日09:00截标。资格后审且不接受联合体；主要设备须有制造商授权及服务承诺，同品牌同型号仅允许一个投标人；禁止使用美光产品及含其芯片的产品。</p><div class="verdict"><b>判断：</b>机会在摄像设备、边缘分析及集成，但公司授权、器件清单、交货资源和技术附件未核；属于电网安防，不是核电智慧巡检订单。</div><p><b>建议行动：</b>商务与供应链今天取得品牌授权意向和物料清单；不满足限制则放弃投标，仅保留需求研究。</p><div class="source">来源：<a href="https://www.bidding.csg.cn/zbgg/1200446061.jhtml" rel="noopener noreferrer">海南采购公告</a></div></article>
+        <article class="item"><h3>存量项目：贵州站端视频巡视与南网数字运检</h3><p><b>已确认事实：</b>贵州视频巡视原公告取标截至10月20日；昨日已报道的南网数字运检两包取标截至10月23日。核验范围内没有可据以改变这两项判断的新中标或技术变更。</p><div class="verdict"><b>判断：</b>两项仍需查资格和技术附件，不能再次计作今日新增。</div><p><b>建议行动：</b>商务核是否已取标，分别形成资格与交付资源清单；未获得附件前不估算交付承诺。</p><div class="source">来源：<a href="https://www.bidding.csg.cn/zbgg/1200445725.jhtml" rel="noopener noreferrer">贵州原公告</a><a href="https://www.bidding.csg.cn/zbgg/1200445973.jhtml" rel="noopener noreferrer">数字运检原公告</a></div></article>
+    </section>
+
+      <section id="tracking" class="card">
+        <div class="section-head"><div><div class="kicker">08 · TRACKING</div><h2>八、持续跟踪事项</h2></div></div><div class="table-wrap" tabindex="0"><table><thead><tr><th>事项名称</th><th>当前状态</th><th>今日是否有实质新增</th><th>下一观察节点</th></tr></thead><tbody><tr><td><a href="https://www.bidding.csg.cn/zbgg/1200445973.jhtml" rel="noopener noreferrer">南网数字运检两包</a></td><td>10月16日公告，已报道</td><td>无</td><td>10月23日取标截止</td></tr><tr><td><a href="https://www.bidding.csg.cn/zbgg/1200445725.jhtml" rel="noopener noreferrer">贵州站端视频巡视</a></td><td>招标中</td><td>无</td><td>10月20日取标截止</td></tr><tr><td><a href="https://www.bidding.csg.cn/zbhxrgs/1200445916.jhtml" rel="noopener noreferrer">梅州多光巡检</a></td><td>第一候选公示</td><td>无</td><td>10月19日公示结束，等正式结果</td></tr><tr><td><a href="https://www.bidding.csg.cn/zbgg/1200446061.jhtml" rel="noopener noreferrer">海南变电站技防设备</a></td><td>10月16日公告，本期首次补报</td><td>有；首次纳入</td><td>10月22日取标截止</td></tr></tbody></table></div>
+    </section>
+
+      <section id="insights" class="card">
+        <div class="section-head"><div><div class="kicker">09 · INSIGHT</div><h2>九、今日技术洞察</h2></div></div>
+        <article class="item"><h3>一至三年机会：可追溯标注与可复测国产边缘推理</h3><p><b>已确认事实：</b>官方连续修复同名图像标签、异常框与RKNN导出问题；海南设备采购把摄像、边缘分析、授权和禁用器件列为交付约束。</p><div class="verdict"><b>判断：</b>对核电非安全级视觉产品，长期壁垒可能是数据标识、模型版本、国产工具链、现场证据和人工复核可一并审计。国产化价值必须经准确率、稳定性和供应链实测，而非发布说明证明。</div><p><b>建议行动：</b>算法组建同名图和异常框回归集；架构组锁定RKNN兼容矩阵；质保组定义误漏报、断网恢复、审查及回滚门槛。取得客户授权后才开展现场PoC。</p><div class="source">依据：<a href="https://github.com/ultralytics/ultralytics/releases/tag/v8.4.179" rel="noopener noreferrer">RKNN发布说明</a><a href="https://github.com/ultralytics/ultralytics/releases/tag/v8.4.181" rel="noopener noreferrer">标注修复</a><a href="https://github.com/ultralytics/ultralytics/releases/tag/v8.4.182" rel="noopener noreferrer">标签校验</a><a href="https://www.bidding.csg.cn/zbgg/1200446061.jhtml" rel="noopener noreferrer">海南采购约束</a></div></article>
+    </section>
+
+      <section id="actions" class="card">
+        <div class="section-head"><div><div class="kicker">10 · ACTION</div><h2>十、给公司的建议</h2></div></div><div class="mini-grid"><article class="mini-card"><h3>今日建议（2条）</h3><p>① 商务与供应链核海南标包的授权、禁用器件和30天交货能力；② 算法与架构锁定v8.4.178/182及RKNN工具链，启动隔离对照测试。</p></article><article class="mini-card"><h3>短期行动（1—3个月）</h3><p>建授权视觉数据的唯一标识与错误标签回归集，完成国产边缘设备的准确率、功耗、断网、日志和回滚验证；由质保复核结果。</p></article><article class="mini-card"><h3>中长期规划（6—24个月）</h3><p>形成可复用的数据与标注审计、国产工具链兼容矩阵及非安全级巡检交付包；生产控制始终遵守规程优先、人工复核。</p></article></div>
+    </section>
+
+      <section id="method" class="card">
+        <div class="section-head"><div><div class="kicker">METHODOLOGY</div><h2>信息说明</h2></div></div><p class="note">信息截点：2026年10月19日09:04（Asia/Shanghai）。核对南网官方招标、国家核安全局公开动态和Ultralytics官方发布，并与历史日报去重。10月16—18日事项为首次补报；截至截点未核得今天发布的核电智慧巡检订单。电网招标不等于核电订单，软件修复不等于现场性能。公司投标资格、登录后附件、国产设备与模型实测仍未核；封面为抽象示意。</p>
+    </section>
+    </div>
+
+    <aside class="card toc" aria-label="本期目录">
+      <h2>本期目录</h2>
+      <a href="#industry">01 重大行业事件</a>
+      <a href="#inspection">02 智慧巡检</a>
+      <a href="#ai">03 AI 视觉与多模态</a>
+      <a href="#domestic">04 国产硬件与边缘智能</a>
+      <a href="#data">05 数据治理与数字孪生</a>
+      <a href="#competitors">06 竞争对手</a>
+      <a href="#opportunities">07 商业机会</a>
+      <a href="#tracking">08 持续跟踪</a>
+      <a href="#insights">09 技术洞察</a>
+      <a href="#actions">10 公司建议</a>
+      <a href="#method">信息说明</a>
+    </aside>
+  </main>
+
+  <footer>每日推送 · 2026-10-19 · <a href="/archive/">查看历史归档</a></footer>
+</body>
+</html>
